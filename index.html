@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('plant-background-for-ctip.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: white;
+        }
+        .dld_title_bar {
+            width: 100vw;
+            height: 5vw;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2vw;
+            position: fixed;
+            top: 0;
+        }
+        .dld_selector_container {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+        .selector {
+            width: 10vw;
+            height: 27.5vw;
+            background-color: black;
+            margin: 0 1vw;
+            transform: skew(-20deg);
+            box-shadow: 0.2vw 0.2vw 0.2vw rgba(0, 0, 0, 0.3);
+        }
+        .selector p {
+            color: white;
+            text-align: center;
+            line-height: 20vw;
+        }
+    </style>
+</head>
+<body>
+    <div class = "dld_title_bar">
+        <p>FloraScan</p>
+    </div>
+    <div class = "dld_selector_container">
+        <div class = "selector">
+            <p>Identify</p>
+        </div>
+        <div class = "selector">
+            <p>Explore</p>
+        </div>
+        <div class = "selector">
+            <p>Contributions</p>
+        </div>
+        <div class = "selector">
+            <p>About Us</p>
+        </div>
+    </div>
+</body>
+</html>
