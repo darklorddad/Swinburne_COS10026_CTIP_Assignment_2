@@ -37,9 +37,30 @@
     color: white;
     margin-right: 3vw;
     font-size: 1vw;
+    position: relative;
+    font-family: "dld_samsungsharpsans_medium", sans-serif;
 }
 .dld_navigation_bar_list_most_right_item a {
     margin: 0;
+}
+.dld_navigation_bar_list a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.05vw;
+    bottom: -0.5vw;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition-delay: 0.1s;
+    opacity: 0;
+}
+.dld_navigation_bar_list a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    opacity: 1;
+    transition-delay: 0s;
 }
 .dld_video_container {
     height: 43.1vw;
@@ -79,11 +100,11 @@
 .dld_video_text_1 {
     font-size: 4vw;
     font-family: "dld_samsungsharpsans_bold", sans-serif;
-    margin-left: 9.75vw;
+    margin-left: 16.75vw;
 }
 .dld_divider {
-    width: 0.25vw;
-    height: 10vw;
+    width: 0.1vw;
+    height: 12.5vw;
     background-color: white;
     margin: 0 3vw;
     margin-bottom: 5vw;
@@ -91,30 +112,19 @@
 .dld_video_text_2 {
     font-size: 2vw;
     font-family: "dld_samsungsharpsans_medium", sans-serif;
-    margin-right: 9vw;
+    margin-right: 16vw;
 }
 .dld_selector_container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 43.1vw;
+    height: 48.2vw;
     position: relative;
     background-image: url('plant-background-for-ctip.jpg');
     background-size: 100% 100%;
     background-attachment: fixed;
     background-position: center;
-}
-@keyframes bounceDown {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(10px);
-    }
-    60% {
-        transform: translateY(5px);
-    }
 }
 .dld_selector {
     width: 10vw;
