@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Background color for the page */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-end; /* Align content at the bottom of the screen */
+}
+
+.container {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust this value to control the button's vertical position */
+}
+
+.half-hexagon-button {
+    display: inline-block;
+    padding: 10px 40px; /* Adjust the padding to control the size */
+    background-color: #0074d9; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 85%, 0% 100%); /* Hexagon shape */
+}
+
+.half-hexagon-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: inherit;
+    transform: skewY(-30deg); /* Skew to create the half hexagon effect */
+}
+
+.half-hexagon-button:hover {
+    background-color: #0056b3; /* Hover background color */
+}
