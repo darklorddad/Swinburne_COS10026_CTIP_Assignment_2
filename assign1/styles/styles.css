@@ -1,0 +1,142 @@
+.dld_body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
+}
+@font-face {
+    font-family: "dld_samsungsharpsans";
+    src: url("fonts/dld_samsungsharpsans.otf") format("opentype");
+}
+@font-face {
+    font-family: "dld_samsungsharpsans_medium";
+    src: url("fonts/dld_samsungsharpsans_medium.otf") format("opentype");
+}
+@font-face {
+    font-family: "dld_samsungsharpsans_bold";
+    src: url("fonts/dld_samsungsharpsans_bold.otf") format("opentype");
+}
+.dld_navigation_bar_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 5vw;
+    margin-right: 7.5vw;
+}
+.dld_navigation_bar_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.dld_navigation_bar_list li {
+    display: inline;
+}
+.dld_navigation_bar_list a {
+    text-decoration: none;
+    color: white;
+    margin-right: 3vw;
+    font-size: 1vw;
+    position: relative;
+    font-family: "dld_samsungsharpsans_medium", sans-serif;
+}
+.dld_navigation_bar_list_most_right_item a {
+    margin: 0;
+}
+.dld_navigation_bar_list a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.05vw;
+    bottom: -0.5vw;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition-delay: 0.1s;
+    opacity: 0;
+}
+.dld_navigation_bar_list a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    opacity: 1;
+    transition-delay: 0s;
+}
+.dld_video_container {
+    height: 43.1vw;
+}
+.dld_video_container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 48.1vw;
+    object-fit: cover;
+    z-index: -1;
+}
+.dld_video_text_container {
+    height: 43.1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.dld_video_text_container p {
+    margin-top: 0;
+    margin-bottom: 5vw;
+    padding: 0;
+    color: white;
+}
+.dld_video_text_1 {
+    font-size: 4vw;
+    font-family: "dld_samsungsharpsans_bold", sans-serif;
+    margin-left: 19.75vw;
+    background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: dld_video_text_1_hue 15s infinite linear;
+}
+@-webkit-keyframes dld_video_text_1_hue {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
+}
+.dld_video_text_divider {
+    width: 0.1vw;
+    height: 12.5vw;
+    background-color: white;
+    margin: 0 3vw;
+    margin-bottom: 5vw;
+}
+.dld_video_text_2 {
+    font-size: 2vw;
+    font-family: "dld_samsungsharpsans_medium", sans-serif;
+    margin-right: 13vw;
+}
+.dld_selector_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 48.2vw;
+    position: relative;
+    background-image: url('plant-background-for-ctip.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+}
+.dld_selector {
+    width: 10vw;
+    height: 27.5vw;
+    background-color: rgb(25, 25, 25);
+    margin: 0 1vw;
+    transform: skew(-20deg);
+}
+.dld_selector p {
+    color: white;
+    text-align: center;
+    line-height: 25.46vw;
+    font-size: 1vw;
+}
