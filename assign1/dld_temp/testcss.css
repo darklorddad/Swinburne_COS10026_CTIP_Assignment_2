@@ -1,11 +1,24 @@
-.dld_navigation_bar_list a {
-    box-shadow: inset 0 0 0 0 #54b3d6;
-    color: #54b3d6;
-    margin: 0 -.25rem;
-    padding: 0 .25rem;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+body {
+    margin: 0;
+    padding: 0;
 }
-.dld_navigation_bar_list a:hover {
-    box-shadow: inset 100px 0 0 0 #54b3d6;
-    color: white;
+
+.content {
+    height: 2000px; /* Replace with your content's height */
+    /* This creates space to scroll past */
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    height: 50px; /* Adjust the height as needed */
+    position: fixed;
+    top: -50px; /* Hide the navbar initially by moving it above the viewport */
+    transition: top 0.3s; /* Add a smooth transition effect */
+}
+
+/* Show the navbar when scrolling past a certain point */
+body.scrolled .navbar {
+    top: 0;
 }
