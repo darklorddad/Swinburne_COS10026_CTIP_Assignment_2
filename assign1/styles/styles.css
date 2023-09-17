@@ -225,6 +225,14 @@
     }
 }
 
+/* CSS for contributor.html */
+.ash_body{
+    margin: 0;
+    padding: 0;
+    background-color: #71797E/*#222021*/;
+    font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
+}
+
 /* CSS for identify.html*/
 
 .ttl_body{
