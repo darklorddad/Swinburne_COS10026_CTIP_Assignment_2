@@ -230,7 +230,7 @@
 .ttl_welcome_text_container h1:nth-child(1) {
     color: black;
     font-family: "dld_samsungsharpsans_medium", sans-serif;
-    font-size: 4vw;
+    font-size: 3vw;
     width: 40vw;
     white-space: nowrap;
     overflow: hidden;
@@ -241,7 +241,7 @@
     opacity: 0;
     font-family: "dld_samsungsharpsans_bold", sans-serif;
     background: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
-    font-size: 6vw;  
+    font-size: 5vw;  
     width: 42vw;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -260,28 +260,24 @@
 
 @keyframes shring-animation {
     0% {
-      background-position: 0 0;
       opacity: 0;
       width: 0;
     }
     1% {
-      background-position: 0 0;
       opacity: 1;
       border-right: 1px solid black;
     }
     50% {
-      background-position: 150px 0;
       opacity: 1;
       border-right: 1px solid black;
     }
     100% {
-      background-position: 400px 0;
       opacity: 1;
       border-right: 1px solid black;
     }
-  }
+}
   
-  @keyframes type {
+@keyframes type {
     0% {
       width: 0;
     }
@@ -291,16 +287,17 @@
     100%{
       border-right: none;
     }
-  }
+}
   
-  @keyframes blink {
+@keyframes blink {
     50% {
       border-color: transparent;
     }
-  }
+}
   
 .ttl_welcome_text_container p {
     text-align: justify;
     padding: 10px;
     color: black;
+    font-size: 2vw;
 }
