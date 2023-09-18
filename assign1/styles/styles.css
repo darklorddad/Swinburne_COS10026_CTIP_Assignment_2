@@ -229,9 +229,36 @@
 .ash_body{
     margin: 0;
     padding: 0;
-    background-color: #71797E/*#222021*/;
+    background-color: grey;
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
 }
+
+.ash_section1{
+    font-family: "dld_samsungsharpsans_bold", sans-serif;
+    font-size: 2vw;
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation:   */
+}
+
+.ash_section1_1{
+    font-family: "dld_samsungsharpsans_medium", sans-serif;
+    font-size: 1vw;
+}
+
+.ash_section1_2{
+    font-family: "dld_samsungsharpsans_medium", sans-serif;
+    font-size: 1vw;
+}
+
+/* @-webkit-keyframes {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
+} */
 
 /* ashley's test 1 */
 
