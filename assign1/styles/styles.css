@@ -236,9 +236,9 @@
 .ash_section1{
     font-family: "dld_samsungsharpsans_bold", sans-serif;
     font-size: 2vw;
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-animation:  
+    -webkit-animation:   */
 }
 
 .ash_section1_1{
