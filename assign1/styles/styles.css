@@ -1,6 +1,4 @@
-/* Daniel's CSS */
-
-/* CSS for index.html */
+/* Daniel's index.html */
 .dld_body {
     margin: 0;
     padding: 0;
@@ -21,10 +19,10 @@
 }
 .dld_navigation_bar_container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: flex-end;
     height: 5vw;
-    margin-right: 7.5vw;
+    margin-left: 47.5vw;
 }
 .dld_navigation_bar_list {
     list-style-type: none;
@@ -37,47 +35,62 @@
 .dld_navigation_bar_list a {
     text-decoration: none;
     color: white;
-    margin-right: 3vw;
+    margin-right: 1vw;
     font-size: 1vw;
     position: relative;
     font-family: "dld_samsungsharpsans_medium", sans-serif;
 }
+.dld_navigation_bar_button {
+    padding: 0.5vw 1vw;
+    transition: color 0.5s ease-out, background-color 0.5s ease-out;
+}
+.dld_navigation_bar_button::after,
+.dld_navigation_bar_button::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    transition: 1s;
+}
+.dld_navigation_bar_button::after {
+    top: 0.15vw;
+    left: 0.15vw;
+    border-top: 0.15vw solid transparent;
+    border-left: 0.15vw solid transparent;
+}
+.dld_navigation_bar_button::before {
+    bottom: 0.15vw;
+    right: 0.15vw;
+    border-bottom: 0.15vw solid transparent;
+    border-right: 0.15vw solid transparent;
+}
+.dld_navigation_bar_button:hover {
+    color: black;
+    background-color: white;
+}
+.dld_navigation_bar_button:hover::after,
+.dld_navigation_bar_button:hover::before {
+    width: calc(100% - 0.41vw);
+    height: calc(100% - 0.41vw);
+    border-color: black;
+}
 .dld_navigation_bar_list_login a {
     margin: 0;
 }
-.dld_navigation_bar_list a::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 0.05vw;
-    bottom: -0.5vw;
-    background-color: white;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    transition-delay: 0.1s;
-    opacity: 0;
-}
-.dld_navigation_bar_list a:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-    opacity: 1;
-    transition-delay: 0s;
-}
 .dld_section_1_container {
-    height: 43.1vw;
+    height: 47vw;
 }
 .dld_section_1_container video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 48.1vw;
+    height: 52vw;
     object-fit: cover;
     z-index: -1;
 }
 .dld_section_1_text_container {
-    height: 43.1vw;
+    height: 47vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,14 +98,14 @@
 }
 .dld_section_1_text_container p {
     margin-top: 0;
-    margin-bottom: 5vw;
+    margin-bottom: 8.6vw;
     padding: 0;
     color: white;
 }
 .dld_section_1_text_1 {
     font-size: 4vw;
     font-family: "dld_samsungsharpsans_bold", sans-serif;
-    margin-left: 19.75vw;
+    margin-left: 18.49vw;
     background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -111,7 +124,7 @@
     height: 12.5vw;
     background-color: white;
     margin: 0 3vw;
-    margin-bottom: 5vw;
+    margin-bottom: 8.9vw;
 }
 .dld_section_1_text_2 {
     font-size: 2vw;
@@ -123,7 +136,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 48.2vw;
+    height: 52vw;
     position: relative;
     background-image: url("images/dld_section_2_background_2.jpg");
     background-size: 100% 100%;
@@ -149,7 +162,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 48.2vw;
+    height: 48.3vw;
     position: relative;
 }
 .dld_footer {
@@ -157,9 +170,7 @@
     height: 10vw;
 }
 
-/* Edison's CSS */
-
-/* CSS for explorer.html */
+/* Edison's explorer.html */
 .czy_body {
     margin: 0;
     padding: 0;
@@ -221,11 +232,11 @@
 
 @media (min-width: 576px){
     .czy_container {
-        max-width: 540px;
+        max-wxidth: 540px;
     }
 }
 
-/* CSS for contributor.html */
+/* Ashley's contributor.html */
 .ash_body{
     margin: 0;
     padding: 0;
@@ -260,10 +271,7 @@
     }
 } */
 
-/* ashley's test 1 */
-
-/* CSS for identify.html*/
-
+/* Kelly's identify.html */
 .ttl_body{
     margin: 0;
     padding: 0;
