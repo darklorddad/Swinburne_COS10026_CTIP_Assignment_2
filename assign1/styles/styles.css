@@ -1,4 +1,4 @@
-/* Daniel's index.html */
+/* dld's index.html */
 .dld_body {
     margin: 0;
     padding: 0;
@@ -7,15 +7,15 @@
 }
 @font-face {
     font-family: "dld_samsungsharpsans";
-    src: url("fonts/dld_samsungsharpsans.otf") format("opentype");
+    src: url("fonts/dld/dld_samsungsharpsans.otf") format("opentype");
 }
 @font-face {
     font-family: "dld_samsungsharpsans_medium";
-    src: url("fonts/dld_samsungsharpsans_medium.otf") format("opentype");
+    src: url("fonts/dld/dld_samsungsharpsans_medium.otf") format("opentype");
 }
 @font-face {
     font-family: "dld_samsungsharpsans_bold";
-    src: url("fonts/dld_samsungsharpsans_bold.otf") format("opentype");
+    src: url("fonts/dld/dld_samsungsharpsans_bold.otf") format("opentype");
 }
 .dld_navigation_bar_container {
     display: flex;
