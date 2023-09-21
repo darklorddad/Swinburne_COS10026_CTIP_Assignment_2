@@ -271,31 +271,24 @@
     }
 } */
 
-/* Kelly's identify.html */
+/* Tzy Lynn's identify.html */
 .ttl_body{
     margin: 0;
     padding: 0;
-    background-color: #71797E/*#222021*/;
+    background-color: #222021;
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
 }
 
-.ttl_welcome_text_container{
-    width: 40vw;
+.ttl_text_container1{
+    width: 20vw;
+    height: 20vh;
     margin-left: 5vw;
     margin-top: 2vh;
+    float: left;
+    display: inline;
 }
 
-.ttl_welcome_text_container h1:nth-child(1) {
-    color: black;
-    font-family: "dld_samsungsharpsans_medium", sans-serif;
-    font-size: 3vw;
-    width: 40vw;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: type 2s steps(40,end) forwards;
-}
-
-.ttl_welcome_text_container h1:nth-child(2) {
+.ttl_text_container1 h1 {
     opacity: 0;
     font-family: "dld_samsungsharpsans_bold", sans-serif;
     background: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
@@ -304,7 +297,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     overflow: hidden;
-    animation: shring-animation 3s steps(50,end) 2s forwards, change_gradient 15s infinite linear, blink .5s step-end infinite alternate;
+    animation: shring-animation 3s steps(50,end) 2s forwards, change_gradient 15s infinite linear;
 }
 
 @-webkit-keyframes change_gradient{
@@ -323,39 +316,84 @@
     }
     1% {
       opacity: 1;
-      border-right: 1px solid black;
     }
     50% {
       opacity: 1;
-      border-right: 1px solid black;
     }
     100% {
       opacity: 1;
-      border-right: 1px solid black;
     }
 }
   
-@keyframes type {
-    0% {
-      width: 0;
-    }
-    1%, 99%{
-      border-right: 1px solid black;
-    }
-    100%{
-      border-right: none;
-    }
-}
-  
-@keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-}
-  
-.ttl_welcome_text_container p {
+.ttl_text_container1 p {
     text-align: justify;
-    padding: 10px;
-    color: black;
+    color: white;
     font-size: 2vw;
 }
+
+.ttl_img_container{
+    float: right;
+    display: inline;
+    margin-top: 5vw;
+    margin-right: 5vw;
+    /* width:60vw;
+    height:100vh;
+    background-color:white;
+    position: relative;
+    top:-50%;
+    overflow:hidden; */
+    /* left:50%; */
+    /* transform:translate(-50%,-50%); */
+}
+
+.ttl_curve{
+
+    background-color: aliceblue;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    border-radius: 50%;
+    width: 50vw;
+    height: 60vh;
+    animation: morph 3s linear infinite;
+    overflow: hidden;
+}
+
+
+
+@keyframes morph{
+    0%, 100% {
+    border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+    }
+    34% {
+      border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    }
+    67% {
+      border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    }
+}
+
+.ttl_upload-btn-wrapper {
+    position: relative;
+    left: 6vh;
+    top: -10vw;
+    padding: 20px;
+    overflow: hidden;
+    display: inline-block;
+}
+  
+.ttl_btn {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 2vw;
+    font-family: "dld_samsungsharpsans", sans-serif;
+}
+  
+.ttl_upload-btn-wrapper input[type=file] {
+    font-size: 2vw;
+    position: relative;
+    left: -15vw;
+    top: 0;
+    opacity: 0;
+} 
