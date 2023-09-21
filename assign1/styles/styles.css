@@ -290,22 +290,17 @@
 } */
 
 /* testing for one contribution only */
-
-.ash_container{
+/* .ash_container{
     width: 100vw; 
-    /* 50vw for two per row??? */
     background: white;
-    /* should i put #f1ebdb instead */
     overflow: hidden;
     border-radius: 0.46875vw;
-    /* 3px so divide by 2 is 0.234375vw */
     border: 0.15625vw solid white;
 }
 
 .ash_top_bar{
     width: 100%;
     height: 11.71875vw;
-    /* 5.859375vw */
     padding: 3.90625vw;
     display: flex;
     justify-content: space-between;
@@ -332,25 +327,21 @@
 
 .ash_profile_img span{
     margin-left: ;
-}
+} */
 
-/* testing for one contribution only */
 
-.ash_container{
+/*apa ini extra */
+/* .ash_container{
     width: 100vw; 
-    /* 50vw for two per row??? */
     background: white;
-    /* should i put #f1ebdb instead */
     overflow: hidden;
     border-radius: 0.46875vw;
-    /* 3px so divide by 2 is 0.234375vw */
     border: 0.15625vw solid white;
 }
 
 .ash_top_bar{
     width: 100%;
     height: 11.71875vw;
-    /* 5.859375vw */
     padding: 3.90625vw;
     display: flex;
     justify-content: space-between;
@@ -377,6 +368,120 @@
 
 .ash_profile_img span{
     margin-left: ;
+} */
+
+/* testing 2 */
+:root{
+    --surface-color: #fff;
+    --curve: 40;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.ash_cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2 rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+}
+
+.ash_card{
+    position: relative;
+    display: block;
+    height: 100%;
+    border-radius: calc(var(--curve)*1px);
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.ash_card_img{
+    width: 100%;
+    height: auto;
+}
+
+.ash_card_overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: cal(var(--curve)*1px);
+    background-color: var(--surface-color);
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+}
+
+.ash_card:hover .ash_card_overlay{
+    transform: translateY(0);
+}
+
+.ash_card_header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: cal(var(--curve)*1px)0 0 0;
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+}
+
+.ash_card_arc{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+}
+
+.ash_card_arc path{
+    fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z")
+}
+
+.ash_card:hover .ash_card_header{
+    transform: translateY(0);
+}
+
+.ash_card_thumbnail{
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.ash_card_title{
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #84f527;
+}
+
+.ash_card_tagline{
+    display: block;
+    margin: 1em 0;
+    font-size: .8em;
+    color: #f2291b;
+}
+
+.ash_card_status{
+    font-size: .8em;
+    color: #f7db25;
+}
+
+.ash_card_description{
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #f7db25;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 
 /* Tzy Lynn's identify.html */
