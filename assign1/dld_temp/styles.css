@@ -1,158 +1,47 @@
-/* Reset some default styles */
-* {
+/* Reset some default margin and padding */
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Global styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
+/* Create a container for the sidebar and content */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 20px auto; /* Add margin on all sides */
+}
+
+/* Style the sidebar */
+.sidebar {
+    width: 250px; /* Adjust the width as needed */
+    background-color: #f0f0f0;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    position: sticky;
+    top: 20px; /* Adjust the top position as needed */
     padding: 20px;
 }
 
-/* Navigation */
-header {
-    background-color: #1976D2;
-    color: #fff;
-    padding: 10px 0;
-    animation: slideDown 0.5s ease-in-out;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-nav ul {
+/* Style the navigation links */
+.sidebar ul {
     list-style: none;
-    display: flex;
+    padding: 0;
 }
 
-nav ul li {
-    margin-right: 20px;
+.sidebar ul li {
+    margin-bottom: 10px;
 }
 
-nav a {
+.sidebar a {
     text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
+    color: #333;
+    font-weight: bold;
 }
 
-nav a:hover {
-    color: #BBDEFB;
-}
-
-/* Hero Section */
-.hero {
-    background-image: url('your-hero-image.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
-}
-
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 40px;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #1976D2;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #1565C0;
-}
-
-/* Cards Section */
-.cards {
-    display: flex;
-    justify-content: space-around;
-    margin: 40px 0;
-}
-
-.card {
+/* Style the main content */
+.content {
+    flex: 1;
     background-color: #fff;
     padding: 20px;
-    text-align: center;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    margin: 0 20px;
-    transform: scale(1);
-    transition: transform 0.3s cubic-bezier(0.4, 2.3, 0.9, 1);
-}
-
-.card i {
-    font-size: 48px;
-    color: #1976D2;
-    margin-bottom: 10px;
-}
-
-.card h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer */
-footer {
-    background-color: #1976D2;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    animation: slideUp 0.5s ease-in-out;
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(100%);
-    }
-    to {
-        transform: translateY(0);
-    }
+    margin-left: 20px; /* Add margin on the left side */
 }

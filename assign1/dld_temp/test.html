@@ -3,40 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Apply basic styles to the container */
-        .container {
-            height: 1000px; /* Add some height to simulate scrolling */
-            background-color: #f2f2f2;
-            padding: 20px;
-        }
-
-        /* Apply styles to the sticky element */
-        .sticky-element {
-            background-color: #3498db;
-            color: white;
-            padding: 10px;
-            position: -webkit-sticky; /* Safari */
-            position: sticky;
-            top: 0; /* Stick to the top of the viewport */
-        }
-
-        /* Add some content inside the sticky element */
-        .sticky-content {
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Sticky Sidebar</title>
 </head>
 <body>
     <div class="container">
-        <p>Scroll down to see the sticky element.</p>
-        <!-- The following div becomes sticky after you scroll past it -->
-        <div class="sticky-element">
-            <div class="sticky-content">
-                This element is sticky after you scroll past it.
-            </div>
+        <div class="sidebar">
+            <!-- Your navigation links go here -->
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
-        <p>More content goes here...</p>
+        <div class="content">
+            <!-- Your main content goes here -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet justo at justo ullamcorper volutpat. Duis bibendum tellus a justo vestibulum, vel tincidunt purus iaculis.</p>
+        </div>
     </div>
 </body>
 </html>

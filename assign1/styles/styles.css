@@ -1,85 +1,102 @@
 /* dld's index.html */
+
 .dld_body {
     margin: 0;
     padding: 0;
     background-color: white;
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
 }
+
 @font-face {
     font-family: "dld_samsungsharpsans";
     src: url("fonts/dld/dld_samsungsharpsans.otf") format("opentype");
 }
+
 @font-face {
     font-family: "dld_samsungsharpsans_medium";
     src: url("fonts/dld/dld_samsungsharpsans_medium.otf") format("opentype");
 }
+
 @font-face {
     font-family: "dld_samsungsharpsans_bold";
     src: url("fonts/dld/dld_samsungsharpsans_bold.otf") format("opentype");
 }
-.dld_navigation_bar_container {
+
+.dld_top_navigation_bar_container {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
     height: 5vw;
-    margin-left: 42.5vw;
+    margin-left: 46.5vw;
 }
-.dld_navigation_bar_list {
+
+.dld_top_navigation_bar_list {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-.dld_navigation_bar_list li {
+
+.dld_top_navigation_bar_list li {
     display: inline;
 }
-.dld_navigation_bar_list a {
+
+.dld_top_navigation_bar_list a {
     text-decoration: none;
     color: white;
-    margin-right: 1vw;
+    margin-right: 0vw;
     font-size: 1vw;
     position: relative;
     font-family: "dld_samsungsharpsans_medium", sans-serif;
 }
-.dld_navigation_bar_button {
+
+.dld_top_navigation_bar_button {
     padding: 0.5vw 1vw;
     transition: color 0.5s ease-out, background-color 0.5s ease-out;
 }
-.dld_navigation_bar_button::after,
-.dld_navigation_bar_button::before {
+
+.dld_top_navigation_bar_button::after,
+.dld_top_navigation_bar_button::before {
     position: absolute;
     content: "";
     width: 0;
     height: 0;
     transition: 1s;
 }
-.dld_navigation_bar_button::after {
+
+.dld_top_navigation_bar_button::after {
     top: 0.15vw;
     left: 0.20vw;
     border-top: 0.15vw solid transparent;
     border-left: 0.15vw solid transparent;
 }
-.dld_navigation_bar_button::before {
+
+.dld_top_navigation_bar_button::before {
     bottom: 0.15vw;
     right: 0.20vw;
     border-bottom: 0.15vw solid transparent;
     border-right: 0.15vw solid transparent;
 }
-.dld_navigation_bar_button:hover {
+
+.dld_top_navigation_bar_button:hover {
     color: black;
     background-color: white;
 }
-.dld_navigation_bar_button:hover::after,
-.dld_navigation_bar_button:hover::before {
+
+.dld_top_navigation_bar_button:hover::after,
+.dld_top_navigation_bar_button:hover::before {
     width: calc(100% - 3.2vw);
     height: calc(100% - 1.2vw);
     border-color: black;
 }
-.dld_navigation_bar_list_login a {
+
+.dld_navigation_bar_lr a {
     margin: 0;
 }
+
 .dld_section_1_container {
     height: 47vw;
 }
+
 .dld_section_1_container video {
     position: absolute;
     top: 0;
@@ -89,6 +106,7 @@
     object-fit: cover;
     z-index: -1;
 }
+
 .dld_section_1_text_container {
     height: 47vw;
     display: flex;
@@ -96,12 +114,14 @@
     align-items: center;
     position: relative;
 }
+
 .dld_section_1_text_container p {
     margin-top: 0;
     margin-bottom: 8.6vw;
     padding: 0;
     color: white;
 }
+
 .dld_section_1_text_1 {
     font-size: 4vw;
     font-family: "dld_samsungsharpsans_bold", sans-serif;
@@ -113,6 +133,7 @@
     -webkit-animation: dld_section_1_text_1_hue 15s infinite linear;
     animation: dld_section_1_text_1_hue 15s infinite linear; 
 }
+
 @keyframes dld_section_1_text_1_hue {
     from {
         -webkit-filter: hue-rotate(0deg);
@@ -121,6 +142,7 @@
         -webkit-filter: hue-rotate(-360deg);
     }
 }
+
 .dld_section_1_text_divider {
     width: 0.1vw;
     height: 12.5vw;
@@ -128,14 +150,15 @@
     margin: 0 3vw;
     margin-bottom: 8.9vw;
 }
+
 .dld_section_1_text_2 {
     font-size: 2vw;
     font-family: "dld_samsungsharpsans_medium", sans-serif;
     margin-right: 13vw;
 }
+
 .dld_section_2_container {
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
     height: 52vw;
@@ -146,6 +169,64 @@
     background-position: center;
     background-color: beige;
 }
+
+.dld_side_navigation_bar_container {
+    background-color: black;
+    position: sticky;
+    top: 1vw;
+    padding: 2vw;
+    margin-left: 1vw;
+}
+
+.dld_side_navigation_bar_container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dld_side_navigation_bar_container ul li {
+    margin-bottom: 10px;
+}
+
+.dld_side_navigation_bar_container a {
+    text-decoration: none;
+    color: white;
+}
+
+.dld_side_navigation_bar_button::after,
+.dld_side_navigation_bar_button::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    transition: 1s;
+}
+
+.dld_side_navigation_bar_button::after {
+    top: 0.15vw;
+    left: 0.20vw;
+    border-top: 0.15vw solid transparent;
+    border-left: 0.15vw solid transparent;
+}
+
+.dld_side_navigation_bar_button::before {
+    bottom: 0.15vw;
+    right: 0.20vw;
+    border-bottom: 0.15vw solid transparent;
+    border-right: 0.15vw solid transparent;
+}
+
+.dld_side_navigation_bar_button:hover {
+    color: black;
+    background-color: white;
+}
+
+.dld_side_navigation_bar_button:hover::after,
+.dld_side_navigation_bar_button:hover::before {
+    width: calc(100% - 3.2vw);
+    height: calc(100% - 1.2vw);
+    border-color: black;
+}
+
 .dld_selector {
     width: 10vw;
     height: 27.5vw;
@@ -153,12 +234,14 @@
     margin: 0 1vw;
     transform: skew(-20deg);
 }
+
 .dld_selector p {
     color: white;
     text-align: center;
     line-height: 25.46vw;
     font-size: 1vw;
 }
+
 .dld_section_3_container {
     display: flex;
     justify-content: center;
@@ -167,12 +250,14 @@
     height: 48.3vw;
     position: relative;
 }
+
 .dld_footer {
     background-color: black;
     height: 10vw;
 }
 
 /* Edison's explorer.html */
+
 .czy_body {
     color: white;
     margin: 0;
@@ -192,9 +277,8 @@
     background-color: #f1ebdb;
 }
 
-
-
 /* Ashley's contributor.html */
+
 .ash_body{
     margin: 0;
     padding: 0;
@@ -230,6 +314,7 @@
 } */
 
 /* testing for one contribution only */
+
 .ash_container{
     width: 100vw; 
     /* 50vw for two per row??? */
@@ -274,6 +359,7 @@
 }
 
 /* testing for one contribution only */
+
 .ash_container{
     width: 100vw; 
     /* 50vw for two per row??? */
@@ -318,6 +404,7 @@
 }
 
 /* Tzy Lynn's identify.html */
+
 .ttl_body{
     margin: 0;
     padding: 0;
@@ -404,8 +491,6 @@
     overflow: hidden;
 }
 
-
-
 @keyframes morph{
     0%, 100% {
     border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
@@ -426,7 +511,7 @@
     overflow: hidden;
     display: inline-block;
 }
-  
+
 .ttl_btn {
     border: 2px solid gray;
     color: gray;
@@ -436,11 +521,11 @@
     font-size: 2vw;
     font-family: "dld_samsungsharpsans", sans-serif;
 }
-  
+
 .ttl_upload-btn-wrapper input[type=file] {
     font-size: 2vw;
     position: relative;
     left: -15vw;
     top: 0;
     opacity: 0;
-} 
+}
