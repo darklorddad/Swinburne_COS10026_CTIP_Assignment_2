@@ -27,7 +27,7 @@
     justify-content: space-around;
     align-items: flex-end;
     height: 5vw;
-    margin-left: 44.5vw;
+    margin-left: 48vw;
 }
 
 .dld_top_navigation_bar_list {
@@ -159,15 +159,14 @@
 
 .dld_section_2_container {
     display: flex;
-    /* align-items: center; */
     width: 100%;
-    height: 52vw;
+    height: 104vw;
     position: relative;
     background-image: url("images/dld_section_2_background_2.jpg");
     background-size: 100% 100%;
     background-attachment: fixed;
     background-position: center;
-    background-color: beige;
+    background-color: white;
 }
 
 .dld_side_navigation_bar_container {
@@ -177,7 +176,8 @@
     padding: 2vw;
     margin-left: 2vw;
     margin-top: 2vw;
-    height: 27vw;
+    margin-right: 2vw;
+    height: 34vw;
     z-index: 2;
 }
 
@@ -203,7 +203,7 @@
     padding: 0.5rem;
 }
 
-.dld_selector {
+/* .dld_selector {
     width: 10vw;
     height: 27.5vw;
     background-color: rgb(25, 25, 25);
@@ -216,20 +216,53 @@
     text-align: center;
     line-height: 25.46vw;
     font-size: 1vw;
-}
+} */
 
 .dld_section_3_container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 48.3vw;
+    height: 52vw;
     position: relative;
+    background-color: red;
 }
 
-.dld_footer {
-    background-color: black;
-    height: 10vw;
+.dld_section_4_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 52vw;
+    position: relative;
+    background-color: orange;
+}
+
+.dld_section_5_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 52vw;
+    position: relative;
+    background-color: yellow;
+}
+
+.dld_section_6_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 52vw;
+    position: relative;
+    background-color: green;
+}
+
+.dld_group_1 {
+    width: 100%;
+}
+.dld_group_2 {
+    width: 100%;
 }
 
 /* Edison's explorer.html */

@@ -1,47 +1,36 @@
-/* Reset some default margin and padding */
-body, html {
-    margin: 0;
-    padding: 0;
+/* Reset some default button styles */
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    color: #333; /* Text color */
 }
 
-/* Create a container for the sidebar and content */
-.container {
-    display: flex;
-    max-width: 1200px; /* Adjust as needed */
-    margin: 20px auto; /* Add margin on all sides */
+/* Create the initial underline effect */
+.animated-button::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333; /* Change this to your desired underline color */
+    transition: width 0.3s ease;
 }
 
-/* Style the sidebar */
-.sidebar {
-    width: 250px; /* Adjust the width as needed */
-    background-color: #f0f0f0;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a shadow */
-    position: sticky;
-    top: 20px; /* Adjust the top position as needed */
-    padding: 20px;
+/* Create the hover animation */
+.animated-button:hover::before {
+    width: 100%;
 }
 
-/* Style the navigation links */
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin-bottom: 10px;
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-/* Style the main content */
-.content {
-    flex: 1;
-    background-color: #fff;
-    padding: 20px;
-    margin-left: 20px; /* Add margin on the left side */
+/* Add the rounded background when fully hovered */
+.animated-button:hover {
+    background-color: #333; /* Change this to your desired background color */
+    border-radius: 25px; /* Adjust the radius to make it more or less rounded */
+    color: #fff; /* Change the text color for better visibility */
+    transition: background-color 0.3s ease;
 }
