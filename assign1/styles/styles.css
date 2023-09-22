@@ -310,7 +310,7 @@
 } */
 
 /* testing for one contribution only */
-/* .ash_container{
+.ash_container{
     width: 100vw; 
     background: white;
     overflow: hidden;
@@ -347,51 +347,10 @@
 
 .ash_profile_img span{
     margin-left: ;
-} */
-
-
-/*apa ini extra */
-/* .ash_container{
-    width: 100vw; 
-    background: white;
-    overflow: hidden;
-    border-radius: 0.46875vw;
-    border: 0.15625vw solid white;
 }
-
-.ash_top_bar{
-    width: 100%;
-    height: 11.71875vw;
-    padding: 3.90625vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.ash_profile_img{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    border-radius: 50%;
-}
-
-.ash_profile_img img{
-    position: absolute;
-    top: ;
-    left: ;
-    width: ;
-    height: ;
-    border-radius: 50%;
-    display: inline-block;
-    object-fit: cover;
-}
-
-.ash_profile_img span{
-    margin-left: ;
-} */
 
 /* testing 2 */
-:root{
+/* :root{
     --surface-color: #fff;
     --curve: 40;
 }
@@ -502,7 +461,7 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
-}
+} */
 
 /* Tzy Lynn's identify.html */
 
