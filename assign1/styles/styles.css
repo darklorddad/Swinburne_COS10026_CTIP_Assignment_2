@@ -271,24 +271,69 @@
 }
 
 /* Edison's explorer.html */
-
-.czy_body {
-    color: white;
+.czy_body{
     margin: 0;
     padding: 0;
-    background-color: #222021;
+    overflow: hidden;
+
+    background-color: #090909;
+    background-image: url("images/czy/very_nice_bg.png");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
 }
 
-.czy_container{
-    box-sizing: border-box;
-    margin: 10vw 15vw;
+.czy_axis{
+    transform: translate(26.5%, 250%);
+    display: block;
 }
 
-.czy_family_card{
-    color: black;
-    background-color: #f1ebdb;
+.czy_axis_centre{
+    position: relative;
+    width: 4.38rem;
+    height: 4.38rem;
 }
+
+.czy_axis_left{
+    right: 100%;
+    position: absolute;
+    top: 50%;
+    width: 100vw;
+    height: 2px;
+    background-color: #cbff40;
+}
+
+.czy_axis_right{
+    left: 100%;
+    position: absolute;
+    top: 50%;
+    width: 100vw;
+    height: 2px;
+    background-color: #cbff40;
+}
+
+.czy_axis_top{
+    bottom: 100%;
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 30vh;
+    background: linear-gradient(0deg, #cbff40, transparent 80%);
+}
+
+.czy_axis_bottom{
+    top: 100%;
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100vh;
+    background: #cbff40;
+}
+
+
 
 /* Ashley's contributor.html */
 
