@@ -287,7 +287,7 @@
 }
 
 .czy_axis{
-    transform: translate(50%, 250%);
+    transform: translate(26.5%, 250%);
     display: block;
 }
 
@@ -302,7 +302,7 @@
     position: absolute;
     top: 50%;
     width: 100vw;
-    height: 0.15vw;
+    height: 2px;
     background-color: #cbff40;
 }
 
@@ -311,7 +311,7 @@
     position: absolute;
     top: 50%;
     width: 100vw;
-    height: 0.15vw;
+    height: 2px;
     background-color: #cbff40;
 }
 
@@ -319,7 +319,7 @@
     bottom: 100%;
     position: absolute;
     left: 50%;
-    width: 0.15vw;
+    width: 2px;
     height: 30vh;
     background: linear-gradient(0deg, #cbff40, transparent 80%);
 }
@@ -328,7 +328,7 @@
     top: 100%;
     position: absolute;
     left: 50%;
-    width: 0.15vw;
+    width: 2px;
     height: 100vh;
     background: #cbff40;
 }
