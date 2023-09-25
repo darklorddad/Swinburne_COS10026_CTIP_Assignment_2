@@ -146,11 +146,10 @@
     position: sticky;
     top: 1vw;
     padding: 1vw;
-    margin-left: 1vw;
-    margin-top: 1vw;
-    margin-right: 1vw;
+    margin: 1vw;
     height: 29.55vw;
     border-radius: 2vw;
+    z-index: 1;
 }
 
 .dld_snb ul {
@@ -162,7 +161,6 @@
 .dld_snb ul li {
     margin-bottom: 1vw;  
     transition: transform 0.5s ease;
-    /* border-radius: 2vw; */
 }
 
 .dld_snb ul li:hover {
@@ -175,22 +173,23 @@
 .dld_snbi::after {
     content: attr(data-text);
     position: absolute;
-    left: 100%;
+    left: 76%;
     top: 50%;
     transform: translateY(-50%);
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     white-space: nowrap;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    /* transition: opacity 0.25s ease; */
     font-family: "dld_samsungsharpsans";
     font-size: 1vw;
-    padding: 1vw;
+    padding: 0.81vw;
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
 }
 
 .dld_snbi {
     background: white;
-    /* border-radius: 1vw; */
     padding: 0.5vw 1vw;
     border: none;
     border-radius: 1vw;
@@ -247,9 +246,11 @@
     border-radius: 2vw;
     margin: 0.5vw;
 }
+
 .dld_card_1 {
     margin-top: 8vw;
 }
+
 .dld_card_3 {
     margin-bottom: 8vw;
 }
