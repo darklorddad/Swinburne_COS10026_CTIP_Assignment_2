@@ -149,7 +149,7 @@
     margin-left: 1vw;
     margin-top: 1vw;
     margin-right: 1vw;
-    height: 38vw;
+    height: 29.55vw;
     border-radius: 2vw;
 }
 
@@ -162,19 +162,13 @@
 .dld_snb ul li {
     margin-bottom: 1vw;  
     transition: transform 0.5s ease;
-    border-radius: 2vw;
+    /* border-radius: 2vw; */
 }
 
 .dld_snb ul li:hover {
     transform: translateX(0.5vw);
-    background-color: black;
-}
-
-.dld_snb a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    padding: 0.5rem;
+    background-color: white;
+    border-radius: 1vw;
 }
 
 /* dld_side_navigation_bar_item */
@@ -184,18 +178,22 @@
     left: 100%;
     top: 50%;
     transform: translateY(-50%);
-    padding: 0.2vw;
     background-color: black;
     color: white;
     white-space: nowrap;
     opacity: 0;
     transition: opacity 0.3s ease;
+    font-family: "dld_samsungsharpsans";
+    font-size: 1vw;
+    padding: 1vw;
 }
 
 .dld_snbi {
     background: white;
-    border-radius: 1vw;
+    /* border-radius: 1vw; */
     padding: 0.5vw 1vw;
+    border: none;
+    border-radius: 1vw;
 }
 
 .dld_snbi:hover::after {
@@ -203,21 +201,7 @@
 }
 
 .dld_snbit {
-    display: none;
-    margin-left: 1vw;
-    transition: opacity 0.3s ease;
-}
-
-/* Show text on hover and change icon color */
-.dld_snbi:hover .dld_snbit {
-    display: inline;
-    opacity: 1;
-}
-
-/* Icon hover animation */
-.dld_snbi:hover .material-symbols-outlined {
-    transform: scale(1.2); /* Adjust the scale factor as needed */
-    transition: transform 0.3s ease;
+    color: white;
 }
 
 /* dld_section_3_container */
