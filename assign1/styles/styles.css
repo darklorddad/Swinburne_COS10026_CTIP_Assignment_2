@@ -260,62 +260,123 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-
+    color: #090909;
     background-color: #090909;
-    background-image: url("images/czy/very_nice_bg.png");
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
 }
 
+.czy_bg{
+    position: fixed;
+    background-image: url("images/czy/very_nice_bg.png");
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    filter: invert(100%);
+}
+
+.czy_content{
+    transform: translate(31vw, 13vw);
+}
+
+.czy_content_header{
+    font-size: 3vw;
+    font-family: "dld_samsungsharpsans_bold";
+}
+
+.czy_cards{
+    transform: translate(32vw, 17vw);
+    font-size: 2vw;
+    font-family: "dld_samsungsharpsans_medium";
+}
+
+.czy_triangle{
+    transform: translate(-5.1vw, -21.7vw) rotate(-30deg);
+    -webkit-text-stroke: 0.15vw white;
+    color: transparent;
+    font-size: 1.5vw;
+}
+
+.czy_families_content, .czy_cards_genera, .czy_cards_species{
+    color: white;
+    border-radius: 2vw;
+    padding-left: 4vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+
+    margin-bottom: 1.5vw;
+    background: linear-gradient(135deg, #444444, transparent 45%);
+}
+
+.czy_families_content:hover, .czy_cards_genera:hover, .czy_cards_species:hover{
+    cursor: crosshair;
+}
+
+.czy_btn{
+    display: none;
+}
+
+
+
 .czy_axis{
-    transform: translate(26.5%, 250%);
+    transform: translate(27vw, -6vw);
     display: block;
 }
 
 .czy_axis_centre{
     position: relative;
-    width: 4.38rem;
-    height: 4.38rem;
+    width: 3vw;
+    height: 3vw;
+}
+
+.czy_axis_centre::before{
+    position: absolute;
+    top: calc(50% - 0.5vw);
+    left: calc(50% - 0.5vw);
+    box-sizing: border-box;
+    width: 1.2vw;
+    height: 1.2vw;
+    content: "";
+    border: 0.25vw solid #090909;
+    border-radius: 2vw;
 }
 
 .czy_axis_left{
     right: 100%;
     position: absolute;
     top: 50%;
-    width: 100vw;
-    height: 2px;
-    background-color: #cbff40;
+    width: 30vw;
+    height: 0.2vw;
+    background: linear-gradient(-90deg, #090909, transparent 80%);
 }
 
 .czy_axis_right{
     left: 100%;
     position: absolute;
     top: 50%;
-    width: 100vw;
-    height: 2px;
-    background-color: #cbff40;
+    width: 70vw;
+    height: 0.2vw;
+    background: linear-gradient(90deg, #090909, transparent 95%);
 }
 
 .czy_axis_top{
     bottom: 100%;
     position: absolute;
     left: 50%;
-    width: 2px;
-    height: 30vh;
-    background: linear-gradient(0deg, #cbff40, transparent 80%);
+    width: 0.2vw;
+    height: 18vw;
+    background: linear-gradient(0deg, #090909, transparent 80%);
 }
 
 .czy_axis_bottom{
     top: 100%;
     position: absolute;
     left: 50%;
-    width: 2px;
+    width: 0.2vw;
     height: 100vh;
-    background: #cbff40;
+    background: #090909;
 }
 
 
