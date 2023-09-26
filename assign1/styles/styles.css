@@ -44,7 +44,7 @@
 
 .dld_tnbl a {
     text-decoration: none;
-    color: white;
+    color: #e9e7e4;
     margin-right: 1vw;
     font-size: 1vw;
     font-family: "dld_samsungsharpsans_medium", sans-serif;
@@ -59,7 +59,7 @@
 
 .dld_tnbi:hover {
     color: black;
-    background-color: white;
+    background-color: #e9e7e4;
 }
 
 /* dld_top_navigation_bar_most_right_item */
@@ -92,7 +92,7 @@
 .dld_s1tc p {
     margin-top: 0;
     margin-bottom: 8.6vw;
-    color: white;
+    color: #e9e7e4;
 }
 
 /* dld_section_1_text_1 */
@@ -123,7 +123,7 @@
 .dld_s1td {
     width: 0.1vw;
     height: 12.5vw;
-    background-color: white;
+    background-color: #e9e7e4;
     margin: 0 3vw;
     margin-bottom: 8.9vw;
 }
@@ -138,15 +138,17 @@
 /* dld_main */
 .dld_m {
     display: flex;
+    background-color: black;
 }
 
 /* dld_side_navigation_bar */
 .dld_snb {
-    background-color: black;
+    background-color: #e9e7e4;
     position: sticky;
-    top: 1vw;
+    top: 5vw;
     padding: 1vw;
-    margin: 1vw;
+    margin-top: 6.75vw;
+    margin-left: 5vw;
     height: 29.55vw;
     border-radius: 2vw;
     z-index: 1;
@@ -165,7 +167,7 @@
 
 .dld_snb ul li:hover {
     transform: translateX(0.5vw);
-    background-color: white;
+    background-color: #e9e7e4;
     border-radius: 1vw;
 }
 
@@ -176,7 +178,7 @@
     left: 76%;
     top: 50%;
     transform: translateY(-50%);
-    background-color: white;
+    background-color: #e9e7e4;
     color: black;
     white-space: nowrap;
     opacity: 0;
@@ -189,7 +191,7 @@
 }
 
 .dld_snbi {
-    background: white;
+    background: #e9e7e4;
     padding: 0.5vw 1vw;
     border: none;
     border-radius: 1vw;
@@ -203,73 +205,73 @@
     color: white;
 }
 
-/* dld_section_3_container */
-.dld_section_3_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.dld_s2 {
     width: 100%;
-    height: 52vw;
-    position: relative;
-    background-color: lightgrey;
+}
+
+.dld_s2c1 {
+    display: flex;
+    /* align-items: center; */
+    width: 100%;
+    height: 50vw;
+    /* position: relative; */
+    background-color: black;
     flex-wrap: wrap;
 }
 
-.dld_section_4_container {
+.dld_s2c2 {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 52vw;
+    height: 50vw;
     position: relative;
-    background-color: lightgrey;
+    background-color: black;
 }
 
-.dld_section_5_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 52vw;
-    position: relative;
-    background-color: lightgrey;
-}
-
-.dld_group_1 {
-    width: 100%;
-}
-
-.dld_section_3_cards {
+.dld_s2cc {
     width: 35vw;
     height: 10vw;
-    background-color: #C5EAFA;
+    background-color: #406e3f;
     border-radius: 2vw;
-    margin: 0.5vw;
     border: 0.2vw solid transparent;
     transition: border-color 0.5s ease-in-out;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-left: 5vw;
 }
 
-.dld_section_3_cards:hover {
-    border: 0.2vw solid white;
+.dld_s2cc:hover {
+    border: 0.2vw solid #406e3f;
 }
 
-
-.dld_card_1 {
-    margin-top: 8vw;
-}
-
-.dld_card_3 {
-    margin-bottom: 8vw;
-}
-
-.dld_rectangle {
+.dld_s2cc1 {
+    margin-top: 7vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1vw;
-    height: 1vw;
-    background-color: #444444;
+    flex-wrap: wrap;
+}
+
+.dld_s2cc3 {
+    margin: 0;
+}
+
+.dld_s2cc3 {
+    margin-bottom: 4.4vw;
+    margin-left: 5vw;
+}
+
+.dld_s2cc1i {
+    width: 33.33%;
+    height: 100%;
+    background-color: red;
+    border-top-left-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.dld_s2cc1t {
+    width: 66.67%;
+    height: 100%;
+    background-color: green;
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
 }
 
 /* Edison's explorer.html */
