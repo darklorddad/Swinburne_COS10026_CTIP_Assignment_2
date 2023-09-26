@@ -474,8 +474,7 @@
     margin-left: 50px;
 }
 
-/*apa ini extra */
-/* .ash_container{
+.ash_container{
     width: 100vw; 
     background: white;
     overflow: hidden;
@@ -519,12 +518,12 @@
     padding: 5px 0;
 }
 
-/* .ash_comments p{
+.ash_comments p{
     font-size: 14px;
     color: burlywood;
     padding: 5px 0;
     padding-bottom: 10px;
-} */
+}
 
 .ash_comment_container{
     width: 100%;
