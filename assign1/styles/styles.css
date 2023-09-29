@@ -411,7 +411,8 @@
 
 .ash_text_container_1{
     font-family: "dld_samsungsharpsans_bold", sans-serif;
-    font-size: 3vw;
+    font-size: 2vw;
+    /* margin-left: 5vw; */
     background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
     background-clip: text;
     -webkit-background-clip: text;
@@ -429,6 +430,14 @@
     to {
         -webkit-filter: hue-rotate(-360deg);
     }
+}
+
+.ash_text_container_1_2{
+    font-family: "dld_samsungsharpsans_medium", sans-serif;
+}
+
+.ash_text_container_1_3{
+    font-family: "dld_samsungsharpsans", sans-serif;
 }
 
 /* Tzy Lynn's identify.html */
