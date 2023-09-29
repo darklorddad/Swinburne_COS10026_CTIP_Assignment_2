@@ -1172,19 +1172,27 @@
 .ttl_result_container{
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
 }
 
 .ttl_plant_card {
     width: 30vw;
-    height: 35vw;
+    height: 32vw;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-color: white;
-    box-shadow:  0 0 0 #21F5F0;
     border-radius: 20px;
+}
+
+.ttl_plant_card:hover{
+    box-shadow: 0 40px 260px rgba(255, 0, 0, 0.1), 0 40px 130px rgba(250, 100, 100, 0.2), -80px -40px 230px rgba(0, 200, 250, 0.15), 80px 40px 230px rgba(120, 120, 255, 0.15);
+}
+
+.ttl_plant_img_conatiner{
+    height: 200%;
 }
 
 .ttl_plant_img {
@@ -1195,18 +1203,147 @@
 
 .ttl_plant_name{
     width: 100%;
-    padding: 1vw;
+    height: 5%;
+    padding: 0.2vw;
     text-align: center;
     background-color: white;
 }
 
 .ttl_plant_common_name{
     font-size: 2vw;
-    margin-bottom: 10px;
+    margin-bottom: 0.2vw;
 }
 
 .ttl_plant_scientific_name{
-    font-size: 2vw;
-    margin-bottom: 20px;
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
     font-style: italic;
+}
+
+.ttl_plant_modal_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2vw;
+}
+
+.ttl_plant_modal_box:not(:first-child) {
+    height: 45rem;
+}
+
+a.ttl_link-1, a.ttl_link-2, a.ttl_link-1:link, a.ttl_link-2:link {
+  font-family: inherit;
+  text-decoration: none;
+}
+
+a.ttl_link-1:focus, a.ttl_link-2:focus {
+  outline: none;
+}
+
+.ttl_modal_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    background: hsl(220, 25%, 10%);
+}
+
+/* using :target */
+/*
+when users will click/enter button(link) browser will add a #id in a url and when that happens we'll show our users the modal that contains that id.
+*/
+.ttl_modal_container:target {
+  display: flex;
+}
+
+.ttl_modal {
+  width: 80vw;
+  padding: 5vw;
+  border-radius: 2vw;
+
+  color: hsl(220, 50%, 90%);
+  background: linear-gradient(to right, hsl(210, 30%, 20%), hsl(255, 30%, 25%));
+  box-shadow: .4rem .4rem 10.2rem .2rem hsla(236, 50%, 50%, .3);
+  position: relative;
+
+  overflow: hidden;
+}
+
+.ttl_modal__title {
+  font-size: 6vw;
+}
+
+.ttl_modal__text {
+  padding: 0 4rem;
+  margin-top: 4rem;
+
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+/* link-... */
+.ttl_link-1 {
+    font-size: 1vw;
+
+    color: hsl(220, 50%, 90%);
+    background: linear-gradient(to right, hsl(210, 30%, 20%), hsl(255, 30%, 25%));
+    box-shadow: .4rem .4rem 2.4rem .2rem var(hsla(236, 50%, 50%, .3));
+    border-radius: 2vw;
+    margin-top: 80%;
+    padding: 1vw;
+
+    transition: .2s;
+}
+
+a.ttl_link-1:hover, a.ttl_link-1:focus {
+    transform: translateY(-.2rem);
+    box-shadow: 0 0 4.4rem .2rem hsla(236, 50%, 50%, .4);
+}
+
+a.ttl_link-1:focus {
+    box-shadow:
+    0 0 4.4rem .2rem hsla(236, 50%, 50%, .4),
+    0 0 0 .4rem hsl(220, 25%, 10%),
+    0 0 0 .5rem hsl(210, 90%, 50%);
+}
+
+.ttl_link-2 {
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid hsla(0, 0%, 100%, .2);
+    border-radius: 100rem;
+
+    color: inherit;
+    font-size: 2.2rem;
+
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .2s;
+}
+
+a.ttl_link-2::before {
+    content: '×';
+    transform: translateY(-.1rem);
+}
+
+a.ttl_link-2:hover, a.ttl_link-2:focus {
+    background: hsl(210, 90%, 50%);
+    border-color: hsl(210, 90%, 50%);
+    transform: translateY(-.2rem);
 }
