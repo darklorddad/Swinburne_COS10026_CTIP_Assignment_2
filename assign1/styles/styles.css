@@ -954,10 +954,19 @@
     fill: #FFFDEF
 }
 
+.ttl_result_title{
+    color: white;
+    text-align: center;
+    font-size: 6vw;
+}
+
 .ttl_result_container{
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
+    margin-left: 15vw;
+    column-gap: 7vw;
+    row-gap: 7vw;
+    padding: 1vw 6vw 6vw;
 }
 
 .ttl_plant_card {
@@ -973,7 +982,10 @@
 }
 
 .ttl_plant_card:hover{
-    box-shadow: 0 40px 260px rgba(255, 0, 0, 0.1), 0 40px 130px rgba(250, 100, 100, 0.2), -80px -40px 230px rgba(0, 200, 250, 0.15), 80px 40px 230px rgba(120, 120, 255, 0.15);
+    /* box-shadow: 0 40px 260px rgba(255, 0, 0, 0.1), 0 40px 130px rgba(250, 100, 100, 0.2), -80px -40px 230px rgba(0, 200, 250, 0.15), 80px 40px 230px rgba(120, 120, 255, 0.15); */
+    box-shadow: 10px 10px 71px 11px rgba(24,236,232,1);
+    -webkit-box-shadow: 10px 10px 71px 11px rgba(24,236,232,1);
+    -moz-box-shadow: 10px 10px 71px 11px rgba(24,236,232,1);
 }
 
 .ttl_plant_img_conatiner{
@@ -1053,6 +1065,7 @@ when users will click/enter button(link) browser will add a #id in a url and whe
 
 .ttl_modal {
   width: 80vw;
+  max-height: 70%;
   padding: 5vw;
   border-radius: 2vw;
 
@@ -1061,7 +1074,8 @@ when users will click/enter button(link) browser will add a #id in a url and whe
   box-shadow: .4rem .4rem 10.2rem .2rem hsla(236, 50%, 50%, .3);
   position: relative;
 
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow-y: scroll;
 }
 
 .ttl_modal__title {
@@ -1082,7 +1096,7 @@ when users will click/enter button(link) browser will add a #id in a url and whe
 
     color: hsl(220, 50%, 90%);
     background: linear-gradient(to right, hsl(210, 30%, 20%), hsl(255, 30%, 25%));
-    box-shadow: .4rem .4rem 2.4rem .2rem var(hsla(236, 50%, 50%, .3));
+    box-shadow: .4rem .4rem 2.4rem .2rem hsla(236, 50%, 50%, .3);
     border-radius: 2vw;
     margin-top: 80%;
     padding: 1vw;
@@ -1132,3 +1146,61 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     border-color: hsl(210, 90%, 50%);
     transform: translateY(-.2rem);
 }
+
+/* .ttl_plant_info_slider_box{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.ttl_plant_info_slider_img{
+    width: 100px;
+}
+
+.ttl_plant_info_main_slider{
+    position: relative;
+    width: 640px;
+    padding-top: 320px;
+    margin: 20px auto;
+    box-shadow: 0 10px 20px -6px rgba(0,0,0,0.8);
+}
+
+.ttl_plant_info_main_slider> img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all .6s;
+}
+
+.ttl_plant_info_main_slider input[name="chinaberry"]{
+    display: none;
+}
+
+.ttl_plant_info_main_slider label{
+    margin: 50px 0 0 20px;
+    border: 3px solid #888;
+    float: left;
+    cursor: pointer;
+    transition: all .6s;
+    opacity: 0.8; 
+}
+
+.ttl_plant_info_main_slider label img{
+    display: block;
+}
+
+.ttl_plant_info_main_slider input[name="chinaberry"]:checked+label{
+    border-color: #777;
+    opacity: 1;
+}
+
+.ttl_plant_info_main_slider input[name="chinaberry"]~img{
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+.ttl_plant_info_main_slider input[name="chinaberry"]:checked+label+img{
+    opacity: 1;
+    transform: scale(1);
+} */
