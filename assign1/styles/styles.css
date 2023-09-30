@@ -405,7 +405,7 @@
 .ash_body{
     margin: 0;
     padding: 0;
-    background-color: grey;
+    background-color: black;
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
 }
 
@@ -434,14 +434,16 @@
 
 .ash_text_container_1_2{
     font-family: "dld_samsungsharpsans_medium", sans-serif;
+    color: white;
 }
 
 .ash_text_container_1_3{
     font-family: "dld_samsungsharpsans", sans-serif;
+    color: white;
 }
 
 .ash_container{
-    width: 100vw; 
+    width: auto; 
     background: white;
     overflow: hidden;
     border-radius: 0.46875vw;
@@ -479,17 +481,32 @@
     margin-left: 50px;
 }
 
+/* .ash_username{
+    margin-left: 10px; 
+    font-size: 1.5625vw; 
+    color: #222021; 
+    font-weight: bold;
+} */
+
 .ash_container{
-    width: 100vw; 
+    width: 25%; 
+    height: auto;
+    margin-bottom: 0.78125vw;
     background: white;
     overflow: hidden;
     border-radius: 0.46875vw;
     border: 0.15625vw solid white;
 }
 
-.ash_posted_img{
+/* .ash_posted_img{
     width: 640px;
     height: 640px;
+    margin-bottom: 15px;
+} */
+
+.ash_posted_img {
+    max-width: 100%; 
+    height: auto;
     margin-bottom: 15px;
 }
 
