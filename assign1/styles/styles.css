@@ -1199,11 +1199,11 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     clip-path: polygon(0 0,calc(50% - 1vw/4) 0,100% calc(50% + 1vw/4),100% 100%,0 100%);
 }
 
-.ttl_plant_about_container, .ttl_plant_care_environment_container{
+.ttl_plant_about_container, .ttl_plant_care_container{
     width: 90%;
 }
 
-.ttl_plant_about_title_container, .ttl_plant_care_environment_container{
+.ttl_plant_about_title_container, .ttl_plant_care_container{
     border-left:  2vw solid #21F5F0;
     height: 6vw;
     width: 100%;
@@ -1214,7 +1214,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     overflow: hidden;
 }
 
-.ttl_plant_about_title, .ttl_plant_care_environment_title{
+.ttl_plant_about_title, .ttl_plant_care_title{
     font-family: "dld_samsungsharpsans_medium", sans-serif;
     font-size: 3.5vw;
     vertical-align: middle;
@@ -1228,9 +1228,67 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     font-size: 2.5vw;
 }
 
-.ttl_plant_about_icon, .ttl_plant_care_environment_icon{
+.ttl_plant_about_icon, .ttl_plant_care_icon{
     width: 6vw;
     height: 6vw;
     vertical-align: middle;
 }
 
+.ttl_plant_care_card_container{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 3vw;
+    margin-top: 4vw;
+
+}
+
+.ttl_plant_care_card{
+    width: 100%;
+    background-color: white;
+    border-radius: 1vw;
+    color: black;
+    padding: 2vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 0px;
+    text-align: center;
+
+}
+
+.ttl_plant_care_card_title{
+    font-size: 3vw;
+    font-family: "dld_samsungsharpsans_medium", sans-serif;
+}
+
+.ttl_plant_care_card_text{
+    font-family: "dld_samsungsharpsans", sans-serif;
+    font-size: 2.5vw;
+}
+
+.ttl_plant_care_card_left{
+    width: 100%;
+    text-align: center;
+    padding-top: 5vw;
+
+}
+
+.ttl_plant_care_card_right{
+    width: 100%;
+    border-left: 2px dotted #808080;
+    text-align: center;
+
+}
+
+.ttl_water_icon, .ttl_sun_icon, .ttl_pruning_icon, .ttl_fertilizer_icon{
+    width: 10vw;
+}
+
+.ttl_plant_care_card_description{
+    text-align: justify;
+    font-size: 2vw;
+    padding: 5vw;
+    font-family: "dld_samsungsharpsans", sans-serif;;
+}
