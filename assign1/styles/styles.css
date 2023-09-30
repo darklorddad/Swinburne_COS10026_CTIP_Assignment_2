@@ -440,6 +440,110 @@
     font-family: "dld_samsungsharpsans", sans-serif;
 }
 
+.ash_container{
+    width: 100vw; 
+    background: white;
+    overflow: hidden;
+    border-radius: 0.46875vw;
+    border: 0.15625vw solid white;
+}
+
+.ash_top_bar{
+    width: 100%;
+    height: 11.71875vw;
+    padding: 3.90625vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ash_profile_img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+}
+
+.ash_profile_img img{
+    position: absolute;
+    /* top: ; */
+    left: -5px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: inline-block;
+    object-fit: cover;
+}
+
+.ash_profile_img span{
+    margin-left: 50px;
+}
+
+.ash_container{
+    width: 100vw; 
+    background: white;
+    overflow: hidden;
+    border-radius: 0.46875vw;
+    border: 0.15625vw solid white;
+}
+
+.ash_posted_img{
+    width: 640px;
+    height: 640px;
+    margin-bottom: 15px;
+}
+
+.ash_posted_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ash_post_footer{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.ash_post_icon{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.ash_post_icon .fa{
+    font-size: 24px;
+}
+
+.ash_post_icon_left .fa{
+    margin: 0px 3px;
+    color: #222021;
+}
+
+.ash_post_caption p{
+    padding: 5px 0;
+}
+
+.ash_comments p{
+    font-size: 14px;
+    color: burlywood;
+    padding: 5px 0;
+    padding-bottom: 10px;
+}
+
+.ash_comment_container{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ash_input_field{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
 /* Tzy Lynn's identify.html */
 
 .ttl_body{
