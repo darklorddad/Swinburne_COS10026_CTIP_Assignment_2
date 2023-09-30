@@ -553,115 +553,6 @@
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif; 
 }
 
-/* .ttl_text_container1{
-    width: 20vw;
-    height: 20vh;
-    margin-left: 5vw;
-    margin-top: 2vh;
-    float: left;
-    display: inline;
-}
-
-.ttl_text_container1 h1 {
-    opacity: 0;
-    font-family: "dld_samsungsharpsans_bold", sans-serif;
-    background: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
-    font-size: 5vw;  
-    width: 42vw;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    overflow: hidden;
-    animation: shring-animation 3s steps(50,end) 2s forwards, change_gradient 15s infinite linear;
-}
-
-@keyframes change_gradient{
-    from {
-        -webkit-filter: hue-rotate(0deg);
-    }
-    to {
-        -webkit-filter: hue-rotate(-360deg);
-    }
-}
-
-@keyframes shring-animation {
-    0% {
-      opacity: 0;
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-}
-  
-.ttl_text_container1 p {
-    text-align: justify;
-    color: white;
-    font-size: 2vw;
-}
-
-.ttl_img_container{
-    float: right;
-    display: inline;
-    margin-top: 5vw;
-    margin-right: 5vw;
-}
-
-.ttl_curve{
-    background-color: aliceblue;
-    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-    border-radius: 50%;
-    width: 50vw;
-    height: 60vh;
-    animation: morph 3s linear infinite;
-    overflow: hidden;
-}
-
-@keyframes morph{
-    0%, 100% {
-    border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
-    }
-    34% {
-      border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
-    }
-    67% {
-      border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
-    }
-}
-
-.ttl_upload-btn-wrapper {
-    position: relative;
-    left: 6vh;
-    top: -10vw;
-    padding: 20px;
-    overflow: hidden;
-    display: inline-block;
-}
-
-.ttl_btn {
-    border: 2px solid gray;
-    color: gray;
-    background-color: white;
-    padding: 8px 20px;
-    border-radius: 8px;
-    font-size: 2vw;
-    font-family: "dld_samsungsharpsans", sans-serif;
-}
-
-.ttl_upload-btn-wrapper input[type=file] {
-    font-size: 2vw;
-    position: relative;
-    left: -15vw;
-    top: 0;
-    opacity: 0;
-} */
-
 .ttl_slider_container{
     position: relative;
     overflow: hidden;
@@ -1182,8 +1073,9 @@ when users will click/enter button(link) browser will add a #id in a url and whe
   overflow-y: scroll;
 }
 
-.ttl_modal__title {
-  font-size: 6vw;
+.ttl_modal_title{
+    font-size: 3vw;
+    font-family: "dld_samsungsharpsans_medium", sans-serif;
 }
 
 .ttl_modal__text {
@@ -1251,60 +1143,41 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     transform: translateY(-.2rem);
 }
 
-/* .ttl_plant_info_slider_box{
+
+.ttl_plant_img_gallery_container{
+    margin: 0;
+    min-height: 50%;
     display: grid;
-    place-items: center;
-    min-height: 100vh;
+    place-content: center;
+}
+
+.ttl_plant_gallery{
+    display: grid;
+    width: 60vw; 
+    aspect-ratio: 1;
+    grid: auto-flow 1fr/repeat(3,1fr);
+    gap: 1vw;
+}
+
+.ttl_plant_gallery img {
     width: 100%;
-}
-
-.ttl_plant_info_slider_img{
-    width: 100px;
-}
-
-.ttl_plant_info_main_slider{
-    position: relative;
-    width: 640px;
-    padding-top: 320px;
-    margin: 20px auto;
-    box-shadow: 0 10px 20px -6px rgba(0,0,0,0.8);
-}
-
-.ttl_plant_info_main_slider> img{
-    position: absolute;
-    left: 0;
-    top: 0;
-    transition: all .6s;
-}
-
-.ttl_plant_info_main_slider input[name="chinaberry"]{
-    display: none;
-}
-
-.ttl_plant_info_main_slider label{
-    margin: 50px 0 0 20px;
-    border: 3px solid #888;
-    float: left;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale();
     cursor: pointer;
-    transition: all .6s;
-    opacity: 0.8; 
+    transition: .5s
 }
 
-.ttl_plant_info_main_slider label img{
-    display: block;
+.ttl_plant_gallery img:hover {
+    filter: grayscale(0);
 }
 
-.ttl_plant_info_main_slider input[name="chinaberry"]:checked+label{
-    border-color: #777;
-    opacity: 1;
+.ttl_plant_gallery img:nth-child(2) {
+    grid-area: 1/2/span 2/span 2;
+    clip-path: polygon(0 0,100% 0,100% 100%,calc(50% + 1vw/4) 100%,0 calc(50% - 1vw/4))
 }
 
-.ttl_plant_info_main_slider input[name="chinaberry"]~img{
-    opacity: 0;
-    transform: scale(1.1);
+.ttl_plant_gallery img:nth-child(3) {
+    grid-area: 2/1/span 2/span 2;
+    clip-path: polygon(0 0,calc(50% - 1vw/4) 0,100% calc(50% + 1vw/4),100% 100%,0 100%);
 }
-
-.ttl_plant_info_main_slider input[name="chinaberry"]:checked+label+img{
-    opacity: 1;
-    transform: scale(1);
-} */
