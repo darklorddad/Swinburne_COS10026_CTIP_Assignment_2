@@ -450,7 +450,8 @@
     border: 0.15625vw solid white;
 }
 
-.ash_top_bar{
+/* testing 1 */
+/* .ash_top_bar{
     width: 100%;
     height: 11.71875vw;
     padding: 3.90625vw;
@@ -468,7 +469,6 @@
 
 .ash_profile_img img{
     position: absolute;
-    /* top: ; */
     left: -5px;
     width: 42px;
     height: 42px;
@@ -479,7 +479,7 @@
 
 .ash_profile_img span{
     margin-left: 50px;
-}
+} */
 
 /* .ash_username{
     margin-left: 10px; 
@@ -488,7 +488,7 @@
     font-weight: bold;
 } */
 
-.ash_container{
+/* .ash_container{
     width: 25%; 
     height: auto;
     margin-bottom: 0.78125vw;
@@ -496,7 +496,7 @@
     overflow: hidden;
     border-radius: 0.46875vw;
     border: 0.15625vw solid white;
-}
+} */
 
 /* .ash_posted_img{
     width: 640px;
@@ -504,7 +504,7 @@
     margin-bottom: 15px;
 } */
 
-.ash_posted_img {
+/* .ash_posted_img {
     max-width: 100%; 
     height: auto;
     margin-bottom: 15px;
@@ -559,7 +559,7 @@
     padding: 10px;
     border: none;
     outline: none;
-}
+} */
 
 /* Tzy Lynn's identify.html */
 
