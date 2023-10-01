@@ -732,7 +732,68 @@ button:focus+.design-container {
     --tr: 20;
     --op: .7;
   }
-  
+
+/* comment testing */
+.ash_comment_wrapper{
+	padding: 80px 0;
+}
+
+.ash_comment_container {
+	max-width: 650px;
+	width: 650px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.ash_head_text {
+	font-size: 40px;
+	font-weight: 700;
+	color: #ffffff;
+	margin-bottom: 30px;
+}
+
+.ash_comment_box {
+	display: flex;
+	align-items: flex-start;
+}
+
+.ash_pfp {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin-right: 20px;
+}
+
+.ash_comment_box {
+	margin-top: 20px;
+}
+
+.ash_comment_custom_flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.ash_custom_para {
+	font-size: 16px;
+	color: #ffffff;
+}
+
+.ash_custom_para span {
+	font-size: 13px;
+}
+
+.ash_reply_text {
+	color: #ffffff;
+	text-decoration: none;
+	transition: .2s;
+}
+
+.ash_blog_details_para {
+	font-size: 15px;
+	margin-top: 20px;
+	color: #ffffff;
+}
 
 /* Tzy Lynn's identify.html */
 
