@@ -574,12 +574,14 @@
     height: 500px;
     margin: 40px;
     perspective: 1000px;
+    display: flex;
+    justify-content: space-between;
   }
   
   /* .flip-card */
 .ash_flip_card {
-    width: inherit;
-    height: inherit;
+    width: 310px;
+    height: 500px;
     position: relative;
     transform-style: preserve-3d;
     transition: .6s .1s;
@@ -618,6 +620,10 @@
 .ash_card_back {
     transform: rotateY(180deg);
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   /* figure */
