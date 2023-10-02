@@ -1,36 +1,10 @@
-/* Reset some default button styles */
-button {
-    border: none;
-    background: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    font-size: 16px;
-    position: relative;
-    overflow: hidden;
-    color: #333; /* Text color */
-}
-
-/* Create the initial underline effect */
-.animated-button::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #333; /* Change this to your desired underline color */
-    transition: width 0.3s ease;
-}
-
-/* Create the hover animation */
-.animated-button:hover::before {
-    width: 100%;
-}
-
-/* Add the rounded background when fully hovered */
-.animated-button:hover {
-    background-color: #333; /* Change this to your desired background color */
-    border-radius: 25px; /* Adjust the radius to make it more or less rounded */
-    color: #fff; /* Change the text color for better visibility */
-    transition: background-color 0.3s ease;
-}
+html, body { 
+    min-height: 100%; 
+  }
+  body {
+    background: rgb(32, 32, 32);
+    background-image: -webkit-radial-gradient(top, circle cover, rgb(40, 40, 40), black 80%);
+    background-image: -moz-radial-gradient(top, circle cover, rgb(40, 40, 40), black 80%);
+    background-image: -o-radial-gradient(top, circle cover, rgb(40, 40, 40), black 80%);
+    background-image: radial-gradient(top, circle cover, rgb(40, 40, 40), black 80%);
+  }

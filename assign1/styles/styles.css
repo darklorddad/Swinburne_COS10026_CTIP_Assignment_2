@@ -278,127 +278,86 @@
 .czy_body{
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    color: #090909;
-    background-color: #090909;
+    color: rgb(206, 206, 206);
+    background: fixed;
+    background-image: linear-gradient(5deg, rgb(23, 26, 28), rgb(10, 82, 63));
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
 }
 
-.czy_bg{
-    position: fixed;
-    background-image: url("images/czy/very_nice_bg.png");
-    background-position: top;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    filter: invert(100%);
+.czy_navigation_fool ul{
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 5vw;
+    margin-right: 8vw;
+    margin-left: 8vw;
+    list-style-type: none;
+
+    border-radius: 1vw;
+    background-color: rgb(31, 41, 46);
 }
 
-.czy_content{
-    transform: translate(31vw, 13vw);
+.czy_navigation_fool li{
+    float: left;
 }
 
-.czy_content_header{
-    font-size: 3vw;
-    font-family: "dld_samsungsharpsans_bold";
-}
-
-.czy_cards{
-    transform: translate(32vw, 17vw);
-    font-size: 2vw;
-    font-family: "dld_samsungsharpsans_medium";
-}
-
-.czy_triangle{
-    transform: translate(-5.1vw, -21.7vw) rotate(-30deg);
-    -webkit-text-stroke: 0.15vw white;
-    color: transparent;
-    font-size: 1.5vw;
-}
-
-.czy_families_content, .czy_cards_genera, .czy_cards_species{
-    color: white;
-    border-radius: 2vw;
-    padding-left: 4vw;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
-
-    margin-bottom: 1.5vw;
-    background: linear-gradient(135deg, #444444, transparent 45%);
-}
-
-.czy_families_content:hover, .czy_cards_genera:hover, .czy_cards_species:hover{
-    cursor: crosshair;
-}
-
-.czy_btn{
-    display: none;
-}
-
-
-
-.czy_axis{
-    transform: translate(27vw, -6vw);
+.czy_navigation_fool li a{
+    color: rgb(206, 206, 206);
     display: block;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left: 8vw;
+    padding: 0.5vw 4vw;
+    border-radius: 1svw;
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 2vw;
+    background-color: rgb(23, 30, 34);
+    text-decoration: none;
+    text-align: center;
 }
 
-.czy_axis_centre{
-    position: relative;
-    width: 3vw;
-    height: 3vw;
+.czy_navigation_fool a:hover{
+    background-color: rgb(255, 255, 255, 0.05);
 }
 
-.czy_axis_centre::before{
-    position: absolute;
-    top: calc(50% - 0.5vw);
-    left: calc(50% - 0.5vw);
-    box-sizing: border-box;
-    width: 1.2vw;
-    height: 1.2vw;
-    content: "";
-    border: 0.25vw solid #090909;
-    border-radius: 2vw;
+.czy_where_magic_happens{
+    margin-top: 1vw;
+    margin-right: 8vw;
+    margin-left: 8vw;
+    border-radius: 1vw;
+    background-color: rgb(31, 41, 46);
+    padding: 1.5vw;
+    overflow: hidden;
 }
 
-.czy_axis_left{
-    right: 100%;
-    position: absolute;
-    top: 50%;
+.czy_tis_a_search_bar{
+    float: right;
     width: 30vw;
-    height: 0.2vw;
-    background: linear-gradient(-90deg, #090909, transparent 80%);
+    font-size: 1.5vw;
+    padding: 0.5vw;
+    padding-left: 1.5vw;
+    border: none;
+    border-radius: 1.5vw;
 }
 
-.czy_axis_right{
-    left: 100%;
-    position: absolute;
-    top: 50%;
-    width: 70vw;
-    height: 0.2vw;
-    background: linear-gradient(90deg, #090909, transparent 95%);
+.czy_tis_a_search_bar:hover{
+    box-shadow: rgba(206, 206, 206, 0.8) 0 0 1vw 0.1vw;
 }
 
-.czy_axis_top{
-    bottom: 100%;
-    position: absolute;
-    left: 50%;
-    width: 0.2vw;
-    height: 18vw;
-    background: linear-gradient(0deg, #090909, transparent 80%);
+.czy_where_magic_happens h1{
+    font-family: "dld_samsungsharpsans_medium";
+    float: left;
+    margin: 0;
+    font-size: 2.5vw;
 }
 
-.czy_axis_bottom{
-    top: 100%;
-    position: absolute;
-    left: 50%;
-    width: 0.2vw;
-    height: 100vh;
-    background: #090909;
+.czy_tis_a_line{
+    margin: 0;
+    padding: 0;
+    margin-top: 3.2vw;
+    border-radius: 1vw;
+    border: 0.2vw solid rgb(206, 206, 206);
 }
-
-
 
 /* Ashley's contributor.html */
 
@@ -627,12 +586,12 @@
   }
   
   /* figure */
-figure {
+.ash_figure {
     z-index: -1;
   }
   
   /* figure, .img-bg */
-/* figure,
+/* ash_figure,
 .ash_img_bg {
     position: absolute;
     top: 0;
@@ -642,14 +601,14 @@ figure {
   } */
   
   /* img */
-img {
+.ash_plant_post_img {
     max-width: 100%;
     max-height: 100%;
     border-radius: 24px;
   }
   
   /* figcaption */
-figcaption {
+.ash_plant_name {
     display: block;
     width: auto;
     margin-top: 12%;
@@ -701,7 +660,7 @@ figcaption {
   }
    
   /* button */
-button {
+.ash_comment_button {
     font-family: inherit;
     font-weight: bold;
     color: var(--white-1);
@@ -714,25 +673,25 @@ button {
     cursor: pointer;
   }
   
-button:hover,
-button:focus {
+.ash_comment_button:hover,
+.ash_comment_button:focus {
     color: var(--primary);
     background: hsla(var(--hue), 25%, 10%, .2);
     border-color: currentColor;
   }
   
-button:active {
+.ash_comment_button:active {
     transform: translate(2px);
   }
    
   /* states */
-button:hover+.design-container,
-button:active+.design-container,
-button:focus+.design-container {
+.ash_comment_button:hover+.design-container,
+.ash_comment_button:active+.design-container,
+.ash_comment_button:focus+.design-container {
     --tr: 20;
     --op: .7;
   }
-
+  
 /* comment testing */
 .ash_comment_wrapper{
 	padding: 80px 0;
@@ -794,6 +753,22 @@ button:focus+.design-container {
 	margin-top: 20px;
 	color: #ffffff;
 }
+
+.ash_comment_input_field{
+    align-items: center;
+}
+
+.ash_post_button{
+    align-items: center;
+}
+
+/* .ash_horizontal_dropdown_container{
+
+}
+
+.ash_dropdown_menu{
+
+} */
 
 /* Tzy Lynn's identify.html */
 
