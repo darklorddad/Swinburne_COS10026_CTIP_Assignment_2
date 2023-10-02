@@ -586,12 +586,12 @@
   }
   
   /* figure */
-figure {
+.ash_figure {
     z-index: -1;
   }
   
   /* figure, .img-bg */
-/* figure,
+/* ash_figure,
 .ash_img_bg {
     position: absolute;
     top: 0;
@@ -601,7 +601,7 @@ figure {
   } */
   
   /* img */
-img {
+.ash_plant_post_img {
     max-width: 100%;
     max-height: 100%;
     border-radius: 24px;
@@ -753,6 +753,22 @@ img {
 	margin-top: 20px;
 	color: #ffffff;
 }
+
+.ash_comment_input_field{
+    align-items: center;
+}
+
+.ash_post_button{
+    align-items: center;
+}
+
+/* .ash_horizontal_dropdown_container{
+
+}
+
+.ash_dropdown_menu{
+
+} */
 
 /* Tzy Lynn's identify.html */
 
