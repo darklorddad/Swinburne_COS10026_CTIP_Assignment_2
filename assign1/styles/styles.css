@@ -608,7 +608,7 @@ img {
   }
   
   /* figcaption */
-figcaption {
+.ash_plant_name {
     display: block;
     width: auto;
     margin-top: 12%;
@@ -660,7 +660,7 @@ figcaption {
   }
    
   /* button */
-button {
+.ash_comment_button {
     font-family: inherit;
     font-weight: bold;
     color: var(--white-1);
@@ -673,21 +673,21 @@ button {
     cursor: pointer;
   }
   
-button:hover,
-button:focus {
+.ash_comment_button:hover,
+.ash_comment_button:focus {
     color: var(--primary);
     background: hsla(var(--hue), 25%, 10%, .2);
     border-color: currentColor;
   }
   
-button:active {
+.ash_comment_button:active {
     transform: translate(2px);
   }
    
   /* states */
-button:hover+.design-container,
-button:active+.design-container,
-button:focus+.design-container {
+.ash_comment_button:hover+.design-container,
+.ash_comment_button:active+.design-container,
+.ash_comment_button:focus+.design-container {
     --tr: 20;
     --op: .7;
   }
