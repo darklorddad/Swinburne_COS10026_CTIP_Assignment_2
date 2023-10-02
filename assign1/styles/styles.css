@@ -276,6 +276,7 @@
 
 /* Edison's explorer.html */
 .czy_body{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     color: rgb(206, 206, 206);
@@ -354,10 +355,61 @@
 .czy_tis_a_line{
     margin: 0;
     padding: 0;
-    margin-top: 3.2vw;
+    margin-top: 4.2vw;
     border-radius: 1vw;
     border: 0.2vw solid rgb(206, 206, 206);
 }
+
+.czy_left_card_bro, .czy_right_card_bro{
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 1vw;
+    margin-top: 2vw;
+    width: 39.5vw;
+}
+
+.czy_right_card_bro{
+    float: right;
+}
+
+.czy_left_card_bro{
+    float: left;
+}
+
+.czy_yoo_pictures{
+    float: left;
+    width: 10vw;
+    height: 10vw;
+    object-fit: cover;
+    position: relative;
+    border-radius: 1vw 0 0 1vw;
+}
+
+.czy_cards_le_content{
+    margin-left: 9vw;
+    padding: 0.5vw 0 0.4vw 2vw;
+    position: relative;
+    border-radius: 1vw;
+    height: 9.1vw;
+    background-image: linear-gradient(90deg, rgb(46, 53, 56), rgb(46, 53, 56, 0.4));
+    font-family: "dld_samsungsharpsans";
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.czy_card_butt_on{
+    border-radius: 1vw;
+    margin-right: 1vw;
+    padding: 0.4vw 1vw;
+    background-color: rgb(31, 41, 46);
+    font-size: 1vw;
+    color: #08A7A4;
+    text-decoration: none;
+}
+
+
+
+
 
 /* Ashley's contributor.html */
 
