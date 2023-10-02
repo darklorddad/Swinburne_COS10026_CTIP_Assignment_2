@@ -325,6 +325,7 @@
     margin-top: 1vw;
     margin-right: 8vw;
     margin-left: 8vw;
+    margin-bottom: 3vw;
     border-radius: 1vw;
     background-color: rgb(31, 41, 46);
     padding: 1.5vw;
@@ -338,7 +339,7 @@
     padding: 0.5vw;
     padding-left: 1.5vw;
     border: none;
-    border-radius: 1.5vw;
+    border-radius: 0.4vw;
 }
 
 .czy_tis_a_search_bar:hover{
@@ -361,6 +362,7 @@
 }
 
 .czy_left_card_bro, .czy_right_card_bro{
+    box-shadow: rgba(0, 0, 0, 0.2) 0.1vw 0.1vw 0.8vw 0.1vw;
     display: inline-block;
     overflow: hidden;
     border-radius: 1vw;
@@ -394,7 +396,7 @@
     background-image: linear-gradient(90deg, rgb(46, 53, 56), rgb(46, 53, 56, 0.4));
     font-family: "dld_samsungsharpsans";
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 .czy_card_butt_on{
