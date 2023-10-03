@@ -825,7 +825,7 @@
 } */
 
 /*Dialog Styles*/
-/* dialog {
+dialog {
 	padding: 1rem 3rem;
 	background: white;
 	max-width: 400px;
@@ -882,9 +882,9 @@
 	background: url(https://images.unsplash.com/photo-1574169208507-84376144848b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=879&q=80)
 		no-repeat center center;
 	background-size: cover;
-}
+}*/
 
-button.primary {
+/* button.primary {
 	display: inline-block;
 	font-size: 0.8rem;
 	color: #fff !important;
@@ -910,7 +910,7 @@ button.primary {
 	to {
 		opacity: 1;
 	}
-} */ 
+}  */
 
 /* Tzy Lynn's identify.html */
 
