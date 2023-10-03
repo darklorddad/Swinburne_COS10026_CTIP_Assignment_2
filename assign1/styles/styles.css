@@ -463,6 +463,10 @@
     border: 0.15625vw solid white;
 }
 
+.ash_page_header{
+    margin-left: 5vw;
+}
+
 /* testing 1 */
 /* .ash_top_bar{
     width: 100%;
