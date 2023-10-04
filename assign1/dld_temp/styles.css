@@ -1,10 +1,206 @@
-html, body { 
-    min-height: 100%; 
-  }
-  body {
-    background: rgb(32, 32, 32);
-    background-image: -webkit-radial-gradient(top, circle cover, rgb(40, 40, 40), black 80%);
-    background-image: -moz-radial-gradient(top, circle cover, rgb(40, 40, 40), black 80%);
-    background-image: -o-radial-gradient(top, circle cover, rgb(40, 40, 40), black 80%);
-    background-image: radial-gradient(top, circle cover, rgb(40, 40, 40), black 80%);
-  }
+/* dld's index.html */
+
+@font-face {
+    font-family: "dld_samsungsharpsans";
+    src: url("dld_samsungsharpsans.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "dld_samsungsharpsans_medium";
+    src: url("dld_samsungsharpsans_medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "dld_samsungsharpsans_bold";
+    src: url("dld_samsungsharpsans_bold.otf") format("opentype");
+}
+
+.dld_body {
+    margin: 0;
+    padding: 0;
+    font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
+	/* background-color: #daded4; */
+    background-image: linear-gradient(5deg, rgb(23, 26, 28), rgb(10, 82, 63));
+}
+
+.dld_section_1 {
+	display: flex;
+    position: relative;
+	height: 45.5vw;
+    width: 95%;
+	margin-top: 2.5vw;
+	margin-left: auto;
+	margin-right: auto;
+    border-radius: 2vw;
+    overflow: hidden;
+}
+
+.dld_section_1 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dld_section_1 nav {
+	position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    padding: 4vw;
+    z-index: 1;
+}
+
+.dld_section_1 nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dld_section_1 nav ul li {
+    display: inline;
+	margin-left: 1vw;
+}
+
+.dld_section_1 nav ul li a {
+    text-decoration: none;
+    color: #e9e7e4;
+	padding: 0.5vw 1vw;
+    border-radius: 2vw;
+    transition: color 0.5s ease-out, background-color 0.5s ease-out;
+	font-size: 1vw;
+	font-family: "dld_samsungsharpsans_medium";
+}
+
+.dld_section_1 nav ul li a:hover {
+    color: #3c403d;
+    background-color: #e9e7e4;
+}
+
+.dld_section_1_text_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	display: flex;
+    align-items: center;
+    text-align: justify;
+    width: 100%;
+}
+
+.dld_section_1_text_1 {
+    font-size: 4vw;
+    font-family: "dld_samsungsharpsans_bold", sans-serif;
+    margin-left: 16vw;
+    background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: dld_section_1_text_1_hue 15s infinite linear; 
+}
+
+@keyframes dld_section_1_text_1_hue {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(-360deg);
+    }
+}
+
+.dld_section_1_text_divider {
+    width: 0.1vw;
+    height: 12.5vw;
+    background-color: #e9e7e4;
+    margin: 0 3vw;
+}
+
+.dld_section_1_text_2 {
+    font-size: 2vw;
+    font-family: "dld_samsungsharpsans_medium", sans-serif;
+	color: #e9e7e4;
+	margin-right: 16vw;
+}
+
+.dld_main {
+	display: flex;
+}
+
+.dld_main nav {
+    background-color: #daded4;
+    position: sticky;
+    top: 5vw;
+    padding: 1vw;
+    margin-top: 5vw;
+    margin-left: 2.5vw;
+    height: 29.55vw;
+    border-radius: 1vw;
+    z-index: 1;
+	width: 3.6vw;
+}
+
+.dld_main nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dld_main nav ul li {
+    margin-bottom: 1vw;
+    transition: transform 0.5s ease;
+}
+
+.dld_main nav ul li:hover {
+    transform: translateX(0.5vw);
+    background-color: #daded4;
+    border-radius: 1vw;
+}
+
+.dld_main nav ul li a button::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 76%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #daded4;
+    color: black;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    font-family: "dld_samsungsharpsans";
+    font-size: 1vw;
+    padding: 0.81vw;
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+}
+
+.dld_main nav ul li a button {
+    background: #daded4;
+    padding: 0.5vw 1vw;
+    border: none;
+    border-radius: 1vw;
+}
+
+.dld_main nav ul li a button:hover::after {
+    opacity: 1;
+}
+
+.dld_section_2 {
+    display: flex;
+    width: 100%;
+    height: 45.5vw;
+    background-color: transparent;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* background-image: radial-gradient(ellipse 50% 90% at 50% 20% , #222222 0%, #000000 100%); */
+}
+
+.dld_section_2_card {
+    background-color: #daded4;
+    padding: 1.5vw;
+    margin: auto;
+    text-align: center;
+    width: 20vw;
+    border-radius: 1vw;
+    height: 30vw;
+}
