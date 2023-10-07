@@ -231,7 +231,7 @@
     white-space: nowrap;
     opacity: 0;
     transition: opacity 0.25s ease;
-    font-family: "dld_samsungsharpsans";
+    font-family: "dld_samsungsharpsans_medium";
     font-size: 1vw;
     padding: 0.81vw;
     border-top-right-radius: 1vw;
@@ -264,13 +264,32 @@
 }
 
 .dld_section_2_card {
-    background-color: #91a99b;
+    position: relative;
+    background-color: #cbcdd2;
     margin: 0 1vw;
     text-align: center;
     width: 21vw;
     border-radius: 1.5vw;
     height: 32.5vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    overflow: hidden;
+}
+
+.dld_section_2_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10.5vw;
+    color: #fff;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #cbcdd2);
+    /* background-image:  linear-gradient(to top, rgb(255, 255, 255) 50%,rgba(255,255,255,0) 75%),url("images/dld/a21091f956f875b55dfcb3b82f1577bee17c892e.jpeg"); */
 }
 
 .dld_section_3 {
