@@ -1287,52 +1287,237 @@
     }
 }
 
-.ttl_word_carousel{
-    color:white;
-    font-size:2vw;
-    font-weight:bold;
-    position:relative;
-    top: 20%;
-    width:100%;
-    height: 20%;
-    overflow: hidden;
-    bottom:45%;
-    display:block;
+.ttl_block_reveal{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vw;
+    margin-top: 8vw;
+    margin-left: 4vw;
+    width: 80%;
+    height: 20vw;
 }
 
-.ttl_flip{
-    /* height: 5%;*/
-    overflow: hidden; 
-    background-color: red;
+.ttl_identify{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 2.5vw;
 }
 
-.ttl_flip > div > div {
-    color:#fff;
-    padding:4px 12px;
-    height: 30px;
-    margin-bottom:45px;
-    display:flex;
-    flex-wrap: wrap;
+.ttl_block1{
+    width: 0%;
+    height: inherit;
+    background: #4c6148;
+    position: absolute;
+    animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+    display: flex;
 }
 
-.ttl_flip div:first-child {
-    animation: ttl_show 5s linear infinite;
+.ttl_block1_text{
+    animation: mainFadeIn 2s forwards;
+    font-size: 2.5vw;
+    animation-delay: 1.6s;
+    color: white;
+    opacity: 0;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    font-family: "dld_samsungsharpsans_medium";
 }
 
-@keyframes ttl_show {
-    0% {margin-top:-270px;}
-    5% {margin-top:-180px;}
-    33% {margin-top:-180px;}
-    38% {margin-top:-90px;}
-    66% {margin-top:-90px;}
-    71% {margin-top:0px;}
-    99.99% {margin-top:0px;}
-    100% {margin-top:-270px;}
+.ttl_any_plant{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 2.5vw;
+    margin-top: 10px;
+}
+
+.ttl_block2{
+    width: 0%;
+    height: inherit;
+    background: #b1af59;
+    position: absolute;
+    animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation-delay: 2s;
+    display: flex;
+}
+
+.ttl_block2_text{
+    animation: secFadeIn 2s forwards;
+    animation-delay: 3.2s;
+    opacity: 0;
+    font-size: 2.5vw;
+    color: white;
+    font-family: "dld_samsungsharpsans_medium";
+}
+
+.ttl_anywhere{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 2.5vw;
+    margin-top: 10px;
+}
+
+.ttl_block3{
+    width: 0%;
+    height: inherit;
+    background: #e2e09d;
+    position: absolute;
+    animation: thirdBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation-delay: 4s;
+    display: flex;
+}
+
+.ttl_block3_text{
+    animation: thirdFadeIn 2s forwards;
+    animation-delay: 5.5s;
+    opacity: 0;
+    color: white;
+    font-size: 2.5vw;
+    font-family: "dld_samsungsharpsans_medium";
+}
+
+.ttl_anytime{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 2.5vw;
+    margin-top: 10px;
+}
+
+.ttl_block4{
+    width: 0%;
+    height: inherit;
+    background: #91a99b;
+    position: absolute;
+    animation: fourthBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation-delay: 6s;
+    display: flex;
+}
+
+.ttl_block4_text{
+    animation: fourthFadeIn 2s forwards;
+    animation-delay: 7.5s;
+    color: white;
+    opacity: 0;
+    font-size: 2.5vw;
+    font-family: "dld_samsungsharpsans_medium";
+}
+
+@keyframes mainBlock {
+    0% {
+      width: 0%;
+      left: 0;
+  
+    }
+    50% {
+      width: 100%;
+      left: 0;
+  
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+}
+  
+@keyframes secBlock {
+    0% {
+      width: 0%;
+      left: 0;
+  
+    }
+    50% {
+      width: 100%;
+      left: 0;
+  
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+}
+
+@keyframes thirdBlock {
+    0% {
+      width: 0%;
+      left: 0;
+  
+    }
+    50% {
+      width: 100%;
+      left: 0;
+  
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+}
+
+@keyframes fourthBlock {
+    0% {
+      width: 0%;
+      left: 0;
+  
+    }
+    50% {
+      width: 100%;
+      left: 0;
+  
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+}
+  
+@keyframes mainFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes secFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes thirdFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes fourthFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
 }
 
 .ttl_image_slider{
     width: 90%;
-    height: 92%;
+    height: 90%;
     overflow: hidden;
     position: relative;
     transform: translate(-50%, -50%);
@@ -1340,9 +1525,11 @@
     left: 50%;
     border-radius: 2vw;
     grid-area: 2 / 2 / 3 / 3;
+    grid-row-gap: 0.8333333333333334vw;
 }
 
 .ttl_image_slider_wrapper{
+    position: relative;
     width: 100%;
     height: 45.5vw;
     margin: auto auto;
@@ -1752,9 +1939,9 @@ when users will click/enter button(link) browser will add a #id in a url and whe
 }
 
 .ttl_modal {
-  width: 80vw;
-  max-height: 70%;
-  padding: 5vw;
+  width: 85vw;
+  max-height: 85%;
+  padding: 3vw;
   border-radius: 2vw;
 
   color: hsl(220, 50%, 90%);
@@ -1762,24 +1949,14 @@ when users will click/enter button(link) browser will add a #id in a url and whe
   box-shadow: .4rem .4rem 10.2rem .2rem hsla(236, 50%, 50%, .3);
   position: relative;
 
-  /* overflow: hidden; */
   overflow-y: scroll;
 }
 
 .ttl_modal_title{
-    font-size: 3vw;
+    font-size: 1.8vw;
     font-family: "dld_samsungsharpsans_medium", sans-serif;
 }
 
-.ttl_modal__text {
-  padding: 0 4rem;
-  margin-top: 4rem;
-
-  font-size: 1.6rem;
-  line-height: 2;
-}
-
-/* link-... */
 .ttl_link-1 {
     font-size: 1vw;
 
@@ -1846,7 +2023,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .ttl_plant_gallery{
     display: grid;
-    width: 60vw; 
+    width: 39vw; 
     aspect-ratio: 1;
     grid: auto-flow 1fr/repeat(3,1fr);
     gap: 1vw;
@@ -1881,19 +2058,18 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .ttl_plant_about_title_container, .ttl_plant_care_container, .ttl_plant_environment_title_container, .ttl_plant_location_title_container{
-    border-left:  2vw solid #21F5F0;
-    height: 6vw;
+    border-left:  0.5vw solid #21F5F0;
+    height: 2vw;
     width: 100%;
     display: inline-block;
     align-items: center;
     padding: 0.5vw;
     margin-top: 2vw;
-    overflow: hidden;
 }
 
 .ttl_plant_about_title, .ttl_plant_care_title, .ttl_plant_environment_title, .ttl_plant_location_title{
     font-family: "dld_samsungsharpsans_medium", sans-serif;
-    font-size: 3.5vw;
+    font-size: 2vw;
     vertical-align: middle;
     padding-left: 1vw;
     display: inline;
@@ -1902,12 +2078,12 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 .ttl_plant_about_content{
     text-align: justify;
     font-family: "dld_samsungsharpsans", sans-serif;
-    font-size: 2.5vw;
+    font-size: 1.5vw;
 }
 
 .ttl_plant_about_icon, .ttl_plant_care_icon, .ttl_plant_environment_icon, .ttl_globe_icon{
-    width: 6vw;
-    height: 6vw;
+    width: 3vw;
+    height: 3vw;
     vertical-align: middle;
 }
 
@@ -1937,13 +2113,13 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .ttl_plant_care_card_title{
-    font-size: 3vw;
+    font-size: 2vw;
     font-family: "dld_samsungsharpsans_medium", sans-serif;
 }
 
 .ttl_plant_care_card_text{
     font-family: "dld_samsungsharpsans", sans-serif;
-    font-size: 2.5vw;
+    font-size: 1.5vw;
 }
 
 .ttl_plant_care_card_left{
@@ -1961,12 +2137,12 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .ttl_water_icon, .ttl_sun_icon, .ttl_pruning_icon, .ttl_fertilizer_icon{
-    width: 10vw;
+    width: 7vw;
 }
 
 .ttl_plant_care_card_description{
     text-align: justify;
-    font-size: 2vw;
+    font-size: 1.5vw;
     padding: 5vw;
     font-family: "dld_samsungsharpsans", sans-serif;
 }
@@ -1992,13 +2168,13 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 .ttl_plant_environment_table th{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    font-size: 2.5vw;
+    font-size: 1.5vw;
 }
 
 .ttl_plant_environment_table td{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 .ttl_plant_location_content{
