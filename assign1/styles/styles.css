@@ -1024,6 +1024,296 @@ when users will click/enter button(link) browser will add a #id in a url and whe
 
 
 
+/* Ashley's login_register.html */
+/* .ash_hero{
+    height: 100%;
+    font-weight: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.ash_form_box{
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: #fff;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.ash_button_box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow:  0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+
+.ash_toggle_btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#ash_btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    transition: 5s;
+}
+
+.ash_input_group{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.ash_input_field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.ash_submit_btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.ash_checkbox{
+    margin: 30px 10px 30px 0;
+}
+
+.ash_span{
+    columns: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+
+#ash_login{
+    left: 50px;
+}
+
+#ash_register{
+    left: 450px;
+} */
+
+/* #2 */
+.ash_body_2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
+}
+
+.ash_wrapper{
+    position: relative;
+    width: 750px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid #0ef;
+}
+
+.ash_form_box.login{
+    left: 0;
+    padding: 0 40px;
+}
+
+.ash_form_box{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ash_form_box_h2{
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+}
+
+.ash_input_box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    /* background: blue; */
+    margin: 25px 0;
+}
+
+.ash_input_box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fff;
+}
+
+.ash_input_box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+}
+
+.ash_btn2{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #0ef;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.ash_logreg_link{
+    font-size: 14.5px;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.ash_logreg_link p a{
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ash_logreg_link p a:hover{
+    text-decoration: underline;
+}
+
+
+/* #3 */
+/* .main-content{
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0,0,0,.4);
+    margin: 5em auto;
+    display: flex;
+}
+
+.company__info{
+    background-color: #008080;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.fa-android{
+    font-size:3em;
+}
+
+@media screen and (max-width: 640px) {
+    .main-content{width: 90%;}
+    .company__info{
+      display: none;
+    }
+    .login_form{
+      border-top-left-radius:20px;
+      border-bottom-left-radius:20px;
+    }
+}
+
+@media screen and (min-width: 642px) and (max-width:800px){
+    .main-content{width: 70%;}
+}
+
+.row > h2{
+    color:#008080;
+}
+
+.login_form{
+    background-color: #fff;
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+    border-top:1px solid #ccc;
+    border-right:1px solid #ccc;
+}
+
+form{
+    padding: 0 2em;
+}
+
+.form__input{
+    width: 100%;
+    border:0px solid transparent;
+    border-radius: 0;
+    border-bottom: 1px solid #aaa;
+    padding: 1em .5em .5em;
+    padding-left: 2em;
+    outline:none;
+    margin:1.5em auto;
+    transition: all .5s ease;
+}
+
+.form__input:focus{
+    border-bottom-color: #008080;
+    box-shadow: 0 0 5px rgba(0,80,80,.4); 
+    border-radius: 4px;
+}
+
+.btn{
+    transition: all .5s ease;
+    width: 70%;
+    border-radius: 30px;
+    color:#008080;
+    font-weight: 600;
+    background-color: #fff;
+    border: 1px solid #008080;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+.btn:hover, .btn:focus{
+    background-color: #008080;
+    color:#fff;
+} */
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+
 /* Tzy Lynn's identify.html */
 
 .ttl_body{
