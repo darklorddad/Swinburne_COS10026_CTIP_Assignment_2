@@ -15,29 +15,29 @@
     src: url("fonts/dld/dld_samsungsharpsans_bold.otf") format("opentype");
 }
 
-.dld_background {
+.dld_background_dots {
     width: 125%;
     height: 125%;
     position: fixed;
     z-index: -1;
 }
 
-.dld_background::before {
+.dld_background_dots::before {
     z-index: -10;
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    top: -15%;
+    top: -12.5%;
     left: 0;
-    /* background-image: radial-gradient(#00000059 0.05vw, transparent 0.05vw); */
-    background-image: radial-gradient(#ffffff59 0.05vw, transparent 0.05vw);
-    background-size: 2vw 2vw;
+    background-image: radial-gradient(#00000059 0.05vw, transparent 0.05vw);
+    /* background-image: radial-gradient(#ffffff59 0.052vw, transparent 0.052vw); */
+    background-size: 1.77vw 1.77vw;
     opacity: 0.8;
-    animation: dld_background_pulsate 20s infinite;
+    animation: dld_background_dots_pulsate 20s infinite;
 }
 
-@keyframes dld_background_pulsate { 
+@keyframes dld_background_dots_pulsate { 
     0% {
         transform: scale(1);
         opacity: 0.8;
@@ -52,7 +52,7 @@
     }
 }
 
-.dld_background_blob {
+.dld_background_gradient {
     background-color: aliceblue;
     background: linear-gradient(200deg, #0bc94a 0%, #752bec 100%);
     height: 60vw;
@@ -62,12 +62,12 @@
     left: 15.75%;
     top: -10%;
     border-radius: 30vw;
-    filter: blur(40vw);
+    filter: blur(25vw);
     z-index: -2;
-    animation: dld_background_blob_rotate 7s linear infinite;
+    animation: dld_background_gradient_rotate 7s linear infinite;
 }
 
-@keyframes dld_background_blob_rotate {
+@keyframes dld_background_gradient_rotate {
     0% {
         transform: rotate(0deg);
     }
@@ -75,17 +75,17 @@
         transform: rotate(360deg);
     }
 }
-  
+
 .dld_body {
     margin: 0;
     padding: 0;
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
     /* background-image: linear-gradient(5deg, rgb(23, 26, 28), rgb(10, 82, 63)); */
-    background-image: linear-gradient(5deg, #1e2f25, #91a99b);
-    /* background-color: #daded4; */
-    /* background-color: #cbcdd2; */
-    /* background-color: #e5e4eb; */
-    /* background-color: #e5e4eb; */
+    /* background-image: linear-gradient(5deg, #23322a, #90a79a); */
+    /* background-color: #e4e3ea; */
+    /* background-color: white; */
+    /* background-color: #daddd4; */
+    background-image: linear-gradient(5deg, #BDC3C7, #ECF0F1);
 }
 
 .dld_section_1 {
@@ -114,32 +114,35 @@
     background-color: transparent;
     padding: 4vw;
     z-index: 1;
+    font-size: 1vw;
 }
 
 .dld_section_1 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    font-size: 1vw;
 }
 
 .dld_section_1 nav ul li {
     display: inline;
 	margin-left: 1vw;
+    font-size: 1vw;
 }
 
 .dld_section_1 nav ul li a {
     text-decoration: none;
-    color: #e5e4eb;
+    color: #e4e3ea;
 	padding: 0.5vw 1vw;
     border-radius: 2vw;
-    transition: color 0.5s ease, background-color 0.5s ease;
+    transition: color 0.25s ease, background-color 0.5s ease;
 	font-size: 1vw;
 	font-family: "dld_samsungsharpsans_medium";
 }
 
 .dld_section_1 nav ul li a:hover {
-    color: #1e2f25;
-    background-color: #91a99b;
+    color: #23322a;
+    background-color: #90a79a;
 }
 
 .dld_section_1_text_container {
@@ -176,14 +179,14 @@
 .dld_section_1_text_divider {
     width: 0.1vw;
     height: 12.5vw;
-    background-color: #e5e4eb;
+    background-color: #e4e3ea;
     margin: 0 3vw;
 }
 
 .dld_section_1_text_2 {
     font-size: 2vw;
     font-family: "dld_samsungsharpsans_medium", sans-serif;
-	color: #e5e4eb;
+	color: #e4e3ea;
 	margin-right: 16vw;
 }
 
@@ -198,7 +201,7 @@
     padding: 1vw 0.5vw;
     margin-top: 6.5vw;
     margin-left: 2.5vw;
-    height: 30.44vw;
+    height: 27.844vw;
     border-radius: 1.5vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
@@ -211,33 +214,45 @@
 
 .dld_main nav ul li {
     margin-bottom: 1vw;
-    transition: transform 0.5s ease, background-color 0.5s ease;
-    background-color: #e5e4eb;
+    transition: transform 0.5s ease;
+    background-color: #e4e3ea;
     border-radius: 1vw;
     padding: 0.5vw 1vw;
+    position: relative;
 }
 
 .dld_main nav ul li:hover {
     transform: translateX(0.5vw);
-    background-color: #91a99b;
+    background-color: #90a79a;
+}
+
+.dld_main nav ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .dld_main nav ul li a span {
-    color: #1e2f25;
+    color: #23322a;
 }
 
-.dld_main nav ul li {
-    position: relative;
+.dld_main nav ul li span.material-symbols-outlined {
+    font-size: 1.6vw;
 }
 
 .dld_main nav ul li span.nav-text {
     display: none;
     position: absolute;
     top: 50%;
-    left: calc(100% + 1vw); /* Adjust the spacing as needed */
+    left: calc(100% - 1vw);
     transform: translate(0, -50%);
-    white-space: nowrap; /* Prevent text from wrapping */
-    background-color: #91a99b;
+    white-space: nowrap;
+    background-color: #90a79a;
+    padding: 0.7vw 1vw;
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    font-size: 1vw;
+    font-family: "dld_samsungsharpsans_medium";
 }
 
 .dld_main nav ul li:hover span.nav-text {
@@ -252,7 +267,7 @@
 .dld_section_2 {
     display: flex;
     width: 100%;
-    height: 45.5vw;
+    height: 35vw;
     align-items: center;
     justify-content: center;
     margin: 0 5.7vw;
@@ -260,21 +275,58 @@
 
 .dld_section_2_card {
     position: relative;
-    background-color: #e5e4eb;
+    background-color: #e4e3ea;
     margin: 0 1vw;
     text-align: center;
-    width: 21vw;
+    height: 21vw;
     border-radius: 1.5vw;
-    height: 32.5vw;
+    width: 32.5vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
     overflow: hidden;
+    transition: background-color 0.5s ease;
 }
 
 .dld_section_2_card img {
     width: 100%;
-    height: 100%;
+    height: 60%;
     object-fit: cover;
+    border-bottom-right-radius: 1.5vw;
+    border-bottom-left-radius: 1.5vw;
+    /* border-bottom: #23322a solid 0.1vw; */
 }
+
+.dld_section_2_card h1 {
+    font-size: 1.2vw;
+    font-family: "dld_samsungsharpsans_medium";
+    color: #23322a;
+    transition: color 0.5s ease;
+}
+
+.dld_section_2_card p {
+    font-size: 1vw;
+    font-family: "dld_samsungsharpsans";
+    color: #23322a;
+    transition: color 0.5s ease;
+}
+
+.dld_section_2_card:hover {
+    background-color: #23322a;
+    color: #90a79a;
+    /* border: #23322a solid 0.1vw; */
+    /* box-sizing: border-box; */
+}
+
+.dld_section_2_card:hover p {
+    color: #90a79a;
+}
+
+.dld_section_2_card:hover h1 {
+    color: #90a79a;
+}
+
+/* .dld_section_2_card:hover img {
+    border-bottom: #23322a solid 0.05vw;
+} */
 
 .card-content {
     position: absolute;
@@ -284,7 +336,7 @@
     padding: 14vw;
     color: #fff;
     /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #cbcdd2); */
-    background-image:  linear-gradient(to top, #e5e4eb 20%,rgba(255,255,255,0) 60%), url("images/dld/a21091f956f875b55dfcb3b82f1577bee17c892e.jpeg");
+    /* background-image: url("images/dld/a21091f956f875b55dfcb3b82f1577bee17c892e.jpeg"); */
 }
 
 .dld_section_3 {
@@ -297,7 +349,7 @@
 }
 
 .dld_section_3_card {
-    background-color: #e5e4eb;
+    background-color: #e4e3ea;
     margin: 0 1vw;
     text-align: center;
     width: 25vw;
