@@ -272,6 +272,7 @@
 .dld_sections {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .dld_section_2 {
