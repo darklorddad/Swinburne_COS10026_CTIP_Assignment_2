@@ -85,7 +85,7 @@
     /* background-color: #e4e3ea; */
     /* background-color: white; */
     /* background-color: #daddd4; */
-    background-image: linear-gradient(5deg, #BDC3C7, #ECF0F1);
+    background-image: linear-gradient(5deg, #bdc3c7, #ecf0f1);
 }
 
 .dld_section_1 {
@@ -135,7 +135,7 @@
     color: #e4e3ea;
 	padding: 0.5vw 1vw;
     border-radius: 2vw;
-    transition: color 0.25s ease, background-color 0.5s ease;
+    transition: color 0.5s ease, background-color 0.5s ease;
 	font-size: 1vw;
 	font-family: "dld_samsungsharpsans_medium";
 }
@@ -143,6 +143,8 @@
 .dld_section_1 nav ul li a:hover {
     color: #23322a;
     background-color: #90a79a;
+    /* color: #90a79a;
+    background-color: #23322a; */
 }
 
 .dld_section_1_text_container {
@@ -195,7 +197,7 @@
 }
 
 .dld_main nav {
-    /* background-color: white; */
+    /* background-color: black; */
     position: sticky;
     top: 2.5vw;
     padding: 1vw 0.5vw;
@@ -223,6 +225,7 @@
 
 .dld_main nav ul li:hover {
     transform: translateX(0.5vw);
+    /* background-color: #23322a; */
     background-color: #90a79a;
 }
 
@@ -240,6 +243,10 @@
     font-size: 1.6vw;
 }
 
+/* .dld_main nav ul li:hover span.material-symbols-outlined {
+    color: #90a79a;
+} */
+
 .dld_main nav ul li span.nav-text {
     display: none;
     position: absolute;
@@ -247,7 +254,10 @@
     left: calc(100% - 1vw);
     transform: translate(0, -50%);
     white-space: nowrap;
+    /* background-color: #23322a; */
     background-color: #90a79a;
+    /* color: #90a79a; */
+    color: #23322a;
     padding: 0.7vw 1vw;
     border-top-right-radius: 1vw;
     border-bottom-right-radius: 1vw;
@@ -267,13 +277,56 @@
 .dld_section_2 {
     display: flex;
     width: 100%;
-    height: 35vw;
+    /* height: 25vw; */
+    align-items: center;
+    justify-content: left;
+    margin-left: 11.4vw;
+}
+
+.dld_section_2_card {
+    position: relative;
+    background-color: #e4e3ea;
+    margin: 0 1vw;
+    text-align: center;
+    /* height: 10vw; */
+    border-radius: 1.5vw;
+    width: 67vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+    /* margin-top: -11vw; */
+}
+
+.dld_section_2_card p {
+    text-align: justify;
+    font-family: "dld_samsungsharpsans";
+    margin: 1.5vw;
+    font-size: 1.25vw;
+}
+
+.dld_section_2_card:hover {
+    background-color: #23322a;
+    /* background-color: #90a79a; */
+    /* background-color: #567260; */
+    /* border: #23322a solid 0.1vw; */
+    /* box-sizing: border-box; */
+}
+
+.dld_section_2_card:hover p {
+    color: #90a79a;
+    /* color: #23322a; */
+}
+
+.dld_section_3 {
+    display: flex;
+    width: 100%;
+    /* height: 25vw; */
     align-items: center;
     justify-content: center;
     margin: 0 5.7vw;
 }
 
-.dld_section_2_card {
+.dld_section_3_card {
     position: relative;
     background-color: #e4e3ea;
     margin: 0 1vw;
@@ -284,9 +337,10 @@
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
     overflow: hidden;
     transition: background-color 0.5s ease;
+    /* margin-top: -11vw; */
 }
 
-.dld_section_2_card img {
+.dld_section_3_card img {
     width: 100%;
     height: 60%;
     object-fit: cover;
@@ -295,33 +349,50 @@
     /* border-bottom: #23322a solid 0.1vw; */
 }
 
-.dld_section_2_card h1 {
+.dld_section_3_card h1 {
     font-size: 1.2vw;
     font-family: "dld_samsungsharpsans_medium";
     color: #23322a;
     transition: color 0.5s ease;
 }
 
-.dld_section_2_card p {
+.dld_section_3_card p {
     font-size: 1vw;
     font-family: "dld_samsungsharpsans";
     color: #23322a;
     transition: color 0.5s ease;
 }
 
-.dld_section_2_card:hover {
+.dld_section_3_card:hover {
     background-color: #23322a;
-    color: #90a79a;
+    /* background-color: #90a79a; */
+    /* background-color: #567260; */
     /* border: #23322a solid 0.1vw; */
     /* box-sizing: border-box; */
 }
 
-.dld_section_2_card:hover p {
+.dld_section_3_card:hover p {
     color: #90a79a;
+    /* color: #23322a; */
 }
 
-.dld_section_2_card:hover h1 {
+.dld_section_3_card:hover h1 {
     color: #90a79a;
+    /* color: #23322a; */
+}
+
+.dld_up_to_date {
+    text-align: left;
+    margin-top: 6.15vw;
+    margin-left: 12.3vw;
+    margin-bottom: 1.95vw;
+}
+
+.dld_up_to_date h1 {
+    font-size: 2vw;
+    color: #23322a;
+    font-family: "dld_samsungsharpsans_bold", sans-serif;
+    margin: 0;
 }
 
 /* .dld_section_2_card:hover img {
@@ -339,7 +410,7 @@
     /* background-image: url("images/dld/a21091f956f875b55dfcb3b82f1577bee17c892e.jpeg"); */
 }
 
-.dld_section_3 {
+.dld_section_4 {
     display: flex;
     width: 100%;
     height: 45.5vw;
@@ -348,7 +419,7 @@
     margin-left: 5.70vw;
 }
 
-.dld_section_3_card {
+.dld_section_4_card {
     background-color: #e4e3ea;
     margin: 0 1vw;
     text-align: center;
