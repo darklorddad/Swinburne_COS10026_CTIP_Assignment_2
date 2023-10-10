@@ -793,57 +793,36 @@
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
 }
 
-.ash_section_1{
+.ash_section_1 {
     display: flex;
-    position: relative;
-	height: 20vw;
-    width: 70.9%;
-	margin-top: 2.5vw;
-	margin-left: auto;
-	margin-right: auto;
+    height: 10vw;
+    width: 71vw;
+    margin-top: 2.5vw;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 2vw;
-    overflow: hidden;
-    background: black;
+    background: #e4e3ea;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    align-items: center;
 }
 
-.ash_text_container_1{
-    font-family: "dld_samsungsharpsans_bold", sans-serif;
+.ash_page_header {
+    text-align: center;
+    color: #23322a;
+    width: 100%;
+    margin: 0;
+}
+
+.ash_page_header h1 {
+    font-family: "dld_samsungsharpsans_bold";
     font-size: 2vw;
-    /* margin-left: 5vw; */
-    background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* overflow: hidden;
-    transition: 0.5s; */
-    animation: ash_gradient_change 15s infinite linear;
-    -webkit-animation: ash_gradient_change 15s infinite linear;
+    margin: 0;
+    margin-bottom: 1vw;
 }
 
-@keyframes ash_gradient_change{
-    from {
-        -webkit-filter: hue-rotate(0deg);
-    }
-    to {
-        -webkit-filter: hue-rotate(-360deg);
-    }
-}
-
-.ash_page_header{
-    text-align: center;
-}
-
-.ash_text_container_1_2{
-    font-family: "dld_samsungsharpsans_medium", sans-serif;
-    color: white;
-    text-align: center;
-}
-
-.ash_text_container_1_3{
-    font-family: "dld_samsungsharpsans", sans-serif;
-    color: white;
-    text-align: center;
+.ash_page_header p {
+    font-size: 1vw;
+    margin: 0;
 }
 
 .ash_big_container{
@@ -859,10 +838,6 @@
     overflow: hidden;
     border-radius: 0.46875vw;
     border: 0.15625vw solid white;
-}
-
-.ash_page_header{
-    margin-left: 5vw;
 }
 
 /* .flip-card-container */
@@ -1111,13 +1086,14 @@ a:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
     padding: 0 4rem 2rem;
     position: absolute;
+    height: 5vw;
 }
 
 .ash_box:not(:first-child) {
-    height: 45rem;
+    height: 5vw;
 }
 
 /* modal */
