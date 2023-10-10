@@ -442,9 +442,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: rgb(206, 206, 206);
+    color: #90a79a;
     background: fixed;
-    background-image: linear-gradient(5deg, rgb(23, 26, 28), rgb(10, 82, 63));
+    /* background-image: linear-gradient(5deg, rgb(23, 26, 28), rgb(10, 82, 63)); */
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
 }
 
@@ -456,7 +456,6 @@
     margin-right: 8vw;
     margin-left: 8vw;
     list-style-type: none;
-
     border-radius: 1vw;
     background-color: rgb(31, 41, 46);
 }
@@ -472,7 +471,7 @@
     margin-bottom: 1vw;
     margin-left: 8vw;
     padding: 0.5vw 4vw;
-    border-radius: 1svw;
+    border-radius: 1vw;
     font-family: "dld_samsungsharpsans_bold";
     font-size: 2vw;
     background-color: rgb(23, 30, 34);
@@ -480,8 +479,9 @@
     text-align: center;
 }
 
-.czy_navigation_fool a:hover{
-    background-color: rgb(255, 255, 255, 0.05);
+.czy_navigation_fool a:hover, .czy_navigation_fool .czy_active{
+    background-color: #90a79a;
+    color: #23322a;
 }
 
 .czy_where_magic_happens{
@@ -521,16 +521,16 @@
     padding: 0;
     margin-top: 4.2vw;
     border-radius: 1vw;
-    border: 0.2vw solid rgb(206, 206, 206);
+    border: 0.2vw solid #90a79a;
 }
 
 .czy_left_card_bro, .czy_right_card_bro{
     box-shadow: rgba(0, 0, 0, 0.2) 0.1vw 0.1vw 0.8vw 0.1vw;
     display: inline-block;
     overflow: hidden;
-    border-radius: 1vw;
+    border-radius: 1vw 1vw 1vw 1vw;
     margin-top: 2vw;
-    width: 39.5vw;
+    width: 39vw;
 }
 
 .czy_right_card_bro{
@@ -546,20 +546,43 @@
     width: 10vw;
     height: 10vw;
     object-fit: cover;
-    position: relative;
-    border-radius: 1vw 0 0 1vw;
+}
+
+.czy_gallery{
+    display: none;
+    text-align: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1.5vw;
+    width: 37vw;
+    position: absolute;
+    background-color: rgb(32, 36, 39, 0.9);
+    border-radius: 0 0 1vw 1vw;
+}
+
+.czy_gallery_pictures{
+    width: 6vw;
+    height: 6vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-bottom: 1vw;
+    border-radius: 0.5vw;
+    object-fit: cover;
 }
 
 .czy_cards_le_content{
     margin-left: 9vw;
     padding: 0.5vw 0 0.4vw 2vw;
-    position: relative;
-    border-radius: 1vw;
     height: 9.1vw;
-    background-image: linear-gradient(90deg, rgb(46, 53, 56), rgb(46, 53, 56, 0.4));
+    background-color: rgb(46, 53, 56);
     font-family: "dld_samsungsharpsans";
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
+}
+
+.czy_small_description{
+    font-weight: 600;
+    font-size: 0.8vw;
 }
 
 .czy_card_butt_on{
@@ -572,10 +595,103 @@
     text-decoration: none;
 }
 
+.czy_left_card_bro:hover > .czy_gallery{
+    display: block;
+    
+}
+
+.czy_left_card_bro:hover{
+    border-radius: 1vw 1vw 0 0;
+}
+
+/* Pop up images for when you click on the image */
+.czy_overlay{
+    position: absolute;
+	top: 0;
+	bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    &:target{
+        visibility: visible;
+        opacity: 1;
+    }
+    .cancel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        cursor: default;
+    }
+    > img{
+        display: block;
+        margin-top: 3vw;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60vw;
+        height: 40vw;
+        object-fit: cover;
+    }
+}
 
 
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* profiles.html */
+.czy_profile_body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgb(206, 206, 206);
+    background: fixed;
+    background-image: linear-gradient(5deg, rgb(23, 26, 28), rgb(10, 82, 63));
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+.czy_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.czy_profile_pic{
+    margin-top: 2vw;
+    width: 15vw;
+    border-radius: 15vw;
+}
+
+.czy_profile_description{
+    padding-bottom: 1vw;
+    padding-right: 10vw;
+    padding-left: 10vw;
+}
+
+.czy_member_name{
+    font-size: 200%
+}
+
+.czy_about_me{
+    text-align: justify;
+}
+
+.czy_table_title{
+    font-size: 2vw;
+}
+
+.czy_profile_body table, th, td{
+    border: 2px solid rgb(206, 206, 206);
+    border-radius: 1vw;
+    border-collapse: collapse
+}
+
+.czy_profile_body th, td{
+    padding: 0.3vw;
+}
+
+.czy_profile_card table{
+    width: 100%;
+}
 
 
 /* Ashley's contributions.html */
@@ -2469,3 +2585,133 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 /* Nicholas's enquiry.html */
 
 /* insert css here */
+
+/* Body styles */
+.nic_body {
+    font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contact box */
+.nic_contact-box {
+    border-radius: 2vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    height: 100%;
+    margin: 10vw;
+}
+
+/* Left side background */
+.nic_left {
+    border-radius: 2vw 0 0 2vw;
+    height: 100%;
+    background: url("images/nic/peakpx.jpg") no-repeat center;
+    background-size: cover;
+}
+
+/* Right side form container */
+.nic_right {
+    padding: 30px 30px;
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+}
+
+/* Form title */
+.nic_h2 {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-bottom: 2rem;
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 2vw;
+}
+
+/* Form fields */
+.nic_field {
+    width: 90%;
+    padding: 0.5rem 1rem;
+    background-color: rgba(230, 230, 230, 0.6);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: 0.3s;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.nic_field:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nic_field:focus {
+    background-color: #fff;
+    border: 2px solid rgba(30, 85, 250, 0.47);
+}
+
+.nic_textarea {
+    min-height: 80px;
+}
+
+/* Form labels */
+.nic_label {
+    font-weight: bold;
+}
+
+/* Select containers */
+.nic_select-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Select styles */
+.nic_select {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: rgba(230, 230, 230, 0.6);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: 0.3s;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.nic_button {
+    border-radius: 40px;
+    border-color: black;
+    text-align: center;
+    display: flex;
+    margin-right: auto;
+    padding: 15px 40px;
+    justify-content: space-between;
+    font-size: 20px;
+    background-color: #2ecc71;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.nic_button:hover {
+    opacity: 80%;
+}
+
+/* Submit and Reset button styles */
+.nic_submit {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.nic_reset {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+/* Button container */
+.nic_button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
