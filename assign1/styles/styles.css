@@ -1844,7 +1844,8 @@ form{
     border-radius: 0.5vw;
     box-shadow: 5px 2px 15px 0px rgba(0,0,0,0.6);
     font-family: "dld_samsungsharpsans_medium", sans-serif;
-    background: linear-gradient(to top right, #3A92AF 0%, #5CA05A 100%); 
+    /* background: linear-gradient(to top right, #3A92AF 0%, #5CA05A 100%);  */
+    background: linear-gradient(to top right, #2c3e50 0%, #34495e 100%); 
 }
 
 .ttl_center{
@@ -1864,6 +1865,7 @@ form{
     margin: 0;
     padding-top: 3vw;
     font-size: 3vw;
+    font-family: "dld_samsungsharpsans_bold";
 }
 
 .ttl_upload_description{
@@ -2141,6 +2143,7 @@ form{
     background-color: white;
     border-radius: 20px;
     transition: box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
 .ttl_plant_card:hover{
