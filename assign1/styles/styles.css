@@ -1220,7 +1220,83 @@ when users will click/enter button(link) browser will add a #id in a url and whe
 
 
 
-/* Ashley's login_register.html */
+/* Ashley's login.html and register.html */
+
+.ash_body_2{
+    box-sizing: border-box;
+    font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
+}
+
+.ash_wrapper{
+    width: 330px;
+    padding: 2rem 1rem;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.ash_wrapper h1{
+    font-size: 2rem;
+    color: #07001f;
+    margin-bottom: 1.2rem;
+}
+
+.ash_wrapper form input{
+    width: 92%;
+    outline: none;
+    border: 1px solid #fff;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background: #e4e4e4;
+}
+
+.ash_wrapper button{
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 90%;
+    color: #fff;
+    cursor: pointer;
+    background: rgb(17, 107, 143);
+}
+
+.ash_wrapper button:hover{
+    background: rgba(17, 107, 143, 0.877);
+}
+
+.ash_wrapper input:focus{
+    border: 1px solid rgb(192, 192, 192);
+}
+
+.ash_member{
+    font-size: 0.8rem;
+    margin-top: 1.4rem;
+    color: #636363;
+}
+
+.ash_member a{
+    color: rgb(17, 107, 143);
+    text-decoration: none;
+}
+
+.ash_recover{
+    text-align: right;
+    font-size: 0.7rem;
+    margin: 0.3rem 1.4rem 0 0;
+}
+
+.ash_recover a{
+    text-decoration: none;
+    color: #4646447;
+}
+
+/* #2 */
 
 /* .ash_body_2{
     display: flex;
