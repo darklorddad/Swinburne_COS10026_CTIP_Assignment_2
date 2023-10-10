@@ -1319,7 +1319,7 @@ form{
 .ttl_body{
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(5deg, #1e2f25, #91a99b);
+    background-image: linear-gradient(5deg, #bdc3c7, #ecf0f1);
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif; 
 }
 
@@ -1463,7 +1463,7 @@ form{
 .ttl_header_container{
     display: grid;
     grid-template-columns: 1fr 2.5fr;
-    grid-template-rows: 0.05fr 1fr;
+    /* grid-template-rows: 0.05fr 1fr; */
     padding: 1vw;
 }
 
@@ -1471,7 +1471,7 @@ form{
     background-color: black;
 	display: flex;
     position: relative;
-	height: 48vw;
+	height: 45.5vw;
     width: 95.03%;
 	margin-top: 2.5vw;
 	margin-left: auto;
@@ -1491,11 +1491,12 @@ form{
 
 .ttl_top_nav nav {
 	position: absolute;
-    top: 3.5%;
+    top: 0;
     right: 0;
     background-color: transparent;
-    padding-right: 4vw;
+    padding: 4vw;
     z-index: 1;
+    font-size: 1vw;
 }
 
 .ttl_top_nav nav ul {
@@ -1572,7 +1573,7 @@ form{
 .ttl_block1{
     width: 0%;
     height: inherit;
-    background: #4c6148;
+    background: #567260;
     position: absolute;
     animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
     display: flex;
@@ -1602,7 +1603,7 @@ form{
 .ttl_block2{
     width: 0%;
     height: inherit;
-    background: #b1af59;
+    background: #90a79a;
     position: absolute;
     animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
     animation-delay: 2s;
@@ -1630,7 +1631,7 @@ form{
 .ttl_block3{
     width: 0%;
     height: inherit;
-    background: #e2e09d;
+    background: #caccd1;
     position: absolute;
     animation: thirdBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
     animation-delay: 4s;
@@ -1658,7 +1659,7 @@ form{
 .ttl_block4{
     width: 0%;
     height: inherit;
-    background: #91a99b;
+    background: #e4e3ea;
     position: absolute;
     animation: fourthBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
     animation-delay: 6s;
@@ -1780,11 +1781,11 @@ form{
 
 .ttl_image_slider{
     width: 90%;
-    height: 90%;
+    height: 85%;
     overflow: hidden;
     position: relative;
     transform: translate(-50%, -50%);
-    top: 50%;
+    top: 55%;
     left: 50%;
     border-radius: 2vw;
     grid-area: 2 / 2 / 3 / 3;
@@ -1835,9 +1836,9 @@ form{
 .ttl_frame{
     clear: both;
     position: relative;
-    padding: 2vw;
-    width: 50vw;
-    height: 45vw;
+    padding: 1vw;
+    width: 60vw;
+    height: 55vw;
     top: 10vw;
     margin: auto;
     border-radius: 0.5vw;
@@ -1848,22 +1849,36 @@ form{
 
 .ttl_center{
     position: relative;
-    width: 45vw;
-    height: 40vw;
+    top:5%;
+    width: 50vw;
+    height: 45vw;
     background: #fff;
 	box-shadow: 8px 10px 15px 0 rgba(0,0,0,0.2);
 	border-radius: 3px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin:auto;
 
+}
+
+.ttl_upload_title{
+    text-align: center;
+    margin: 0;
+    padding-top: 3vw;
+    font-size: 3vw;
+}
+
+.ttl_upload_description{
+    text-align: center;
+    padding: 2vw;
+    position: relative;
+    margin: 0;
+    font-size: 1.5vw;
+    border-bottom: 3px solid #D8D8D8;
 }
 
 .ttl_fileupload_title{
     text-align: center;
-    font-size: 3vw;
+    font-size: 2vw;
     padding: 1vw;
-    border-bottom: 3px solid #D8D8D8;
 }
 
 .ttl_dropzone{
@@ -1873,7 +1888,7 @@ form{
 	display: table;
 	table-layout: fixed;
 	width: 70%;
-	height: 55%;
+	height: 50%;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1897,12 +1912,13 @@ form{
     position: relative;
 	width: 20vw;
 	height: 2.5vw;
-	left: 26%;
-	bottom: -15%;
+    margin-top: 5vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1vw;
 	background: #6ECE3B;
 	border-radius: 3px;
 	text-align: center;
-    padding: 1vw;
 	font-size: 2vw;
     text-align: center;
 	box-shadow: 0 2px 0 0 #498C25;
@@ -1914,10 +1930,16 @@ form{
 	}
 }
 
+.ttl_upload-btn_container{
+    margin: auto;
+    padding-top:2vw;
+}
+
 .ttl_filecontent input[type=file] {
     align-items: center;
     position: relative;
     left: 10%;
+    padding: 1vw;
 }
 
 .ttl_filecontent img {
@@ -1925,8 +1947,8 @@ form{
     position: relative;
     top: 60%;
     left: 0;
-    width: 50%;
-    height: 30%;
+    width: 40%;
+    height: 50%;
     padding: 3vw;
 }
 
