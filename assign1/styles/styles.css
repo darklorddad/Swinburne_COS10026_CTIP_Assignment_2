@@ -520,6 +520,196 @@
     margin-left: 12.5vw;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+.dld_footer{
+	background: #e4e3ea;
+	box-sizing: border-box;
+	/* width: 100%; */
+	/* text-align: left; */
+	/* font: bold 16px sans-serif; */
+    /* font-family: "dld_samsungsharpsans"; */
+	padding: 3vw 3vw;
+    margin: 2.5vw;
+    width: 95.03%;
+    border-radius: 2vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.dld_footer_left,
+.dld_footer_center,
+.dld_footer_right {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.dld_footer_text_divider {
+    width: 0.052vw;
+    /* height: 21vw; */
+    background-color: #23322a;
+    margin: 0 3vw;
+}
+
+.dld_footer_left {
+	/* width: 33%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dld_footer h1 {
+    font-size: 3vw;
+    font-family: "dld_samsungsharpsans_bold";
+    background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: dld_footer_hue 15s infinite linear; 
+    margin: 0;
+}
+
+@keyframes dld_footer_hue {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(-360deg);
+    }
+}
+
+.dld_footer_navigation {
+	/* margin: 20px 0 12px; */
+	/* padding: 0; */
+    margin: 0;
+    /* margin-top: 0.5vw; */
+    /* margin-bottom: 1vw; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.25vw;
+    margin-bottom: 2.25vw;
+}
+
+.dld_footer_navigation a {
+	/* display:inline-block; */
+	/* line-height: 1.8; */
+    /* font-weight:400; */
+	/* text-decoration: none; */
+	/* color:  inherit; */
+    color:  #23322a;
+    margin-top: 0.25vw;
+    margin-bottom: 0.25vw;
+}
+
+.dld_footer_company_name {
+	color:  #23322a;
+	font-size: 0.75vw;
+	margin: 0;
+}
+
+/* .dld_footer_navigation a:before {
+    content: "|";
+    font-weight:300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.dld_footer_navigation .dld_link_1:before {
+    content: none;
+} */
+
+.dld_footer_center{
+	/* width: 33%; */
+}
+
+.dld_footer_center i {
+	background-color:  #23322a;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.dld_footer_center i.fa-envelope {
+	font-size: 1vw;
+	line-height: 38px;
+    color: #23322a;
+}
+
+.dld_footer_center p {
+	/* display: inline-block; */
+	color: #23322a;
+  /* font-weight:400; */
+	/* vertical-align: middle; */
+	margin:0;
+}
+
+.dld_footer_center_information {
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1.5vw;
+}
+
+.dld_footer_center p span {
+	display:block;
+	/* font-weight: normal; */
+	font-size:1vw;
+	/* line-height:2; */
+}
+
+.dld_footer_center p a {
+	color:  #90a79a;
+	/* text-decoration: none; */
+}
+
+.dld_footer_right {
+	width: 40%;
+}
+
+.dld_footer_company_about {
+	line-height: 1.5vw;
+	color:  #23322a;
+	font-size: 1vw;
+	margin: 0;
+}
+
+.dld_footer_company_about span {
+	display: block;
+	color:  #23322a;
+	font-size: 1.5vw;
+	font-family: "dld_samsungsharpsans_bold";
+	margin-bottom: 1.5vw;
+}
+
+.dld_footer_icons {
+	margin-top: 2vw;
+}
+
+.dld_footer_icons a {
+	display: inline-block;
+	width: 3vw;
+	height: 3vw;
+	/* cursor: pointer; */
+	background-color:  #23322a;
+	border-radius: 1vw;
+	/* font-size: 20px; */
+	/* color: #90a79a; */
+	/* text-align: center; */
+	/* line-height: 35px; */
+
+	margin-right: 0.5vw;
+	/* margin-bottom: 5px; */
+}
+
 
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
