@@ -169,7 +169,7 @@
     background-color: #90a79a;
 }
 
-.text {
+.dld_top_navigation_bar_text {
     position: absolute;
     transition: 0.5s ease;
     color: #23322a;
@@ -180,7 +180,7 @@
     white-space: nowrap;
 }
 
-.dld_top_navigation_bar ul li:hover .text {
+.dld_top_navigation_bar ul li:hover .dld_top_navigation_bar_text {
     opacity: 1;
     transform: translateY(0.75vw);
 }
