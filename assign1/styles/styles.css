@@ -498,6 +498,123 @@
     margin-left: 12.5vw;
 }
 
+.menu {
+    background-color: #1f292e;
+    height: 4vw;
+    width: 95.03%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vw;
+    margin-top: 2.5vw;
+    margin-left: 2.5vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.menu ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu ul h1 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 2.5vw;
+    font-family: "dld_samsungsharpsans_bold", sans-serif;
+    background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: dld_navigation_bar_title_hue 15s infinite linear;
+    margin-right: 10vw;
+}
+
+@keyframes dld_navigation_bar_title_hue {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(-360deg);
+    }
+}
+
+.item {
+    /* position: relative; */
+    /* height: 3.5vw; */
+    /* z-index: 1; */
+    list-style-type: none;
+    /* display: flex; */
+    /* align-items: center; */
+    margin: 0 1vw;
+}
+
+/* .right_item {
+    margin-right: 2vw;
+} */
+
+.item a {
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* flex-direction: column; */
+    /* width: 100%; */
+}
+
+.icon {
+    position: relative;
+    color: #23322a;
+    transition: 0.5s;
+    font-size: 1.25vw;
+    display: flex;
+    align-items: center;
+    width: 5.1vw;
+    height: 2.55vw;
+    justify-content: center;
+    border-radius: 2vw;
+    background-color: #e4e3ea;
+}
+
+.menu ul li:hover a .icon {
+    transform: translateY(-1.5vw);
+    opacity: 1;
+    width: 5.1vw;
+    height: 2.55vw;
+    border-radius: 2vw;
+    background-color: #90a79a;
+}
+
+.text {
+    position: absolute;
+    transition: 0.5s ease;
+    color: #23322a;
+    opacity: 0;
+    transform: translateY(2.5vw);
+    font-family: "dld_samsungsharpsans_medium";
+    font-size: 1vw;
+    white-space: nowrap;
+}
+
+.menu ul li:hover .text {
+    opacity: 1;
+    transform: translateY(0.75vw);
+}
+
+/* .text:active {
+    color: #90a79a;
+    transition: 0s;
+} */
+
 
 
 
