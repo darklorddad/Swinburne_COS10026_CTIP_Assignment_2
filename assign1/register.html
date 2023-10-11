@@ -4,6 +4,7 @@
         <meta charset = "UTF-8">
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         <link rel = "stylesheet" type = "text/css" href = "styles/styles.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <title>FLORASCAN - Login / Registration</title>
     </head>
 
@@ -13,7 +14,8 @@
 		</div>
 
         <div class="ash_wrapper">
-            <h1>Register</h1>
+            <span class="ash_bg_animate2"></span>
+            <!-- <h1>Register</h1>
             <form action="#">
                 <input type="text" placeholder="Username" required>
                 <input type="text" placeholder="Name" required>
@@ -24,7 +26,37 @@
             <button>Register</button>
             <div class="ash_member">
                 <p>Already a member?<a href="./login.html">Log In</a></p>
-            </div>
+            </div> -->
+
+            <div class="ash_form_box register">
+				<h2>Sign Up</h2>
+				<form action="#">
+					<div class="ash_input_box">
+						<input type="text" required>
+						<label>Username</label>
+						<i class='bx bxs-user'></i>
+					</div>
+					<div class="ash_input_box">
+						<input type="text" required>
+						<label>Email</label>
+						<i class='bx bxs-envelope'></i>
+					</div>
+					<div class="ash_input_box">
+						<input type="password" required>
+						<label>Password</label>
+						<i class='bx bxs-lock-alt' ></i>
+					</div>
+					<button type="submit" class="ash_btn">Sign Up</button>
+					<div class="ash_logreg_link">
+						<p>Already have an account? <a href="./login.html" class="ash_login_link">Log In</a></p>
+					</div>
+				</form>
+			</div>
+
+			<div class="ash_info_text register">
+				<h2>Welcome Back!</h2>
+				<p>Lorem ipsum dolor sit amet.</p>
+			</div>
         </div>
 
 

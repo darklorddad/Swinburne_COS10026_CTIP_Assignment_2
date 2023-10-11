@@ -1237,7 +1237,7 @@ when users will click/enter button(link) browser will add a #id in a url and whe
 
 /* Ashley's login.html and register.html */
 
-.ash_body_2{
+/* .ash_body_2{
     box-sizing: border-box;
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
 }
@@ -1308,18 +1308,18 @@ when users will click/enter button(link) browser will add a #id in a url and whe
 
 .ash_recover a{
     text-decoration: none;
-    color: #4646447;
-}
+    color: #4646447; 
+}*/
 
 /* #2 */
 
-/* .ash_body_2{
+.ash_body_2{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     box-sizing: border-box;
-    background: #081b29;
+    /* background: #081b29; */
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
 }
 
@@ -1346,13 +1346,13 @@ when users will click/enter button(link) browser will add a #id in a url and whe
 .ash_wrapper .ash_form_box.login{
     left: 0;
     padding: 0 60px 0 40px;
-    display: none;
+    /* display: none; */
 }
 
 .ash_wrapper .ash_form_box.register{
     right: 0;
     padding: 0 40px 0 60px;
-    display: none;
+    /* display: none; */
 }
 
 .ash_form_box h2{
@@ -1481,14 +1481,14 @@ when users will click/enter button(link) browser will add a #id in a url and whe
     right: 0;
     text-align: right;
     padding-right: 10px;
-    display: none;
+    /* display: none; */
 }
 
 .ash_wrapper .ash_info_text.register{
     left: 0;
     text-align: left;
     padding-left: 10px;
-    display: none;
+    /* display: none; */
 }
 
 .ash_info_text h2{
@@ -1512,7 +1512,7 @@ when users will click/enter button(link) browser will add a #id in a url and whe
     background: linear-gradient(45deg, #081b29, #0ef);
     border-bottom: 3px solid #0ef;
     transform: rotate(10deg) skewY(40deg);
-    transform: rotate(0) skewY(0);
+    /* transform: rotate(0) skewY(0); */
     transform-origin: bottom right;
 }
 
@@ -1525,9 +1525,9 @@ when users will click/enter button(link) browser will add a #id in a url and whe
     background: #081b29;
     border-top: 3px solid #0ef;
     transform: rotate(-11deg) skewY(-41deg);
-    transform: rotate(0) skewY(0);
+    /* transform: rotate(0) skewY(0); */
     transform-origin: bottom left;
-} */
+}
 
 
 
