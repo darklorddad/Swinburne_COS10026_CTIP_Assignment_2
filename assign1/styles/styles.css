@@ -1346,6 +1346,7 @@ when users will click/enter button(link) browser will add a #id in a url and whe
 .ash_wrapper .ash_form_box.login{
     left: 0;
     padding: 0 60px 0 40px;
+    /* background: #081b29; */
     /* display: none; */
 }
 
@@ -1437,7 +1438,7 @@ when users will click/enter button(link) browser will add a #id in a url and whe
 .ash_btn::before{
     content: '';
     position: absolute;
-    top: -100;
+    top: -100%;
     left: 0;
     width: 100%;
     height: 300%;
