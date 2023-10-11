@@ -1337,12 +1337,15 @@ when users will click/enter button(link) browser will add a #id in a url and whe
 
 .ash_body_2{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     box-sizing: border-box;
     /* background: #081b29; */
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .ash_wrapper{
@@ -1353,6 +1356,7 @@ when users will click/enter button(link) browser will add a #id in a url and whe
     border: 2px solid #0ef;
     box-shadow: 0 0 25px #0ef;
     overflow: hidden;
+    margin-top: 6.5vw;
 }
 
 .ash_wrapper .ash_form_box{
