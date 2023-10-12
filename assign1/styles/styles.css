@@ -723,6 +723,7 @@
     margin: 0;
     padding: 0;
     color: #90a79a;
+    background-image: linear-gradient(5deg, #bdc3c7, #ecf0f1);
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
 }
 
@@ -735,7 +736,7 @@
     margin-left: 8vw;
     list-style-type: none;
     border-radius: 1vw;
-    background-color: rgb(31, 41, 46);
+    background-color: #e4e3ea;
 }
 
 .czy_navigation_fool li{
@@ -743,7 +744,7 @@
 }
 
 .czy_navigation_fool li a{
-    color: rgb(206, 206, 206);
+    background-color: #90a79a;
     display: block;
     margin-top: 1vw;
     margin-bottom: 1vw;
@@ -752,15 +753,17 @@
     border-radius: 1vw;
     font-family: "dld_samsungsharpsans_bold";
     font-size: 2vw;
-    background-color: rgb(23, 30, 34);
+    color: #23322a;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25);
     text-decoration: none;
     text-align: center;
 }
 
 .czy_navigation_fool a:hover, .czy_navigation_fool .czy_active{
-    background-color: #90a79a;
-    color: #23322a;
-}
+    transition: color, background-color 400ms;
+    color: #90a79a;
+    background-color: #23322a;
+    }
 
 .czy_where_magic_happens{
     margin-top: 1vw;
@@ -972,7 +975,7 @@
 .czy_profile_table{
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0.5vw;
+    border-spacing: 0.3vw;
 }
 
 .czy_profile_body th, td{
@@ -1446,7 +1449,7 @@ when users will click/enter button(link) browser will add a #id in a url and whe
     position: relative;
     width: 750px;
     height: 450px;
-    background: transparent;
+    background: #081b29;
     border: 2px solid #0ef;
     box-shadow: 0 0 25px #0ef;
     overflow: hidden;
@@ -1643,7 +1646,7 @@ when users will click/enter button(link) browser will add a #id in a url and whe
     left: 250px;
     width: 850px;
     height: 700px;
-    background: #081b29;
+    background: linear-gradient(45deg, #081b29, #0ef);
     border-top: 3px solid #0ef;
     transform: rotate(-11deg) skewY(-41deg);
     /* transform: rotate(0) skewY(0); */
@@ -2646,8 +2649,13 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     background-color: #AFE4DE;
 }
 
+<<<<<<< Updated upstream
 .ttl_plant_environment_table th, .ttl_plant_environment_table td{
     border-radius: 5px;
+=======
+.ttl_plant_environment_table th{
+    border-radius: 10px;
+>>>>>>> Stashed changes
     font-size: 1.5vw;
 }
 
@@ -2694,11 +2702,39 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 /* Left side background */
-.nic_left {
+.nic_slide > img{
+    height: 75vw;
+    width: 35vw;
+    object-fit: cover;
+}
+
+#nic_slideshow {
     border-radius: 2vw 0 0 2vw;
-    height: 100%;
-    background: url("images/nic/peakpx.jpg") no-repeat center;
-    background-size: cover;
+    overflow: hidden;
+    height: 75vw;
+    width: 35vw;
+    margin: 0 auto;
+}
+  
+.nic_slide-wrapper {
+    width: 210vw;
+    -webkit-animation: slide 20s ease-in-out infinite;
+}
+  
+.nic_slide {
+    float: left;
+}
+  
+.nic_slide img{
+    object-fit: cover;
+}
+
+@-webkit-keyframes slide {
+    10% {margin-left: 0;}
+    30% {margin-left: -35vw;}
+    50% {margin-left: -70vw;}
+    70% {margin-left: -105vw;}
+    90% {margin-left: -140vw;}
 }
 
 /* Right side form container */
