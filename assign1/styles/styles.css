@@ -972,7 +972,7 @@
 .czy_profile_table{
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0.5vw;
+    border-spacing: 0.3vw;
 }
 
 .czy_profile_body th, td{
@@ -2646,8 +2646,13 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     background-color: #AFE4DE;
 }
 
+<<<<<<< Updated upstream
 .ttl_plant_environment_table th, .ttl_plant_environment_table td{
     border-radius: 5px;
+=======
+.ttl_plant_environment_table th{
+    border-radius: 10px;
+>>>>>>> Stashed changes
     font-size: 1.5vw;
 }
 
@@ -2694,11 +2699,39 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 /* Left side background */
-.nic_left {
+.nic_slide > img{
+    height: 75vw;
+    width: 35vw;
+    object-fit: cover;
+}
+
+#nic_slideshow {
     border-radius: 2vw 0 0 2vw;
-    height: 100%;
-    background: url("images/nic/peakpx.jpg") no-repeat center;
-    background-size: cover;
+    overflow: hidden;
+    height: 75vw;
+    width: 35vw;
+    margin: 0 auto;
+}
+  
+.nic_slide-wrapper {
+    width: 210vw;
+    -webkit-animation: slide 20s ease-in-out infinite;
+}
+  
+.nic_slide {
+    float: left;
+}
+  
+.nic_slide img{
+    object-fit: cover;
+}
+
+@-webkit-keyframes slide {
+    10% {margin-left: 0;}
+    30% {margin-left: -35vw;}
+    50% {margin-left: -70vw;}
+    70% {margin-left: -105vw;}
+    90% {margin-left: -140vw;}
 }
 
 /* Right side form container */
