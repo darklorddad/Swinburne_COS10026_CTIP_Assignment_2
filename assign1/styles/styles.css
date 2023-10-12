@@ -1446,7 +1446,7 @@ when users will click/enter button(link) browser will add a #id in a url and whe
     position: relative;
     width: 750px;
     height: 450px;
-    background: transparent;
+    background: #081b29;
     border: 2px solid #0ef;
     box-shadow: 0 0 25px #0ef;
     overflow: hidden;
@@ -1643,7 +1643,7 @@ when users will click/enter button(link) browser will add a #id in a url and whe
     left: 250px;
     width: 850px;
     height: 700px;
-    background: #081b29;
+    background: linear-gradient(45deg, #081b29, #0ef);
     border-top: 3px solid #0ef;
     transform: rotate(-11deg) skewY(-41deg);
     /* transform: rotate(0) skewY(0); */
