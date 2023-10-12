@@ -2737,14 +2737,13 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     90% {margin-left: -140vw;}
 }
 
-/* Right side form container */
+
 .nic_right {
     padding: 30px 30px;
     border-top-right-radius: 2vw;
     border-bottom-right-radius: 2vw;
 }
 
-/* Form title */
 .nic_h2 {
     position: relative;
     padding-bottom: 10px;
@@ -2754,7 +2753,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     font-size: 2vw;
 }
 
-/* Form fields */
+
 .nic_field {
     width: 90%;
     padding: 0.5rem 1rem;
@@ -2778,18 +2777,17 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     min-height: 80px;
 }
 
-/* Form labels */
+
 .nic_label {
     font-weight: bold;
 }
 
-/* Select containers */
 .nic_select-container {
     display: flex;
     align-items: center;
 }
 
-/* Select styles */
+
 .nic_select {
     width: 98%;
     padding: 0.5rem 1rem;
@@ -2819,7 +2817,6 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     opacity: 80%;
 }
 
-/* Submit and Reset button styles */
 .nic_submit {
     background-color: #2ecc71;
     color: #fff;
@@ -2830,7 +2827,6 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     color: #fff;
 }
 
-/* Button container */
 .nic_button-container {
     display: flex;
     justify-content: space-between;
