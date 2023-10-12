@@ -2041,7 +2041,6 @@ when users will click/enter button(link) browser will add a #id in a url and whe
 
 .ttl_dropzone{
     position: relative;
-    z-index: 1;
 	box-sizing: border-box;
 	display: table;
 	table-layout: fixed;
