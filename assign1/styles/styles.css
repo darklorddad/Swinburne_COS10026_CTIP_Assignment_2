@@ -723,6 +723,7 @@
     margin: 0;
     padding: 0;
     color: #90a79a;
+    background-image: linear-gradient(5deg, #bdc3c7, #ecf0f1);
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
 }
 
@@ -735,7 +736,7 @@
     margin-left: 8vw;
     list-style-type: none;
     border-radius: 1vw;
-    background-color: rgb(31, 41, 46);
+    background-color: #e4e3ea;
 }
 
 .czy_navigation_fool li{
@@ -743,7 +744,7 @@
 }
 
 .czy_navigation_fool li a{
-    color: rgb(206, 206, 206);
+    background-color: #90a79a;
     display: block;
     margin-top: 1vw;
     margin-bottom: 1vw;
@@ -752,15 +753,17 @@
     border-radius: 1vw;
     font-family: "dld_samsungsharpsans_bold";
     font-size: 2vw;
-    background-color: rgb(23, 30, 34);
+    color: #23322a;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25);
     text-decoration: none;
     text-align: center;
 }
 
 .czy_navigation_fool a:hover, .czy_navigation_fool .czy_active{
-    background-color: #90a79a;
-    color: #23322a;
-}
+    transition: color, background-color 400ms;
+    color: #90a79a;
+    background-color: #23322a;
+    }
 
 .czy_where_magic_happens{
     margin-top: 1vw;
