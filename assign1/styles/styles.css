@@ -1449,9 +1449,9 @@ when users will click/enter button(link) browser will add a #id in a url and whe
     position: relative;
     width: 750px;
     height: 450px;
-    background: #081b29;
-    border: 2px solid #0ef;
-    box-shadow: 0 0 25px #0ef;
+    background: #23322a;
+    border: 2px solid #e4e3ea;
+    box-shadow: 0 0 25px #e4e3ea;
     overflow: hidden;
     margin-top: 6.5vw;
 }
@@ -1507,7 +1507,7 @@ when users will click/enter button(link) browser will add a #id in a url and whe
 
 .ash_input_box input:focus,
 .ash_input_box input:valid{
-    border-bottom-color: #0ef;
+    border-bottom-color: #e4e3ea ;
 }
 
 .ash_input_box label{
@@ -1524,7 +1524,7 @@ when users will click/enter button(link) browser will add a #id in a url and whe
 .ash_input_box input:focus~label,
 .ash_input_box input:valid~label{
     top: -5px;
-    color: #0ef;
+    color: #90a79a ;
 }
 
 .ash_input_box i{
@@ -1539,7 +1539,7 @@ when users will click/enter button(link) browser will add a #id in a url and whe
 
 .ash_input_box input:focus~i,
 .ash_input_box input:valid~i{
-    color: #0ef;
+    color: #e4e3ea;
 }
 
 .ash_btn{
@@ -1547,7 +1547,7 @@ when users will click/enter button(link) browser will add a #id in a url and whe
     width: 100%;
     height: 45px;
     background: transparent;
-    border: 2px solid #0ef;
+    border: 2px solid #e4e3ea;
     outline: none;
     border-radius: 40px;
     cursor: pointer;
@@ -1565,7 +1565,7 @@ when users will click/enter button(link) browser will add a #id in a url and whe
     left: 0;
     width: 100%;
     height: 300%;
-    background: linear-gradient(#081b29, #0ef, #081b29, #0ef);
+    background: linear-gradient(#23322a, #e4e3ea , #23322a, #e4e3ea);
     z-index: -1;
     transition: .5s;
 }
@@ -1582,7 +1582,7 @@ when users will click/enter button(link) browser will add a #id in a url and whe
 }
 
 .ash_logreg_link p a{
-    color: #0ef;
+    color: #90a79a ;
     text-decoration: none;
     font-weight: 600;
 }
@@ -1633,8 +1633,8 @@ when users will click/enter button(link) browser will add a #id in a url and whe
     right: 0;
     width: 850px;
     height: 600px;
-    background: linear-gradient(45deg, #081b29, #0ef);
-    border-bottom: 3px solid #0ef;
+    background: linear-gradient(45deg, #23322a, #e4e3ea);
+    border-bottom: 3px solid #e4e3ea;
     transform: rotate(10deg) skewY(40deg);
     /* transform: rotate(0) skewY(0); */
     transform-origin: bottom right;
@@ -1646,8 +1646,8 @@ when users will click/enter button(link) browser will add a #id in a url and whe
     left: 250px;
     width: 850px;
     height: 700px;
-    background: linear-gradient(45deg, #081b29, #0ef);
-    border-top: 3px solid #0ef;
+    background: linear-gradient(45deg, #23322a, #e4e3ea);
+    border-top: 3px solid #e4e3ea;
     transform: rotate(-11deg) skewY(-41deg);
     /* transform: rotate(0) skewY(0); */
     transform-origin: bottom left;
