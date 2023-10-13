@@ -797,7 +797,7 @@
     width: 95.03%;
     margin-left: 2.5vw;
     list-style-type: none;
-    border-radius: 1vw;
+    border-radius: 2vw;
     background-color: #e4e3ea;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
@@ -812,17 +812,17 @@
     margin-top: 1vw;
     margin-bottom: 1vw;
     padding: 0.5vw 4vw;
-    border-radius: 1vw;
+    border-radius: 1.5vw;
     font-family: "dld_samsungsharpsans_bold";
     font-size: 2vw;
     color: #23322a;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25);
     text-decoration: none;
     text-align: center;
+    transition: color 0.4s, background-color 0.4s;
 }
 
 .czy_navigation_fool a:hover, .czy_navigation_fool .czy_active{
-    transition: color, background-color 400ms;
     color: #90a79a;
     background-color: #23322a;
 }
@@ -832,17 +832,25 @@
     width: 89.03%;
     margin-left: 2.5vw;
     margin-bottom: 3vw;
-    border-radius: 1vw;
+    border-radius: 2vw;
     background-color: #e4e3ea;
     padding: 3vw;
     overflow: hidden;
-    /* box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22); */
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.czy_ooo_pictures{
+}
+
+.czy_section{
+    margin-bottom: 1vw;
 }
 
 .czy_tis_a_search_bar{
     float: right;
     width: 46%;
     font-size: 1.5vw;
+    margin-right: 0.8vw;
     padding: 0.5vw;
     padding-left: 1.5vw;
     border: none;
@@ -858,62 +866,68 @@
     font-family: "dld_samsungsharpsans_medium";
     float: left;
     margin: 0;
+    margin-left: 0.8vw;
     font-size: 2.5vw;
 }
 
-.czy_tis_a_line{
+.czy_tis_a_line, .czy_tis_a_line_2{
     margin: 0;
     padding: 0;
-    margin-top: 4.2vw;
     border-radius: 1vw;
     border: 0.2vw solid #23322a;
 }
 
+.czy_tis_a_line{
+    margin-left: 0.8vw;
+    margin-right: 0.8vw;
+    margin-top: 4vw;
+    margin-bottom: 0.5vw;
+}
+
+.czy_tis_a_line_2{
+    margin-bottom: 1vw;
+}
+
 .czy_family_title{
     margin: 0;
+    margin-left: 0.8vw;
     padding: 0;
     font-weight: bold;
     font-family: "dld_samsungsharpsans_bold";
     font-size: 2.5vw;
-    margin-top: 1vw;
 }
 
-.czy_left_card_bro, .czy_right_card_bro, .czy_left_card_species, .czy_right_card_species{
+.czy_card, .czy_card_species{
     box-shadow: -0.52vw 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
     display: inline-block;
     overflow: hidden;
-    border-radius: 1vw 1vw 1vw 1vw;
-    margin-top: 1vw;
+    border-radius: 1.5vw;
+    margin: 1vw;
+    margin-left: 0.8vw;
+    margin-right: auto;
     width: 48.5%;
-
-}
-
-.czy_right_card_bro, .czy_right_card_species{
-    float: right;
-}
-
-.czy_left_card_bro, .czy_left_card_species{
-    float: left;
 }
 
 .czy_yoo_pictures{
     float: left;
     width: 10vw;
-    height: 13vw;
+    height: 17vw;
     object-fit: cover;
 }
 
 .czy_cards_le_content{
-    color: #90a79a;
-    background-color: #23322a;
+    color: #23322a;
+    background-color: white;
     margin-left: 10vw;
     padding: 0.5vw 1vw 0.4vw 0.8vw;
-    height: 12.1vw;
+    height: 16.1vw;
     font-family: "dld_samsungsharpsans";
     position: relative;
+    transition: background-color ease 0.25s, color ease 0.25s;
 }
 
 .czy_cards_le_content h1{
+    margin: 0;
     font-family: "dld_samsungsharpsans_bold";
     font-size: 1.7vw;
 }
@@ -921,100 +935,114 @@
 .czy_seperator{
     margin: 0;
     padding: 0;
-    margin-top: 2.3vw;
+    margin-top: 2.5vw;
     border-radius: 2vw;
-    border: 0.1vw solid #90a79a;
+    border: 0.15vw solid #23322a;
 }
 
 .czy_small_description{
     margin: 0;
     margin-top: 0.4vw;
     font-weight: 600;
-    font-size: 0.85vw;
+    font-size: 1vw;
     text-align: justify;
-    line-height: 1.3;
+    line-height: 1.4;
 }
 
 .czy_button{
     position: absolute;
-    right: 0.8vw;
-    bottom: 1.2vw;
+    bottom: 1.1vw;
+    font-family: "dld_samsungsharpsans_bold";
 }
 
 .czy_card_butt_on{
-    color: #23322a;
-    background-color: #90a79a;
-    border-radius: 0.5vw;
-    margin: 0 3.5vw;
+    color: #90a79a;
+    background-color: #23322a;
+    border-radius: 1vw;
     padding: 0.4vw 2vw;
-    font-size: 1vw;
-    font-family: "dld_samsungsharpsans_bold";
+    margin-right: 0.6vw;
+    font-size: 1.25vw;
     font-weight: bold;
     text-decoration: none;
+    transition: background-color 0.25s ease, color 0.25s eases;
 }
 
 .czy_card_butt_on:hover{
-    transition: box-shadow 400ms, background-color 600ms;
-    background-color: #cccdd2;
-    box-shadow: rgb(144, 167, 154) 0 0 0.8vw 0.2vw
+    color: #23322a;
+    background-color: #90a79a;
 }
 
 .czy_gallery_seperator{
-    margin: 0;
+    margin: 0 0.8vw;
     padding: 0;
-    margin-bottom: 1vw;
+    margin-bottom: 0.5vw;
     border-radius: 2vw;
-    border: 0.1vw solid #90a79a;
+    border: 0.15vw solid #90a79a;
 }
 
 .czy_gallery{
-    z-index: 1;
-    background-image: linear-gradient(180deg, #23322a, #567361);
+    margin-top: 0vw;
+    z-index: -1;
+    position: absolute;
+    background-image: linear-gradient(180deg, #23322a, rgba(86, 115, 97, 0.95));
     opacity: 0;
     text-align: center;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    padding-top: 1.5vw;
-    width: 41.2%;
-    position: absolute;
-    border-radius: 0 0 1vw 1vw;
-
+    padding-left: 0.2vw;
+    padding-right: 0.2vw;
+    padding-top: 1vw;
+    width: 42.78%;
+    border-radius: 0 0 1.5vw 1.5vw;
+    transition: opacity ease 0.25s;
 }
 
 .czy_gallery_pictures{
-    width: 6vw;
-    height: 6vw;
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
-    margin-bottom: 1vw;
+    width: 7vw;
+    height: 7vw;
+    margin: 0.4vw;
     border-radius: 0.5vw;
     object-fit: cover;
-    transition: filter ease 0.4s;
+    transition: filter ease 0.3s;
 }
 
 .czy_gallery_pictures:hover{
-    filter: brightness(70%)
+    filter: brightness(40%)
 }
 
-.czy_left_card_species:hover > .czy_gallery{
+.czy_card_species:hover > .czy_gallery{
+    z-index: 1;
     opacity: 1;
 }
 
-.czy_left_card_species:hover{
+.czy_card_species:hover{
+    border-radius: 1.5vw 1.5vw 0 0;
+}
+
+.czy_card_species:hover .czy_cards_le_content{
+    color: #90a79a;
     background-color: #23322a;
-    border-radius: 1vw 1vw 0 0;
+}
+
+.czy_card_species:hover .czy_card_butt_on{
+    color: #23322a;
+    background-color: #90a79a;
+}
+
+.czy_card_species:hover .czy_seperator{
+    border-color: #90a79a;
 }
 
 /* Pop up images for when you click on the image */
 .czy_overlay{
+    display: flex;
+    align-items: center;
     z-index: 10;
-    position: absolute;
+    position: fixed;
 	top: 0;
 	bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0,0,0,0.5);
-    transition: opacity 500ms;
+    background: rgba(0,0,0,0.8);
+    transition: opacity ease 0.8s;
     visibility: hidden;
     opacity: 0;
 }
@@ -1033,7 +1061,6 @@
 
 .czy_overlay > img{
     display: block;
-    margin-top: 3vw;
     margin-left: auto;
     margin-right: auto;
     max-height: 40vw;
@@ -1067,35 +1094,44 @@
 }
 
 .czy_profile_pic{
-    margin-top: 2vw;
+    margin-top: 3vw;
     width: 15vw;
     border-radius: 15vw;
+    object-fit: cover;
 }
 
-.czy_profile_description{
-    padding-bottom: 1vw;
-    padding-right: 10vw;
-    padding-left: 10vw;
+.czy_profile_about_me, .czy_profile_personal{
+    margin-top: 2vw;
+    padding-top: 3vw;
+    padding-bottom: 2vw;
+    border-radius: 2vw;
+    width: 80%;
+    background-color: white;
+    box-shadow: -0.52vw 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
 .czy_member_name{
-    font-size: 200%
+    text-shadow: 0.05vw 0.05vw 0.2vw rgba(0,0,0,0.4);
+    font-size: 200%;
+    font-weight: bold
 }
 
 .czy_about_me{
     box-shadow: -0.2vw 0.2vw 0.52vw rgba(0,0,0,0.3);
     text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    width: 83%;
     padding: 2.5vw 5vw;
-    border: 0.2vw solid #90a79a;
     border-radius: 1vw;
     color: #23322a;
-    background-color: #90a79a;
+    background-color: white;
 }
 
 .czy_title{
     text-shadow: 0.05vw 0.05vw 0.2vw rgba(0,0,0,0.4);
     font-weight: bold;
-    font-size: 140%;
+    font-size: 2vw;
     color: #23322a;
     padding: 0.5vw 1vw;
     width: 30%;
@@ -1104,28 +1140,36 @@
 }
 
 .czy_profile_table{
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
     border-collapse: separate;
     border-spacing: 0.5vw;
-    
 }
 
 .czy_profile_body th, td{
     box-shadow: -0.1vw 0.1vw 0.52vw rgba(0,0,0,0.3);
-    padding: 1.25vw 2.5vw;
+    padding: 0.5vw 1.5vw;
     color: #23322a; 
-    background-color: #90a79a;
+    height: 3vw;
+    background-color: white;
     border-radius: 0.5vw;
-    border: 0.2vw solid #90a79a;
 }
 
+.czy_profile_body th{
+    font-family: "dld_samsungsharpsans_bold";
+    width: 20%;
+}
 
 .czy_profile_body td{
+    font-family: "dld_samsungsharpsans_medium";
     text-align: justify;
 }
 
 .czy_profile_body td ul{
     margin: 0;
+    margin-left: 1vw;
+    padding: 0;
 }
 
 
