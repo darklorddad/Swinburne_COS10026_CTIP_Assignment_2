@@ -917,6 +917,7 @@
 }
 
 .czy_gallery{
+    z-index: 1;
     background-image: linear-gradient(180deg, #23322a, #567361);
     opacity: 0;
     text-align: center;
@@ -926,7 +927,7 @@
     width: 41.2%;
     position: absolute;
     border-radius: 0 0 1vw 1vw;
-    transition: opacity ease-in 0.1s;
+
 }
 
 .czy_gallery_pictures{
@@ -1072,8 +1073,8 @@
     text-align: justify;
 }
 
-.czy_profile_body td p {
-    margin:0.2vw;
+.czy_profile_body td ul{
+    margin: 0;
 }
 
 
