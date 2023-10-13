@@ -722,21 +722,25 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: #90a79a;
+    color: #23322a;
     background-image: linear-gradient(5deg, #bdc3c7, #ecf0f1);
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
 }
 
 .czy_navigation_fool ul{
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
     overflow: hidden;
     padding: 0;
     margin-bottom: 0;
-    margin-top: 5vw;
-    margin-right: 8vw;
-    margin-left: 8vw;
+    margin-top: 1.5vw;
+    width: 95.03%;
+    margin-left: 2.5vw;
     list-style-type: none;
     border-radius: 1vw;
     background-color: #e4e3ea;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
 .czy_navigation_fool li{
@@ -748,7 +752,6 @@
     display: block;
     margin-top: 1vw;
     margin-bottom: 1vw;
-    margin-left: 8vw;
     padding: 0.5vw 4vw;
     border-radius: 1vw;
     font-family: "dld_samsungsharpsans_bold";
@@ -763,27 +766,29 @@
     transition: color, background-color 400ms;
     color: #90a79a;
     background-color: #23322a;
-    }
+}
 
 .czy_where_magic_happens{
-    margin-top: 1vw;
-    margin-right: 8vw;
-    margin-left: 8vw;
+    margin-top: 1.5vw;
+    width: 89.03%;
+    margin-left: 2.5vw;
     margin-bottom: 3vw;
     border-radius: 1vw;
-    background-color: rgb(31, 41, 46);
-    padding: 1.5vw;
+    background-color: #e4e3ea;
+    padding: 3vw;
     overflow: hidden;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
 .czy_tis_a_search_bar{
     float: right;
-    width: 30vw;
+    width: 46%;
     font-size: 1.5vw;
     padding: 0.5vw;
     padding-left: 1.5vw;
     border: none;
-    border-radius: 0.4vw;
+    border-radius: 2vw;
+    border: 0.2vw solid #23322a;
 }
 
 .czy_tis_a_search_bar:hover{
@@ -802,43 +807,118 @@
     padding: 0;
     margin-top: 4.2vw;
     border-radius: 1vw;
-    border: 0.2vw solid #90a79a;
+    border: 0.2vw solid #23322a;
 }
 
-.czy_left_card_bro, .czy_right_card_bro{
-    box-shadow: rgba(0, 0, 0, 0.2) 0.1vw 0.1vw 0.8vw 0.1vw;
+.czy_family_title{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 2.5vw;
+    margin-top: 1vw;
+}
+
+.czy_left_card_bro, .czy_right_card_bro, .czy_left_card_species, .czy_right_card_species{
+    box-shadow: -0.52vw 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
     display: inline-block;
     overflow: hidden;
     border-radius: 1vw 1vw 1vw 1vw;
-    margin-top: 2vw;
-    width: 39vw;
+    margin-top: 1vw;
+    width: 48.5%;
+
 }
 
-.czy_right_card_bro{
+.czy_right_card_bro, .czy_right_card_species{
     float: right;
 }
 
-.czy_left_card_bro{
+.czy_left_card_bro, .czy_left_card_species{
     float: left;
 }
 
 .czy_yoo_pictures{
     float: left;
     width: 10vw;
-    height: 10vw;
+    height: 13vw;
     object-fit: cover;
 }
 
+.czy_cards_le_content{
+    color: #90a79a;
+    background-color: #23322a;
+    margin-left: 10vw;
+    padding: 0.5vw 1vw 0.4vw 0.8vw;
+    height: 12.1vw;
+    font-family: "dld_samsungsharpsans";
+    position: relative;
+}
+
+.czy_cards_le_content h1{
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1.7vw;
+}
+
+.czy_seperator{
+    margin: 0;
+    padding: 0;
+    margin-top: 2.3vw;
+    border-radius: 2vw;
+    border: 0.1vw solid #90a79a;
+}
+
+.czy_small_description{
+    margin: 0;
+    margin-top: 0.4vw;
+    font-weight: 600;
+    font-size: 0.85vw;
+    text-align: justify;
+    line-height: 1.3;
+}
+
+.czy_button{
+    position: absolute;
+    right: 0.8vw;
+    bottom: 1.2vw;
+}
+
+.czy_card_butt_on{
+    color: #23322a;
+    background-color: #90a79a;
+    border-radius: 0.5vw;
+    margin: 0 3.5vw;
+    padding: 0.4vw 2vw;
+    font-size: 1vw;
+    font-family: "dld_samsungsharpsans_bold";
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.czy_card_butt_on:hover{
+    transition: box-shadow 400ms, background-color 600ms;
+    background-color: #cccdd2;
+    box-shadow: rgb(144, 167, 154) 0 0 0.8vw 0.2vw
+}
+
+.czy_gallery_seperator{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1vw;
+    border-radius: 2vw;
+    border: 0.1vw solid #90a79a;
+}
+
 .czy_gallery{
-    display: none;
+    background-image: linear-gradient(180deg, #23322a, #567361);
+    opacity: 0;
     text-align: center;
     padding-left: 1vw;
     padding-right: 1vw;
     padding-top: 1.5vw;
-    width: 37vw;
+    width: 41.2%;
     position: absolute;
-    background-color: rgb(32, 36, 39, 0.9);
     border-radius: 0 0 1vw 1vw;
+    transition: opacity ease-in 0.1s;
 }
 
 .czy_gallery_pictures{
@@ -849,44 +929,25 @@
     margin-bottom: 1vw;
     border-radius: 0.5vw;
     object-fit: cover;
+    transition: filter ease 0.4s;
 }
 
-.czy_cards_le_content{
-    margin-left: 9vw;
-    padding: 0.5vw 0 0.4vw 2vw;
-    height: 9.1vw;
-    background-color: rgb(46, 53, 56);
-    font-family: "dld_samsungsharpsans";
-    font-weight: bold;
-    font-size: 1.3vw;
+.czy_gallery_pictures:hover{
+    filter: brightness(70%)
 }
 
-.czy_small_description{
-    font-weight: 600;
-    font-size: 0.8vw;
+.czy_left_card_species:hover > .czy_gallery{
+    opacity: 1;
 }
 
-.czy_card_butt_on{
-    border-radius: 1vw;
-    margin-right: 1vw;
-    padding: 0.4vw 1vw;
-    background-color: rgb(31, 41, 46);
-    font-size: 1vw;
-    color: #08A7A4;
-    text-decoration: none;
-}
-
-.czy_left_card_bro:hover > .czy_gallery{
-    display: block;
-    
-}
-
-.czy_left_card_bro:hover{
+.czy_left_card_species:hover{
+    background-color: #23322a;
     border-radius: 1vw 1vw 0 0;
 }
 
 /* Pop up images for when you click on the image */
 .czy_overlay{
+    z-index: 10;
     position: absolute;
 	top: 0;
 	bottom: 0;
@@ -915,8 +976,7 @@
     margin-top: 3vw;
     margin-left: auto;
     margin-right: auto;
-    width: 60vw;
-    height: 40vw;
+    max-height: 40vw;
     object-fit: cover;
 }
 
@@ -927,17 +987,20 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: #90a79a;
+    color: #23322a;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .czy_container{
+    box-shadow: -0.52vw 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    background-color: #23322a;
-    margin: 3vw 10vw;
+    background-color: #e4e3ea;
+    width: 95.03%;
+    margin-top: 2vw;
+    margin-left: 2.5vw;
     border-radius: 2vw;
     padding-top: 2vw;
     padding-bottom: 5vw;
@@ -960,36 +1023,50 @@
 }
 
 .czy_about_me{
+    box-shadow: -0.2vw 0.2vw 0.52vw rgba(0,0,0,0.3);
     text-align: justify;
+    padding: 0.8vw;
+    border: 0.2vw solid #90a79a;
+    border-radius: 1vw;
+    color: #90a79a;
+    background-color: #23322a;
 }
 
 .czy_title{
+    text-shadow: 0.05vw 0.05vw 0.2vw rgba(0,0,0,0.4);
     font-weight: bold;
-    font-size: 150%;
+    font-size: 140%;
     color: #23322a;
-    background-color: #90a79a;
     padding: 0.5vw 1vw;
-    border-radius: 2vw;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 1.5vw;
 }
 
 .czy_profile_table{
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0.3vw;
+    border-spacing: 0.5vw;
+    
 }
 
 .czy_profile_body th, td{
+    box-shadow: -0.1vw 0.1vw 0.52vw rgba(0,0,0,0.3);
     padding: 0.5vw 1vw;
-    color: #23322a; 
-    background-color: #90a79a;
+    color: #90a79a; 
+    background-color: #23322a;
     border-radius: 0.5vw;
+    border: 0.2vw solid #90a79a;
 }
+
 
 .czy_profile_body td{
     text-align: justify;
 }
 
-
+.czy_profile_body td p {
+    margin:0.2vw;
+}
 
 
 /* Ashley's contributions.html */
