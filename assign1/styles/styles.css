@@ -211,6 +211,19 @@
     transform: translateY(0.5vw);
 }
 
+.dld_main {
+    background-color: #e4e3ea40;
+    backdrop-filter: blur(0.078vw);
+    /* background-color: #90a79a7b; */
+    /* background-color: #e4e3ea; */
+    width: 95.03%;
+    margin-left: auto;
+	margin-right: auto;
+    margin-top: 2.5vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    border-radius: 2vw;
+}
+
 .dld_section_1 {
 	display: flex;
     position: relative;
@@ -320,7 +333,7 @@
 }
 
 .dld_main nav {
-    /* background-color: black; */
+    background-color: #e4e3ea;
     position: sticky;
     top: 2.5vw;
     padding: 1vw 0.5vw;
@@ -716,6 +729,23 @@
 
 .dld_footer_section_2_copyright a {
 	color:  #00872f;
+    /* font-size: 4vw; */
+    font-family: "dld_samsungsharpsans_bold";
+    /* margin-left: 16vw; */
+    background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: dld_section_1_text_1_hue 15s infinite linear; 
+}
+
+@keyframes dld_section_1_text_1_hue {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(-360deg);
+    }
 }
 
 
