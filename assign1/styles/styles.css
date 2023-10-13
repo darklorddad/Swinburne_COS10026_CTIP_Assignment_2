@@ -2649,13 +2649,8 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     background-color: #AFE4DE;
 }
 
-<<<<<<< Updated upstream
 .ttl_plant_environment_table th, .ttl_plant_environment_table td{
     border-radius: 5px;
-=======
-.ttl_plant_environment_table th{
-    border-radius: 10px;
->>>>>>> Stashed changes
     font-size: 1.5vw;
 }
 
