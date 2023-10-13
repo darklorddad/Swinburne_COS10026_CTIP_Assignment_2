@@ -2563,6 +2563,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     width: 70%;
     height: 30vw;
     padding: 2vw;
+    border: none;
 }
 
 .ttl_plant_about_icon, .ttl_plant_care_icon, .ttl_plant_environment_icon, .ttl_globe_icon{
