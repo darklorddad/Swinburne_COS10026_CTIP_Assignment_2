@@ -93,7 +93,7 @@
 }
 
 .dld_top_navigation_bar {
-    top: 2.5vw;
+    top: 0vw;
     position: sticky;
     background-color: #e4e3ea;
     height: 4vw;
@@ -647,6 +647,12 @@
 	margin-bottom: 5px;
 }
 
+.dld_footer_divider {
+    width: 0.052vw;
+    background-color: #23322a;
+    margin: 0 3vw;
+}
+
 /* .dld_footer_navigation a:before {
     content: "|";
     font-weight:300;
@@ -680,15 +686,6 @@
     /* margin-top: 2.25vw; */
     /* margin-bottom: 2.25vw; */
 /* } */
-
-.dld_footer_divider {
-    width: 0.052vw;
-    /* height: 21vw; */
-    background-color: #23322a;
-    margin: 0 3vw;
-}
-
-
 
 .dld_footer_section_1_center{
 	width: 33%;
