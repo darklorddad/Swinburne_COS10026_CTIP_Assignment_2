@@ -1872,12 +1872,14 @@ a:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;margin-top: 1.5vw;
-    width: 89.03%;
+    width: 95.03%;
     margin-left: 2.5vw;
     margin-bottom: 2.5vw;
+    margin-top: 2.5vw;
     border-radius: 2vw;
     backdrop-filter: blur(0.078vw);
-    background-color: rgba(228, 227, 234, 0.5);
+    background-color: rgba(228, 227, 234, 0.25);
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
 .ash_wrapper{
@@ -1885,10 +1887,11 @@ a:focus {
     width: 55%;
     height: 30vw;
     background: #23322a;
-    border: 2px solid #e4e3ea;
-    box-shadow: 0 0 25px #e4e3ea;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
     overflow: hidden;
-    margin-top: 3vw;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    border-radius: 2vw;
 }
 
 .ash_wrapper .ash_form_box{
@@ -1903,89 +1906,108 @@ a:focus {
 
 .ash_wrapper .ash_form_box.login{
     left: 0;
-    padding: 0 60px 0 40px;
+    padding: 0 0 0 4vw;
     /* background: #081b29; */
     /* display: none; */
 }
 
 .ash_wrapper .ash_form_box.register{
+    color: #23322a;
     right: 0;
-    padding: 0 40px 0 60px;
+    padding: 0 3vw 0 0;
     /* display: none; */
 }
 
 .ash_form_box h2{
-    font-size: 32px;
+    font-size: 2vw;
     color: #fff;
     text-align: center;
+    margin: 0;
 }
 
-.ash_form_box .ash_input_box{
+.ash_form_box .ash_input_box, .ash_register_input_box{
     position: relative;
     width: 100%;
-    height: 50px;
-    margin: 25px 0;
+    height: 2.5vw;
+    margin: 1.8vw 0;
+    font-weight: bold;
 }
 
-.ash_input_box input{
-    width: 98.8%;
+.ash_input_box input, .ash_register_input_box input{
+    width: 100%;
     height: 100%;
     background: transparent;
     border: none;
     outline: none;
-    border-bottom: 2px solid #fff;
-    font-size: 16px;
+    border-bottom: 0.2vw solid #fff;    
     color: #fff;
-    font-weight: 500;
-    transition: .5s;
+    transition: all ease 0.5s;
 }
 
-.ash_input_box input:focus, .ash_input_box input:valid{
+.ash_register_input_box input{
+    border-bottom: 0.2vw solid #23322a;    
+    color: #23322a;
+}
+
+.ash_input_box input:focus, .ash_input_box input:valid, .ash_register_input_box:focus, .ash_register_input_box:valid{
     border-bottom-color: #e4e3ea ;
 }
 
-.ash_input_box label{
+.ash_input_box label, .ash_register_input_box label{
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    font-size: 16px;
+    font-size: 1vw;
     color: #fff;
     pointer-events: none;
     transition: .5s;
 }
 
+.ash_register_input_box label{
+    color: #23322a;
+}
+
 .ash_input_box input:focus~label, .ash_input_box input:valid~label{
-    top: -5px;
+    top: -0.1vw;
     color: #90a79a ;
 }
 
-.ash_input_box i{
+.ash_register_input_box input:focus~label, .ash_register_input_box input:valid~label{
+    top: -0.1vw;
+    color: #23322a;
+}
+
+.ash_input_box i, .ash_register_input_box i{
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    font-size: 18px;
+    font-size: 1.5vw;
     color: #fff;
     transition: .5s;
 }
 
-.ash_input_box input:focus~i, .ash_input_box input:valid~i{
+.ash_register_input_box i{
+    color: #23322a;
+}
+
+.ash_input_box input:focus~i, .ash_input_box input:valid~i {
     color: #e4e3ea;
 }
 
 .ash_btn{
     position: relative;
     width: 100%;
-    height: 45px;
+    height: 2.5vw;
     background: transparent;
-    border: 2px solid #e4e3ea;
+    border: 0.2vw solid #e4e3ea;
     outline: none;
-    border-radius: 40px;
+    border-radius: 2vw;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1vw;
     color: #fff;
-    font-weight: 600;
+    font-weight: bold;
     z-index: 1;
     overflow: hidden;
 }
@@ -1999,27 +2021,33 @@ a:focus {
     height: 300%;
     background: linear-gradient(#23322a, #e4e3ea , #23322a, #e4e3ea);
     z-index: -1;
-    transition: .5s;
+    transition: all 0.5s;
 }
 
 .ash_btn:hover::before{
     top: 0;
 }
 
-.ash_form_box .ash_logreg_link{
-    font-size: 14.5px;
+.ash_form_box .ash_logreg_link, .ash_logreg_link_register{
+    font-size: 0.8vw;
     color: #fff;
     text-align: center;
-    margin: 20px 0 10px;
+    margin: 0;
+    margin-top: 3vw;
 }
 
-.ash_logreg_link p a{
-    color: #90a79a ;
+.ash_logreg_link_register p{
+    font-family: "dld_samsungsharpsans_medium";
+    color: #23322a;
+}
+
+.ash_logreg_link p a,.ash_logreg_link_register p a{
+    color: #90a79a;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: bold;
 }
 
-.ash_logreg_link p a:hover{
+.ash_logreg_link p a:hover, .ash_logreg_link_register p a:hover{
     text-decoration: underline;
 }
 
@@ -2036,22 +2064,26 @@ a:focus {
 .ash_wrapper .ash_info_text.login{
     right: 0;
     text-align: right;
-    padding-right: 10px;
+    padding-right: 1vw;
     /* display: none; */
 }
 
 .ash_wrapper .ash_info_text.register{
     left: 0;
     text-align: left;
-    padding-left: 10px;
+    padding-left: 2vw;
     /* display: none; */
 }
 
 .ash_info_text h2{
     font-size: 2vw;
-    color: #fff;
+    color: #23322a;
     line-height: 1.3;
     text-transform: uppercase;
+}
+
+.ash_info_text.register h2{
+    color: #e4e3ea;
 }
 
 /* .ash_info_text p{
@@ -2063,10 +2095,9 @@ a:focus {
     position: absolute;
     top: -4px;
     right: 0;
-    width: 850px;
-    height: 600px;
-    background: linear-gradient(45deg, #23322a, #e4e3ea);
-    border-bottom: 3px solid #e4e3ea;
+    width: 40vw;
+    height: 40vw;
+    background-color: #e4e3ea;
     transform: rotate(10deg) skewY(40deg);
     /* transform: rotate(0) skewY(0); */
     transform-origin: bottom right;
@@ -2075,11 +2106,10 @@ a:focus {
 .ash_wrapper .ash_bg_animate2{
     position: absolute;
     top: 100%;
-    left: 250px;
-    width: 850px;
-    height: 700px;
-    background: linear-gradient(45deg, #23322a, #e4e3ea);
-    border-top: 3px solid #e4e3ea;
+    left: 22vw;
+    width: 80vw;
+    height: 80vw;
+    background-color: #e4e3ea;
     transform: rotate(-11deg) skewY(-41deg);
     /* transform: rotate(0) skewY(0); */
     transform-origin: bottom left;
