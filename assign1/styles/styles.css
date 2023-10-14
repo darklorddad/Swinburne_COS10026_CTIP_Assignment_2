@@ -3204,34 +3204,29 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     object-fit: cover;
 }
 
-/* @keyframes slide {
-    10% {}
+@keyframes slide {
+    10% {margin-left: 0;}
     30% {margin-left: -100%;}
-    50% {}
-    70% {}
-    90% {}
-    100% {margin-left: -140vw;}
-} */
+    50% {margin-left: -70vw;}
+    70% {margin-left: -105vw;}
+    90% {margin-left: -140vw;}
+}
 
 @keyframes slide {
     0%, 20% {
-        margin-left: 0;
+        transform: translateX(0);
     }
 
     25%, 45% {
-        margin-left: -35vw; /* Adjusted value for a smoother transition */
+        transform: translateX(-100%);
     }
 
     50%, 70% {
-        margin-left: -70vw;
+        transform: translateX(-200%);
     }
 
     75%, 95% {
-        margin-left: -105vw;
-    }
-
-    100% {
-        margin-left: -140vw;
+        transform: translateX(-300%);
     }
 }
 
