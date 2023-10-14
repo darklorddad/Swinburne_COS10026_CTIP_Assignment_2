@@ -340,7 +340,7 @@
     /* background-color: rgb(228, 227, 234); */
     backdrop-filter: blur(0.078vw);
     /* background-color: #90a79a7b; */
-    background-color: rgba(228, 227, 234, 0.5);
+    background-color: rgba(228, 227, 234, 0.25);
     width: 95.03%;
     margin-left: auto;
 	margin-right: auto;
@@ -353,8 +353,8 @@
 }
 
 .dld_main nav {
-    /* background-color: #e4e3ea; */
-    background-color: white;
+    background-color: #e4e3ea;
+    /* background-color: white; */
     position: sticky;
     top: 2.5vw;;
     padding: 1vw 0.5vw;
@@ -376,8 +376,8 @@
 .dld_main nav ul li {
     margin-bottom: 1vw;
     transition: transform 0.25s ease;
-    /* background-color: #e4e3ea; */
-    background-color: white;
+    background-color: #e4e3ea;
+    /* background-color: white; */
     border-radius: 1vw;
     padding: 0.5vw 1vw;
     /* position: relative; */
@@ -452,6 +452,7 @@
     color: #23322a;
     font-family: "dld_samsungsharpsans_bold";
     margin: 0;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 .dld_section_2 {
@@ -463,8 +464,8 @@
 
 .dld_section_2_card {
     /* position: relative; */
-    /* background-color: #e4e3ea; */
-    background-color: white;
+    background-color: #e4e3ea;
+    /* background-color: white; */
     margin: 0 1vw;
     text-align: center;
     /* height: 10vw; */
@@ -508,8 +509,8 @@
 
 .dld_section_3_card {
     /* position: relative; */
-    /* background-color: #e4e3ea; */
-    background-color: white;
+    background-color: #e4e3ea;
+    /* background-color: white; */
     margin: 0 1vw;
     text-align: center;
     height: 21vw;
@@ -597,47 +598,39 @@
     object-fit: cover;
 }
 
-.dld_gallery .prevNext {
+/* .dld_gallery .prevNext {
 	position: absolute;
-	/* z-index: 1; */
 	top: 50%;
 	width: 100%;
-	/* height: 0; */
-}
+} */
 
-.dld_gallery .prevNext > div+div {
+/* .dld_gallery .prevNext > div+div {
 	visibility: hidden;
-}
+} */
 
-.dld_gallery .prevNext a {
-	/* background: #e4e3ea; */
-    background: white;
+/* .dld_gallery .prevNext a {
+    background: #e4e3ea;
 	position: absolute;
 	width: 1.5vw;
 	height: 4.5vw;
     margin: 0 1vw;
-	/* line-height: 1vw; */
-	/* text-align: center; */
 	opacity: 0.5;
-	/* -webkit-transition: 0.3s; */
     transition: 0.3s;
-	/* -webkit-transform: translateY(-50%); */
     transform: translateY(-50%);
-	/* left: 0; */
     border-radius: 1vw;
     border: 0.1vw solid #23322a;
-}
+} */
 
-.dld_gallery .prevNext a:hover {
+/* .dld_gallery .prevNext a:hover {
 	opacity: 1;
-}
+} */
 
-.dld_gallery .prevNext a+a {
+/* .dld_gallery .prevNext a+a {
 	left: auto;
 	right: 0;
-}
+} */
 
-.dld_gallery > s:target ~ .prevNext > * {
+/* .dld_gallery > s:target ~ .prevNext > * {
     visibility: hidden;
 }
 
@@ -671,6 +664,28 @@
 
 #s4:target ~ .slider {
     transform: translateX(-300%); -webkit-transform: translateX(-300%);
+} */
+
+.dld_gallery .slider {
+    animation: slide 20s infinite; /* Double the time to stay on each slide */
+}
+
+@keyframes slide {
+    0%, 20% {
+        transform: translateX(0);
+    }
+
+    25%, 45% {
+        transform: translateX(-100%);
+    }
+
+    50%, 70% {
+        transform: translateX(-200%);
+    }
+
+    75%, 95% {
+        transform: translateX(-300%);
+    }
 }
 
 .dld_section_5 {
@@ -679,19 +694,65 @@
     justify-content: left;
     margin-left: 9.95vw;
     margin-bottom: 2.5vw;
+    flex-wrap: wrap;
+}
+
+.dld_section_5_map_container {
+    width: 65.048vw;
+    background-color: #e4e3ea;
+    margin-bottom: 2vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    border-radius: 2vw;
+    padding: 0.6vw 1vw;
+    transition: background-color 0.25s ease;
+}
+
+.dld_section_5_map_container:hover {
+    background-color: #23322a;
+}
+
+.dld_section_5_map_container p {
+    text-align: center;
+    font-family: "dld_samsungsharpsans_medium";
+    font-size: 1.125vw;
+    margin: 0;
+    padding-top: 0.4vw;
+    padding-bottom: 0.8vw;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+    transition: color 0.25s ease;
+}
+
+.dld_section_5_map_container:hover .dld_section_5_map_container_text {
+    color: #90a79a;
 }
 
 .dld_section_5_map {
-    width: 32.4vw;
-    height: 32.2vw;
+    /* width: 32.4vw; */
+    /* width: 67.048vw; */
+    width: 100%;
+    height: 28.735vw;
+    /* height: 100%; */
     border-radius: 2vw;
+    /* margin-right: 2vw; */
+    /* margin-bottom: 2vw; */
+    border: none;
+    /* background-color: #e4e3ea; */
+}
+
+.dld_section_5_video_container {
+    width: 65.048vw;
+    background-color: #e4e3ea;
+    margin-bottom: 2vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
-    margin-right: 2vw;
+    border-radius: 2vw;
+    padding: 0.6vw 1vw;
+    transition: background-color 0.25s ease;
 }
 
 .dld_section_5_youtube_video {
-    width: 32.4vw;
-    height: 32.4vw;
+    /* width: 32.4vw; */
+    width: 67.048vw;
+    height: 28.735vw;
     border-radius: 2vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
