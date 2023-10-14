@@ -645,6 +645,7 @@ img.dld_gallery-fullsize {
     /* max-height: 26.75vw; */
     /* width: 67.048vw; */
     object-fit: cover;
+    cursor: default;
 }
 
 ul#dld_gallery-container:hover li.dld_gallery-item:active img.dld_gallery-fullsize {
@@ -1037,6 +1038,7 @@ label.dld_gallery-label {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
+    padding: 0;
 }
 
 .czy_navigation_fool li{
@@ -3188,7 +3190,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
   
 .nic_slide-wrapper {
     width: 210vw;
-    -webkit-animation: slide 20s infinite;
+    animation: slide 20s infinite;
 }
   
 .nic_slide {
@@ -3199,12 +3201,35 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     object-fit: cover;
 }
 
-@-webkit-keyframes slide {
-    10% {margin-left: 0;}
+/* @keyframes slide {
+    10% {}
     30% {margin-left: -100%;}
-    50% {margin-left: -70vw;}
-    70% {margin-left: -105vw;}
-    90% {margin-left: -140vw;}
+    50% {}
+    70% {}
+    90% {}
+    100% {margin-left: -140vw;}
+} */
+
+@keyframes slide {
+    0%, 20% {
+        margin-left: 0;
+    }
+
+    25%, 45% {
+        margin-left: -35vw; /* Adjusted value for a smoother transition */
+    }
+
+    50%, 70% {
+        margin-left: -70vw;
+    }
+
+    75%, 95% {
+        margin-left: -105vw;
+    }
+
+    100% {
+        margin-left: -140vw;
+    }
 }
 
 /* Right side form container */
