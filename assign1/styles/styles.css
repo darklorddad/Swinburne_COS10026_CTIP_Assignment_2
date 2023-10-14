@@ -1906,6 +1906,10 @@ a:focus {
     justify-content: center;
 }
 
+.ash_form_box.register h2{
+    color: #23322a;
+}
+
 .ash_wrapper .ash_form_box.login{
     left: 0;
     padding: 0 0 0 4vw;
@@ -2002,13 +2006,12 @@ a:focus {
     position: relative;
     width: 100%;
     height: 2.5vw;
-    background: transparent;
-    border: 0.2vw solid #e4e3ea;
+    border: none;
     outline: none;
     border-radius: 2vw;
     cursor: pointer;
     font-size: 1vw;
-    color: #fff;
+    color: #23322a;
     font-weight: bold;
     z-index: 1;
     overflow: hidden;
@@ -2021,7 +2024,7 @@ a:focus {
     left: 0;
     width: 100%;
     height: 300%;
-    background: linear-gradient(#23322a, #e4e3ea , #23322a, #e4e3ea);
+    background: linear-gradient(#91a99b, #567361 , #91a99b, #567361);
     z-index: -1;
     transition: all 0.5s;
 }
@@ -2085,7 +2088,7 @@ a:focus {
 }
 
 .ash_info_text.register h2{
-    color: #e4e3ea;
+    color: #91a99b;
 }
 
 /* .ash_info_text p{
