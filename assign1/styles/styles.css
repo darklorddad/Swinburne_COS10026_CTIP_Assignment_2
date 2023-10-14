@@ -1035,20 +1035,25 @@
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
 }
 
+.czy_navigation_fool{
+    border-radius: 1.5vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+    width: 95%;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+    background-color: #e4e3ea;
+    box-shadow: 0 0.2vw 0.5vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
 .czy_navigation_fool ul{
     display: flex;
-    position: relative;
     justify-content: space-evenly;
-    overflow: hidden;
-    padding: 0;
-    margin-bottom: 0;
-    margin-top: 2.5vw;
-    width: 95.03%;
-    margin-left: 2.5vw;
+    
     list-style-type: none;
-    border-radius: 2vw;
-    background-color: #e4e3ea;
-    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
 .czy_navigation_fool li{
@@ -1082,17 +1087,10 @@
     margin-left: 2.5vw;
     margin-bottom: 2.5vw;
     border-radius: 2vw;
-    background-color: #e4e3ea;
-    padding: 3vw;
-    overflow: hidden;
+    backdrop-filter: blur(0.078vw);
+    background-color: rgba(228, 227, 234, 0.5);
+    padding: 2vw 3vw 3vw 3vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
-}
-
-.czy_ooo_pictures{
-}
-
-.czy_section{
-    margin-bottom: 1vw;
 }
 
 .czy_tis_a_search_bar{
@@ -1104,7 +1102,12 @@
     padding-left: 1.5vw;
     border: none;
     border-radius: 1vw;
-    border: 0.11vw solid #23322a;
+    background-image: url('images/czy/search_thing.png');
+    background-size: 2vw;
+    background-position: 39.5vw; 
+    background-repeat: no-repeat;
+    border: 0.15vw solid #23322a;
+    font-family: "dld_samsungsharpsans_medium";
 }
 
 .czy_tis_a_search_bar:hover{
@@ -1115,6 +1118,7 @@
     font-family: "dld_samsungsharpsans_medium";
     float: left;
     margin: 0;
+    margin-top: 0.5vw;
     margin-left: 0.8vw;
     font-size: 2.5vw;
 }
@@ -1122,18 +1126,20 @@
 .czy_tis_a_line, .czy_tis_a_line_2{
     margin: 0;
     padding: 0;
+    margin-left: 0.8vw;
+    margin-right: 0.8vw;
     border-radius: 1vw;
     border: 0.2vw solid #23322a;
 }
 
 .czy_tis_a_line{
-    margin-left: 0.8vw;
-    margin-right: 0.8vw;
-    margin-top: 4vw;
-    margin-bottom: 0.6vw;
+    
+    margin-top: 4.5vw;
+    margin-bottom: 0.5vw;
 }
 
 .czy_tis_a_line_2{
+    margin-top: 3vw;
     margin-bottom: 1vw;
 }
 
@@ -1186,12 +1192,12 @@
     padding: 0;
     margin-top: 2.22vw;
     border-radius: 2vw;
-    border: 0.1vw solid #23322a;
+    border: 0.15vw solid #23322a;
 }
 
 .czy_small_description{
     margin: 0;
-    margin-top: 0.4vw;
+    margin-top: 0.65vw;
     font-weight: 600;
     font-size: 1vw;
     text-align: justify;
@@ -1231,7 +1237,7 @@
 
 .czy_gallery{
     margin-top: 0vw;
-    z-index: -1;
+    visibility: hidden;
     position: absolute;
     background-image: linear-gradient(180deg, #23322a, rgba(86, 115, 97, 0.95));
     opacity: 0;
@@ -1239,15 +1245,16 @@
     padding-left: 0.2vw;
     padding-right: 0.2vw;
     padding-top: 1vw;
-    width: 42.78%;
+    width: 44.98%;
     border-radius: 0 0 1.5vw 1.5vw;
     transition: opacity ease 0.25s;
 }
 
 .czy_gallery_pictures{
-    width: 7vw;
-    height: 7vw;
-    margin: 0.4vw;
+    width: 6vw;
+    height: 6vw;
+    margin: 0.35vw;
+    margin-bottom: 0.8vw;
     border-radius: 0.5vw;
     object-fit: cover;
     transition: filter ease 0.3s;
@@ -1258,6 +1265,7 @@
 }
 
 .czy_card_species:hover > .czy_gallery{
+    visibility: visible;
     z-index: 1;
     opacity: 1;
 }
@@ -1284,14 +1292,14 @@
 .czy_overlay{
     display: flex;
     align-items: center;
-    z-index: 10;
+    z-index: 8;
     position: fixed;
 	top: 0;
 	bottom: 0;
     left: 0;
     right: 0;
     background: rgba(0,0,0,0.8);
-    transition: opacity ease 0.8s;
+    transition: opacity ease 0.4s;
     visibility: hidden;
     opacity: 0;
 }
@@ -1305,7 +1313,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    cursor: default;
+    cursor: default; 
 }
 
 .czy_overlay > img{
@@ -1315,8 +1323,6 @@
     max-height: 40vw;
     object-fit: cover;
 }
-
-
 
 /* profiles.html */
 .czy_profile_body{
