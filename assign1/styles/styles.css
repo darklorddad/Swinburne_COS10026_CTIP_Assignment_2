@@ -801,11 +801,15 @@ label.dld_gallery-label {
     font-family: "dld_samsungsharpsans_medium";
 }
 
-.dld_footer_heading {
+.dld_footer_heading, .dld_heading{
     font-family: "dld_samsungsharpsans_bold";
     font-size: 1.25vw;
     margin: 0;
     margin-bottom: 1vw;
+}
+
+.dld_heading{
+    font-size: 1vw;
 }
 
 .dld_footer_section_1_left_information {
