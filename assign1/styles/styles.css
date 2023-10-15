@@ -986,15 +986,17 @@ label.dld_gallery-label {
     background-color: #e4e3ea;
     border-radius: 2vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    font-family: "dld_samsungsharpsans_medium";
 }
 
 .dld_enhancements_big_box_column, .dld_enhancements_big_box_row{
-    margin-top: 1vw;
+    margin-bottom: 5vw;
 }
 
 .dld_enhancements_big_box_column{
     display: flex;
     flex-direction: column;
+    gap: 2vw;
     text-align: justify;
 }
 
@@ -1009,6 +1011,7 @@ label.dld_gallery-label {
 }
 
 .dld_description_box{
+    flex-direction: column;
     padding-right: 5vw;
     flex-wrap: wrap;
 }
@@ -1017,9 +1020,29 @@ label.dld_gallery-label {
     padding: 0;
 }
 
+.dld_btn{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: row;
+    flex: 1;
+}
+
 .dld_btn_enhancement{
-    padding: 1vw 2vw;
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: #23322a;
+    text-decoration: none;
+    border-radius: 2vw;
+    padding: 0.8vw 2vw;
     background-color: #91a99b;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    transition: all 0.25s;
+}
+
+.dld_btn_enhancement:hover{
+    background-color: #23322a;
+    color: #91a99b;
 }
 
 
@@ -1031,6 +1054,7 @@ label.dld_gallery-label {
 }
 
 .dld_image_box img{
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
     max-height: 35vw;
     object-fit: cover;
 }
