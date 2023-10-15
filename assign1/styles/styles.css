@@ -1167,7 +1167,7 @@ label.dld_gallery-label {
     box-shadow: rgba(35, 50, 42, 0.25) 0 0 1vw 0.1vw;
 }
 
-.czy_where_magic_happens h1{
+.czy_where_magic_happens .czy_head{
     font-family: "dld_samsungsharpsans_medium";
     float: left;
     margin: 0;
@@ -1247,7 +1247,7 @@ label.dld_gallery-label {
     transition: background-color ease 0.25s, color ease 0.25s;
 }
 
-.czy_cards_le_content h1{
+.czy_cards_le_content .czy_card_title{
     margin: 0;
     font-family: "dld_samsungsharpsans_bold";
     font-size: 1.5vw;
@@ -1256,7 +1256,7 @@ label.dld_gallery-label {
 .czy_seperator{
     margin: 0;
     padding: 0;
-    margin-top: 2.22vw;
+    margin-top: 0.5vw;
     border-radius: 2vw;
     border: 0.15vw solid #23322a;
     transition: border-color 0.25s ease;
@@ -1551,7 +1551,7 @@ label.dld_gallery-label {
     margin: 0;
 }
 
-.ash_page_header h1 {
+.ash_page_header .ash_title_header {
     font-family: "dld_samsungsharpsans_bold";
     font-size: 2vw;
     margin: 0;
