@@ -979,40 +979,67 @@ label.dld_gallery-label {
 .dld_enhancements_big_box {
     /* display: flex; */
     width: 95%;
-    height: 10vw;
-    margin-left: 2.5vw;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5vw;
     background-color: #e4e3ea;
     border-radius: 2vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
-.dld_enhancements_big_box_row {
+.dld_enhancements_big_box_column, .dld_enhancements_big_box_row{
+    margin-top: 1vw;
+}
+
+.dld_enhancements_big_box_column{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    text-align: justify;
 }
 
-.dld_enhancements_big_box_row {
+.dld_enhancements_big_box_row{
     display: flex;
     flex-direction: row;
-    width: 100%;
 }
 
-.dld_test_1 {
-    background-color: white;
-    width: 5vw;
-    height: 5vw;
-    border: 0.1vw solid #00872f;
+.dld_description_box, .dld_image_box{
+    display: flex;
+    flex: 1;
+}
+
+.dld_description_box{
+    padding-right: 5vw;
+    flex-wrap: wrap;
+}
+
+.dld_description_box h1{
+    padding: 0;
+}
+
+.dld_btn_enhancement{
+    padding: 1vw 2vw;
+    background-color: #91a99b;
 }
 
 
+.dld_image_box{
+    justify-content: center;
+    align-items: center;
+    margin: 3vw 0;
+    width: 50vw;
+}
+
+.dld_image_box img{
+    max-height: 35vw;
+    object-fit: cover;
+}
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
 
 
 
 /* Edison's explorer.html */
-
 .czy_body{
     box-sizing: border-box;
     margin: 0;
@@ -1022,7 +1049,7 @@ label.dld_gallery-label {
     font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
 }
 
-.czy_navigation_fool{
+.czy_navigation_fool, .czy_navigation_fool_profile{
     border-radius: 1.5vw;
     margin-left: auto;
     margin-right: auto;
@@ -1036,18 +1063,18 @@ label.dld_gallery-label {
     box-shadow: 0 0.2vw 0.5vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
-.czy_navigation_fool ul{
+.czy_navigation_fool ul, .czy_navigation_fool_profile ul{
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
     padding: 0;
 }
 
-.czy_navigation_fool li{
+.czy_navigation_fool li, .czy_navigation_fool_profile li{
     float: left;
 }
 
-.czy_navigation_fool li a{
+.czy_navigation_fool li a, .czy_navigation_fool_profile li a{
     background-color: #90a79a;
     display: block;
     margin-top: 1vw;
@@ -1063,7 +1090,11 @@ label.dld_gallery-label {
     transition: color 0.25s, background-color 0.25s;
 }
 
-.czy_navigation_fool a:hover, .czy_navigation_fool .czy_active{
+.czy_navigation_fool_profile li a{
+    padding: 0.5vw 5vw;
+}
+
+.czy_navigation_fool a:hover, .czy_navigation_fool .czy_active, .czy_navigation_fool_profile a:hover, .czy_navigation_fool_profile .czy_active{
     color: #90a79a;
     background-color: #23322a;
 }
@@ -2504,6 +2535,17 @@ a:focus {
     height: 100%;
 }
 
+.ttl_background{
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+    border-radius: 2vw;
+    backdrop-filter: blur(0.078vw);
+    background-color: rgba(228, 227, 234, 0.25);
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
 .ttl_frame{
     clear: both;
     position: relative;
@@ -2785,6 +2827,7 @@ a:focus {
 }
 
 .ttl_result_title{
+    padding-top: 4%;
     color: black;
     text-align: center;
     font-size: 6vw;
@@ -3196,8 +3239,6 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .nic_container {
-    backdrop-filter: blur(0.078vw);
-    background-color: rgba(228, 227, 234, 0.25);
     padding-top: 1vw;
     padding-bottom: 1vw;
     margin-left: 2.5vw;
@@ -3205,6 +3246,8 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     margin-top: 2.5vw;
     margin-bottom: 2.5vw;
     border-radius: 2vw;
+    backdrop-filter: blur(0.078vw);
+    background-color: rgba(228, 227, 234, 0.25);
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
@@ -3273,8 +3316,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .nic_div{
-    margin: 0;
-    padding: 0;
+    font-size: 1vw;
 }
 
 /* Form title */
@@ -3315,6 +3357,8 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .nic_right fieldset{
+    border-radius: 1vw;
+    font-size: 1vw;
     padding: 1vw;
     margin-bottom: 1vw;
 }
