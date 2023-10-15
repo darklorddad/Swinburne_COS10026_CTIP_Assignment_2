@@ -1073,7 +1073,7 @@ label.dld_gallery-label {
     margin-bottom: 2.5vw;
     border-radius: 2vw;
     backdrop-filter: blur(0.078vw);
-    background-color: rgba(228, 227, 234, 0.5);
+    background-color: rgba(228, 227, 234, 0.25);
     padding: 2vw 3vw 3vw 3vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
@@ -3151,7 +3151,8 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .nic_container {
-    background-color: #e4e3ea;
+    backdrop-filter: blur(0.078vw);
+    background-color: rgba(228, 227, 234, 0.25);
     padding-top: 1vw;
     padding-bottom: 1vw;
     margin-left: 2.5vw;
@@ -3172,14 +3173,14 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     text-align: center;
     background-color: #fff;
     height: 100%;
-    margin: 5vw 15vw;
+    margin: 5vw 10vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
 /* Left side background */
 .nic_slide > img{
     height: 75vw;
-    width: 35vw;
+    width: 37vw;
     object-fit: cover;
 }
 
@@ -3187,7 +3188,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     border-radius: 2vw 0 0 2vw;
     overflow: hidden;
     height: 75vw;
-    width: 35vw;
+    width: 37vw;
     margin: 0 auto;
 }
   
@@ -3199,18 +3200,6 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 .nic_slide {
     float: left;
 }
-  
-.nic_slide img{
-    object-fit: cover;
-}
-
-@keyframes slide {
-    10% {margin-left: 0;}
-    30% {margin-left: -100%;}
-    50% {margin-left: -70vw;}
-    70% {margin-left: -105vw;}
-    90% {margin-left: -140vw;}
-}
 
 @keyframes slide {
     0%, 20% {
@@ -3218,31 +3207,34 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     }
 
     25%, 45% {
-        transform: translateX(-100%);
+        transform: translateX(-17.64%);
     }
 
     50%, 70% {
-        transform: translateX(-200%);
+        transform: translateX(-35.25%);
     }
 
     75%, 95% {
-        transform: translateX(-300%);
+        transform: translateX(-52.78%);
     }
 }
 
 /* Right side form container */
 .nic_right {
-    padding: 30px 30px;
+    margin: 0;
+    padding: 2vw;
     border-top-right-radius: 2vw;
     border-bottom-right-radius: 2vw;
+}
+
+.nic_div{
+    margin: 0;
+    padding: 0;
 }
 
 /* Form title */
 .nic_h2 {
     position: relative;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    margin-bottom: 2vw;
     font-family: "dld_samsungsharpsans_bold";
     font-size: 2vw;
 }
@@ -3253,9 +3245,10 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     padding: 0.5vw 1vw;
     background-color: rgba(230, 230, 230, 0.6);
     font-size: 1.1vw;
-    margin-bottom: 22px;
+    margin-bottom: 0.5vw;
     transition: 0.3s;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1vw;
+    border: 0.2vw solid rgba(0, 0, 0, 0.1);
 }
 
 .nic_field:hover {
@@ -3264,16 +3257,21 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .nic_field:focus {
     background-color: #fff;
-    border: 2px solid rgba(30, 85, 250, 0.47);
 }
 
 .nic_textarea {
-    min-height: 80px;
+    min-height: 10vw;
 }
 
 /* Form labels */
 .nic_label {
+    font-size: 1.1vw;
     font-weight: bold;
+}
+
+.nic_right fieldset{
+    padding: 1vw;
+    margin-bottom: 1vw;
 }
 
 /* Select containers */
@@ -3288,20 +3286,21 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     padding: 0.5vw 1vw;
     background-color: rgba(230, 230, 230, 0.6);
     font-size: 1.1vw;
-    margin-bottom: 22px;
+    margin-bottom: 1vw;
     transition: 0.3s;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1vw;
+    border: 0.2vw solid rgba(0, 0, 0, 0.1);
 }
 
 .nic_button {
-    border-radius: 40px;
+    border-radius: 2vw;
     border-color: black;
     text-align: center;
     display: flex;
     margin-right: auto;
-    padding: 15px 40px;
+    padding: 0.5vw 1.5vw;
     justify-content: space-between;
-    font-size: 20px;
+    font-size: 1.5vw;
     background-color: #2ecc71;
     border: none;
     transition: 0.3s;
@@ -3309,7 +3308,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .nic_button:hover {
-    opacity: 80%;
+    filter: brightness(80%);
 }
 
 /* Submit and Reset button styles */
@@ -3327,5 +3326,5 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 .nic_button-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 2vw;
 }
