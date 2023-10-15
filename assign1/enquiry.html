@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="Enquiry Form" />
-    <meta name="author" content="Nicholas" />
+    <meta charset="utf-8">
+    <meta name="description" content="Enquiry Form">
+    <meta name="author" content="Nicholas">
     <title>Enquiry</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -15,6 +15,7 @@
     <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 </head>
+
 <body class="nic_body">
     <div class = "dld_background_dots">
         <div class = "dld_background_gradient"></div>
@@ -66,7 +67,7 @@
                 </a>
             </li>
 
-            <a href = "index.html"><h1>FLORASCAN</h1></a>
+            <li><a href = "index.html"><p>FLORASCAN</p></a></li>
 
             <li>
                 <a href = "enquiry.html">
@@ -139,24 +140,25 @@
                 <form action="mailto:management@florascan.com" method="POST" class="nic_form">
                     <div class = "nic_div">
                         <label class="nic_label" for="first-name">First Name:</label>
-                        <input id="first-name" name="first-name" class="nic_field" type="text" maxlength="25" pattern="[A-Za-z]+" required />
+                        <input id="first-name" name="first-name" class="nic_field" type="text" maxlength="25" pattern="[A-Za-z]+" required>
                     </div>
                     <div class = "nic_div">
                         <label class="nic_label" for="last-name">Last Name:</label>
-                        <input id="last-name" name="last-name" class="nic_field" type="text" maxlength="25" pattern="[A-Za-z]+" required />
+                        <input id="last-name" name="last-name" class="nic_field" type="text" maxlength="25" pattern="[A-Za-z]+" required>
                     </div>
                     <div class = "nic_div">
                         <label class="nic_label" for="email">Email Address:</label>
-                        <input id="email" name="email" class="nic_field" type="email" required />
+                        <input id="email" name="email" class="nic_field" type="email" required>
                     </div>
                     <fieldset>
                         <legend class="nic_label">Address:</legend>
                         <label class="nic_label" for="street-address">Street Address:</label>
-                        <input id="street-address" name="street-address" class="nic_field" type="text" maxlength="40" required />
+                        <input id="street-address" name="street-address" class="nic_field" type="text" maxlength="40" required>
                         <label class="nic_label" for="city-town">City/Town:</label>
-                        <input id="city-town" name="city-town" class="nic_field" type="text" maxlength="20" required />
+                        <input id="city-town" name="city-town" class="nic_field" type="text" maxlength="20" required>
                         <label class="nic_label" for="state">State:</label>
                         <select id="state" name="state" class="nic_select" required>
+                            <option value="">Select your state</option>
                             <option value="Selangor">Selangor</option>
                             <option value="Perlis">Perlis</option>
                             <option value="Kelantan">Kelantan</option>
@@ -171,12 +173,13 @@
                             <option value="Kedah">Kedah</option>
                         </select>
                         <label class="nic_label" for="postcode">Postcode:</label>
-                        <input id="postcode" name="postcode" class="nic_field" type="text" pattern="[0-9]{5}" required />
+                        <input id="postcode" name="postcode" class="nic_field" type="text" pattern="[0-9]{5}" required>
                     </fieldset>
 
                     <div class = "nic_div">
                         <label class="nic_label" for="plant">Plant:</label>
                         <select id="plant" name="plant" class="nic_select" required>
+                            <option value="">Please choose a plant</option>
                             <option value="Dipterocarpaceae">Dipterocarpaceae</option>
                             <option value="Lauraceae">Lauraceae</option>
                             <option value="Burseraceae">Burseraceae</option>

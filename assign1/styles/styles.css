@@ -134,7 +134,7 @@
     align-items: center;
 }
 
-.dld_top_navigation_bar ul a h1 {
+.dld_top_navigation_bar ul a p {
     display: flex;
     align-items: center;
     height: 100%;
@@ -3321,7 +3321,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     float: left;
 }
 
-/* @keyframes slide {
+@keyframes slide {
     0%, 20% {
         transform: translateX(0);
     }
@@ -3337,7 +3337,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     75%, 95% {
         transform: translateX(-52.78%);
     }
-} */
+}
 
 /* Right side form container */
 .nic_right {
