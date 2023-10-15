@@ -3228,8 +3228,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .nic_div{
-    margin: 0;
-    padding: 0;
+    font-size: 1vw;
 }
 
 /* Form title */
@@ -3270,8 +3269,13 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .nic_right fieldset{
+    font-size: 0.5vw;
     padding: 1vw;
     margin-bottom: 1vw;
+}
+
+.nic_comment-label{
+    font-size: 0.5vw;
 }
 
 /* Select containers */
