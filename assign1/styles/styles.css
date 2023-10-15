@@ -1011,12 +1011,16 @@ label.dld_gallery-label {
 }
 
 .dld_description_box{
+    font-size: 1vw;
+    line-height: 1.4vw;
     flex-direction: column;
     padding-right: 5vw;
     flex-wrap: wrap;
 }
 
 .dld_description_box h1{
+    font-size: 2vw;
+    margin-top: 5vw;
     padding: 0;
 }
 
