@@ -1486,8 +1486,9 @@ label.dld_gallery-label {
 }
 
 .czy_member_name{
-    text-shadow: 0.05vw 0.05vw 0.2vw rgba(0,0,0,0.4);
-    font-size: 200%;
+    /* text-shadow: 0.05vw 0.05vw 0.2vw rgba(0,0,0,0.4); */
+    /* font-size: 200%; */
+    font-size: 1.5vw;
     font-weight: bold
 }
 
@@ -1512,6 +1513,7 @@ label.dld_gallery-label {
     margin: auto;
     margin-bottom: 1.5vw;
     font-family: "dld_samsungsharpsans_bold";
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 .czy_profile_table{
