@@ -1036,6 +1036,7 @@ label.dld_gallery-label {
     border-radius: 2vw;
     background-color: #e4e3ea;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    min-height: 18.6vw;
 }
 
 .dld_buttons_column{
@@ -1051,6 +1052,7 @@ label.dld_gallery-label {
 .dld_flex_container{
     display: flex;
     flex-wrap: wrap;
+    width: 40vw;
 }
 
 .dld_flex_container a{
