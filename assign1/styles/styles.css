@@ -820,6 +820,7 @@ label.dld_gallery-label {
     font-size: 1.25vw;
     margin: 0;
     margin-bottom: 1vw;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 .dld_heading {
@@ -917,7 +918,7 @@ label.dld_gallery-label {
 .dld_footer_section_1_center{
 	/* width: 21.2vw;
     min-width: 21.2vw; */
-    width: 25%;
+    width: 24.5%;
 }
 
 .dld_footer_section_1_center_row {
@@ -984,7 +985,8 @@ label.dld_gallery-label {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: dld_section_1_text_1_hue 15s infinite linear; 
+    animation: dld_section_1_text_1_hue 15s infinite linear;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 @keyframes dld_section_1_text_1_hue {
@@ -1172,7 +1174,7 @@ label.dld_gallery-label {
 .czy_tis_a_search_bar{
     float: right;
     width: 46%;
-    font-size: 1.25vw;
+    font-size: 1.125vw;
     margin-right: 0.8vw;
     padding: 0.5vw;
     padding-left: 1.5vw;
@@ -1199,7 +1201,8 @@ label.dld_gallery-label {
     margin: 0;
     margin-top: 0.5vw;
     margin-left: 0.8vw;
-    font-size: 2.5vw;
+    font-size: 2.25vw;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 .czy_tis_a_line, .czy_tis_a_line_2{
@@ -1229,6 +1232,7 @@ label.dld_gallery-label {
     font-weight: bold;
     font-family: "dld_samsungsharpsans_bold";
     font-size: 1.75vw;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 .czy_card, .czy_card_species{
@@ -1582,6 +1586,7 @@ label.dld_gallery-label {
     font-size: 2vw;
     margin: 0;
     margin-bottom: 1vw;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 .ash_page_header p {
@@ -2344,7 +2349,7 @@ a:focus {
     font-size: 2vw;
     margin: 0;
     margin-bottom: 1vw;
-    /* text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25); */
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 .ttl_page_header p {
@@ -2664,7 +2669,7 @@ a:focus {
     /* top:5%; */
     width: 59vw;
     /* height: vw; */
-    background: #e4e3ea;
+    background-color: #e4e3ea;
 	/* box-shadow: 8px 10px 15px 0 rgba(0,0,0,0.2); */
 	border-radius: 2vw;
     margin:auto;
@@ -2679,6 +2684,7 @@ a:focus {
     padding-top: 2vw;
     font-size: 2vw;
     font-family: "dld_samsungsharpsans_bold";
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 .ttl_upload_description{
@@ -2717,6 +2723,7 @@ a:focus {
 .ttl_filecontent{
     display: table-cell;
     vertical-align: middle;
+    background-color: white;
 }
 
 .ttl_filecontent{
@@ -2751,6 +2758,10 @@ a:focus {
     /* background: linear-gradient(200deg, #008cff 0%, #84ff00 100%); */
     filter: saturate(200%);
     box-shadow: 0 0 4.4vw .2vw hsla(236, 50%, 50%, .4);
+}
+
+.ttl_upload-btn:hover .ttl_center {
+    background-color: #23322a;
 }
 
 .ttl_filecontent input[type=file] {
@@ -2793,6 +2804,7 @@ a:focus {
     border: none;
     border-radius: 1.5vw;
     transition: all .25s ease-in-out;
+    cursor: pointer;
 }
 
 .ttl-star-1 {
@@ -2953,6 +2965,7 @@ a:focus {
     margin: 0;
     margin-bottom: 2vw;
     font-family: "dld_samsungsharpsans_bold";
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 .ttl_result_container{
@@ -3127,7 +3140,7 @@ a.ttl_link-1:focus, a.ttl_link-2:focus {
 }
 
 a.ttl_link-1:hover, a.ttl_link-1:focus .ttl_link-1 {
-    transform: translateY(-1vw);
+    /* transform: translateY(-1vw); */
     box-shadow: 0 0 4.4vw .2vw hsla(236, 50%, 50%, .4);
     filter: saturate(200%);
 }
@@ -3390,12 +3403,12 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .nic_container {
-    padding-top: 1vw;
-    padding-bottom: 1vw;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
-    margin-top: 2.5vw;
-    margin-bottom: 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4vw;
+    padding-bottom: 8vw;
+    margin: 2.5vw;
     border-radius: 2vw;
     backdrop-filter: blur(0.078vw);
     background-color: rgba(228, 227, 234, 0.5);
@@ -3404,31 +3417,34 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 /* Contact box */
 .nic_contact-box {
+    width: 78vw;
     border-radius: 2vw;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #fff;
-    height: 100%;
-    margin: 5vw 10vw;
+    background-color: #e4e3ea;
+    /* height: 100%; */
+    /* margin: 5vw 10vw; */
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
 /* Left side background */
 .nic_slide > img{
-    height: 75vw;
-    width: 37vw;
+    height: 79vw;
+    width: 39.06vw;
     object-fit: cover;
+    filter: brightness(80%);
 }
 
 #nic_slideshow {
     border-radius: 2vw 0 0 2vw;
     overflow: hidden;
-    height: 75vw;
-    width: 37vw;
+    height: 79vw;
+    /* width: 37vw; */
     margin: 0 auto;
+    width: 39vw;
 }
   
 .nic_slide-wrapper {
@@ -3446,15 +3462,15 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     }
 
     25%, 45% {
-        transform: translateX(-17.64%);
+        transform: translateX(-18.62%);
     }
 
     50%, 70% {
-        transform: translateX(-35.25%);
+        transform: translateX(-37.24%);
     }
 
     75%, 95% {
-        transform: translateX(-52.78%);
+        transform: translateX(-55.86%);
     }
 }
 
@@ -3468,6 +3484,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .nic_div{
     font-size: 1vw;
+    /* margin-bottom: 1vw; */
 }
 
 /* Form title */
@@ -3475,22 +3492,42 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     position: relative;
     font-family: "dld_samsungsharpsans_bold";
     font-size: 2vw;
+    margin: 0;
+    margin-bottom: 3vw;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 /* Form fields */
 .nic_field {
     width: 90%;
     padding: 0.5vw 1vw;
-    background-color: rgba(230, 230, 230, 0.6);
-    font-size: 1.1vw;
-    margin-bottom: 0.5vw;
-    transition: 0.3s;
+    /* background-color: rgba(230, 230, 230, 0.6); */
+    background-color: white;
+    font-size: 1vw;
+    margin: 0;
+    margin-top: 0.25vw;
+    margin-bottom: 1vw;
+    transition: 0.25s;
     border-radius: 1vw;
-    border: 0.2vw solid rgba(0, 0, 0, 0.1);
+    border: 0.1vw solid #23322a;
 }
 
+.nic_field::placeholder {
+    font-size: 0.75vw;
+    font-family: "dld_samsungsharpsans";
+}
+
+.nic_select option {
+    font-size: 1vw;
+    font-family: "dld_samsungsharpsans";
+}
+
+/* .nic_select:hover {
+    background-color: rgb(35, 50, 42, 0.25);
+  } */
+
 .nic_field:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgb(35, 50, 42, 0.25);
 }
 
 .nic_field:focus {
@@ -3504,11 +3541,17 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 /* Form labels */
 .nic_label {
     font-size: 1vw;
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-family: "dld_samsungsharpsans_medium";
+}
+
+.nic_legend {
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1.25vw;
 }
 
 .nic_right fieldset{
-    border-radius: 1vw;
+    border-radius: 2vw;
     font-size: 1vw;
     padding: 1vw;
     margin-bottom: 1vw;
@@ -3522,33 +3565,35 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 /* Select styles */
 .nic_select {
-    width: 98%;
-    padding: 0.5vw 1vw;
-    background-color: rgba(230, 230, 230, 0.6);
+    width: 96.5%;
+    padding: 0.43vw 1vw;
+    /* background-color: rgba(230, 230, 230, 0.6); */
+    background-color: white;
     font-size: 1.1vw;
     margin-bottom: 1vw;
+    margin-top: 0.25vw;
     transition: 0.3s;
     border-radius: 1vw;
-    border: 0.2vw solid rgba(0, 0, 0, 0.1);
+    border: 0.1vw solid #23322a;
 }
 
 .nic_button {
-    border-radius: 2vw;
-    border-color: black;
-    text-align: center;
-    display: flex;
-    margin-right: auto;
-    padding: 0.5vw 1.5vw;
-    justify-content: space-between;
-    font-size: 1.5vw;
+    border-radius: 1vw;
+    /* border-color: black; */
+    /* text-align: center; */
+    /* display: flex; */
+    /* margin-right: auto; */
+    padding: 0.5vw 3vw;
+    font-size: 1.125vw;
+    font-family: "dld_samsungsharpsans_bold";
     background-color: #2ecc71;
     border: none;
-    transition: 0.3s;
+    transition: 0.25s;
     cursor: pointer;
 }
 
 .nic_button:hover {
-    filter: brightness(80%);
+    filter: brightness(50%);
 }
 
 /* Submit and Reset button styles */
@@ -3560,11 +3605,12 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 .nic_reset {
     background-color: #e74c3c;
     color: #fff;
+    margin-left: 1vw;
 }
 
 /* Button container */
 .nic_button-container {
     display: flex;
-    justify-content: space-between;
-    margin-top: 2vw;
+    justify-content: right;
+    margin-top: 1.5vw;
 }
