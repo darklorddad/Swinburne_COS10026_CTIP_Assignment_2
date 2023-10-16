@@ -134,7 +134,7 @@
     align-items: center;
 }
 
-.dld_top_navigation_bar ul a p{
+.dld_top_navigation_bar ul a p {
     display: flex;
     align-items: center;
     height: 100%;
@@ -780,7 +780,8 @@ label.dld_gallery-label {
 }
 
 .dld_footer_section_1_left {
-	width: 25vw;
+	/* width: 20vw; */
+    width: 25%;
 }
 
 .dld_footer_section_1_left_title {
@@ -814,15 +815,18 @@ label.dld_gallery-label {
     font-family: "dld_samsungsharpsans_medium";
 }
 
-.dld_footer_heading, .dld_heading{
+.dld_footer_heading {
     font-family: "dld_samsungsharpsans_bold";
     font-size: 1.25vw;
     margin: 0;
     margin-bottom: 1vw;
 }
 
-.dld_heading{
+.dld_heading {
+    font-family: "dld_samsungsharpsans_medium";
     font-size: 1vw;
+    margin: 0;
+    margin-bottom: 1vw;
 }
 
 .dld_footer_section_1_left_information {
@@ -911,20 +915,21 @@ label.dld_gallery-label {
 }
 
 .dld_footer_section_1_center{
-	width: 21.2vw;
-    min-width: 21.2vw;
+	/* width: 21.2vw;
+    min-width: 21.2vw; */
+    width: 25%;
 }
 
 .dld_footer_section_1_center_row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .dld_footer_section_1_center_column {
     display: flex;
     flex-direction: column;
-    width: 10.35vw;
+    width: 10.75vw;
 }
 
 .dld_footer_section_1_center_column a {
@@ -935,6 +940,7 @@ label.dld_gallery-label {
     margin-bottom: 0.5vw;
     transition: background-color 0.25s ease, color 0.25s ease;
     /* border: 0.1vw solid #23322a; */
+    margin-right: 0.5vw;
 }
 
 .dld_footer_section_1_center_column a:hover {
@@ -1036,7 +1042,6 @@ label.dld_gallery-label {
     border-radius: 2vw;
     background-color: #e4e3ea;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
-    min-height: 18.6vw;
 }
 
 .dld_buttons_column{
@@ -1052,7 +1057,6 @@ label.dld_gallery-label {
 .dld_flex_container{
     display: flex;
     flex-wrap: wrap;
-    width: 40vw;
 }
 
 .dld_flex_container a{
@@ -2269,13 +2273,14 @@ a:focus {
     display: grid;
     grid-template-columns: 1fr 2.5fr;
     padding: 1vw;
+    padding-right: 0;
 }
 
 .ttl_header_section {
-    background-color: black;
+    background-color: #e4e3ea;
 	display: flex;
     position: relative;
-	height: 45.5vw;
+	height: 34.6vw;
     width: 95.03%;
 	margin-top: 2.5vw;
 	margin-left: auto;
@@ -2287,9 +2292,10 @@ a:focus {
 
 .ttl_title{
     position: relative;
-    padding-left: 4vw;
+    margin: 0;
+    margin-left: 7.5vw;
     top: 10%;
-    font-size: 4vw;
+    font-size: 3vw;
     font-family: "dld_samsungsharpsans_bold", sans-serif;
     background: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
     -webkit-background-clip: text;
@@ -2314,10 +2320,33 @@ a:focus {
     display: flex;
     flex-direction: column;
     row-gap: 1vw;
-    margin-top: 8vw;
-    margin-left: 4vw;
-    width: 80%;
+    margin-top: 3vw;
+    margin-left: 2vw;
+    width: 100%;
     height: 20vw;
+}
+
+.ttl_page_header {
+    text-align: justify;
+    color: #23322a;
+    width: 25vw;
+    margin: 0;
+    margin-left: 2vw;
+    margin-top: 1vw;
+}
+
+.ttl_page_header .ttl_title_header {
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 2vw;
+    margin: 0;
+    margin-bottom: 1vw;
+    /* text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25); */
+}
+
+.ttl_page_header p {
+    font-size: 1vw;
+    margin: 0 0vw;
+    line-height: 1.5;
 }
 
 .ttl_identify{
@@ -2331,22 +2360,23 @@ a:focus {
 .ttl_block1{
     width: 0%;
     height: inherit;
-    background: #567260;
+    background: #23322a;
     position: absolute;
     animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
     display: flex;
 }
 
 .ttl_block1_text{
-    animation: mainFadeIn 2s forwards;
-    font-size: 2.5vw;
+    animation: mainFadeIn 0.25s forwards;
+    font-size: 1.5vw;
     animation-delay: 1.6s;
-    color: white;
+    color: #23322a;
     opacity: 0;
     display: flex;
     align-items: baseline;
     position: relative;
     font-family: "dld_samsungsharpsans_medium";
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 .ttl_any_plant{
@@ -2361,20 +2391,21 @@ a:focus {
 .ttl_block2{
     width: 0%;
     height: inherit;
-    background: #90a79a;
+    background: #23322a;
     position: absolute;
     animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
-    animation-delay: 2s;
+    /* animation-delay: 2s; */
     display: flex;
 }
 
 .ttl_block2_text{
-    animation: secFadeIn 2s forwards;
-    animation-delay: 3.5s;
+    animation: secFadeIn 0.25s forwards;
+    animation-delay: 1.5s;
     opacity: 0;
-    font-size: 2.5vw;
-    color: white;
-    font-family: "dld_samsungsharpsans_medium";
+    font-size: 1.5vw;
+    color: #23322a;
+    font-family: "dld_samsungsharpsans_bold";
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 .ttl_anywhere{
@@ -2389,20 +2420,21 @@ a:focus {
 .ttl_block3{
     width: 0%;
     height: inherit;
-    background: #caccd1;
+    background: #23322a;
     position: absolute;
     animation: thirdBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
-    animation-delay: 4s;
+    animation-delay: 2s;
     display: flex;
 }
 
 .ttl_block3_text{
-    animation: thirdFadeIn 2s forwards;
-    animation-delay: 5.5s;
+    animation: thirdFadeIn 0.25s forwards;
+    animation-delay: 3.5s;
     opacity: 0;
-    color: white;
-    font-size: 2.5vw;
-    font-family: "dld_samsungsharpsans_medium";
+    color: #23322a;
+    font-size: 1.5vw;
+    font-family: "dld_samsungsharpsans_bold";
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 .ttl_anytime{
@@ -2417,20 +2449,21 @@ a:focus {
 .ttl_block4{
     width: 0%;
     height: inherit;
-    background: #e4e3ea;
+    background: #23322a;
     position: absolute;
     animation: fourthBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
-    animation-delay: 6s;
+    animation-delay: 4s;
     display: flex;
 }
 
 .ttl_block4_text{
-    animation: fourthFadeIn 2s forwards;
-    animation-delay: 7.5s;
-    color: white;
+    animation: fourthFadeIn 0.25s forwards;
+    animation-delay: 5.5s;
+    color: #23322a;
     opacity: 0;
-    font-size: 2.5vw;
-    font-family: "dld_samsungsharpsans_medium";
+    font-size: 1.5vw;
+    font-family: "dld_samsungsharpsans_bold";
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 @keyframes mainBlock {
@@ -2538,24 +2571,33 @@ a:focus {
 }
 
 .ttl_image_slider{
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 95%;
     overflow: hidden;
     position: relative;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     border-radius: 2vw;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-top: 0.5vw;
 }
 
 .ttl_image_slider_wrapper{
-    position: relative;
-    width: 100%;
-    height: 45.5vw;
-    margin: auto auto;
+    /* position: relative; */
+    /* width: 100%; */
+	/* height: 35.5vw; */
+    /* margin: auto auto; */
     display: flex;
     animation: ttl_slide 14s infinite;
 }
+
+/* .ttl_image_slider_wrapper {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+} */
 
 @keyframes ttl_slide{
     0%{
