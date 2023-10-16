@@ -1862,7 +1862,7 @@ a:focus {
 /* modal */
 .ash_modal_container {
     text-align: justify;
-    font-family: "dld_samsungsharpsans_medium";
+    font-family: "dld_samsungsharpsans";
     position: fixed;
     top: 0;
     left: 0;
@@ -1883,36 +1883,41 @@ a:focus {
 .ash_modal {
     width: 60vw;
     padding: 4vw 2vw;
-    border-radius: .8vw;
+    border-radius: 2vw;
     color: var(--light);
     background: black;
     box-shadow: var(--m-shadow, .4vw .4vw 10.2vw .2vw) var(--shadow-1);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .ash_modal_title {
-    color: white;
+    color: #e4e3ea;
     font-size: 2vw;
+    font-family: "dld_samsungsharpsans_bold";
 }
 
 .ash_modal_title2{
     font-style: italic;
     color: grey;
-    font-size: 1.2vw;
+    font-size: 1.25vw;
 }
 
 .ash_modal_title2, .ash_modal_title{
     margin: 0;
     margin-left: 4vw;
+    margin-top: 0.25vw;
+    font-family: "dld_samsungsharpsans_medium";
 }
 
 .ash_modal_text {
-    color: white;
+    color: #e4e3ea;
     padding: 0 4vw;
     margin-top: 2vw;
 
-    font-size: 1.1vw;
+    font-size: 1vw;
     line-height: 1.7;
 }
 
@@ -1953,7 +1958,7 @@ a:focus {
 
 .ash_link_2::before {
     content: '×';
-
+    font-size: 2vw;
     transform: translateY(-.1vw);
 }
 
@@ -1961,6 +1966,59 @@ a:focus {
     background: var(--focus);
     border-color: var(--focus);
     transform: translateY(-.2vw);
+}
+
+.ash_comment_box form {
+    margin-left: 4vw;
+    margin-top: 1vw;
+}
+
+.ash_comment_box form textarea {
+    border-radius: 0.5vw;
+    width: 90%;
+    border: none;
+    transition: background-color 0.25s ease;
+}
+
+.ash_comment_box form textarea:hover {
+    /* border: 0.1vw solid #23322a; */
+    background-color: rgb(228, 227, 234, 0.9);
+}
+
+.ash_comment_box form textarea:focus {
+    /* border: 0.1vw solid #23322a; */
+    outline: none;
+    background-color: rgb(228, 227, 234, 0.9);
+}
+
+.ash_comment_box form textarea::placeholder {
+    font-size: 0.75vw;
+    font-family: "dld_samsungsharpsans";
+    color: #23322a;
+}
+
+.ash_submit_btn {
+    background-color: #e4e3ea;
+    color: #23322a;
+    padding: 0.5vw 1.5vw;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    margin-left: 4vw;
+    margin-top: 1vw;
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1vw;
+    transition: background-color 0.25s ease;
+}
+
+.ash_submit_btn:hover {
+    background-color: #23322a;
+    color: #90a79a;
+}
+
+.ash_comment_boxx {
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -3064,7 +3122,8 @@ a.ttl_link-1:focus, a.ttl_link-2:focus {
   padding: 3vw;
   border-radius: 2vw;
 
-  color: hsl(220, 50%, 90%);
+  /* color: hsl(220, 50%, 90%); */
+  color: #e4e3ea;
   background: linear-gradient(to right, hsl(210, 30%, 20%), hsl(255, 30%, 25%));
   box-shadow: .4vw .4vw 10.2vw .2vw hsla(236, 50%, 50%, .3);
   position: relative;
@@ -3073,17 +3132,18 @@ a.ttl_link-1:focus, a.ttl_link-2:focus {
 }
 
 .ttl_modal::-webkit-scrollbar{
-    width: 15px;
+    width: 1vw;
 }
 
 .ttl_modal::-webkit-scrollbar-track{
-    background-color: rgb(255 255 255 / 10%);
-    border-radius: 20px;
+    background-color: #e4e3ea;
+    border-radius: 0.1vw;
 }
 
 .ttl_modal::-webkit-scrollbar-thumb{
-    background: linear-gradient(45deg, #00aeff, #a68eff);
-    border-radius: 20px;
+    /* background: linear-gradient(45deg, #00aeff, #a68eff); */
+    border-radius: 1vw;
+    background-color: #23322a;
 }
 
 
@@ -3099,7 +3159,7 @@ a.ttl_link-1:focus, a.ttl_link-2:focus {
 
 .ttl_modal_title{
     font-size: 2vw;
-    font-family: "dld_samsungsharpsans_medium", sans-serif;
+    font-family: "dld_samsungsharpsans_bold", sans-serif;
 }
 
 .ttl_link-1 {
@@ -3135,7 +3195,7 @@ a.ttl_link-1:focus {
     border-radius: 4vw;
 
     color: inherit;
-    font-size: 2.2vw;
+    font-size: 2vw;
 
     position: fixed;
     top: 10%;
@@ -3227,7 +3287,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .ttl_plant_about_title_container, .ttl_plant_care_container, .ttl_plant_environment_title_container, .ttl_plant_location_title_container{
     border-left:  0.5vw solid #21F5F0;
-    height: 2vw;
+    height: 3vw;
     width: 100%;
     display: inline-block;
     align-items: center;
@@ -3236,7 +3296,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .ttl_plant_about_title, .ttl_plant_care_title, .ttl_plant_environment_title, .ttl_plant_location_title{
-    font-family: "dld_samsungsharpsans_medium", sans-serif;
+    font-family: "dld_samsungsharpsans_bold", sans-serif;
     font-size: 2vw;
     vertical-align: middle;
     padding-left: 1vw;
@@ -3246,7 +3306,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 .ttl_plant_about_content{
     text-align: justify;
     font-family: "dld_samsungsharpsans", sans-serif;
-    font-size: 1vw;
+    font-size: 1.25vw;
 }
 
 .ttl_youtube_video_container{
@@ -3264,6 +3324,8 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     width: 3vw;
     height: 3vw;
     vertical-align: middle;
+    /* margin-bottom: 1vw; */
+    margin-left: 1vw;
 }
 
 .ttl_plant_care_card_container{
@@ -3278,9 +3340,9 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .ttl_plant_care_card{
     width: 100%;
-    background-color: white;
+    background-color: #e4e3ea;
     border-radius: 1vw;
-    color: black;
+    color: #23322a;
     padding: 2vw;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -3288,31 +3350,35 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     grid-column-gap: 5px;
     grid-row-gap: 0px;
     text-align: center;
-
 }
 
 .ttl_plant_care_card_title{
-    font-size: 2vw;
-    font-family: "dld_samsungsharpsans_medium", sans-serif;
+    font-size: 1.5vw;
+    font-family: "dld_samsungsharpsans_bold", sans-serif;
 }
 
 .ttl_plant_care_card_text{
-    font-family: "dld_samsungsharpsans", sans-serif;
-    font-size: 1.5vw;
+    font-family: "dld_samsungsharpsans_medium", sans-serif;
+    font-size: 1.25vw;
 }
 
 .ttl_plant_care_card_left{
     width: 100%;
     text-align: center;
-    padding-top: 5vw;
-
+    /* padding-top: 5vw; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .ttl_plant_care_card_right{
     width: 100%;
-    border-left: 2px dotted #808080;
+    border-left: 0.15vw dotted #808080;
     text-align: center;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ttl_water_icon, .ttl_sun_icon, .ttl_pruning_icon, .ttl_fertilizer_icon{
@@ -3321,8 +3387,8 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .ttl_plant_care_card_description{
     text-align: justify;
-    font-size: 1.5vw;
-    padding: 5vw;
+    font-size: 1.25vw;
+    padding: 2.5vw;
     font-family: "dld_samsungsharpsans", sans-serif;
 }
 
@@ -3340,15 +3406,18 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .ttl_plant_environment_table td, .ttl_plant_environment_table th{
     text-align: center;
-    padding: 1vw;
+    /* padding: 1vw; */
     background-color: #AFE4DE;
 }
 
 .ttl_plant_environment_table th, .ttl_plant_environment_table td{
-    border-radius: 5px;
-    font-size: 1.5vw;
+    border-radius: 1.5vw;
+    font-size: 1.25vw;
 }
 
+.ttl_plant_environment_table th {
+    font-family: "dld_samsungsharpsans_bold";
+}
 
 .ttl_plant_location_content{
     margin-top: 2vw;
@@ -3357,6 +3426,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 .ttl_google_map iframe{
     width: 110%;
     height: 45vw;
+    border-radius: 2vw;
 }
 
 
