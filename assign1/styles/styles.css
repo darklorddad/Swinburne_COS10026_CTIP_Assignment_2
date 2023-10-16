@@ -2058,7 +2058,7 @@ a:focus {
     margin-top: 2.5vw;
     border-radius: 2vw;
     backdrop-filter: blur(0.078vw);
-    background-color: rgba(228, 227, 234, 0.25);
+    background-color: rgba(228, 227, 234, 0.5);
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
@@ -2070,7 +2070,7 @@ a:focus {
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
     overflow: hidden;
     margin-top: 4vw;
-    margin-bottom: 4vw;
+    margin-bottom: 8vw;
     border-radius: 2vw;
 }
 
@@ -2104,9 +2104,10 @@ a:focus {
 
 .ash_form_box h2{
     font-size: 2vw;
-    color: #fff;
+    color: #e4e3ea;
     text-align: center;
     margin: 0;
+    font-family: "dld_samsungsharpsans_bold";
 }
 
 .ash_form_box .ash_input_box, .ash_register_input_box{
@@ -2114,7 +2115,7 @@ a:focus {
     width: 100%;
     height: 2.5vw;
     margin: 1.8vw 0;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .ash_input_box input, .ash_register_input_box input{
@@ -2123,13 +2124,13 @@ a:focus {
     background: transparent;
     border: none;
     outline: none;
-    border-bottom: 0.2vw solid #fff;    
+    border-bottom: 0.1vw solid #fff;    
     color: #fff;
-    transition: all ease 0.5s;
+    transition: all 0.25s ease;
 }
 
 .ash_register_input_box input{
-    border-bottom: 0.2vw solid #23322a;    
+    border-bottom: 0.1vw solid #23322a;    
     color: #23322a;
 }
 
@@ -2145,7 +2146,7 @@ a:focus {
     font-size: 1vw;
     color: #fff;
     pointer-events: none;
-    transition: .5s;
+    transition: 0.25s ease;
 }
 
 .ash_register_input_box label{
@@ -2169,7 +2170,7 @@ a:focus {
     transform: translateY(-50%);
     font-size: 1.5vw;
     color: #fff;
-    transition: .5s;
+    transition: 0.25s ease;
 }
 
 .ash_register_input_box i{
@@ -2190,7 +2191,8 @@ a:focus {
     cursor: pointer;
     font-size: 1vw;
     color: #23322a;
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-family: "dld_samsungsharpsans_bold";
     z-index: 1;
     overflow: hidden;
 }
@@ -2202,9 +2204,9 @@ a:focus {
     left: 0;
     width: 100%;
     height: 300%;
-    background: linear-gradient(#91a99b, #567361 , #91a99b, #567361);
+    background: linear-gradient(#66B5F6 0%, #BFE299 100%, #66B5F6 0%, #BFE299 100%);
     z-index: -1;
-    transition: all 0.5s;
+    transition: all 0.25s;
 }
 
 .ash_btn:hover::before{
@@ -2212,8 +2214,8 @@ a:focus {
 }
 
 .ash_form_box .ash_logreg_link, .ash_logreg_link_register{
-    font-size: 0.8vw;
-    color: #fff;
+    font-size: 0.75vw;
+    color: #e4e3ea;
     text-align: center;
     margin: 0;
     margin-top: 3vw;
@@ -2261,12 +2263,15 @@ a:focus {
 .ash_info_text h2{
     font-size: 2vw;
     color: #23322a;
-    line-height: 1.3;
+    /* line-height: 1.3; */
     text-transform: uppercase;
+    font-family: "dld_samsungsharpsans_bold";
+    margin-right: 1vw;
 }
 
 .ash_info_text.register h2{
-    color: #91a99b;
+    color: #e4e3ea;
+    margin-left: 2vw;
 }
 
 /* .ash_info_text p{
