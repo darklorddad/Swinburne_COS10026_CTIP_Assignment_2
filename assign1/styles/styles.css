@@ -1443,7 +1443,14 @@ label.dld_gallery-label {
     object-fit: cover;
 }
 
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+
 /* profiles.html */
+
 .czy_profile_body{
     box-sizing: border-box;
     margin: 0;
@@ -1455,11 +1462,13 @@ label.dld_gallery-label {
 
 .czy_container{
     box-shadow: -0.52vw 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    backdrop-filter: blur(0.078vw);
+    background-color: rgba(228, 227, 234, 0.5);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    background-color: #e4e3ea;
+    /* background-color: #e4e3ea; */
     width: 95.03%;
     margin-top: 2.5vw;
     margin-left: 2.5vw;
@@ -1489,34 +1498,55 @@ label.dld_gallery-label {
     /* text-shadow: 0.05vw 0.05vw 0.2vw rgba(0,0,0,0.4); */
     /* font-size: 200%; */
     font-size: 1.5vw;
-    font-weight: bold
+    font-family: "dld_samsungsharpsans_bold";
+    /* font-weight: bold */
+
 }
 
 .czy_about_me{
     box-shadow: -0.2vw 0.2vw 0.52vw rgba(0,0,0,0.3);
     text-align: justify;
-    margin-left: auto;
-    margin-right: auto;
     width: 83%;
     padding: 2.5vw 5vw;
-    border-radius: 1vw;
+    border-radius: 2vw;
     color: #23322a;
     background-color: white;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vw;
+    font-size: 1vw;
+    line-height: 1.5;
+}
+
+.czy_member_course {
+    font-size: 1vw;
+    font-family: "dld_samsungsharpsans_medium";
+}
+
+.czy_student_id {
+    font-size: 1vw;
+    margin-bottom: 3vw;
+    font-family: "dld_samsungsharpsans_medium";
 }
 
 .czy_title{
     /* text-shadow: 0.05vw 0.05vw 0.2vw rgba(0,0,0,0.4); */
     font-size: 2vw;
     color: #23322a;
-    padding: 0.5vw 1vw;
+    /* padding: 0.5vw 1vw; */
     width: 30%;
-    margin: auto;
-    margin-bottom: 1.5vw;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2vw;
     font-family: "dld_samsungsharpsans_bold";
     text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 .czy_profile_table{
+    margin: 0;
+    padding: 0;
     margin-left: auto;
     margin-right: auto;
     width: 95%;
@@ -1536,11 +1566,13 @@ label.dld_gallery-label {
 .czy_profile_body th{
     font-family: "dld_samsungsharpsans_bold";
     width: 20%;
+    font-size: 1vw;
 }
 
 .czy_profile_body td{
-    font-family: "dld_samsungsharpsans_medium";
+    font-family: "dld_samsungsharpsans";
     text-align: justify;
+    font-size: 1vw;
 }
 
 .czy_profile_body td ul{
