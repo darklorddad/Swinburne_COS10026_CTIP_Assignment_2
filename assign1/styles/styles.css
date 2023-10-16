@@ -1164,7 +1164,7 @@ label.dld_gallery-label {
     margin-bottom: 2.5vw;
     border-radius: 2vw;
     backdrop-filter: blur(0.078vw);
-    background-color: rgba(228, 227, 234, 0.25);
+    background-color: rgba(228, 227, 234, 0.5);
     padding: 2vw 3vw 3vw 3vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
@@ -1193,8 +1193,8 @@ label.dld_gallery-label {
     box-shadow: rgba(35, 50, 42, 0.25) 0 0 1vw 0.1vw;
 }
 
-.czy_where_magic_happens .czy_head{
-    font-family: "dld_samsungsharpsans_medium";
+.czy_where_magic_happens .czy_head {
+    font-family: "dld_samsungsharpsans_bold";
     float: left;
     margin: 0;
     margin-top: 0.5vw;
@@ -1228,7 +1228,7 @@ label.dld_gallery-label {
     padding: 0;
     font-weight: bold;
     font-family: "dld_samsungsharpsans_bold";
-    font-size: 2.5vw;
+    font-size: 1.75vw;
 }
 
 .czy_card, .czy_card_species{
@@ -1276,7 +1276,7 @@ label.dld_gallery-label {
 .czy_cards_le_content .czy_card_title{
     margin: 0;
     font-family: "dld_samsungsharpsans_bold";
-    font-size: 1.5vw;
+    font-size: 1.125vw;
 }
 
 .czy_seperator{
@@ -1294,7 +1294,7 @@ label.dld_gallery-label {
     /* font-weight: 600; */
     font-size: 1vw;
     text-align: justify;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .czy_button{
@@ -1597,7 +1597,7 @@ label.dld_gallery-label {
     align-items: center;
     /* background-color: #e4e3ea; */
     backdrop-filter: blur(0.078vw);
-    background-color: rgba(228, 227, 234, 0.25);
+    background-color: rgba(228, 227, 234, 0.5);
     margin-left: 2.5vw;
     margin-right: 2.5vw;
     border-radius: 2vw;
@@ -1702,7 +1702,7 @@ label.dld_gallery-label {
     position: absolute;
     top: 0;
     font-family: "dld_samsungsharpsans_bold";
-    font-size: 1.3vw;
+    font-size: 1.125vw;
     /* padding: 0.417vw 1.75vw; */
     /* font-weight: bold; */
     /* line-height: 1.6; */
@@ -1753,15 +1753,19 @@ label.dld_gallery-label {
     /* color: var(--white-1); */
     color: #23322a;
     /* letter-spacing: 2px; */
-    padding: 0.5vw 2vw;
+    padding: 0.5vw 1vw;
     width: 10vw;
     text-align: center;
     /* border: 1px solid var(--grey); */
-    border: 0.15vw solid #23322a;
-    border-radius: 1.5vw;
+    border: 0.1vw solid #23322a;
+    border-radius: 1vw;
     background: transparent;
-    transition: .3s;
+    transition: .25s;
     cursor: pointer;
+}
+
+.ash_box a {
+    font-size: 1vw;
 }
   
 .ash_moreinfo_button:hover, .ash_moreinfo_button:focus {
@@ -2321,7 +2325,7 @@ a:focus {
     flex-direction: column;
     row-gap: 1vw;
     margin-top: 3vw;
-    margin-left: 2vw;
+    margin-left: 2.05vw;
     width: 100%;
     height: 20vw;
 }
@@ -3105,7 +3109,7 @@ a.ttl_link-1:focus, a.ttl_link-2:focus {
 } */
 
 .ttl_modal_title{
-    font-size: 1.8vw;
+    font-size: 2vw;
     font-family: "dld_samsungsharpsans_medium", sans-serif;
 }
 
@@ -3189,7 +3193,29 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     filter: grayscale(100%);
     cursor: pointer;
     transition: .5s ;
-    border-radius: 0;
+    border-radius: 2vw;
+}
+
+.ttl_plant_gallery img:first-child {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.ttl_plant_gallery img:nth-child(2) {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.ttl_plant_gallery img:nth-child(3) {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.ttl_plant_gallery img:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .ttl_plant_gallery img:hover {
@@ -3231,7 +3257,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 .ttl_plant_about_content{
     text-align: justify;
     font-family: "dld_samsungsharpsans", sans-serif;
-    font-size: 1.5vw;
+    font-size: 1vw;
 }
 
 .ttl_youtube_video_container{
@@ -3372,7 +3398,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     margin-bottom: 2.5vw;
     border-radius: 2vw;
     backdrop-filter: blur(0.078vw);
-    background-color: rgba(228, 227, 234, 0.25);
+    background-color: rgba(228, 227, 234, 0.5);
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
