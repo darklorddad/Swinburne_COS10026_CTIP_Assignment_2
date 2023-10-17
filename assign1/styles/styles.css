@@ -459,49 +459,117 @@
 }
 
 .dld_section_2 {
-    display: flex;
-    width: 100%;
-    justify-content: left;
-    margin-left: 8.93vw;
+    margin-left: 9.93vw;
 }
 
 .dld_section_2_card {
-    /* position: relative; */
-    background-color: #e4e3ea;
-    /* background-color: white; */
-    margin: 0 1vw;
-    text-align: center;
-    /* height: 10vw; */
+    display: flex;
+    /* background-color: #e4e3ea; */
     border-radius: 1.5vw;
     width: 67vw;
-    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
-    /* overflow: hidden; */
-    /* transition: background-color 0.5s ease; */
-    /* margin-top: -11vw; */
-    /* prank only */
+    /* box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22); */
+    flex-direction: column;
 }
 
 .dld_section_2_card p {
+    display: flex;
     text-align: justify;
     font-family: "dld_samsungsharpsans";
-    margin: 1.5vw;
     font-size: 1vw;
     color: #23322a;
     line-height: 1.5;
+    margin: 0;
+    margin-left: 2vw;
+    /* margin-right: 2vw; */
+    width: 38vw;
+    height: 20vw;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #e4e3ea;
+    border-radius: 1.5vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
-/* .dld_section_2_card:hover { */
-    /* background-color: #23322a; */
-    /* background-color: #90a79a; */
-    /* background-color: #567260; */
-    /* border: #23322a solid 0.1vw; */
-    /* box-sizing: border-box; */
-/* } */
+.dld_section_2_card_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
-/* .dld_section_2_card:hover p { */
-    /* color: #90a79a; */
-    /* color: #23322a; */
-/* } */
+.dld_section_2_card_column {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.dld_section_2_card_column img {
+    object-fit: cover;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 1.5vw;
+    margin: 0vw;
+    margin-bottom: 2vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.dld_section_2_1 img {
+    margin-right: 0;
+    border-top-left-radius: 1.5vw;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1.5vw;
+    border-bottom-right-radius: 0;
+}
+
+.dld_section_2_2 p {
+    margin-left: 0;
+    width: 39vw;
+    border-top-left-radius: 0;
+    border-top-right-radius: 1.5vw;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 1.5vw;
+    /* margin-top: 2vw; */
+    padding: 0 4vw;
+}
+
+.dld_section_2_3 p {
+    margin-left: 0;
+    width: 39vw;
+    border-top-left-radius: 1.5vw;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1.5vw;
+    border-bottom-right-radius: 0;
+    /* margin-top: 2vw; */
+    padding: 0 4vw;
+}
+
+.dld_section_2_4 img {
+    margin-right: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 1.5vw;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 1.5vw;
+}
+
+.dld_section_2_5 img {
+    margin-right: 0;
+    border-top-left-radius: 1.5vw;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1.5vw;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+}
+
+.dld_section_2_6 p {
+    margin-left: 0;
+    width: 39vw;
+    border-top-left-radius: 0;
+    border-top-right-radius: 1.5vw;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 1.5vw;
+    /* margin-top: 2vw; */
+    padding: 0 4vw;
+    margin-bottom: 0;
+}
 
 .dld_section_3 {
     display: flex;
@@ -950,6 +1018,28 @@ label.dld_gallery-label {
     color: #90a79a;
 }
 
+.dld_footer_section_1_center_column_2 {
+    display: flex;
+    flex-direction: column;
+    width: 12vw;
+}
+
+.dld_footer_section_1_center_column_2 a {
+    color:  #23322a;
+    font-size: 1vw;
+    padding: 0.5vw 1vw;
+    border-radius: 1vw;
+    margin-bottom: 0.5vw;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    /* border: 0.1vw solid #23322a; */
+    margin-right: 0.5vw;
+}
+
+.dld_footer_section_1_center_column_2 a:hover {
+    background-color: #23322a;
+    color: #90a79a;
+}
+
 /* .dld_footer_section_1_right {
     width: 33%;
 } */
@@ -1102,11 +1192,14 @@ label.dld_gallery-label {
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
+
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
 
 
 
 /* Edison's explorer.html */
+
 .czy_body{
     box-sizing: border-box;
     margin: 0;
@@ -1495,14 +1588,14 @@ label.dld_gallery-label {
     padding-bottom: 2vw;
     border-radius: 2vw;
     width: 80%;
-    background-color: white;
+    background-color: rgb(228, 227, 234);
     box-shadow: -0.52vw 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
 .czy_member_name{
     /* text-shadow: 0.05vw 0.05vw 0.2vw rgba(0,0,0,0.4); */
-    /* font-size: 200%; */
-    font-size: 1.5vw;
+    font-size: 200%;
+    /* font-size: 1.5vw; */
     font-family: "dld_samsungsharpsans_bold";
     /* font-weight: bold */
 
@@ -1515,7 +1608,7 @@ label.dld_gallery-label {
     padding: 2.5vw 5vw;
     border-radius: 2vw;
     color: #23322a;
-    background-color: white;
+    background-color: rgb(228, 227, 234);
     margin: 0;
     margin-left: auto;
     margin-right: auto;
@@ -1525,20 +1618,20 @@ label.dld_gallery-label {
 }
 
 .czy_member_course {
-    font-size: 1vw;
+    font-size: 1.25vw;
     font-family: "dld_samsungsharpsans_medium";
 }
 
 .czy_student_id {
-    font-size: 1vw;
+    font-size: 1.25vw;
     margin-bottom: 3vw;
-    font-family: "dld_samsungsharpsans_medium";
+    font-family: Arial, sans-serif;
 }
 
 .czy_title{
     /* text-shadow: 0.05vw 0.05vw 0.2vw rgba(0,0,0,0.4); */
     font-size: 2vw;
-    color: #23322a;
+    color: rgb(35, 50, 42);
     /* padding: 0.5vw 1vw; */
     width: 30%;
     margin: 0;
@@ -1564,7 +1657,7 @@ label.dld_gallery-label {
     padding: 0.5vw 1.5vw;
     color: #23322a; 
     height: 3vw;
-    background-color: white;
+    background-color: #e4e3ea;
     border-radius: 1vw;
 }
 
