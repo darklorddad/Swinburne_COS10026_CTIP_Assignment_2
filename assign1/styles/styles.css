@@ -529,6 +529,7 @@
     border-bottom-right-radius: 1.5vw;
     /* margin-top: 2vw; */
     padding: 0 4vw;
+    z-index: -1;
 }
 
 .dld_section_2_3 p {
@@ -569,6 +570,7 @@
     /* margin-top: 2vw; */
     padding: 0 4vw;
     margin-bottom: 0;
+    z-index: -1;
 }
 
 .dld_section_3 {
@@ -1022,6 +1024,7 @@ label.dld_gallery-label {
     display: flex;
     flex-direction: column;
     width: 12vw;
+    margin-right: 4vw;
 }
 
 .dld_footer_section_1_center_column_2 a {
