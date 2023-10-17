@@ -1578,6 +1578,7 @@ label.dld_gallery-label {
 .czy_profile_pic{
     margin-top: 3vw;
     width: 15vw;
+    height: 15vw;
     border-radius: 15vw;
     object-fit: cover;
 }
