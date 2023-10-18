@@ -1324,6 +1324,16 @@ label.dld_gallery-label {
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
+.czy_where_magic_happens .czy_head {
+    font-family: "dld_samsungsharpsans_bold";
+    float: left;
+    margin: 0;
+    margin-top: 0.5vw;
+    margin-left: 0.8vw;
+    font-size: 2.25vw;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
 .czy_tis_a_search_bar{
     float: right;
     width: 46%;
@@ -1344,18 +1354,7 @@ label.dld_gallery-label {
 }
 
 .czy_tis_a_search_bar:hover{
-    /* box-shadow: rgba(206, 206, 206, 0.8) 0 0 1vw 0.1vw; */
     box-shadow: rgba(35, 50, 42, 0.25) 0 0 1vw 0.1vw;
-}
-
-.czy_where_magic_happens .czy_head {
-    font-family: "dld_samsungsharpsans_bold";
-    float: left;
-    margin: 0;
-    margin-top: 0.5vw;
-    margin-left: 0.8vw;
-    font-size: 2.25vw;
-    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 .czy_tis_a_line, .czy_tis_a_line_2{
@@ -1368,7 +1367,6 @@ label.dld_gallery-label {
 }
 
 .czy_tis_a_line{
-    
     margin-top: 4.5vw;
     margin-bottom: 0.5vw;
 }
@@ -1448,7 +1446,6 @@ label.dld_gallery-label {
 .czy_small_description{
     margin: 0;
     margin-top: 0.65vw;
-    /* font-weight: 600; */
     font-size: 1vw;
     text-align: justify;
     line-height: 1.4;
@@ -1477,22 +1474,10 @@ label.dld_gallery-label {
     background-color: #567260;
 }
 
-.czy_gallery_seperator{
-    margin: 0 0.8vw;
-    padding: 0;
-    margin-bottom: 0.5vw;
-    border-radius: 2vw;
-    /* border: 0.15vw solid #90a79a; */
-    border: 0.15vw solid #23322a;
-    transition: border-color 0.25s ease;
-}
-
 .czy_gallery{
     margin-top: 0vw;
     visibility: hidden;
     position: absolute;
-    /* background-image: linear-gradient(180deg, #23322a, rgba(86, 115, 97, 0.95)); */
-    /* background-color: #23322a; */
     background-color: #e4e3ea;
     opacity: 0;
     text-align: center;
@@ -1500,11 +1485,20 @@ label.dld_gallery-label {
     padding-right: 0.2vw;
     padding-top: 1vw;
     width: 44.98%;
-    /* border-radius: 0 0 1.5vw 1.5vw; */
     border-radius: 1.5vw;
     transition: opacity ease 0.25s, background-color 0.25s ease, border-radius 0.25s ease;
     z-index: 1;
 }
+
+.czy_gallery_seperator{
+    margin: 0 0.8vw;
+    padding: 0;
+    margin-bottom: 0.5vw;
+    border-radius: 2vw;
+    border: 0.15vw solid #23322a;
+    transition: border-color 0.25s ease;
+}
+
 
 .czy_gallery_pictures{
     width: 5.5vw;
@@ -1539,11 +1533,6 @@ label.dld_gallery-label {
     border-bottom-right-radius: 1.5vw;
     border-bottom-left-radius: 0;
 }
-
-/* .czy_card_species:hover .czy_card_butt_on{
-    color: #23322a;
-    background-color: #90a79a;
-} */
 
 .czy_card_species:hover .czy_seperator{
     border-color: #90a79a;
@@ -1619,7 +1608,6 @@ label.dld_gallery-label {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    /* background-color: #e4e3ea; */
     width: 95.03%;
     margin-top: 2.5vw;
     margin-left: 2.5vw;
@@ -1636,6 +1624,22 @@ label.dld_gallery-label {
     object-fit: cover;
 }
 
+.czy_member_name{
+    font-size: 200%;
+    font-family: "dld_samsungsharpsans_bold";
+}
+
+.czy_member_course {
+    font-size: 1.25vw;
+    font-family: "dld_samsungsharpsans_medium";
+}
+
+.czy_student_id {
+    font-size: 1.25vw;
+    margin-bottom: 3vw;
+    font-family: Arial, sans-serif;
+}
+
 .czy_profile_about_me, .czy_profile_personal{
     margin-top: 2vw;
     padding-top: 3vw;
@@ -1644,15 +1648,6 @@ label.dld_gallery-label {
     width: 80%;
     background-color: rgb(228, 227, 234);
     box-shadow: -0.52vw 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
-}
-
-.czy_member_name{
-    /* text-shadow: 0.05vw 0.05vw 0.2vw rgba(0,0,0,0.4); */
-    font-size: 200%;
-    /* font-size: 1.5vw; */
-    font-family: "dld_samsungsharpsans_bold";
-    /* font-weight: bold */
-
 }
 
 .czy_about_me{
@@ -1671,22 +1666,9 @@ label.dld_gallery-label {
     line-height: 1.5;
 }
 
-.czy_member_course {
-    font-size: 1.25vw;
-    font-family: "dld_samsungsharpsans_medium";
-}
-
-.czy_student_id {
-    font-size: 1.25vw;
-    margin-bottom: 3vw;
-    font-family: Arial, sans-serif;
-}
-
 .czy_title{
-    /* text-shadow: 0.05vw 0.05vw 0.2vw rgba(0,0,0,0.4); */
     font-size: 2vw;
     color: rgb(35, 50, 42);
-    /* padding: 0.5vw 1vw; */
     width: 30%;
     margin: 0;
     margin-left: auto;
