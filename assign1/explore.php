@@ -2,44 +2,16 @@
 
 <html lang = "en">
     <head>
-        <meta charset = "UTF-8">
-        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         <meta name = "author" content = "Edison Ho">
-        <link rel = "stylesheet" type = "text/css" href = "styles/styles.css">
-		<link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-        <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-        <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,0,0">
-        <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-        <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-        <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-        <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-        <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+        <meta name = "description" content = "Explore">
         <title>FLORASCAN  -  Explore</title>
+        <?php include_once("dld_head.php"); ?>
     </head>
 
     <body class = "czy_body">
         <?php include_once("dld_background.php"); ?>
-
         <?php include_once("dld_top_navigation_bar.php"); ?>
-        
-        <nav class = "czy_navigation_fool">
-            <div class = "ash_page_header">
-                <p class = "ash_title_header">Explore</p>
-                <p>Dive into the vast world of plant taxonomy on our explore page, unraveling the interconnected web of known species, genera and families for an enlightening botanical journey.</p>
-            </div>
-
-            <ul>
-                <li><a href = "explore.html" class = "czy_active">Families</a></li>
-                <li><a href = "genera.html">Genera</a></li>
-                <li><a href = "species.html">Species</a></li>
-            </ul>
-            
-            
-
-            <div id = "apocynaceae"></div>
-            <div id = "dipterocarpaceae"></div>
-            <div id = "pandanaceae"></div>
-        </nav>
+        <?php include_once("czy_navigation_fool.php"); ?>
         
         <div class = "czy_where_magic_happens">
             <div class = "czy_back"></div>
