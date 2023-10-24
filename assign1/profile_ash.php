@@ -4,7 +4,7 @@
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" type = "text/css" href = "styles/styles.css">
-    <meta name = "author" content = "Nicholas Sik">
+    <meta name = "author" content = "Ashley Jong">
     <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,0,0">
@@ -18,103 +18,9 @@
 
 <body class = "czy_profile_body">
 
-    <div class = "dld_background_dots">
-        <div class = "dld_background_gradient"></div>
-    </div>
+    <?php include_once("dld_background.php"); ?>
 
-    <nav class = "dld_top_navigation_bar">
-        <ul>
-            <li class="dld_top_navigation_bar_item_first">
-                <a href="index.html" class="dld_top_navigation_bar_link">
-                    <span class="dld_top_navigation_bar_icon">
-                        <span class="material-symbols-outlined">home</span>
-                    </span>
-                    <span class="dld_top_navigation_bar_text">
-                        Home
-                    </span>
-                </a>
-            </li>
-
-            <li>
-                <a href = "identify.html">
-                    <span class = "dld_top_navigation_bar_icon">
-                        <span class = "material-symbols-outlined">search</span>
-                    </span>
-                    <span class = "dld_top_navigation_bar_text">
-                        Identify
-                    </span>
-                </a>
-            </li>
-
-            <li>
-                <a href = "explore.html">
-                    <span class = "dld_top_navigation_bar_icon">
-                        <span class = "material-symbols-outlined">explore</span>
-                    </span>
-                    <span class = "dld_top_navigation_bar_text">
-                        Explore
-                    </span>
-                </a>
-            </li>
-
-            <li>
-                <a href = "contributions.html">
-                    <span class = "dld_top_navigation_bar_icon dld_top_navigation_bar_set">
-                        <span class = "material-symbols-outlined">groups</span>
-                    </span>
-                    <span class = "dld_top_navigation_bar_text">
-                        Contributions
-                    </span>
-                </a>
-            </li>
-
-            <li><a href = "index.html"><p>FLORASCAN</p></a></li>
-
-            <li>
-                <a href = "enquiry.html">
-                    <span class = "dld_top_navigation_bar_icon">
-                        <span class = "material-symbols-outlined">forward_to_inbox</span>
-                    </span>
-                    <span class = "dld_top_navigation_bar_text">
-                        Enquiry
-                    </span>
-                </a>
-            </li>
-
-            <li>
-                <a href = "profile_ash.html">
-                    <span class = "dld_top_navigation_bar_icon">
-                        <span class = "material-symbols-outlined">badge</span>
-                    </span>
-                    <span class = "dld_top_navigation_bar_text">
-                        Profiles
-                    </span>
-                </a>
-            </li>
-
-            <li>
-                <a href = "login.html">
-                    <span class = "dld_top_navigation_bar_icon">
-                        <span class = "material-symbols-outlined">account_circle</span>
-                    </span>
-                    <span class = "dld_top_navigation_bar_text">
-                        Account
-                    </span>
-                </a>
-            </li>
-
-            <li class = "dld_top_navigation_bar_item_last">
-                <a href = "enhancements.html">
-                    <span class = "dld_top_navigation_bar_icon">
-                        <span class = "material-symbols-outlined">hotel_class</span>
-                    </span>
-                    <span class = "dld_top_navigation_bar_text">
-                        Enhancements
-                    </span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <?php include_once("dld_top_navigation_bar.php"); ?>
 
     <nav class = "czy_navigation_fool_profile">
         <div class = "ash_page_header">
@@ -123,27 +29,24 @@
         </div>
 
         <ul>
-            <li><a href = "profile_ash.html">Ashley</a></li>
+            <li><a href = "profile_ash.html" class = "czy_active">Ashley</a></li>
             <li><a href = "profile_dld.html">Daniel</a></li>
             <li><a href = "profile_czy.html">Edison</a></li>
-            <li><a href = "profile_nic.html" class = "czy_active">Nicholas</a></li>
+            <li><a href = "profile_nic.html">Nicholas</a></li>
             <li><a href = "profile_ttl.html">Tzy Lynn</a></li>
         </ul>
     </nav>
 
     <div class = "czy_container">
-        <img src = "styles/images/czy/Profile/nic.jpg" alt="Nicholas" class = "czy_profile_pic">
+        <img src = "styles/images/ash/ash.jpg" alt="Ashley" class = "czy_profile_pic">
         <div class = "czy_profile_description">
-            <p class = "czy_member_name">Nicholas Sik Jia Le</p>
+            <p class = "czy_member_name">Ashley Jong</p>
             <p class = "czy_member_course">Course: Bachelor of Computer Science</p>
-            <p class = "czy_student_id">Student ID: 102786645</p>
+            <p class = "czy_student_id">Student ID: 102780087</p>
             <br>
             <br>
             <p class = "czy_title">Biographic Overview</p>
-            <p class = "czy_about_me">
-                My name is Nicholas Sik Jia Le. My hometown is Sibu, Sarawak. At Swinburne University of Technology Sarawak, 
-                I am pursuing Bachelor of Computer Science degree. My goal is to become a programmer.
-            </p>    
+            <p class = "czy_about_me">Name? Ashley. What am I doing? First-year CS degree student. Fun fact? Loves, pursues, or desires to obtain pain of itself because it is pain, but circumstances occur where toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise except to obtain some advantage? But those who find fault choose to enjoy pleasure, one who avoids a pain that produces no blinded by desire, that they cannot foresee blame belongs to those who fail in their duty through weakness of will is the same as saying through shrinking from toil and pain. That's the lorem ipsum translation btw :D</p>
             <br>
 
             <p class = "czy_title">Personal Details</p>
@@ -151,23 +54,23 @@
                 <tr class = "demographic">
                     <th>Demographic Information</th>
                     <td>
-                        Male, 20 years old
+                        Female, 2023 - 2004 = im kinda bad at maths
                     </td>
                 </tr>
 
                 <tr class = "hometown">
                     <th>Hometown</th>
-                    <td>Sibu</td>
+                    <td>Sarawak, Malaysia</td>
                 </tr>
 
                 <tr class = "achievement">
                     <th>Achievements</th>
-                    <td>Joining clubs, playing sports and community involvement.</td>
+                    <td>Still slaying after 19 years and waking up 5 minutes before class but somehow still managed to arrive on time</td>
                 </tr>
 
                 <tr class = "interests">
                     <th>Interests</th>
-                    <td>Exercise</td>
+                    <td>Squinting my eyes counting px even though we use vw and sleeping (i really need it)</td>
                 </tr>                    
             </table>
         </div>
@@ -251,7 +154,7 @@
 
             <div class = "dld_section_1_footer_right">
                 <h1 class = "dld_footer_heading">E-mail</h1>
-                <p><a href="mailto:102786645@students.swinburne.edu.my">102786645@students.swinburne.edu.my</a></p>
+                <p><a href="mailto:102780087@students.swinburne.edu.my">102780087@students.swinburne.edu.my</a></p>
             </div>
         </div>
 

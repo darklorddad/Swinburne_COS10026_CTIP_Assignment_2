@@ -4,7 +4,7 @@
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" type = "text/css" href = "styles/styles.css">
-    <meta name = "author" content = "Edison Ho">
+    <meta name = "author" content = "Tan Tzy Lynn">
     <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,0,0">
@@ -18,103 +18,9 @@
 
 <body class = "czy_profile_body">
 
-    <div class = "dld_background_dots">
-        <div class = "dld_background_gradient"></div>
-    </div>
+    <?php include_once("dld_background.php"); ?>
 
-    <nav class = "dld_top_navigation_bar">
-        <ul>
-            <li class="dld_top_navigation_bar_item_first">
-                <a href="index.html" class="dld_top_navigation_bar_link">
-                    <span class="dld_top_navigation_bar_icon">
-                        <span class="material-symbols-outlined">home</span>
-                    </span>
-                    <span class="dld_top_navigation_bar_text">
-                        Home
-                    </span>
-                </a>
-            </li>
-
-            <li>
-                <a href = "identify.html">
-                    <span class = "dld_top_navigation_bar_icon">
-                        <span class = "material-symbols-outlined">search</span>
-                    </span>
-                    <span class = "dld_top_navigation_bar_text">
-                        Identify
-                    </span>
-                </a>
-            </li>
-
-            <li>
-                <a href = "explore.html">
-                    <span class = "dld_top_navigation_bar_icon">
-                        <span class = "material-symbols-outlined">explore</span>
-                    </span>
-                    <span class = "dld_top_navigation_bar_text">
-                        Explore
-                    </span>
-                </a>
-            </li>
-
-            <li>
-                <a href = "contributions.html">
-                    <span class = "dld_top_navigation_bar_icon dld_top_navigation_bar_set">
-                        <span class = "material-symbols-outlined">groups</span>
-                    </span>
-                    <span class = "dld_top_navigation_bar_text">
-                        Contributions
-                    </span>
-                </a>
-            </li>
-
-            <li><a href = "index.html"><p>FLORASCAN</p></a></li>
-
-            <li>
-                <a href = "enquiry.html">
-                    <span class = "dld_top_navigation_bar_icon">
-                        <span class = "material-symbols-outlined">forward_to_inbox</span>
-                    </span>
-                    <span class = "dld_top_navigation_bar_text">
-                        Enquiry
-                    </span>
-                </a>
-            </li>
-
-            <li>
-                <a href = "profile_ash.html">
-                    <span class = "dld_top_navigation_bar_icon">
-                        <span class = "material-symbols-outlined">badge</span>
-                    </span>
-                    <span class = "dld_top_navigation_bar_text">
-                        Profiles
-                    </span>
-                </a>
-            </li>
-
-            <li>
-                <a href = "login.html">
-                    <span class = "dld_top_navigation_bar_icon">
-                        <span class = "material-symbols-outlined">account_circle</span>
-                    </span>
-                    <span class = "dld_top_navigation_bar_text">
-                        Account
-                    </span>
-                </a>
-            </li>
-
-            <li class = "dld_top_navigation_bar_item_last">
-                <a href = "enhancements.html">
-                    <span class = "dld_top_navigation_bar_icon">
-                        <span class = "material-symbols-outlined">hotel_class</span>
-                    </span>
-                    <span class = "dld_top_navigation_bar_text">
-                        Enhancements
-                    </span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <?php include_once("dld_top_navigation_bar.php"); ?>
 
     <nav class = "czy_navigation_fool_profile">
         <div class = "ash_page_header">
@@ -125,25 +31,25 @@
         <ul>
             <li><a href = "profile_ash.html">Ashley</a></li>
             <li><a href = "profile_dld.html">Daniel</a></li>
-            <li><a href = "profile_czy.html" class = "czy_active">Edison</a></li>
+            <li><a href = "profile_czy.html">Edison</a></li>
             <li><a href = "profile_nic.html">Nicholas</a></li>
-            <li><a href = "profile_ttl.html">Tzy Lynn</a></li>
+            <li><a href = "profile_ttl.html" class = "czy_active">Tzy Lynn</a></li>
         </ul>
     </nav>
 
     <div class = "czy_container">
-        <img src = "styles/images/czy/Profile/czy.jpg" alt="Edison" class = "czy_profile_pic">
+        <img src = "styles/images/czy/Profile/ttl.png" alt="Tan Tzy Lynn" class = "czy_profile_pic">
         <div class = "czy_profile_description">
-            <p class = "czy_member_name">Edison Ho Hui Yang</p>
+            <p class = "czy_member_name">Tan Tzy Lynn</p>
             <p class = "czy_member_course">Course: Bachelor of Computer Science</p>
-            <p class = "czy_student_id">Student ID: 102779496</p>
+            <p class = "czy_student_id">Student ID: 102779328</p>
             <br>
             <br>
             <p class = "czy_title">Biographic Overview</p>
             <p class = "czy_about_me">
-                I'm currently studying in Swinburne Uhiversity of Technology Sarawak and is one of the members who worked on the website. 
-                I'm taking Computer Science alongside with the enrolment of this unit. While working on the website I learned more about the amount of effort 
-                and knowledge needed to successfully create a website.
+                I’m currently a first-year degree student studying Bachelor of Computer Science at Swinburne University of Technology Sarawak. 
+                As a member involved in website project, I've delved into the complexities of web development, 
+                merging theoretical concepts from the unit with practical application. 
             </p>    
             <br>
 
@@ -151,22 +57,24 @@
             <table class = "czy_profile_table">
                 <tr class = "demographic">
                     <th>Demographic Information</th>
-                    <td>Male, 19 years old</td>
+                    <td>
+                        Female, 19 years old
+                    </td>
                 </tr>
 
                 <tr class = "hometown">
                     <th>Hometown</th>
-                    <td>Miri, Sarawak, Malaysia</td>
+                    <td>Kuching, Sarawak, Malaysia</td>
                 </tr>
 
                 <tr class = "achievement">
                     <th>Achievements</th>
-                    <td>Osu [Global Ranking #183,005] [Country Ranking #2,812]</td>
+                    <td>Accumulated an impressive collection of unread books, showcasing dedication to literary procrastination</td>
                 </tr>
 
                 <tr class = "interests">
                     <th>Interests</th>
-                    <td>Games, reading & music</td>
+                    <td>Sleeping, reading & games</td>
                 </tr>                    
             </table>
         </div>
@@ -250,7 +158,7 @@
 
             <div class = "dld_section_1_footer_right">
                 <h1 class = "dld_footer_heading">E-mail</h1>
-                <p><a href="mailto:102779496@students.swinburne.edu.my">102779496@students.swinburne.edu.my</a></p>
+                <p><a href="mailto:102779328@students.swinburne.edu.my">102779328@students.swinburne.edu.my</a></p>
             </div>
         </div>
 
