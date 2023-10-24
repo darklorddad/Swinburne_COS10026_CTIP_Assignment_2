@@ -959,79 +959,7 @@
 
     <footer>
         <div class = "dld_footer_section_1">
-            <div class = "dld_footer_section_1_left">
-                <h1 class = "dld_footer_section_1_left_title"><a href = "index.html">FLORASCAN</a></h1>
-                <p class = "dld_footer_section_1_left_title_text">Unearth, delve and spread the wonder of untamed plant life, in nature's grand show.</p>
-                <p class = "dld_footer_heading">Location</p>
-
-                <div class = "dld_footer_section_1_left_information">
-                    <a class = "dld_footer_section_1_left_information_icon" href = "https://www.google.com.my/maps/place/Swinburne+University+of+Technology+Sarawak+Campus/@1.5326046,110.3574906,17.43z/data=!4m6!3m5!1s0x31fba70b11e02ce7:0x69cbf290cfd24bb7!8m2!3d1.5323021!4d110.3571732!16zL20vMGYyemIz?authuser=1&entry=ttu">
-                        <span class = "material-symbols-outlined">location_on</span>
-                    </a>
-                    <a href = "https://www.google.com.my/maps/place/Swinburne+University+of+Technology+Sarawak+Campus/@1.5326046,110.3574906,17.43z/data=!4m6!3m5!1s0x31fba70b11e02ce7:0x69cbf290cfd24bb7!8m2!3d1.5323021!4d110.3571732!16zL20vMGYyemIz?authuser=1&entry=ttu">
-                        <p class = "dld_footer_section_1_left_information_address">Q5B, 93350 Kuching, Sarawak</p>
-                    </a>
-                </div>
-
-                <p class = "dld_footer_heading">Contact Details</p>
-
-                <a href = "index.html">
-                    <div class = "dld_footer_section_1_left_information dld_no_hover">
-                        <span class = "material-symbols-outlined">call</span>
-                        <p class = "dld_footer_section_1_left_information_phone_number">082-415 353</p>
-                    </div>
-                </a>
-
-                <a href = "mailto:support@florascan.com">
-                    <div class = "dld_footer_section_1_left_information dld_footer_section_1_left_information_last">
-                        <span class = "material-symbols-outlined">mail</span>
-                        <p class = "dld_footer_section_1_left_information_email">support@florascan.com</p>
-                    </div>
-                </a>
-
-                <p></p>
-
-                <p class = "dld_footer_heading">Youtube Video</p>
-
-                <a href = "https://www.youtube.com/watch?v=zDBzVGz05xk">
-                    <div class = "dld_footer_section_1_left_information dld_footer_section_1_left_information_last">
-                        <p class = "dld_footer_section_1_left_information_email">Link</p>
-                    </div>
-                </a>
-            </div>
-
-            <div class = "dld_footer_divider"></div>
-
-            <div class = "dld_footer_section_1_center">
-                <h1 class = "dld_footer_heading">Navigation</h1>
-                <div class = "dld_footer_section_1_center_row">
-                    <div class = "dld_footer_section_1_center_column">
-                        <a href = "explore.html">Families</a>
-                        <a href = "genera.html">Genera</a>
-                        <a href = "species.html">Species</a>
-                        <a href = "profile_ash.html">Profile ASH</a>
-                        <a href = "profile_czy.html">Profile CZY</a>
-                        <a href = "profile_dld.html">Profile DLD</a>
-                        <a href = "profile_nic.html">Profile NIC</a>
-                        <a href = "profile_ttl.html">Profile TTL</a>
-                        <a href = "login.html">Log In</a>
-                        <a href = "register.html">Register</a>
-                    </div>
-
-                    <div class = "dld_footer_section_1_center_column">
-                        <a href = "index.html" class = "dld_footer_section_1_center_navigation_link_1">Home</a>
-                        <a href = "identify.html">Identify</a>
-                        <a href = "explore.html">Explore</a>
-                        <a href = "contributions.html">Contributions</a>
-                        <a href = "enquiry.html">Enquiry</a>
-                        <a href = "profile_czy.html">Profiles</a>
-                        <a href = "login.html">Account</a>
-                        <a href = "enhancements.html">Enhancements</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class = "dld_footer_divider"></div>
+            <?php include_once("dld_footer.php"); ?>
 
             <div class = "dld_section_1_footer_right">
                 <h1 class = "dld_footer_heading">Acknowledgement</h1>
@@ -1041,74 +969,57 @@
                         <a target="_blank" href = "https://unsplash.com/" class = "dld_footer_section_1_center_navigation_link_1">Unsplash</a>
                         <a target="_blank" href = "https://www.inaturalist.org/observations">iNaturalist</a>
                         <p></p>
-                        
                     </div>
 
                     <div class = "dld_footer_section_1_center_column">
                         <h1 class = "dld_heading">Icon</h1>
                         <a target="_blank" href = "https://www.svgrepo.com/">SVGRepo</a>
-                        
                     </div>
-
+                    
                     <div class = "dld_footer_section_1_center_column">
                         <h1 class = "dld_heading">Map</h1>
                         <a target="_blank" href = "https://www.google.com/maps">Google Map</a>
-                        
                     </div>
-
                 </div>
 
                 <div class = "dld_footer_section_1_center_row">
-
-                    <div class = "dld_footer_section_1_center_column">
-                        <h1 class = "dld_heading">Video</h1>
-                        <a target="_blank" href = "https://www.youtube.com/">YouTube</a>
-                        
-                    </div>
-
-                    <div class = "dld_footer_section_1_center_column">
-                        <h1 class = "dld_heading">Chinaberry Information</h1>
-                        <a target="_blank" href = "https://www.picturethisai.com/wiki/Melia_azedarach.html">PictureThis</a>
-                        <a target="_blank" href = "https://hort.ifas.ufl.edu/database/documents/pdf/tree_fact_sheets/melazea.pdf">University of Florida</a>
-                        
-                    </div>
-
                     <div class = "dld_footer_section_1_center_column">
                         <h1 class = "dld_heading">Malaysian Persimmon Information</h1>
                         <a target="_blank" href = "https://www.monaconatureencyclopedia.com/diospyros-maritima/?lang=en">Monaca Nature Encyclopedia</a>
                         <a target="_blank" href = "https://www.picturethisai.com/wiki/Diospyros_virginiana.html">PictureThis</a>
                         <a target="_blank" href = "https://hort.ifas.ufl.edu/database/documents/pdf/tree_fact_sheets/diovira.pdf">University of Florida</a>
                         <p></p>
-                        
                     </div>
 
+                    <div class = "dld_footer_section_1_center_column">
+                        <h1 class = "dld_heading">Chinaberry Information</h1>
+                        <a target="_blank" href = "https://www.picturethisai.com/wiki/Melia_azedarach.html">PictureThis</a>
+                        <a target="_blank" href = "https://hort.ifas.ufl.edu/database/documents/pdf/tree_fact_sheets/melazea.pdf">University of Florida</a>
+                    </div>
+
+                    <div class = "dld_footer_section_1_center_column">
+                        <h1 class = "dld_heading">Video</h1>
+                        <a target="_blank" href = "https://www.youtube.com/">YouTube</a>
+                    </div>
                 </div>
 
                 <div class = "dld_footer_section_1_center_row">
-
                     <div class = "dld_footer_section_1_center_column">
                         <h1 class = "dld_heading">Cocoplum Information</h1>
                         <a target="_blank" href = "https://www.picturethisai.com/wiki/Chrysobalanus_icaco.html">PictureThis</a>
                         <a target="_blank" href = "https://edis.ifas.ufl.edu/publication/EP553">University of Florida</a>
-                        
                     </div>
 
                     <div class = "dld_footer_section_1_center_column">
                         <h1 class = "dld_heading">Gumbo-limbo Information</h1>
                         <a target="_blank" href = "https://www.picturethisai.com/wiki/Chrysobalanus_icaco.html">PictureThis</a>
                         <a target="_blank" href = "https://edis.ifas.ufl.edu/publication/EP553">University of Florida</a>
-                        
                     </div>
-
-                    
                 </div>
-
             </div>
         </div>
 
-        <div class = "dld_footer_section_2">
-            <p class = "dld_footer_section_2_copyright">Copyright © 2023 <a href = "index.html">FLORASCAN. </a>All rights reserved.</p>
-        </div>
+        <?php include_once("dld_footer_2.php"); ?>
     </footer>
 </body>
 </html>

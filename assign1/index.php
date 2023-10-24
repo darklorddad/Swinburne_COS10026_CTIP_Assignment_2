@@ -37,61 +37,45 @@
         <div class = "dld_main">
             <nav>
                 <ul>
-                    <li>
-                        <a href = "index.php">
-                            <span class = "material-symbols-outlined dld_side_navigation_bar_icon">home</span>
-                            <span class = "dld_side_navigation_bar_text">Home</span>
-                        </a>
-                    </li>
+                    <li><a href = "index.php">
+                        <span class = "material-symbols-outlined dld_side_navigation_bar_icon">home</span>
+                        <span class = "dld_side_navigation_bar_text">Home</span>
+                    </a></li>
 
-                    <li>
-                        <a href  ="identify.php">
-                            <span class = "material-symbols-outlined dld_side_navigation_bar_icon">search</span>
-                            <span class = "dld_side_navigation_bar_text">Identify</span>
-                        </a>
-                    </li>
+                    <li><a href  ="identify.php">
+                        <span class = "material-symbols-outlined dld_side_navigation_bar_icon">search</span>
+                        <span class = "dld_side_navigation_bar_text">Identify</span>
+                    </a></li>
 
-                    <li>
-                        <a href = "explore.php">
-                            <span class = "material-symbols-outlined dld_side_navigation_bar_icon">explore</span>
-                            <span class = "dld_side_navigation_bar_text">Explore</span>
-                        </a>
-                    </li>
+                    <li><a href = "explore.php">
+                        <span class = "material-symbols-outlined dld_side_navigation_bar_icon">explore</span>
+                        <span class = "dld_side_navigation_bar_text">Explore</span>
+                    </a></li>
 
-                    <li>
-                        <a href = "contributions.php">
-                            <span class = "material-symbols-outlined dld_side_navigation_bar_icon">groups</span>
-                            <span class = "dld_side_navigation_bar_text">Contributions</span>
-                        </a>
-                    </li>
+                    <li><a href = "contributions.php">
+                        <span class = "material-symbols-outlined dld_side_navigation_bar_icon">groups</span>
+                        <span class = "dld_side_navigation_bar_text">Contributions</span>
+                    </a></li>
 
-                    <li>
-                        <a href = "enquiry.php">
-                            <span class = "material-symbols-outlined dld_side_navigation_bar_icon">forward_to_inbox</span>
-                            <span class = "dld_side_navigation_bar_text">Enquiry</span>
-                        </a>
-                    </li>
+                    <li><a href = "enquiry.php">
+                        <span class = "material-symbols-outlined dld_side_navigation_bar_icon">forward_to_inbox</span>
+                        <span class = "dld_side_navigation_bar_text">Enquiry</span>
+                    </a></li>
 
-                    <li>
-                        <a href = "profile_ash.php">
-                            <span class = "material-symbols-outlined dld_side_navigation_bar_icon">badge</span>
-                            <span class = "dld_side_navigation_bar_text">Profiles</span>
-                        </a>
-                    </li>
+                    <li><a href = "profile_ash.php">
+                        <span class = "material-symbols-outlined dld_side_navigation_bar_icon">badge</span>
+                        <span class = "dld_side_navigation_bar_text">Profiles</span>
+                    </a></li>
 
-                    <li>
-                        <a href = "login.php">
-                            <span class = "material-symbols-outlined dld_side_navigation_bar_icon">account_circle</span>
-                            <span class = "dld_side_navigation_bar_text">Account</span>
-                        </a>
-                    </li>
+                    <li><a href = "login.php">
+                        <span class = "material-symbols-outlined dld_side_navigation_bar_icon">account_circle</span>
+                        <span class = "dld_side_navigation_bar_text">Account</span>
+                    </a></li>
 
-                    <li>
-                        <a href = "enhancements.php">
-                            <span class = "material-symbols-outlined dld_side_navigation_bar_icon">hotel_class</span>
-                            <span class = "dld_side_navigation_bar_text">Enhancements</span>
-                        </a>
-                    </li>
+                    <li><a href = "enhancements.php">
+                        <span class = "material-symbols-outlined dld_side_navigation_bar_icon">hotel_class</span>
+                        <span class = "dld_side_navigation_bar_text">Enhancements</span>
+                    </a></li>
                 </ul>
             </nav>
 
@@ -247,6 +231,49 @@
             </div>
         </div>
 
-        <?php include_once("dld_footer.php"); ?>
+        <footer>
+            <div class = "dld_footer_section_1">
+                <?php include_once("dld_footer.php"); ?>
+
+                <div class = "dld_section_1_footer_right">
+                    <h1 class = "dld_footer_heading">Acknowledgement</h1>
+                    <div class = "dld_footer_section_1_center_row">
+                        <div class = "dld_footer_section_1_center_column_2">
+                            <h1 class = "dld_heading">Prime Showcases</h1>
+                            <a target = "_blank" href = "https://identify.plantnet.org/k-world-flora/species/Kopsia%20singapurensis%20Ridl./data">Kopsia singapurensis</a>
+                            <a target = "_blank" href = "https://tropicos.org/name/100193005">Freycinetia imbricata</a>
+                            <a target = "_blank" href = "https://tropicos.org/name/100383313">Benstonea parva</a>
+                            <a target = "_blank" href = "https://tropicos.org/name/100238609">Pandanus penangensis</a>
+                            <a target = "_blank" href = "https://en.wikipedia.org/wiki/Vatica_pauciflora">Vatica pauciflora </a>
+                            <a target = "_blank" href = "https://www.picturethisai.com/wiki/Chrysobalanus_icaco.php">Chrysobalanus icaco</a>
+                            <a target = "_blank" href = "https://www.picturethisai.com/wiki/Melia_azedarach.php">Melia azedarach</a>
+                            <p></p>
+
+                            <h1 class = "dld_heading">Floral Prelude</h1>
+                            <a target = "_blank" href = "https://www.youtube.com/watch?v=d6e2eTneEf8">Bloom Spot</a>
+                        </div>
+
+                        <div class = "dld_footer_section_1_center_column_2">
+                            <h1 class = "dld_heading">In the Spotlight</h1>
+                            <a target = "_blank" href = "https://lh4.googleusercontent.com/-SO3IlpJzy5o/TWnWAjkwL_I/AAAAAAAAADM/fwAZsS27jjg/s1600/Gabb.bmp">Diospyros blancoi</a>
+                            <a target = "_blank" href = "https://static01.nyt.com/images/2022/02/16/business/15Avocados-print/15Avocado-01-superJumbo.jpg">Persea americana</a>
+                            <p></p>
+
+                            <h1 class = "dld_heading">Extended Insights</h1>
+                            <a target = "_blank" href = "https://www.youtube.com/watch?v=Dpn3gGBIOAw">Complementary resource</a>
+                            <a target = "_blank" href = "https://www.google.com.my/maps/place/Malaysia/@4.1339849,104.3169987,6z/data=!3m1!4b1!4m6!3m5!1s0x3034d3975f6730af:0x745969328211cd8!8m2!3d4.210484!4d101.975766!16zL20vMDlwbWt2?authuser=1&entry=ttu">Flora localisation map</a>
+                            <p></p>
+
+                            <h1 class = "dld_heading">Our Purpose Unveiled</h1>
+                            <a target = "_blank" href = "https://www.peakpx.com/en/hd-wallpaper-desktop-erohn">Plant aesthetic 1</a>
+                            <a target = "_blank" href = "https://www.peakpx.com/en/hd-wallpaper-desktop-erowj">Plant aesthetic 2</a>
+                            <a target = "_blank" href = "https://www.peakpx.com/en/hd-wallpaper-desktop-erohp">Plant aesthetic 3</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <?php include_once("dld_footer_2.php"); ?>
+        </footer>
     </body>
 </html>

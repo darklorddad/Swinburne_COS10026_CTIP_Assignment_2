@@ -11,7 +11,15 @@
     <body class = "czy_body">
         <?php include_once("dld_background.php"); ?>
         <?php include_once("dld_top_navigation_bar.php"); ?>
-        <?php include_once("czy_navigation_fool.php"); ?>
+        
+        <nav class = "czy_navigation_fool">
+            <?php include_once("czy_navigation_fool.php"); ?>
+            <ul>
+                <li><a href = "explore.php" class = "czy_active">Families</a></li>
+                <li><a href = "genera.php">Genera</a></li>
+                <li><a href = "species.php">Species</a></li>
+            </ul>
+        </nav>
         
         <div class = "czy_where_magic_happens">
             <div class = "czy_back"></div>
@@ -82,79 +90,7 @@
 
         <footer>
             <div class = "dld_footer_section_1">
-                <div class = "dld_footer_section_1_left">
-                    <h1 class = "dld_footer_section_1_left_title"><a href = "index.html">FLORASCAN</a></h1>
-                    <p class = "dld_footer_section_1_left_title_text">Unearth, delve and spread the wonder of untamed plant life, in nature's grand show.</p>
-                    <p class = "dld_footer_heading">Location</p>
-    
-                    <div class = "dld_footer_section_1_left_information">
-                        <a class = "dld_footer_section_1_left_information_icon" href = "https://www.google.com.my/maps/place/Swinburne+University+of+Technology+Sarawak+Campus/@1.5326046,110.3574906,17.43z/data=!4m6!3m5!1s0x31fba70b11e02ce7:0x69cbf290cfd24bb7!8m2!3d1.5323021!4d110.3571732!16zL20vMGYyemIz?authuser=1&entry=ttu">
-                            <span class = "material-symbols-outlined">location_on</span>
-                        </a>
-                        <a href = "https://www.google.com.my/maps/place/Swinburne+University+of+Technology+Sarawak+Campus/@1.5326046,110.3574906,17.43z/data=!4m6!3m5!1s0x31fba70b11e02ce7:0x69cbf290cfd24bb7!8m2!3d1.5323021!4d110.3571732!16zL20vMGYyemIz?authuser=1&entry=ttu">
-                            <p class = "dld_footer_section_1_left_information_address">Q5B, 93350 Kuching, Sarawak</p>
-                        </a>
-                    </div>
-
-                    <p class = "dld_footer_heading">Contact Details</p>
-
-                    <a href = "index.html">
-                        <div class = "dld_footer_section_1_left_information dld_no_hover">
-                            <span class = "material-symbols-outlined">call</span>
-                            <p class = "dld_footer_section_1_left_information_phone_number">082-415 353</p>
-                        </div>
-                    </a>
-
-                    <a href = "mailto:support@florascan.com">
-                        <div class = "dld_footer_section_1_left_information dld_footer_section_1_left_information_last">
-                            <span class = "material-symbols-outlined">mail</span>
-                            <p class = "dld_footer_section_1_left_information_email">support@florascan.com</p>
-                        </div>
-                    </a>
-
-                    <p></p>
-
-                    <p class = "dld_footer_heading">Youtube Video</p>
-
-                    <a href = "https://www.youtube.com/watch?v=zDBzVGz05xk">
-                        <div class = "dld_footer_section_1_left_information dld_footer_section_1_left_information_last">
-                            <p class = "dld_footer_section_1_left_information_email">Link</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class = "dld_footer_divider"></div>
-
-                <div class = "dld_footer_section_1_center">
-                    <h1 class = "dld_footer_heading">Navigation</h1>
-                    <div class = "dld_footer_section_1_center_row">
-                        <div class = "dld_footer_section_1_center_column">
-                            <a href = "explore.html">Families</a>
-                            <a href = "genera.html">Genera</a>
-                            <a href = "species.html">Species</a>
-                            <a href = "profile_ash.html">Profile ASH</a>
-                            <a href = "profile_czy.html">Profile CZY</a>
-                            <a href = "profile_dld.html">Profile DLD</a>
-                            <a href = "profile_nic.html">Profile NIC</a>
-                            <a href = "profile_ttl.html">Profile TTL</a>
-                            <a href = "login.html">Log In</a>
-                            <a href = "register.html">Register</a>
-                        </div>
-
-                        <div class = "dld_footer_section_1_center_column">
-                            <a href = "index.html" class = "dld_footer_section_1_center_navigation_link_1">Home</a>
-                            <a href = "identify.html">Identify</a>
-                            <a href = "explore.html">Explore</a>
-                            <a href = "contributions.html">Contributions</a>
-                            <a href = "enquiry.html">Enquiry</a>
-                            <a href = "profile_czy.html">Profiles</a>
-                            <a href = "login.html">Account</a>
-                            <a href = "enhancements.html">Enhancements</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class = "dld_footer_divider"></div>
+                <?php include_once("dld_footer.php"); ?>
 
                 <div class = "dld_section_1_footer_right">
                     <h1 class = "dld_footer_heading">Acknowledgement</h1>
@@ -183,9 +119,7 @@
                 </div>
             </div>
 
-            <div class = "dld_footer_section_2">
-                <p class = "dld_footer_section_2_copyright">Copyright © 2023 <a href = "index.html">FLORASCAN. </a>All rights reserved.</p>
-            </div>
+            <?php include_once("dld_footer_2.php"); ?>
         </footer>
     </body>
 </html>
