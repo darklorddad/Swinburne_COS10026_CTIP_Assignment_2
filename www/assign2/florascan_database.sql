@@ -32,13 +32,14 @@ CREATE TABLE IF NOT EXISTS `enquiry` (
   `plant` varchar(50) NOT NULL,
   `enquiry` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumping data for table florascan_database.enquiry: ~3 rows (approximately)
+-- Dumping data for table florascan_database.enquiry: ~0 rows (approximately)
 INSERT INTO `enquiry` (`id`, `first_name`, `last_name`, `email`, `street`, `city`, `state`, `postcode`, `plant`, `enquiry`) VALUES
 	(1, 'testone', 'testone', 'testone@testone', 'testone', 'testone', 'Selangor', '00001', 'Dipterocarpaceae', 'testone'),
 	(2, 'testtwo', 'testtwo', 'testtwo@testtwo', 'testtwo', 'testtwo', 'Selangor', '00002', 'Dipterocarpaceae', 'testtwo'),
-	(3, 'testthree', 'testthree', 'testthree@testthree', 'testthree', 'testthree', 'Selangor', '00003', 'Dipterocarpaceae', 'testthree');
+	(3, 'testthree', 'testthree', 'testthree@testthree', 'testthree', 'testthree', 'Selangor', '00003', 'Dipterocarpaceae', 'testthree'),
+	(4, 'testfour', 'testfour', 'testfour@testfour', 'testfour', 'testfour', 'Selangor', '00004', 'Dipterocarpaceae', 'testfour');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
