@@ -1,0 +1,6 @@
+*
+!www/
+www/*
+!www/assign2/
+!data/mysql-8/florascan_database/
+!.gitignore
