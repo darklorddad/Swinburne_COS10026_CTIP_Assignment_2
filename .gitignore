@@ -1,6 +1,6 @@
 # Ignore specific files and directories
 bin/
-data/
+# data/
 etc/
 tmp/
 usr/
