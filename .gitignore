@@ -1,12 +1,13 @@
 # Ignore specific files and directories
 bin/
+data/
 etc/
 tmp/
 usr/
 laragon.exe
 
 # Ignore specific directory contents but not the directory itself
-data/mysql-8/*
+# data/mysql-8/*
 www/*
 
 # Include specific subdirectories
