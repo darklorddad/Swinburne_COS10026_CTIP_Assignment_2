@@ -14,7 +14,31 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Data exporting was unselected.
+
+-- Dumping database structure for florascan_database
+CREATE DATABASE IF NOT EXISTS `florascan_database` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `florascan_database`;
+
+-- Dumping structure for table florascan_database.enquiry
+CREATE TABLE IF NOT EXISTS `enquiry` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `street` varchar(255) NOT NULL,
+  `city` varchar(50) NOT NULL,
+  `state` varchar(50) NOT NULL,
+  `postcode` varchar(10) NOT NULL,
+  `plant` varchar(50) NOT NULL,
+  `enquiry` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Dumping data for table florascan_database.enquiry: ~3 rows (approximately)
+INSERT INTO `enquiry` (`id`, `first_name`, `last_name`, `email`, `street`, `city`, `state`, `postcode`, `plant`, `enquiry`) VALUES
+	(1, 'testone', 'testone', 'testone@testone', 'testone', 'testone', 'Selangor', '00001', 'Dipterocarpaceae', 'testone'),
+	(2, 'testtwo', 'testtwo', 'testtwo@testtwo', 'testtwo', 'testtwo', 'Selangor', '00002', 'Dipterocarpaceae', 'testtwo'),
+	(3, 'testthree', 'testthree', 'testthree@testthree', 'testthree', 'testthree', 'Selangor', '00003', 'Dipterocarpaceae', 'testthree');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
