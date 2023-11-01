@@ -1,16 +1,16 @@
 # Ignore specific files and directories
 bin/
-# data/
+data/
 etc/
 tmp/
 usr/
 laragon.exe
 
 # Ignore specific directory contents but not the directory itself
-data/mysql-8/*
+# data/mysql-8/*
 www/*
 
 # Include specific subdirectories
-!data/mysql-8/florascan_database/
+# !data/mysql-8/florascan_database/
 # !data/mysql-8/auto.cnf
 !www/assign2/
