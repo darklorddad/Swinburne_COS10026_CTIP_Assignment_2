@@ -1,0 +1,3806 @@
+/* dld's index.html */
+
+@font-face {
+    font-family: "dld_samsungsharpsans";
+    src: url("fonts/dld/dld_samsungsharpsans.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "dld_samsungsharpsans_medium";
+    src: url("fonts/dld/dld_samsungsharpsans_medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "dld_samsungsharpsans_bold";
+    src: url("fonts/dld/dld_samsungsharpsans_bold.otf") format("opentype");
+}
+
+*::-webkit-scrollbar {
+    width: 1vw;
+}
+
+*::-webkit-scrollbar-track {
+    background: #e4e3ea;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #23322a;
+    border-radius: 1vw;
+    border: 0.25vw solid #e4e3ea;
+}
+
+/* .dld_background_dots, .dld_background_dots, .dld_body {
+    opacity: 0;
+    animation: dld_fade_in 2.5s ease-in-out forwards;
+    background-image: linear-gradient(5deg, #294557, #22464f);
+  }
+
+  @keyframes dld_fade_in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      background-image: linear-gradient(5deg, #bdc3c7, #ecf0f1);
+    }
+  } */
+
+.dld_background_dots {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    justify-content: center;
+    display: flex;
+}
+
+.dld_background_dots::before {
+    z-index: -10;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -5.4%;
+    /* left: 0; */
+    /* background-image: radial-gradient(#00000059 0.05vw, transparent 0.05vw); */
+    /* background-image: radial-gradient(#ffffff59 0.052vw, transparent 0.052vw); */
+    background-image: radial-gradient(#000000ba 0.05vw, transparent 0.05vw);
+    background-size: 1.77vw 1.77vw;
+    opacity: 0.8;
+    animation: dld_background_dots_pulsate 20s infinite;
+}
+
+@keyframes dld_background_dots_pulsate { 
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+.dld_background_gradient {
+    background: linear-gradient(200deg, #0bc94a 0%, #752bec 100%);
+    height: 100%;
+    width: 100%;
+    /* aspect-ratio: 1; */
+    position: absolute;
+    /* left: 9.8%; */
+    /* right: 9.8%; */
+    top: -5.4%;
+    /* border-radius: 1000vw; */
+    filter: blur(25vw);
+    z-index: -2;
+    /* transform: rotate(90deg); */
+    animation: dld_background_gradient_rotate 7s linear infinite;
+}
+
+@keyframes dld_background_gradient_rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.dld_body {
+    margin: 0;
+    /* padding: 0; */
+    font-family: "dld_samsungsharpsans", sans-serif;
+    /* background-image: linear-gradient(5deg, rgb(23, 26, 28), rgb(10, 82, 63)); */
+    /* background-image: linear-gradient(5deg, #23322a, #90a79a); */
+    /* background-color: #e4e3ea; */
+    /* background-color: white; */
+    /* background-color: #daddd4; */
+    background-image: linear-gradient(5deg, #bdc3c7, #ecf0f1);
+    color: #23322a;
+}
+
+.dld_top_navigation_bar {
+    /* top: 1.5vw; */
+    top: 0vw;
+    position: sticky;
+    background-color: #e4e3ea;
+    height: 4vw;
+    width: 95.03%;
+    /* width: 100%; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    border-radius: 1.5vw;
+    margin-top: 2.5vw;
+    margin-left: 2.5vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    z-index: 2;
+}
+
+.dld_top_navigation_bar ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dld_top_navigation_bar ul a p {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    /* padding: 0; */
+    font-size: 2vw;
+    font-family: "dld_samsungsharpsans_bold";
+    background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: dld_top_navigation_bar_title_hue 15s infinite linear;
+    margin-right: 2.5vw;
+    margin-left: 2.5vw;
+    z-index: 3;
+    margin-top: 0.21vw;
+    /* text-shadow: 0px 0.195vw 0.26vw rgba(0,0,0,0.1),
+               0.521vw 0.26vw 0.26vw rgba(0,0,0,0.05),
+               -0.130vw 0.26vw 0.26vw rgba(0,0,0,0.05); */
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+@keyframes dld_top_navigation_bar_title_hue {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(-360deg);
+    }
+}
+
+.dld_top_navigation_bar_item_first {
+    margin-left: 2.5vw;
+}
+
+.dld_top_navigation_bar_item_last {
+    margin-right: 2.5vw;
+}
+
+.dld_top_navigation_bar ul li {
+    list-style-type: none;
+}
+
+.dld_top_navigation_bar ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dld_top_navigation_bar_icon {
+    /* position: relative; */
+    transition: transform 0.25s ease, background-color 0.25s ease;
+    /* font-size: 100vw; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.8vw;
+    height: 2.4vw;
+    border-radius: 1vw;
+    /* background-color: #e4e3ea; */
+}
+
+.dld_top_navigation_bar_icon span {
+    font-size: 1.6vw;
+    color: #23322a;
+    transition: color 0.25s ease;
+}
+
+.dld_top_navigation_bar ul li:hover a .dld_top_navigation_bar_icon {
+    transform: translateY(2vw);
+    opacity: 1;
+    width: 4.8vw;
+    height: 2.4vw;
+    border-radius: 1vw;
+    background-color: #23322a;
+}
+
+.dld_top_navigation_bar ul li:hover a .dld_top_navigation_bar_icon span {
+    color: #90a79a;
+}
+
+.dld_top_navigation_bar_text {
+    position: absolute;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    color: #23322a;
+    opacity: 0;
+    transform: translateY(-2vw);
+    font-family: "dld_samsungsharpsans_medium";
+    font-size: 1vw;
+    white-space: nowrap;
+}
+
+.dld_top_navigation_bar ul li:hover .dld_top_navigation_bar_text {
+    opacity: 1;
+    transform: translateY(-0.5vw);
+}
+
+.dld_section_1 {
+	display: flex;
+    position: relative;
+	/* height: 45.5vw; */
+    height: 41.1vw;
+    width: 95.03%;
+	margin-top: 2.5vw;
+	margin-left: auto;
+	margin-right: auto;
+    border-radius: 2vw;
+    overflow: hidden;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.dld_section_1 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dld_section_1 nav {
+	position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    padding: 4vw;
+    z-index: 1;
+    font-size: 1vw;
+}
+
+.dld_section_1 nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1vw;
+}
+
+.dld_section_1 nav ul li {
+    display: inline;
+	margin-left: 1vw;
+    font-size: 1vw;
+}
+
+.dld_section_1 nav ul li a {
+    text-decoration: none;
+    color: #e4e3ea;
+	padding: 0.5vw 1vw;
+    border-radius: 1vw;
+    transition: color 0.25s ease, background-color 0.25s ease;
+	font-size: 1vw;
+	font-family: "dld_samsungsharpsans_medium";
+}
+
+.dld_section_1 nav ul li a:hover {
+    color: #23322a;
+    background-color: #90a79a;
+    /* color: #90a79a;
+    background-color: #23322a; */
+}
+
+.dld_section_1_text_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	display: flex;
+    align-items: center;
+    text-align: justify;
+    width: 100%;
+}
+
+.dld_section_1_text_1 {
+    font-size: 4vw;
+    font-family: "dld_samsungsharpsans_bold";
+    margin-left: 16vw;
+    background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: dld_section_1_text_1_hue 15s infinite linear; 
+}
+
+@keyframes dld_section_1_text_1_hue {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(-360deg);
+    }
+}
+
+.dld_section_1_text_divider {
+    width: 0.1vw;
+    height: 12.5vw;
+    background-color: #e4e3ea;
+    margin: 0 3vw;
+}
+
+.dld_section_1_text_2 {
+    font-size: 2vw;
+    font-family: "dld_samsungsharpsans_medium";
+	color: #e4e3ea;
+	margin-right: 16vw;
+}
+
+.dld_main {
+    /* background-color: #e4e3ea; */
+    /* background-color: rgb(228, 227, 234); */
+    backdrop-filter: blur(0.078vw);
+    /* background-color: #90a79a7b; */
+    background-color: rgba(228, 227, 234, 0.5);
+    width: 95.03%;
+    margin-left: auto;
+	margin-right: auto;
+    margin-top: 2.5vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    border-radius: 2vw;
+    /* filter: invert(); */
+    display: flex;
+    padding-bottom: 4vw;
+}
+
+.dld_main nav {
+    background-color: #e4e3ea;
+    /* background-color: white; */
+    position: sticky;
+    top: 2.5vw;;
+    padding: 1vw 0.5vw;
+    margin-top: 4vw;
+    /* margin-left: 2.5vw; */
+    margin-right: 1.25vw;
+    margin-bottom: 4vw;
+    height: 27.844vw;
+    border-radius: 1.5vw;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    backdrop-filter: blur(0.078vw);
+}
+
+.dld_main nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dld_main nav ul li {
+    margin-bottom: 1vw;
+    transition: transform 0.25s ease;
+    background-color: #e4e3ea;
+    /* background-color: white; */
+    border-radius: 1vw;
+    padding: 0.5vw 1vw;
+    /* position: relative; */
+}
+
+.dld_main nav ul li:hover {
+    transform: translateX(0.5vw);
+    /* background-color: #23322a; */
+    background-color: #23322a;
+}
+
+.dld_main nav ul li:hover .dld_side_navigation_bar_icon {
+    color: #90a79a; 
+}
+
+.dld_main nav ul li a {
+    display: flex;
+    /* align-items: center; */
+    /* text-decoration: none; */
+}
+
+.dld_main nav ul li a span {
+    color: #23322a;
+}
+
+.dld_main nav ul li span.material-symbols-outlined {
+    font-size: 1.6vw;
+}
+
+.dld_main nav ul li span.dld_side_navigation_bar_text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: calc(100% - 1vw);
+    transform: translate(0, -50%);
+    white-space: nowrap;
+    /* background-color: #23322a; */
+    background-color: #23322a;
+    /* color: #90a79a; */
+    color: #90a79a;
+    padding: 0.7vw 1vw;
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    font-size: 1vw;
+    font-family: "dld_samsungsharpsans_medium";
+}
+
+.dld_main nav ul li:hover span.dld_side_navigation_bar_text {
+    display: inline;
+}
+
+.dld_sections {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+}
+
+.dld_section_title {
+    text-align: left;
+    margin-top: 6.15vw;
+    margin-left: 9.9vw;
+    margin-bottom: 1.95vw;
+}
+
+.dld_section_title:first-child {
+    margin-top: 4vw;
+}
+
+.dld_section_title h1 {
+    font-size: 2vw;
+    color: #23322a;
+    font-family: "dld_samsungsharpsans_bold";
+    margin: 0;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+.dld_section_2 {
+    margin-left: 9.93vw;
+}
+
+.dld_section_2_card {
+    display: flex;
+    /* background-color: #e4e3ea; */
+    border-radius: 1.5vw;
+    width: 67vw;
+    /* box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22); */
+    flex-direction: column;
+}
+
+.dld_section_2_card p {
+    display: flex;
+    text-align: justify;
+    font-family: "dld_samsungsharpsans";
+    font-size: 1vw;
+    color: #23322a;
+    line-height: 2.5;
+    margin: 0;
+    margin-left: 2vw;
+    /* margin-right: 2vw; */
+    width: 38vw;
+    height: 20vw;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #e4e3ea;
+    border-radius: 1.5vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.dld_section_2_card_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.dld_section_2_card_column {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.dld_section_2_card_column img {
+    object-fit: cover;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 1.5vw;
+    margin: 0vw;
+    margin-bottom: 2vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.dld_section_2_3_identify a {
+    color: #567260;
+    font-size: 1.25vw;
+}
+
+.dld_section_2_3_identify {
+    font-family: "dld_samsungsharpsans_bold";
+}
+
+.dld_section_2_3_identify:hover {
+    border-bottom: 0.15vw solid #567260;
+}
+
+.dld_section_2_3_line_spacing {
+    line-height: 2  ;
+}
+
+.dld_section_2_1 img {
+    margin-right: 0;
+    border-top-left-radius: 1.5vw;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1.5vw;
+    border-bottom-right-radius: 0;
+}
+
+.dld_section_2_2 p {
+    margin-left: 0;
+    width: 39vw;
+    border-top-left-radius: 0;
+    border-top-right-radius: 1.5vw;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 1.5vw;
+    /* margin-top: 2vw; */
+    padding: 0 4vw;
+    z-index: -1;
+}
+
+.dld_section_2_3 p {
+    margin-left: 0;
+    width: 39vw;
+    border-top-left-radius: 1.5vw;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1.5vw;
+    border-bottom-right-radius: 0;
+    /* margin-top: 2vw; */
+    padding: 0 4vw;
+    display: inline;
+    padding-top: 6.1vw;
+    height: 13.9vw;
+}
+
+.dld_section_2_4 img {
+    margin-right: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 1.5vw;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 1.5vw;
+}
+
+.dld_section_2_5 img {
+    margin-right: 0;
+    border-top-left-radius: 1.5vw;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1.5vw;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+}
+
+.dld_section_2_6 p {
+    margin-left: 0;
+    width: 39vw;
+    border-top-left-radius: 0;
+    border-top-right-radius: 1.5vw;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 1.5vw;
+    /* margin-top: 2vw; */
+    padding: 0 4vw;
+    margin-bottom: 0;
+    z-index: -1;
+}
+
+.dld_section_3 {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    margin-left: 8.93vw;
+}
+
+.dld_section_3 a {
+    margin: 0 1vw;
+}
+
+.dld_section_3_card {
+    /* position: relative; */
+    background-color: #e4e3ea;
+    /* background-color: white; */
+    /* margin: 0 1vw; */
+    text-align: center;
+    height: 21vw;
+    border-radius: 1.5vw;
+    width: 32.5vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    overflow: hidden;
+    transition: background-color 0.25s ease;
+    /* margin-top: -11vw; */
+}
+
+.dld_section_3_card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-bottom-right-radius: 1.5vw;
+    border-bottom-left-radius: 1.5vw;
+    /* border-bottom: #23322a solid 0.1vw; */
+}
+
+.dld_section_3_card h1 {
+    font-size: 1.25vw;
+    font-family: "dld_samsungsharpsans_bold";
+    color: #23322a;
+    transition: color 0.25s ease;
+}
+
+.dld_section_3_card_common_name {
+    font-size: 1vw;
+    font-family: "dld_samsungsharpsans";
+    color: #23322a;
+    transition: color 0.25s ease;
+}
+
+.dld_section_3_card_scientific_name {
+    font-size: 1vw;
+    font-family: "dld_samsungsharpsans";
+    color: #23322a;
+    transition: color 0.25s ease;
+    font-style: italic;
+}
+
+.dld_section_3_card:hover {
+    background-color: #23322a;
+    /* background-color: #90a79a; */
+    /* background-color: #567260; */
+    /* border: #23322a solid 0.1vw; */
+    /* box-sizing: border-box; */
+}
+
+.dld_section_3_card:hover p {
+    color: #90a79a;
+    /* color: #23322a; */
+}
+
+.dld_section_3_card:hover h1 {
+    color: #90a79a;
+    /* color: #23322a; */
+}
+
+.dld_section_4 {
+    width: 100%;
+    margin-left: 9.93vw;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+#dld_warp {
+    background: #e4e3ea;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    border-radius: 2vw;
+    width: 67.048vw;
+    transition: background-color 0.25s ease;
+    overflow: hidden;
+}
+
+#dld_warp:hover {
+    background-color: #23322a;
+}
+
+ul#dld_gallery-container {
+    position: relative;
+    width: 100%;
+    padding: 35vw 0 1vw;
+    margin: 0;
+    text-align: center;
+    height: 3.4vw;
+}
+
+li.dld_gallery-item {
+    display: inline-block;
+    width: 5vw;
+    height: 3vw;
+    cursor: pointer;
+    margin: 0 0.25vw;
+    border-radius: 0.5vw;
+}
+
+img.dld_gallery-preview {
+    background: #567260;
+    margin: 0;
+    /* padding: 0.25vw 0.25vw 0.25vw; */
+    border-radius: 0.5vw;
+    transition: all 0.25s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+input.dld_gallery-selector:checked~label.dld_gallery-label>img.dld_gallery-preview,
+ul#dld_gallery-container:hover li:hover img.dld_gallery-preview:hover {
+    z-index: 5;
+    transition: all 0.25s ease;
+    background: #90a79a;
+    filter: brightness(25%);
+}
+
+ul#dld_gallery-container:hover li:hover img.dld_gallery-preview:hover {
+    z-index: 20;
+}
+
+input.dld_gallery-selector:checked~label.dld_gallery-label>img.dld_gallery-preview {
+    background: #90a79a;
+}
+
+img.dld_gallery-fullsize {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85.5%;
+    z-index: -1;
+    opacity: 0;
+    transform: scale(0.25);
+    transform-origin: bottom center;
+    transition: all 0.25s ease-out;
+    border-radius: 2vw;
+    /* max-height: 26.75vw; */
+    /* width: 67.048vw; */
+    object-fit: cover;
+    cursor: default;
+}
+
+ul#dld_gallery-container:hover li.dld_gallery-item:active img.dld_gallery-fullsize {
+    z-index: 50;
+}
+
+ul#dld_gallery-container:hover li:hover input.dld_gallery-selector:checked~img.dld_gallery-fullsize {
+    z-index: 10;
+}
+
+input.dld_gallery-selector:checked~img.dld_gallery-fullsize {
+    opacity: 1;
+    z-index: 10;
+    transform: scale(1);
+    transform-origin: top center;
+    transition: all 0.25s ease;
+}
+
+input.dld_gallery-selector {
+    display: none;
+}
+
+label.dld_gallery-label {
+    cursor: pointer;
+    margin-bottom: -2vw;
+    font-size: 0.1vw
+}
+
+.dld_section_5 {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    margin-left: 9.95vw;
+    margin-bottom: 4vw;
+    flex-wrap: wrap;
+}
+
+.dld_section_5_map_container {
+    width: 65.048vw;
+    background-color: #e4e3ea;
+    margin-bottom: 2vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    border-radius: 2vw;
+    padding: 0.6vw 1vw;
+    transition: background-color 0.25s ease;
+}
+
+.dld_section_5_map_container:hover {
+    background-color: #23322a;
+}
+
+.dld_section_5_map {
+    /* width: 32.4vw; */
+    /* width: 67.048vw; */
+    width: 100%;
+    height: 28.735vw;
+    /* height: 100%; */
+    border-radius: 2vw;
+    /* margin-right: 2vw; */
+    /* margin-bottom: 2vw; */
+    border: none;
+    /* background-color: #e4e3ea; */
+}
+
+.dld_section_5_video_container {
+    width: 65.048vw;
+    background-color: #e4e3ea;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    border-radius: 2vw;
+    padding: 0.6vw 1vw;
+    transition: background-color 0.25s ease;
+}
+
+.dld_section_5_video_container:hover {
+    background-color: #23322a;
+}
+
+.dld_section_5_youtube_video {
+    /* width: 32.4vw; */
+    /* width: 67.048vw; */
+    width: 100%;
+    height: 28.735vw;
+    border-radius: 2vw;
+    border: none;
+    /* box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22); */
+}
+
+.dld_section_5_container_text {
+    text-align: center;
+    font-family: "dld_samsungsharpsans_medium";
+    font-size: 1.125vw;
+    margin: 0;
+    padding-top: 0.4vw;
+    padding-bottom: 0.8vw;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+    transition: color 0.25s ease;
+}
+
+.dld_section_5_video_container:hover .dld_section_5_container_text {
+    color: #90a79a;
+}
+
+.dld_section_5_map_container:hover .dld_section_5_container_text {
+    color: #90a79a;
+}
+
+.dld_footer_section_1 {
+	background: #e4e3ea;
+	box-sizing: border-box;
+	padding: 3vw 3vw;
+    width: 95.03%;
+    border-top-right-radius: 2vw;
+    border-top-left-radius: 2vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    display: flex;
+}
+
+.dld_footer_section_1_left {
+	/* width: 20vw; */
+    width: 25%;
+}
+
+.dld_footer_section_1_left_title {
+    font-size: 3vw;
+    font-family: "dld_samsungsharpsans_bold";
+    background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: dld_footer_section_1_left_title_hue 15s infinite linear; 
+    margin: 0;
+    margin-bottom: 0.5vw;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+@keyframes dld_footer_section_1_left_title_hue {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(-360deg);
+    }
+}
+
+.dld_footer_section_1_left_title_text {
+    font-size: 1vw;
+    text-align: justify;
+    margin-bottom: 2vw;
+    margin-top: 0;
+    color: #23322a;
+    font-family: "dld_samsungsharpsans_medium";
+}
+
+.dld_footer_heading {
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1.25vw;
+    margin: 0;
+    margin-bottom: 1vw;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+.dld_heading {
+    font-family: "dld_samsungsharpsans_medium";
+    font-size: 1vw;
+    margin: 0;
+    margin-bottom: 1vw;
+}
+
+.dld_footer_section_1_left_information {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vw;
+    padding: 0.5vw 1vw;
+    border-radius: 1vw;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    cursor: pointer;
+}
+
+.dld_footer_section_1_left_information .dld_footer_section_1_left_information_icon {
+    display: flex;
+    align-items: center;
+}
+
+.dld_footer_section_1_left_information .material-symbols-outlined {
+    margin-right: 1vw;
+    color: #23322a;
+    transition: color 0.25s ease;
+    font-size: 1.5vw;
+}
+
+.dld_footer_section_1_left_information_address {
+    margin: 0;
+    color: #23322a;
+    transition: color 0.25s ease;
+    font-size: 1vw;
+}
+
+.dld_footer_section_1_left_information_phone_number {
+    margin: 0;
+    color: #23322a;
+    transition: color 0.25s ease;
+    font-size: 1vw;
+}
+
+.dld_footer_section_1_left_information_email {
+    color: #23322a;
+    transition: color 0.25s ease;
+    margin: 0;
+    font-size: 1vw;
+}
+
+.dld_footer_section_1_left_information:hover {
+    background-color: #23322a;
+    color: #90a79a;
+}
+
+.dld_footer_section_1_left_information:hover .dld_no_hover {
+    background-color: transparent;
+    color: #23322a;
+}
+
+.dld_footer_section_1_left_information:hover .material-symbols-outlined,
+.dld_footer_section_1_left_information:hover .dld_footer_section_1_left_information_address,
+.dld_footer_section_1_left_information:hover .dld_footer_section_1_left_information_phone_number,
+.dld_footer_section_1_left_information:hover .dld_footer_section_1_left_information_email {
+    color: #90a79a;
+}
+
+.dld_footer_section_1_left_information_last {
+    margin-bottom: 0;
+}
+
+.dld_footer_section_1_left_socials a {
+	display: inline-block;
+	width: 3vw;
+	height: 3vw;
+	cursor: pointer;
+	background-color:  #23322a;
+	border-radius: 1vw;
+	font-size: 1vw;
+	color: #90a79a;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 0.5vw;
+	margin-bottom: 5px;
+}
+
+.dld_footer_divider {
+    width: 0.052vw;
+    background-color: #23322a;
+    margin: 0 3vw;
+}
+
+.dld_footer_section_1_center{
+	/* width: 21.2vw;
+    min-width: 21.2vw; */
+    width: 25.1%;
+}
+
+.dld_footer_section_1_center_row {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+}
+
+.dld_footer_section_1_center_column {
+    display: flex;
+    flex-direction: column;
+    width: 11vw;
+}
+
+.dld_footer_section_1_center_column a {
+    color:  #23322a;
+    font-size: 1vw;
+    padding: 0.5vw 1vw;
+    border-radius: 1vw;
+    margin-bottom: 0.5vw;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    /* border: 0.1vw solid #23322a; */
+    margin-right: 0.5vw;
+}
+
+.dld_footer_section_1_center_column a:hover {
+    background-color: #23322a;
+    color: #90a79a;
+}
+
+.dld_footer_section_1_center_column_2 {
+    display: flex;
+    flex-direction: column;
+    width: 12vw;
+    margin-right: 4vw;
+}
+
+.dld_footer_section_1_center_column_2 a {
+    color:  #23322a;
+    font-size: 1vw;
+    padding: 0.5vw 1vw;
+    border-radius: 1vw;
+    margin-bottom: 0.5vw;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    /* border: 0.1vw solid #23322a; */
+    margin-right: 0.5vw;
+}
+
+.dld_footer_section_1_center_column_2 p {
+    color:  #23322a;
+    font-size: 1vw;
+    padding: 0.5vw 1vw;
+    border-radius: 1vw;
+    margin-bottom: 0.5vw;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    /* border: 0.1vw solid #23322a; */
+    margin-right: 0.5vw;
+}
+
+.dld_footer_section_1_center_column_2 a:hover {
+    background-color: #23322a;
+    color: #90a79a;
+}
+
+/* .dld_footer_section_1_right {
+    width: 33%;
+} */
+
+.dld_section_1_footer_right_acknowledgement {
+    font-size: 1vw;
+}
+
+.dld_footer_section_2 {
+    background: #e4e3ea;
+	box-sizing: border-box;
+	padding: 1.5vw 1.5vw;
+    width: 95.03%;
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.5vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.dld_footer_section_2_copyright {
+	color:  #23322a;
+	font-size: 0.75vw;
+	margin: 0;
+    width: 100%;
+    text-align: center;
+    font-family: "dld_samsungsharpsans_bold";
+}
+
+.dld_footer_section_2_copyright a {
+	color:  #00872f;
+    background-image: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: dld_section_1_text_1_hue 15s infinite linear;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+@keyframes dld_section_1_text_1_hue {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(-360deg);
+    }
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+/* dld's enhancements.html */
+
+.dld_enhancements_big_box {
+    /* display: flex; */
+    width: 95%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5vw;
+    backdrop-filter: blur(0.078vw);
+    background-color: rgba(228, 227, 234, 0.5);
+    border-radius: 2vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    font-family: "dld_samsungsharpsans_medium";
+    padding-top: 4vw;
+    padding-bottom: 8vw;
+}
+
+.dld_row{
+    padding: 2.5vw;
+    padding-top: 0;
+    padding-bottom: 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2.5vw;
+}
+  
+.dld_column{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.dld_enhancements_description{
+    font-size: 1vw;
+    width: 47.5vw;
+    text-align: justify;
+    padding: 0.5vw 2vw;
+    border-radius: 2vw;
+    background-color: #e4e3ea;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    min-height: 18.6vw;
+}
+
+.dld_buttons_column{
+    display: flex;
+    flex-direction: row;
+}
+
+.dld_buttons_column h3{
+    font-size: 1.2vw;
+    width: 5.2vw;
+}
+
+.dld_flex_container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40vw;
+}
+
+.dld_flex_container a{
+    width: 9vw;
+    text-align: center;
+    padding: 0.4vw 0vw;
+    margin: 0.9vw 0.35vw;
+    font-size: 1vw;
+    font-weight: bold;
+    color: #23322a;
+    text-decoration: none;
+    border-radius: 2vw;
+    background-color: #91a99b;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.15), 0 0.52vw 0.52vw rgba(0,0,0,0.12);
+    transition: all 0.25s;
+}
+
+.dld_flex_container a:hover{
+    background-color: #23322a;
+    color: #91a99b;
+}
+
+.dld_column_img{
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.dld_column_img img{
+    width: 35vw;
+    border-radius: 2vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+/* Edison's explorer.html */
+
+.czy_body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #23322a;
+    background-image: linear-gradient(5deg, #bdc3c7, #ecf0f1);
+    font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
+}
+
+.czy_navigation_fool, .czy_navigation_fool_profile{
+    border-radius: 1.5vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+    width: 95%;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+    background-color: #e4e3ea;
+    box-shadow: 0 0.2vw 0.5vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.czy_navigation_fool ul, .czy_navigation_fool_profile ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+}
+
+.czy_navigation_fool li, .czy_navigation_fool_profile li{
+    float: left;
+}
+
+.czy_navigation_fool li a, .czy_navigation_fool_profile li a{
+    background-color: #90a79a;
+    display: block;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    padding: 0.5vw 8vw;
+    border-radius: 1.5vw;
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1.5vw;
+    color: #23322a;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25);
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.25s, background-color 0.25s;
+}
+
+.czy_navigation_fool_profile li a{
+    padding: 0.5vw 5vw;
+}
+
+.czy_navigation_fool a:hover, .czy_navigation_fool .czy_active, .czy_navigation_fool_profile a:hover, .czy_navigation_fool_profile .czy_active{
+    color: #90a79a;
+    background-color: #23322a;
+}
+
+.czy_where_magic_happens{
+    margin-top: 1.5vw;
+    width: 89.03%;
+    margin-left: 2.5vw;
+    margin-bottom: 2.5vw;
+    border-radius: 2vw;
+    backdrop-filter: blur(0.078vw);
+    background-color: rgba(228, 227, 234, 0.5);
+    padding: 2vw 3vw 3vw 3vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.czy_where_magic_happens .czy_head {
+    font-family: "dld_samsungsharpsans_bold";
+    float: left;
+    margin: 0;
+    margin-top: 0.5vw;
+    margin-left: 0.8vw;
+    font-size: 2.25vw;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+.czy_tis_a_search_bar{
+    float: right;
+    width: 46%;
+    font-size: 1.125vw;
+    margin-right: 0.8vw;
+    padding: 0.5vw;
+    padding-left: 1.5vw;
+    border: none;
+    border-radius: 1vw;
+    background-image: url('images/czy/search_thing.png');
+    background-size: 2vw;
+    background-position: 39.5vw; 
+    background-repeat: no-repeat;
+    background-color: #e4e3ea;
+    border: 0.15vw solid #23322a;
+    font-family: "dld_samsungsharpsans";
+    transition: box-shadow 0.25s ease;
+}
+
+.czy_tis_a_search_bar:hover{
+    box-shadow: rgba(35, 50, 42, 0.25) 0 0 1vw 0.1vw;
+}
+
+.czy_tis_a_line, .czy_tis_a_line_2{
+    margin: 0;
+    padding: 0;
+    margin-left: 0.8vw;
+    margin-right: 0.8vw;
+    border-radius: 1vw;
+    border: 0.2vw solid #23322a;
+}
+
+.czy_tis_a_line{
+    margin-top: 4.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.czy_tis_a_line_2{
+    margin-top: 3vw;
+    margin-bottom: 1vw;
+}
+
+.czy_family_title{
+    margin: 0;
+    margin-left: 0.8vw;
+    padding: 0;
+    font-weight: bold;
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1.75vw;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+.czy_card, .czy_card_species{
+    box-shadow: -0.52vw 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 1.5vw;
+    margin: 1vw;
+    margin-left: 0.8vw;
+    margin-right: auto;
+    width: 48.5%;
+    transition: background-color 0.25s ease;
+}
+
+.czy_card_species {
+    background-color: #e4e3ea;
+    transition: border-radius 0.25s ease, background-color 0.25s ease;
+} 
+
+.czy_card_species .czy_gallery {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.25s ease, opacity 0.25s ease, background-color 0.25s ease, border-radius 0.25s ease;
+}
+
+.czy_yoo_pictures{
+    float: left;
+    width: 10vw;
+    height: 17vw;
+    object-fit: cover;
+    transition: border-radius 0.25s ease;
+}
+
+.czy_cards_le_content{
+    color: #23322a;
+    background-color: #e4e3ea;
+    margin-left: 10vw;
+    padding: 0.5vw 1vw 0.4vw 0.8vw;
+    height: 16.1vw;
+    font-family: "dld_samsungsharpsans";
+    position: relative;
+    transition: background-color ease 0.25s, color ease 0.25s;
+}
+
+.czy_cards_le_content .czy_card_title{
+    margin: 0;
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1.125vw;
+}
+
+.czy_seperator{
+    margin: 0;
+    padding: 0;
+    margin-top: 0.5vw;
+    border-radius: 2vw;
+    border: 0.15vw solid #23322a;
+    transition: border-color 0.25s ease;
+}
+
+.czy_small_description{
+    margin: 0;
+    margin-top: 0.65vw;
+    font-size: 1vw;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.czy_button{
+    position: absolute;
+    bottom: 1.1vw;
+    font-family: "dld_samsungsharpsans_medium";
+}
+
+.czy_card_butt_on{
+    color: #23322a;
+    background-color: #90a79a;
+    border-radius: 1vw;
+    padding: 0.4vw 2vw;
+    margin-right: 0.6vw;
+    font-size: 1vw;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.czy_card_butt_on:hover{
+    color: #23322a;
+    background-color: #567260;
+}
+
+.czy_gallery{
+    margin-top: 0vw;
+    visibility: hidden;
+    position: absolute;
+    background-color: #e4e3ea;
+    opacity: 0;
+    text-align: center;
+    padding-left: 0.2vw;
+    padding-right: 0.2vw;
+    padding-top: 1vw;
+    width: 44.98%;
+    border-radius: 1.5vw;
+    transition: opacity ease 0.25s, background-color 0.25s ease, border-radius 0.25s ease;
+    z-index: 1;
+}
+
+.czy_gallery_seperator{
+    margin: 0 0.8vw;
+    padding: 0;
+    margin-bottom: 0.5vw;
+    border-radius: 2vw;
+    border: 0.15vw solid #23322a;
+    transition: border-color 0.25s ease;
+}
+
+
+.czy_gallery_pictures{
+    width: 5.5vw;
+    height: 6vw;
+    margin: 0.35vw;
+    margin-bottom: 0.8vw;
+    border-radius: 0.5vw;
+    object-fit: cover;
+    transition: filter 0.25s ease;
+}
+
+.czy_gallery_pictures:hover{
+    filter: brightness(40%)
+}
+
+.czy_card_species:hover > .czy_gallery{
+    visibility: visible;
+    opacity: 1;
+}
+
+.czy_card_species:hover{
+    border-radius: 1.5vw 1.5vw 0 0;
+    background-color: #23322a;
+}
+
+.czy_card_species:hover .czy_cards_le_content{
+    color: #90a79a;
+    background-color: #23322a;
+}
+
+.czy_card_species:hover .czy_yoo_pictures{
+    border-bottom-right-radius: 1.5vw;
+    border-bottom-left-radius: 0;
+}
+
+.czy_card_species:hover .czy_seperator{
+    border-color: #90a79a;
+}
+
+.czy_card_species:hover .czy_gallery {
+    background-color: #23322a;
+    border-radius: 0 0 1.5vw 1.5vw;
+}
+
+.czy_card_species:hover .czy_gallery_seperator {
+    border-color: #90a79a;
+}
+
+/* Pop up images for when you click on the image */
+.czy_overlay{
+    display: flex;
+    align-items: center;
+    z-index: 8;
+    position: fixed;
+	top: 0;
+	bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+    transition: opacity ease 0.25s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.czy_overlay:target{
+    visibility: visible;
+    opacity: 1;
+}
+
+.czy_overlay .cancel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default; 
+}
+
+.czy_overlay > img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 40vw;
+    object-fit: cover;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+/* profiles.html */
+
+.czy_profile_body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #23322a;
+    font-family: "dld_samsungsharpsans", sans-serif;
+    background-image: linear-gradient(5deg, #bdc3c7, #ecf0f1);
+}
+
+.czy_container{
+    box-shadow: -0.52vw 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    backdrop-filter: blur(0.078vw);
+    background-color: rgba(228, 227, 234, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 95.03%;
+    margin-top: 2.5vw;
+    margin-left: 2.5vw;
+    border-radius: 2vw;
+    padding-top: 2vw;
+    padding-bottom: 5vw;
+}
+
+.czy_profile_pic{
+    margin-top: 3vw;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 15vw;
+    object-fit: cover;
+}
+
+.czy_member_name{
+    font-size: 200%;
+    font-family: "dld_samsungsharpsans_bold";
+}
+
+.czy_member_course {
+    font-size: 1.25vw;
+    font-family: "dld_samsungsharpsans_medium";
+}
+
+.czy_student_id {
+    font-size: 1.25vw;
+    margin-bottom: 3vw;
+    font-family: Arial, sans-serif;
+}
+
+.czy_profile_about_me, .czy_profile_personal{
+    margin-top: 2vw;
+    padding-top: 3vw;
+    padding-bottom: 2vw;
+    border-radius: 2vw;
+    width: 80%;
+    background-color: rgb(228, 227, 234);
+    box-shadow: -0.52vw 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.czy_about_me{
+    box-shadow: -0.2vw 0.2vw 0.52vw rgba(0,0,0,0.3);
+    text-align: justify;
+    width: 83%;
+    padding: 2.5vw 5vw;
+    border-radius: 2vw;
+    color: #23322a;
+    background-color: rgb(228, 227, 234);
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vw;
+    font-size: 1vw;
+    line-height: 1.5;
+}
+
+.czy_title{
+    font-size: 2vw;
+    color: rgb(35, 50, 42);
+    width: 30%;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2vw;
+    font-family: "dld_samsungsharpsans_bold";
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+.czy_profile_table{
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    border-collapse: separate;
+    border-spacing: 0.5vw;
+}
+
+.czy_profile_body th, td{
+    box-shadow: -0.1vw 0.1vw 0.52vw rgba(0,0,0,0.3);
+    padding: 0.5vw 1.5vw;
+    color: #23322a; 
+    height: 3vw;
+    background-color: #e4e3ea;
+    border-radius: 1vw;
+}
+
+.czy_profile_body th{
+    font-family: "dld_samsungsharpsans_bold";
+    width: 20%;
+    font-size: 1vw;
+}
+
+.czy_profile_body td{
+    font-family: "dld_samsungsharpsans";
+    text-align: justify;
+    font-size: 1vw;
+}
+
+.czy_profile_body td ul{
+    margin: 0;
+    margin-left: 1vw;
+    padding: 0;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+/* Ashley's contributions.html */
+
+.ash_body{
+    margin: 0;
+    padding: 0;
+    /* background-color: black; */
+    background-image: linear-gradient(5deg, #bdc3c7, #ecf0f1);
+    font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
+}
+
+.ash_section_1 {
+    display: flex;
+    height: 10vw;
+    width: 95%;
+    margin-top: 2.5vw;
+    margin-left: 2.5vw;
+    /* margin-right: 2.5vw; */
+    border-radius: 2vw;
+    background: #e4e3ea;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    align-items: center;
+}
+
+.ash_page_header {
+    text-align: center;
+    color: #23322a;
+    width: 100%;
+    margin: 0;
+}
+
+.ash_page_header .ash_title_header {
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 2vw;
+    margin: 0;
+    margin-bottom: 1vw;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+.ash_page_header p {
+    font-size: 1vw;
+    margin: 0 15vw;
+    line-height: 1.5;
+}
+
+.ash_big_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #e4e3ea; */
+    backdrop-filter: blur(0.078vw);
+    background-color: rgba(228, 227, 234, 0.5);
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    border-radius: 2vw;
+    margin-top: 2.5vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.ash_container{
+    width: auto; 
+    background: white;
+    overflow: hidden;
+    border-radius: 0.46875vw;
+    border: 0.15625vw solid white;
+}
+
+/* .flip-card-container */
+.ash_flip_card_container {
+    --hue: 150;
+    --primary: hsl(var(--hue), 50%, 50%);
+    --white-1: hsl(0, 0%, 90%);
+    --white-2: hsl(0, 0%, 80%);
+    --dark: hsl(var(--hue), 25%, 10%);
+    --grey: hsl(0, 0%, 50%);
+  
+    width: 19vw;
+    margin: 2.5vw;
+    perspective: 50vw;
+    float: left;
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* justify-content: ; */
+}
+  
+  /* .flip-card */
+.ash_flip_card {
+    width: 20vw;
+    height: 32.5vw;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .5s .1s;
+}
+  
+  /* hover and focus-within states */
+.ash_flip_card_container:hover .ash_flip_card{
+    transform: rotateY(180deg);
+}
+  
+  /* .card-... */
+.ash_card_front, .ash_card_back {
+    width: 20vw;
+    height: 30vw;
+    border-radius: 2vw;
+    background: #e4e3ea;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    align-items:end;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    /* background: var(--dark); */
+    /* background: white; */
+    /* background: #caccd1; */
+}
+  
+  /* .card-front */
+.ash_card_front {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+  
+  /* .card-back */
+.ash_card_back {
+    transform: rotateY(180deg);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+  /* figure */
+.ash_figure {
+    z-index: -1;
+}
+
+  /* img */
+.ash_plant_post_img {
+    width: 15vw;
+    height: 22vw;
+    object-fit: cover;
+    border-radius: 1vw;
+    margin-bottom: 1vw;
+}
+  
+  /* figcaption */
+.ash_plant_name {
+    display: block;
+    margin-top: 15%;
+    color: #23322a;
+    position: absolute;
+    top: 0;
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1.125vw;
+    /* padding: 0.417vw 1.75vw; */
+    /* font-weight: bold; */
+    /* line-height: 1.6; */
+    /* letter-spacing: 2px; */
+    /* word-spacing: 6px; */
+    /* right: 12px; */
+    /* color: var(--white-1); */
+    /* color: #90a79a; */
+    /* background: hsla(var(--hue), 25%, 10%, .5); */
+}
+  
+  /* .img-bg */
+.ash_img_bg {
+    background: hsla(var(--hue), 25%, 10%, .5);
+  }
+  
+.ash_card_front .ash_img_bg {
+    clip-path: polygon(0 20%, 100% 40%, 100% 100%, 0 100%);
+  }
+  
+.ash_card_front .ash_img_bg::before {
+    /* content: ""; */
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(18deg);
+    width: 100%;
+    height: 0.313vw;
+    border: 0.052vw solid var(--primary);
+    border-left-color: transparent;
+    border-right-color: transparent;
+    transition: .1s;
+}
+  
+.ash_card_back .ash_img_bg {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 60%);
+}
+  
+  /* hover state */
+.ash_flip_card_container:hover .ash_card_front .ash_img-bg::before {
+    width: 0.313vw;
+    border-left-color: var(--primary);
+    border-right-color: var(--primary);
+}
+   
+  /* more info button */
+.ash_moreinfo_button {
+    /* color: var(--white-1); */
+    color: #23322a;
+    /* letter-spacing: 2px; */
+    padding: 0.5vw 1vw;
+    width: 10vw;
+    text-align: center;
+    /* border: 1px solid var(--grey); */
+    border: 0.1vw solid #23322a;
+    border-radius: 1vw;
+    background: transparent;
+    transition: .25s;
+    cursor: pointer;
+}
+
+.ash_box a {
+    font-size: 1vw;
+}
+  
+.ash_moreinfo_button:hover, .ash_moreinfo_button:focus {
+    /* color: var(--primary); */
+    color: #90a79a;
+    /* background: hsla(var(--hue), 25%, 10%, .2); */
+    background-color: #23322a;
+    /* border-color: currentColor; */
+}
+  
+.ash_moreinfo_button:active {
+    transform: translate(0.104vw);
+}
+   
+  /* states */
+.ash_moreinfo_button:hover+.design-container, .ash_moreinfo_button:active+.design-container, .ash_moreinfo_button:focus+.design-container {
+    --tr: 20;
+    --op: .7;
+}
+
+/* modal dialog 4 */
+a, a:link {
+  font-family: inherit;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+/* box */
+.ash_box {
+    font-family: "dld_samsungsharpsans_bold";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    /* padding: 0 4vw 2vw; */
+    position: absolute;
+    height: 5vw;
+}
+
+.ash_box:not(:first-child) {
+    height: 5vw;
+}
+
+/* modal */
+.ash_modal_container {
+    text-align: justify;
+    font-family: "dld_samsungsharpsans";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: var(--m-background);
+    backdrop-filter: blur(0.5vw);
+}
+
+.ash_modal_container:target {
+    display: flex;
+}
+
+.ash_modal {
+    width: 60vw;
+    padding: 4vw 2vw;
+    border-radius: 2vw;
+    color: var(--light);
+    background: black;
+    box-shadow: var(--m-shadow, .4vw .4vw 10.2vw .2vw) var(--shadow-1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.ash_modal_title {
+    color: #e4e3ea;
+    font-size: 2vw;
+    font-family: "dld_samsungsharpsans_bold";
+}
+
+.ash_modal_title2{
+    font-style: italic;
+    color: grey;
+    font-size: 1.25vw;
+}
+
+.ash_modal_title2, .ash_modal_title{
+    margin: 0;
+    margin-left: 4vw;
+    margin-top: 0.25vw;
+    font-family: "dld_samsungsharpsans_medium";
+}
+
+.ash_modal_text {
+    color: #e4e3ea;
+    padding: 0 4vw;
+    margin-top: 2vw;
+
+    font-size: 1vw;
+    line-height: 1.7;
+}
+
+.ash_link_1 {
+    font-size: 1.8vw;
+    color: var(--light);
+    background: var(--background);
+    box-shadow: .4vw .4vw 2.4vw .2vw var(--shadow-1);
+    border-radius: 100vw;
+    padding: 1.4vw 3.2vw;
+    transition: .2s;
+}
+
+.ash_link_1:hover, .ash_link_1:focus {
+    transform: translateY(-.2vw);
+    box-shadow: 0 0 4.4vw .2vw var(--shadow-2);
+}
+
+.ash_link_1:focus {
+  box-shadow: 0 0 4.4vw .2vw var(--shadow-2), 0 0 0 .4vw var(--global-background), 0 0 0 .5vw var(--focus);
+}
+
+.ash_link_2 {
+    width: 4vw;
+    height: 4vw;
+    border: 1px solid var(--border-color);
+    border-radius: 100vw;
+    color: white;
+    font-size: 2.2vw;
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.ash_link_2::before {
+    content: '×';
+    font-size: 2vw;
+    transform: translateY(-.1vw);
+}
+
+.ash_link_2:hover, .ash_link_2:focus {
+    background: var(--focus);
+    border-color: var(--focus);
+    transform: translateY(-.2vw);
+}
+
+.ash_comment_box form {
+    margin-left: 4vw;
+    margin-top: 1vw;
+}
+
+.ash_comment_box form textarea {
+    border-radius: 0.5vw;
+    width: 90%;
+    border: none;
+    transition: background-color 0.25s ease;
+}
+
+.ash_comment_box form textarea:hover {
+    /* border: 0.1vw solid #23322a; */
+    background-color: rgb(228, 227, 234, 0.9);
+}
+
+.ash_comment_box form textarea:focus {
+    /* border: 0.1vw solid #23322a; */
+    outline: none;
+    background-color: rgb(228, 227, 234, 0.9);
+}
+
+.ash_comment_box form textarea::placeholder {
+    font-size: 0.75vw;
+    font-family: "dld_samsungsharpsans";
+    color: #23322a;
+}
+
+.ash_submit_btn {
+    background-color: #e4e3ea;
+    color: #23322a;
+    padding: 0.5vw 1.5vw;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    margin-left: 4vw;
+    margin-top: 1vw;
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1vw;
+    transition: background-color 0.25s ease;
+}
+
+.ash_submit_btn:hover {
+    background-color: #23322a;
+    color: #90a79a;
+}
+
+.ash_comment_boxx {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+/* Ashley's login.html and register.html */
+
+
+.ash_body_2{
+    box-sizing: border-box;
+    font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif;
+    background-image: linear-gradient(5deg, #bdc3c7, #ecf0f1);
+    margin: 0;
+    padding: 0;
+    /* background: #081b29; */
+    /* min-height: 100vh; */
+}
+
+.ash_login_thing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;margin-top: 1.5vw;
+    width: 95.03%;
+    margin-left: 2.5vw;
+    margin-bottom: 2.5vw;
+    margin-top: 2.5vw;
+    border-radius: 2vw;
+    backdrop-filter: blur(0.078vw);
+    background-color: rgba(228, 227, 234, 0.5);
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.ash_wrapper{
+    position: relative;
+    width: 55%;
+    height: 30vw;
+    background: #23322a;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    overflow: hidden;
+    margin-top: 4vw;
+    margin-bottom: 8vw;
+    border-radius: 2vw;
+}
+
+.ash_wrapper .ash_form_box{
+    position: absolute;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ash_form_box.register h2{
+    color: #23322a;
+}
+
+.ash_wrapper .ash_form_box.login{
+    left: 0;
+    padding: 0 0 0 4vw;
+    /* background: #081b29; */
+    /* display: none; */
+}
+
+.ash_wrapper .ash_form_box.register{
+    color: #23322a;
+    right: 0;
+    padding: 0 3vw 0 0;
+    /* display: none; */
+}
+
+.ash_form_box h2{
+    font-size: 2vw;
+    color: #e4e3ea;
+    text-align: center;
+    margin: 0;
+    font-family: "dld_samsungsharpsans_bold";
+}
+
+.ash_form_box .ash_input_box, .ash_register_input_box{
+    position: relative;
+    width: 100%;
+    height: 2.5vw;
+    margin: 1.8vw 0;
+    /* font-weight: bold; */
+}
+
+.ash_input_box input, .ash_register_input_box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 0.1vw solid #fff;    
+    color: #fff;
+    transition: all 0.25s ease;
+}
+
+.ash_register_input_box input{
+    border-bottom: 0.1vw solid #23322a;    
+    color: #23322a;
+}
+
+.ash_input_box input:focus, .ash_input_box input:valid, .ash_register_input_box:focus, .ash_register_input_box:valid{
+    border-bottom-color: #e4e3ea ;
+}
+
+.ash_input_box label, .ash_register_input_box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 1vw;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.25s ease;
+}
+
+.ash_register_input_box label{
+    color: #23322a;
+}
+
+.ash_input_box input:focus~label, .ash_input_box input:valid~label{
+    top: -0.1vw;
+    color: #90a79a ;
+}
+
+.ash_register_input_box input:focus~label, .ash_register_input_box input:valid~label{
+    top: -0.1vw;
+    color: #23322a;
+}
+
+.ash_input_box i, .ash_register_input_box i{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 1.5vw;
+    color: #fff;
+    transition: 0.25s ease;
+}
+
+.ash_register_input_box i{
+    color: #23322a;
+}
+
+.ash_input_box input:focus~i, .ash_input_box input:valid~i {
+    color: #e4e3ea;
+}
+
+.ash_btn{
+    position: relative;
+    width: 100%;
+    height: 2.5vw;
+    border: none;
+    outline: none;
+    border-radius: 2vw;
+    cursor: pointer;
+    font-size: 1vw;
+    color: #23322a;
+    /* font-weight: bold; */
+    font-family: "dld_samsungsharpsans_bold";
+    z-index: 1;
+    overflow: hidden;
+}
+
+.ash_btn::before{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    background: linear-gradient(#66B5F6 0%, #BFE299 100%, #66B5F6 0%, #BFE299 100%);
+    z-index: -1;
+    transition: all 0.25s;
+}
+
+.ash_btn:hover::before{
+    top: 0;
+}
+
+.ash_form_box .ash_logreg_link, .ash_logreg_link_register{
+    font-size: 0.75vw;
+    color: #e4e3ea;
+    text-align: center;
+    margin: 0;
+    margin-top: 3vw;
+}
+
+.ash_logreg_link_register p{
+    font-family: "dld_samsungsharpsans_medium";
+    color: #23322a;
+}
+
+.ash_logreg_link p a,.ash_logreg_link_register p a{
+    /* color: #90a79a; */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ash_login_link {
+    color: #00bf53;
+}
+
+.ash_register_link {
+    color: #00bf53;
+}
+
+.ash_logreg_link p a:hover, .ash_logreg_link_register p a:hover{
+    text-decoration: underline;
+}
+
+.ash_wrapper .ash_info_text{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ash_wrapper .ash_info_text.login{
+    right: 0;
+    text-align: right;
+    padding-right: 1vw;
+    /* display: none; */
+}
+
+.ash_wrapper .ash_info_text.register{
+    left: 0;
+    text-align: left;
+    padding-left: 2vw;
+    /* display: none; */
+}
+
+.ash_info_text h2{
+    font-size: 2vw;
+    color: #23322a;
+    /* line-height: 1.3; */
+    text-transform: uppercase;
+    font-family: "dld_samsungsharpsans_bold";
+    margin-right: 1vw;
+}
+
+.ash_info_text.register h2{
+    color: #e4e3ea;
+    margin-left: 2vw;
+}
+
+/* .ash_info_text p{
+    font-size: 16px;
+    color: #fff;
+} */
+
+.ash_wrapper .ash_bg_animate{
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 40vw;
+    height: 40vw;
+    background-color: #e4e3ea;
+    transform: rotate(10deg) skewY(40deg);
+    /* transform: rotate(0) skewY(0); */
+    transform-origin: bottom right;
+}
+
+.ash_wrapper .ash_bg_animate2{
+    position: absolute;
+    top: 100%;
+    left: 22vw;
+    width: 80vw;
+    height: 80vw;
+    background-color: #e4e3ea;
+    transform: rotate(-11deg) skewY(-41deg);
+    /* transform: rotate(0) skewY(0); */
+    transform-origin: bottom left;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+/* Tzy Lynn's identify.html */
+
+.ttl_body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(5deg, #bdc3c7, #ecf0f1);
+    font-family: "dld_samsungsharpsans", "dld_samsungsharpsans_medium", "dld_samsungsharpsans_bold", sans-serif; 
+}
+
+
+.ttl_header_container{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    padding: 1vw;
+    padding-right: 0;
+}
+
+.ttl_header_section {
+    background-color: #e4e3ea;
+	display: flex;
+    position: relative;
+	height: 34.6vw;
+    width: 95.03%;
+	margin-top: 2.5vw;
+	margin-left: auto;
+	margin-right: auto;
+    border-radius: 2vw;
+    overflow: hidden;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.ttl_title{
+    position: relative;
+    margin: 0;
+    margin-left: 7.5vw;
+    top: 10%;
+    font-size: 3vw;
+    font-family: "dld_samsungsharpsans_bold", sans-serif;
+    background: -webkit-linear-gradient(125deg, #f2291b, #f7db25, #84f527);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    /* transition: 0.5s; */
+    animation:ttl_change_gradient 15s infinite linear;
+}
+
+@keyframes ttl_change_gradient{
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
+}
+
+.ttl_block_reveal{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vw;
+    margin-top: 3vw;
+    margin-left: 2.05vw;
+    width: 100%;
+    height: 20vw;
+}
+
+.ttl_page_header {
+    text-align: justify;
+    color: #23322a;
+    width: 25vw;
+    margin: 0;
+    margin-left: 2vw;
+    margin-top: 1vw;
+}
+
+.ttl_page_header .ttl_title_header {
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 2vw;
+    margin: 0;
+    margin-bottom: 1vw;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+.ttl_page_header p {
+    font-size: 1vw;
+    margin: 0 0vw;
+    line-height: 1.5;
+}
+
+.ttl_identify{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 2.5vw;
+}
+
+.ttl_block1{
+    width: 0%;
+    height: inherit;
+    background: #23322a;
+    position: absolute;
+    animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+    display: flex;
+}
+
+.ttl_block1_text{
+    animation: mainFadeIn 0.25s forwards;
+    font-size: 1.5vw;
+    animation-delay: 1.6s;
+    color: #23322a;
+    opacity: 0;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    font-family: "dld_samsungsharpsans_medium";
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+.ttl_any_plant{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 2.5vw;
+    margin-top: 10px;
+}
+
+.ttl_block2{
+    width: 0%;
+    height: inherit;
+    background: #23322a;
+    position: absolute;
+    animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+    /* animation-delay: 2s; */
+    display: flex;
+}
+
+.ttl_block2_text{
+    animation: secFadeIn 0.25s forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+    font-size: 1.5vw;
+    color: #23322a;
+    font-family: "dld_samsungsharpsans_bold";
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+.ttl_anywhere{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 2.5vw;
+    margin-top: 10px;
+}
+
+.ttl_block3{
+    width: 0%;
+    height: inherit;
+    background: #23322a;
+    position: absolute;
+    animation: thirdBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation-delay: 2s;
+    display: flex;
+}
+
+.ttl_block3_text{
+    animation: thirdFadeIn 0.25s forwards;
+    animation-delay: 3.5s;
+    opacity: 0;
+    color: #23322a;
+    font-size: 1.5vw;
+    font-family: "dld_samsungsharpsans_bold";
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+.ttl_anytime{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 2.5vw;
+    margin-top: 10px;
+}
+
+.ttl_block4{
+    width: 0%;
+    height: inherit;
+    background: #23322a;
+    position: absolute;
+    animation: fourthBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation-delay: 4s;
+    display: flex;
+}
+
+.ttl_block4_text{
+    animation: fourthFadeIn 0.25s forwards;
+    animation-delay: 5.5s;
+    color: #23322a;
+    opacity: 0;
+    font-size: 1.5vw;
+    font-family: "dld_samsungsharpsans_bold";
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+@keyframes mainBlock {
+    0% {
+      width: 0%;
+      left: 0;
+  
+    }
+    50% {
+      width: 100%;
+      left: 0;
+  
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+}
+  
+@keyframes secBlock {
+    0% {
+      width: 0%;
+      left: 0;
+  
+    }
+    50% {
+      width: 100%;
+      left: 0;
+  
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+}
+
+@keyframes thirdBlock {
+    0% {
+      width: 0%;
+      left: 0;
+  
+    }
+    50% {
+      width: 100%;
+      left: 0;
+  
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+}
+
+@keyframes fourthBlock {
+    0% {
+      width: 0%;
+      left: 0;
+  
+    }
+    50% {
+      width: 100%;
+      left: 0;
+  
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+}
+  
+@keyframes mainFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes secFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes thirdFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes fourthFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.ttl_image_slider{
+    width: 80%;
+    height: 95%;
+    overflow: hidden;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 2vw;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-top: 0.5vw;
+}
+
+.ttl_image_slider_wrapper{
+    /* position: relative; */
+    /* width: 100%; */
+	/* height: 35.5vw; */
+    /* margin: auto auto; */
+    display: flex;
+    animation: ttl_slide 14s infinite;
+}
+
+/* .ttl_image_slider_wrapper {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+} */
+
+@keyframes ttl_slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+
+.ttl_image_slider_wrapper img{
+    width: 100%;
+    height: 100%;
+}
+
+.ttl_main_body {
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    background-color: rgba(228, 227, 234, 0.5);
+    backdrop-filter: blur(0.078vw);
+    margin: 2.5vw;
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.ttl_frame{
+    clear: both;
+    position: relative;
+    padding: 1vw;
+    /* width: 60vw; */
+    height: 55vw;
+    top: 10vw;
+    margin: 4vw;
+    border-radius: 0.5vw;
+    /* box-shadow: 5px 2px 15px 0px rgba(0,0,0,0.6); */
+    font-family: "dld_samsungsharpsans_medium", sans-serif;
+    /* background: linear-gradient(to top right, #2c3e50 0%, #34495e 100%);  */
+}
+
+.ttl_center{
+    /* position: relative; */
+    /* top:5%; */
+    width: 59vw;
+    /* height: vw; */
+    background-color: #e4e3ea;
+	/* box-shadow: 8px 10px 15px 0 rgba(0,0,0,0.2); */
+	border-radius: 2vw;
+    margin:auto;
+    margin-top: 4vw;
+    margin-bottom: 8vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.ttl_upload_title{
+    text-align: center;
+    margin: 0;
+    padding-top: 2vw;
+    font-size: 2vw;
+    font-family: "dld_samsungsharpsans_bold";
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+.ttl_upload_description{
+    text-align: center;
+    padding: 2vw;
+    position: relative;
+    margin: 0;
+    font-size: 1vw;
+    border-bottom: 3px solid #bdbdbd;
+}
+
+.ttl_fileupload_title{
+    text-align: center;
+    font-size: 2vw;
+    padding: 1vw;
+}
+
+.ttl_dropzone{
+    position: relative;
+	box-sizing: border-box;
+	display: table;
+	table-layout: fixed;
+	width: 70%;
+	height: 50%;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	border: 3px dashed #bdbdbd;
+	border-radius: 2vw;
+	text-align: center;
+	overflow: hidden;
+    margin-top: 15vw;
+    margin-bottom: -6vw;
+}
+
+.ttl_filecontent{
+    display: table-cell;
+    vertical-align: middle;
+    background-color: white;
+}
+
+.ttl_filecontent{
+    display: block;
+    color: #676767;
+}
+
+.ttl_upload-btn{
+    position: relative;
+	width: 20vw;
+	height: 1.4vw;
+    /* margin-top: 10vw; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1vw;
+	/* background: #d0d9cd; */
+    background: linear-gradient(200deg, #66B5F6 0%, #BFE299 100%);
+	border-radius: 1.5vw;
+	text-align: center;
+	font-size: 1vw;
+	/* box-shadow: 0 2px 0 0 #78866B; */
+	cursor: pointer;
+	transition: all .25s ease;
+    /* margin-bottom: 3.4vw; */
+    font-family: "dld_samsungsharpsans_bold";
+    box-shadow: .4vw .4vw 2.4vw .2vw hsla(236, 50%, 50%, .3);
+    color: #23322a;
+}
+
+.ttl_upload-btn:hover {
+    /* box-shadow: 0 2px 0 0 #78866B, 0 2px 10px 0 #d0d9cd; */
+    /* background: linear-gradient(200deg, #008cff 0%, #84ff00 100%); */
+    filter: saturate(200%);
+    box-shadow: 0 0 4.4vw .2vw hsla(236, 50%, 50%, .4);
+}
+
+.ttl_upload-btn:hover .ttl_center {
+    background-color: #23322a;
+}
+
+.ttl_filecontent input[type=file] {
+    align-items: center;
+    /* justify-content: center; */
+    position: relative;
+    left: 6.5%;
+    padding: 1vw;
+    padding-bottom: 3vw;
+}
+
+.ttl_filecontent img {
+    margin: 0;
+    position: relative;
+    top: 60%;
+    left: 0;
+    width: 40%;
+    height: 50%;
+    padding: 3vw;
+}
+
+.ttl_identify_button_container{
+    /* height: 30vw; */
+    width: 100%;
+    clear: both;
+    /* margin-top: 4vw; */
+    margin-bottom: 4vw;
+}
+
+.ttl_identify_button{
+    left: 31.40%;
+    position: relative;
+    width: 22vw;
+    padding: 1.1vw 1vw;
+    background: linear-gradient(200deg, #66B5F6 0%, #BFE299 100%);
+    font-size: 1vw;
+    font-family: "dld_samsungsharpsans_bold", sans-serif;
+    box-shadow: .4vw .4vw 2.4vw .2vw hsla(236, 50%, 50%, .3);
+    color: #23322a;
+    border: none;
+    border-radius: 1.5vw;
+    transition: all .25s ease-in-out;
+    cursor: pointer;
+}
+
+.ttl-star-1 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #e4e3ea);
+    z-index: -5;
+    transition: all 0.5s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.ttl-star-2 {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #e4e3ea);
+    z-index: -5;
+    transition: all 0.5s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.ttl-star-3 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #e4e3ea);
+    z-index: -5;
+    transition: all 0.5s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.ttl-star-4 {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #e4e3ea);
+    z-index: -5;
+    transition: all .4s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.ttl-star-5 {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #e4e3ea);
+    z-index: -5;
+    transition: all .3s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.ttl-star-6 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #e4e3ea);
+    z-index: -5;
+    transition: all .4s ease;
+}
+
+
+.ttl_identify_button:hover {
+    /* background: #23322a; */
+    /* color: #90a79a; */
+    filter: saturate(200%);
+    /* box-shadow: 0 0 25px #aafbdc; */
+    box-shadow: 0 0 4.4vw .2vw hsla(236, 50%, 50%, .4);
+}
+
+.ttl_identify_button:hover .ttl-star-1 {
+    position: absolute;
+    top: -80%;
+    left: -30%;
+    width: 4vw;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.ttl_identify_button:hover .ttl-star-2 {
+    position: absolute;
+    top: -25%;
+    left: 10%;
+    width: 2.5vw;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.ttl_identify_button:hover .ttl-star-3 {
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    width: 1vw;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.ttl_identify_button:hover .ttl-star-4 {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    width: 2vw;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.ttl_identify_button:hover .ttl-star-5 {
+    position: absolute;
+    top: 25%;
+    left: 115%;
+    width: 2.5vw;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.ttl_identify_button:hover .ttl-star-6 {
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    width: 1vw;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+}
+
+.fil0 {
+    fill: #FFFDEF
+}
+
+.ttl_result {
+    backdrop-filter: blur(0.078vw);
+    background-color: rgba(228, 227, 234, 0.5);
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    padding-top: 4vw;
+    border-radius: 2vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.ttl_result_title{
+    color: #23322a;
+    /* text-align: left; */
+    text-align: center;
+    /* padding-left: 13.4vw; */
+    font-size: 2vw;
+    margin: 0;
+    margin-bottom: 2vw;
+    font-family: "dld_samsungsharpsans_bold";
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+.ttl_result_container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3vw;
+    row-gap: 3vw;
+    /* padding: 1vw 6vw 6vw; */
+    /* box-sizing: border-box; */
+    padding-bottom: 8vw;
+}
+
+.ttl_plant_card {
+    width: 35vw;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #e4e3ea;
+    border-radius: 2vw;
+    /* box-shadow: 0 0.365vw 0.729vw rgba(0,0,0,0.25), 0 0.26vw 0.26vw rgba(0,0,0,0.22); */
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    transition: background-color 0.25s ease, color 0.25s ease;
+    align-items: center;
+}
+
+.ttl_plant_card:hover{
+    background-color: #23322a;
+    color: #90a79a;
+}
+
+.ttl_plant_card img {
+    height: 55%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2vw;
+}
+
+.ttl_plant_name{
+    /* width: 100%;
+    height: 20vw;
+    text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ttl_plant_common_name{
+    font-size: 1.125vw;
+    margin: 0;
+    padding-top: 1.5vw;
+    padding-bottom: 1vw;
+    font-family: "dld_samsungsharpsans_medium";
+}
+
+.ttl_plant_scientific_name{
+    font-size: 1.125vw;
+    margin: 0;
+    font-style: italic;
+    padding-bottom: 1vw;
+}
+
+.ttl_plant_modal_box {
+    margin: 2.5vw 0;
+}
+
+.ttl_plant_modal_box a {
+    font-family: "dld_samsungsharpsans_bold";
+}
+
+/* .ttl_plant_modal_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2vw;
+    padding-top: 1vw;
+    margin-bottom: 8vw;
+    height: 100%;
+} */
+
+/* .ttl_plant_modal_box:not(:first-child) {
+    height: 45vw;
+} */
+
+a.ttl_link-1, a.ttl_link-2, a.ttl_link-1:link, a.ttl_link-2:link {
+  /* font-family: inherit; */
+  text-decoration: none;
+}
+
+a.ttl_link-1:focus, a.ttl_link-2:focus {
+  outline: none;
+}
+
+.ttl_modal_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    background: hsl(220, 25%, 10%);
+}
+
+.ttl_modal_container:target {
+  display: flex;
+}
+
+.ttl_modal {
+  width: 85vw;
+  max-height: 85%;
+  padding: 3vw;
+  border-radius: 2vw;
+
+  /* color: hsl(220, 50%, 90%); */
+  color: #e4e3ea;
+  background: linear-gradient(to right, hsl(210, 30%, 20%), hsl(255, 30%, 25%));
+  box-shadow: .4vw .4vw 10.2vw .2vw hsla(236, 50%, 50%, .3);
+  position: relative;
+
+  overflow-y: scroll;
+}
+
+.ttl_modal::-webkit-scrollbar{
+    width: 1vw;
+}
+
+.ttl_modal::-webkit-scrollbar-track{
+    background-color: #e4e3ea;
+    border-radius: 0.1vw;
+}
+
+.ttl_modal::-webkit-scrollbar-thumb{
+    /* background: linear-gradient(45deg, #00aeff, #a68eff); */
+    border-radius: 1vw;
+    background-color: #23322a;
+}
+
+
+/*Hidden scrollbar in modal*/
+/* .ttl_modal::-webkit-scrollbar{
+    display: none;
+}
+
+.ttl_modal{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+} */
+
+.ttl_modal_title{
+    font-size: 2vw;
+    font-family: "dld_samsungsharpsans_bold", sans-serif;
+}
+
+.ttl_link-1 {
+    font-size: 1vw;
+
+    color: #23322a;
+    background: linear-gradient(200deg, #66B5F6 0%, #BFE299 100%);
+    box-shadow: .4vw .4vw 2.4vw .2vw hsla(236, 50%, 50%, .3);
+    border-radius: 1vw;
+    /* margin-top: 60%; */
+    padding: 1vw 2vw;
+
+    transition: 0.25s;
+}
+
+a.ttl_link-1:hover, a.ttl_link-1:focus .ttl_link-1 {
+    /* transform: translateY(-1vw); */
+    box-shadow: 0 0 4.4vw .2vw hsla(236, 50%, 50%, .4);
+    filter: saturate(200%);
+}
+
+a.ttl_link-1:focus {
+    box-shadow:
+    0 0 4.4vw .2vw hsla(236, 50%, 50%, .4),
+    0 0 0 .2vw hsl(220, 25%, 10%),
+    0 0 0 .3vw hsl(210, 90%, 50%);
+}
+
+.ttl_link-2 {
+    width: 6vw;
+    height: 6vw;
+    border: 1px solid hsla(0, 0%, 100%, .2);
+    border-radius: 4vw;
+
+    color: inherit;
+    font-size: 2vw;
+
+    position: fixed;
+    top: 10%;
+    right: 8%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .25s;
+}
+
+a.ttl_link-2::before {
+    content: '×';
+    transform: translateY(-.1vw);
+}
+
+a.ttl_link-2:hover, a.ttl_link-2:focus {
+    background: hsl(210, 90%, 50%);
+    border-color: hsl(210, 90%, 50%);
+    transform: translateY(-.2vw);
+}
+
+
+.ttl_plant_img_gallery_container{
+    margin: 0;
+    min-height: 50%;
+    display: grid;
+    place-content: center;
+}
+
+.ttl_plant_gallery{
+    display: grid;
+    width: 39vw; 
+    /* aspect-ratio: 1; */
+    grid: auto-flow 1fr/repeat(3,1fr);
+    gap: 1vw;
+}
+
+.ttl_plant_gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: .5s ;
+    border-radius: 2vw;
+}
+
+.ttl_plant_gallery img:first-child {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.ttl_plant_gallery img:nth-child(2) {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.ttl_plant_gallery img:nth-child(3) {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.ttl_plant_gallery img:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.ttl_plant_gallery img:hover {
+    filter: grayscale(0);
+}
+
+.ttl_plant_gallery img:nth-child(2) {
+    grid-area: 1/2/span 2/span 2;
+    clip-path: polygon(0 0,100% 0,100% 100%,calc(50% + 1vw/4) 100%,0 calc(50% - 1vw/4))
+}
+
+.ttl_plant_gallery img:nth-child(3) {
+    grid-area: 2/1/span 2/span 2;
+    clip-path: polygon(0 0,calc(50% - 1vw/4) 0,100% calc(50% + 1vw/4),100% 100%,0 100%);
+}
+
+.ttl_plant_about_container, .ttl_plant_care_container, .ttl_plant_environment_container, .ttl_plant_location_container, .ttl_plant_location_content{
+    width: 90%;
+}
+
+.ttl_plant_about_title_container, .ttl_plant_care_container, .ttl_plant_environment_title_container, .ttl_plant_location_title_container{
+    border-left:  0.5vw solid #21F5F0;
+    height: 3vw;
+    width: 100%;
+    display: inline-block;
+    align-items: center;
+    padding: 0.5vw;
+    margin-top: 2vw;
+}
+
+.ttl_plant_about_title, .ttl_plant_care_title, .ttl_plant_environment_title, .ttl_plant_location_title{
+    font-family: "dld_samsungsharpsans_bold", sans-serif;
+    font-size: 2vw;
+    vertical-align: middle;
+    padding-left: 1vw;
+    display: inline;
+}
+
+.ttl_plant_about_content{
+    text-align: justify;
+    font-family: "dld_samsungsharpsans", sans-serif;
+    font-size: 1.25vw;
+}
+
+.ttl_youtube_video_container{
+    text-align: center;
+}
+
+.ttl_youtube_video{
+    width: 70%;
+    height: 30vw;
+    padding: 2vw;
+    border: none;
+}
+
+.ttl_plant_about_icon, .ttl_plant_care_icon, .ttl_plant_environment_icon, .ttl_globe_icon{
+    width: 3vw;
+    height: 3vw;
+    vertical-align: middle;
+    /* margin-bottom: 1vw; */
+    margin-left: 1vw;
+}
+
+.ttl_plant_care_card_container{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 3vw;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+
+}
+
+.ttl_plant_care_card{
+    width: 100%;
+    background-color: #e4e3ea;
+    border-radius: 1vw;
+    color: #23322a;
+    padding: 2vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 0px;
+    text-align: center;
+}
+
+.ttl_plant_care_card_title{
+    font-size: 1.5vw;
+    font-family: "dld_samsungsharpsans_bold", sans-serif;
+}
+
+.ttl_plant_care_card_text{
+    font-family: "dld_samsungsharpsans_medium", sans-serif;
+    font-size: 1.25vw;
+}
+
+.ttl_plant_care_card_left{
+    width: 100%;
+    text-align: center;
+    /* padding-top: 5vw; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ttl_plant_care_card_right{
+    width: 100%;
+    border-left: 0.15vw dotted #808080;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ttl_water_icon, .ttl_sun_icon, .ttl_pruning_icon, .ttl_fertilizer_icon{
+    width: 7vw;
+}
+
+.ttl_plant_care_card_description{
+    text-align: justify;
+    font-size: 1.25vw;
+    padding: 2.5vw;
+    font-family: "dld_samsungsharpsans", sans-serif;
+}
+
+.ttl_plant_environment_table{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    width: 100%;
+    font-family: "dld_samsungsharpsans", sans-serif;
+    color: black;
+    border-spacing: 5px;
+    border: 5px solid transparent;
+    background-image: linear-gradient(to right, hsl(210, 30%, 20%), hsl(255, 30%, 25%));
+    background-origin: border-box;
+}
+
+.ttl_plant_environment_table td, .ttl_plant_environment_table th{
+    text-align: center;
+    /* padding: 1vw; */
+    background-color: #AFE4DE;
+}
+
+.ttl_plant_environment_table th, .ttl_plant_environment_table td{
+    border-radius: 1.5vw;
+    font-size: 1.25vw;
+}
+
+.ttl_plant_environment_table th {
+    font-family: "dld_samsungsharpsans_bold";
+}
+
+.ttl_plant_location_content{
+    margin-top: 2vw;
+}
+
+.ttl_google_map iframe{
+    width: 110%;
+    height: 45vw;
+    border-radius: 2vw;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+/* Nicholas's enquiry.html */
+
+/* Body styles */
+
+.nic_body {
+    font-family: "dld_samsungsharpsans", sans-serif;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(5deg, #bdc3c7, #ecf0f1);
+}
+
+.nic_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4vw;
+    padding-bottom: 8vw;
+    margin: 2.5vw;
+    border-radius: 2vw;
+    backdrop-filter: blur(0.078vw);
+    background-color: rgba(228, 227, 234, 0.5);
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+/* Contact box */
+.nic_contact-box {
+    width: 78vw;
+    border-radius: 2vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #e4e3ea;
+    /* height: 100%; */
+    /* margin: 5vw 10vw; */
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+/* Left side background */
+.nic_slide > img{
+    height: 79vw;
+    width: 39.06vw;
+    object-fit: cover;
+    filter: brightness(80%);
+}
+
+#nic_slideshow {
+    border-radius: 2vw 0 0 2vw;
+    overflow: hidden;
+    height: 79vw;
+    /* width: 37vw; */
+    margin: 0 auto;
+    width: 39vw;
+}
+  
+.nic_slide-wrapper {
+    width: 210vw;
+    animation: slide 20s infinite;
+}
+  
+.nic_slide {
+    float: left;
+}
+
+@keyframes slide {
+    0%, 20% {
+        transform: translateX(0);
+    }
+
+    25%, 45% {
+        transform: translateX(-18.62%);
+    }
+
+    50%, 70% {
+        transform: translateX(-37.24%);
+    }
+
+    75%, 95% {
+        transform: translateX(-55.86%);
+    }
+}
+
+/* Right side form container */
+.nic_right {
+    margin: 0;
+    padding: 2vw;
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+}
+
+.nic_div{
+    font-size: 1vw;
+    /* margin-bottom: 1vw; */
+}
+
+/* Form title */
+.nic_h2 {
+    position: relative;
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 2vw;
+    margin: 0;
+    margin-bottom: 3vw;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+/* Form fields */
+.nic_field {
+    width: 90%;
+    padding: 0.5vw 1vw;
+    /* background-color: rgba(230, 230, 230, 0.6); */
+    background-color: white;
+    font-size: 1vw;
+    margin: 0;
+    margin-top: 0.25vw;
+    margin-bottom: 1vw;
+    transition: 0.25s;
+    border-radius: 1vw;
+    border: 0.1vw solid #23322a;
+}
+
+.nic_field::placeholder {
+    font-size: 0.75vw;
+    font-family: "dld_samsungsharpsans";
+}
+
+.nic_select option {
+    font-size: 1vw;
+    font-family: "dld_samsungsharpsans";
+}
+
+/* .nic_select:hover {
+    background-color: rgb(35, 50, 42, 0.25);
+  } */
+
+.nic_field:hover {
+    background-color: rgb(35, 50, 42, 0.25);
+}
+
+.nic_field:focus {
+    background-color: #fff;
+}
+
+.nic_textarea {
+    min-height: 10vw;
+}
+
+/* Form labels */
+.nic_label {
+    font-size: 1vw;
+    /* font-weight: bold; */
+    font-family: "dld_samsungsharpsans_medium";
+}
+
+.nic_legend {
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1.25vw;
+}
+
+.nic_right fieldset{
+    border-radius: 2vw;
+    font-size: 1vw;
+    padding: 1vw;
+    margin-bottom: 1vw;
+}
+
+/* Select containers */
+.nic_select-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Select styles */
+.nic_select {
+    width: 96.5%;
+    padding: 0.43vw 1vw;
+    /* background-color: rgba(230, 230, 230, 0.6); */
+    background-color: white;
+    font-size: 1.1vw;
+    margin-bottom: 1vw;
+    margin-top: 0.25vw;
+    transition: 0.3s;
+    border-radius: 1vw;
+    border: 0.1vw solid #23322a;
+}
+
+.nic_button {
+    border-radius: 1vw;
+    /* border-color: black; */
+    /* text-align: center; */
+    /* display: flex; */
+    /* margin-right: auto; */
+    padding: 0.5vw 3vw;
+    font-size: 1vw;
+    font-family: "dld_samsungsharpsans_bold";
+    /* background-color: #2ecc71; */
+    border: none;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    cursor: pointer;
+    color: #23322a;
+}
+
+.nic_button:hover {
+    /* filter: brightness(50%); */
+    background-color: #23322a;
+    color: #90a79a;
+}
+
+/* Submit and Reset button styles */
+.nic_submit {
+    background-color: #2ecc71;
+    /* color: #2ecc71; */
+    /* color: #fff; */
+    width: 10vw;
+}
+
+.nic_reset {
+    background-color: #e74c3c;
+    /* color: #fff; */
+    /* color: #e74c3c; */
+    margin-right: 1vw;
+    width: 10vw;
+}
+
+/* Button container */
+.nic_button-container {
+    display: flex;
+    justify-content: right;
+    margin-top: 1.5vw;
+}

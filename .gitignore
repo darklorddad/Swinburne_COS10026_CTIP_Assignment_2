@@ -1,6 +1,14 @@
-*
-!www/
+# Ignore specific files and directories
+bin/
+etc/
+tmp/
+usr/
+laragon.exe
+
+# Ignore specific directory contents but not the directory itself
+data/mysql-8/*
 www/*
-!www/assign2/
+
+# Include specific subdirectories
 !data/mysql-8/florascan_database/
-!.gitignore
+!www/assign2/
