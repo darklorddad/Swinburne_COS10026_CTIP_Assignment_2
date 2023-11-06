@@ -4,11 +4,11 @@
     <meta name="author" content ="Nicholas Sik">
     <meta name = "description" content = "Enquiry form">
     <title>Enquiry</title>
-    <?php include_once("dld_head.php"); ?>
+    <?php include_once("head.php"); ?>
 </head>
 
 <body class="nic_body">
-    <?php include_once("dld_background.php"); ?>
+    <?php include_once("dld_background_dots.php"); ?>
     <?php include_once("dld_top_navigation_bar.php"); ?>
 
     <div class="ash_section_1">
@@ -33,7 +33,7 @@
 
             <div class="nic_right">
                 <h2 class = "nic_h2">Specifics</h2>
-                <form action = "dld_enquiry_process.php" method = "POST" class = "nic_form">
+                <form action = "enquiry_process.php" method = "POST" class = "nic_form">
                     <fieldset>
                         <legend class = "nic_label nic_legend">Contact details</legend>
                         <div class = "nic_div">
@@ -110,7 +110,7 @@
 
     <footer>
         <div class = "dld_footer_section_1">
-            <?php include_once("dld_footer.php"); ?>
+            <?php include_once("dld_footer_section_1.php"); ?>
 
             <div class = "dld_section_1_footer_right">
                 <h1 class = "dld_footer_heading">Acknowledgement</h1>
@@ -131,7 +131,7 @@
             </div>
         </div>
 
-        <?php include_once("dld_footer_2.php"); ?>
+        <?php include_once("dld_footer_section_2.php"); ?>
     </footer>
 </body>
 </html>

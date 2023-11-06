@@ -4,10 +4,10 @@
     <meta name = "author" content = "Edison Ho">
     <meta name = "description" content = "Enhancements">
     <title>FLORASCAN - Enhancements</title>
-    <?php include_once("dld_head.php"); ?>
+    <?php include_once("head.php"); ?>
 </head>
 <body class = "dld_body">
-    <?php include_once("dld_background.php"); ?>
+    <?php include_once("dld_background_dots.php"); ?>
     <?php include_once("dld_top_navigation_bar.php"); ?>
 
     <div class="ash_section_1">
@@ -308,7 +308,7 @@
 
     <footer>
         <div class = "dld_footer_section_1">
-            <?php include_once("dld_footer.php"); ?>
+            <?php include_once("dld_footer_section_1.php"); ?>
 
             <div class = "dld_section_1_footer_right">
                 <h1 class = "dld_footer_heading">Acknowledgement</h1>
@@ -327,7 +327,7 @@
             </div>
         </div>
 
-        <?php include_once("dld_footer_2.php"); ?>
+        <?php include_once("dld_footer_section_2.php"); ?>
     </footer>
 </body>
 </html>

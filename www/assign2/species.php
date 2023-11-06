@@ -5,11 +5,11 @@
         <meta name = "author" content = "Edison Ho">
         <meta name = "description" content = "Species">
         <title>FLORASCAN  -  Explore</title>
-        <?php include_once("dld_head.php"); ?>
+        <?php include_once("head.php"); ?>
     </head>
 
     <body class = "czy_body">
-        <?php include_once("dld_background.php"); ?>
+        <?php include_once("dld_background_dots.php"); ?>
         <?php include_once("dld_top_navigation_bar.php"); ?>
 
         <nav class = "czy_navigation_fool">
@@ -1300,7 +1300,7 @@
 
         <footer>
             <div class = "dld_footer_section_1">
-                <?php include_once("dld_footer.php"); ?>
+                <?php include_once("dld_footer_section_1.php"); ?>
 
                 <div class = "dld_section_1_footer_right">
                     <h1 class = "dld_footer_heading">Acknowledgement</h1>
@@ -1360,7 +1360,7 @@
                 </div>
             </div>
 
-            <?php include_once("dld_footer_2.php"); ?>
+            <?php include_once("dld_footer_section_2.php"); ?>
         </footer>
     </body>
 </html>
