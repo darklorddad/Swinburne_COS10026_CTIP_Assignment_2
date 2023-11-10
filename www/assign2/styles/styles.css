@@ -3566,6 +3566,142 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     border-radius: 2vw;
 }
 
+/* Tzy Lynn's create_user.php */
+
+.ttl_user_center{
+    width: 75vw;
+    background-color: #e4e3ea;
+	border-radius: 2vw;
+    margin: auto;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+.ttl_user_form{
+    width: 70%;
+    padding: 3vw;
+    margin: auto;
+}
+.ttl_user_details{
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1.5vw;
+    margin: auto;
+}
+
+.ttl_fieldset{
+    margin: auto;
+}
+
+.ttl_div{
+    font-size: 1vw;
+}
+
+.ttl_label{
+    font-size: 1vw;
+    font-family: "dld_samsungsharpsans_medium";
+    display: inline-block;
+    justify-content: center;
+}
+
+.ttl_fieldset{
+    border-radius: 2vw;
+    font-size: 1vw;
+    padding: 1vw;
+    margin-bottom: 1vw;
+}
+
+.ttl_field{
+    width: 90%;
+    padding: 0.5vw 1vw;
+    background-color: white;
+    font-size: 1vw;
+    margin: 0;
+    margin-top: 0.25vw;
+    margin-bottom: 1vw;
+    transition: 0.25s;
+    border-radius: 1vw;
+    border: 0.1vw solid #23322a;
+    display: inline-block;
+}
+
+.ttl_field::placeholder {
+    font-size: 0.75vw;
+    font-family: "dld_samsungsharpsans";
+}
+
+.ttl_field:hover {
+    background-color: rgb(35, 50, 42, 0.25);
+}
+
+.ttl_field:focus {
+    background-color: #fff;
+}
+
+/* Tzy Lynn's create_user_action.php*/
+
+.ttl_submit, .ttl_view_result{
+    border-radius: 1vw;
+    padding: 0.5vw 3vw;
+    font-size: 1.25vw;
+    font-family: "dld_samsungsharpsans_bold";
+    border: none;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    cursor: pointer;
+    color: #23322a;
+    background-color: #2ecc71;
+}
+
+.ttl_go_back{
+    border-radius: 1vw;
+    padding: 0.5vw 3vw;
+    margin-top: 2vw;
+    font-size: 1.25vw;
+    font-family: "dld_samsungsharpsans_bold";
+    border: none;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    cursor: pointer;
+    color: #23322a;
+    background-color: #e74c3c;
+}
+
+
+.ttl_submit:hover , .ttl_go_back:hover, .ttl_view_result{
+    background-color: #23322a;
+    color: #90a79a;
+}
+
+.ttl_submit-button, .ttl_go_back_button, .ttl_view_result_button{
+    text-align: center;
+    padding: 2vw;
+}
+
+.ttl_error_title, .ttl_user_account_created{
+    text-align: center;
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 2vw;
+    padding: 2vw;
+    margin: 0;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+.ttl_error_container{
+    width: 75vw;
+    background-color: #e4e3ea;
+	border-radius: 2vw;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.ttl_error_details{
+    text-align: center;
+    font-family: "dld_samsungsharpsans_medium";
+    font-size: 1.5vw;
+}
+
 
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
