@@ -75,5 +75,9 @@
 
     </div>
 
+    <?php 
+        $conn->close(); 
+    ?>
+
 </body>
 </html>

@@ -3639,9 +3639,9 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     background-color: #fff;
 }
 
-/* Tzy Lynn's create_user_action.php*/
+/* Tzy Lynn's create_user_action.php, edit_user_action.php*/
 
-.ttl_submit, .ttl_view_result{
+.ttl_submit, .ttl_view_result, .ttl_update{
     border-radius: 1vw;
     padding: 0.5vw 3vw;
     font-size: 1.25vw;
@@ -3667,17 +3667,17 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 
-.ttl_submit:hover , .ttl_go_back:hover, .ttl_view_result{
+.ttl_submit:hover , .ttl_go_back:hover, .ttl_view_result, .ttl_update:hover{
     background-color: #23322a;
     color: #90a79a;
 }
 
-.ttl_submit-button, .ttl_go_back_button, .ttl_view_result_button{
+.ttl_submit-button, .ttl_go_back_button, .ttl_view_result_button,.ttl_update-button{
     text-align: center;
     padding: 2vw;
 }
 
-.ttl_error_title, .ttl_user_account_created{
+.ttl_error_title, .ttl_user_account_created, .ttl_user_account_updated{
     text-align: center;
     font-family: "dld_samsungsharpsans_bold";
     font-size: 2vw;

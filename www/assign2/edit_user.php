@@ -59,9 +59,12 @@
                         <label class="ttl_label" for="user_password">Password</label>
                         <input id="user_password" name="user_password" class="ttl_field" type="password" value="<?php echo $user_password; ?>">
                     </div>
+
+                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+
                 </fieldset>
                 
-                <div class="ttl_submit-button">
+                <div class="ttl_update-button">
                     <input type="submit" class="ttl_update" name="update_account" value="Update Account">
                 </div>
 
