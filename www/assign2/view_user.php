@@ -34,12 +34,14 @@
 	</div>
 
     <div class = "ttl_main_body">
+        <h1 class="ttl_user_details_heading">User Details</h1>
         <div class="ttl_view_user_table_container">
+            
             <table class="ttl_view_user_table">
                 <tr>
-                    <th class="ttl_view_user_table_heading">Username</th>
-                    <th class="ttl_view_user_table_heading">Email</th>
-                    <th class="ttl_view_user_table_heading">Password</th>
+                    <th class="ttl_view_user_table_heading"><i class='bx bxs-user'></i>Username</th>
+                    <th class="ttl_view_user_table_heading"><i class='bx bxs-envelope'></i>Email</th>
+                    <th class="ttl_view_user_table_heading"><i class='bx bxs-lock-alt' ></i>Password</th>
                     <th class="ttl_view_user_table_heading">Action</th>
                 </tr>
 

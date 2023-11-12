@@ -3706,7 +3706,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .ttl_view_user_table_container{
     background-color: #e4e3ea;
-    margin: 4vw;
+    margin: 3vw;
     border-radius: 2vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 
@@ -3732,7 +3732,6 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     border-radius: 1vw;
     font-family: "dld_samsungsharpsans_medium";
     font-size: 1.5vw;
-    /* background-color: #5E716A; */
     background-color: #424F4A;
     color: white;
     text-align: center;
@@ -3765,16 +3764,22 @@ a.ttl_create_user_account_btn:hover{
     filter: saturate(200%);
 }
 
-a.ttl_edit{
+a.ttl_edit, a.ttl_delete{
     text-decoration: none;
     color: white;
     padding: 0.5vw;
 }
 
-a.ttl_delete{
-    text-decoration: none;
-    color: white;
-    padding: 0.5vw;
+a.ttl_edit:hover, a.ttl_delete:hover{
+    color: #90a79a;
+}
+
+.ttl_user_details_heading{
+    text-align: center;
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 2vw;
+    margin-top: 3vw;
+    margin-bottom: 0;
 }
 
 
