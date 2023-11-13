@@ -24,7 +24,7 @@
     
             <div class="ash_form_box login">
                 <h2>Log In</h2>
-                <form action="#">
+                <form action="login_process.php">
                     <div class="ash_input_box">
                         <input type="text" required>
                         <label>Username</label>
@@ -44,7 +44,6 @@
     
             <div class="ash_info_text login">
                 <h2>Welcome Back!</h2>
-                <!-- <p>Lorem ipsum dolor sit amet.</p> -->
             </div>
         </div>
     </div>

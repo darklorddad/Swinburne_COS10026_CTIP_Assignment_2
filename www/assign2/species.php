@@ -4,7 +4,7 @@
     <head>
         <meta name = "author" content = "Edison Ho">
         <meta name = "description" content = "Species">
-        <title>FLORASCAN  -  Explore</title>
+        <title>FLORASCAN - Explore</title>
         <?php include_once("head.php"); ?>
     </head>
 

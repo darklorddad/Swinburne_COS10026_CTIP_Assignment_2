@@ -95,10 +95,10 @@
     /* right: 9.8%; */
     top: -5.4%;
     /* border-radius: 1000vw; */
-    filter: blur(25vw);
+    filter: blur(2500vw);
     z-index: -2;
     /* transform: rotate(90deg); */
-    animation: dld_background_gradient_rotate 7s linear infinite;
+    /* animation: dld_background_gradient_rotate 7s linear infinite; */
 }
 
 @keyframes dld_background_gradient_rotate {
@@ -3804,3 +3804,42 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     justify-content: right;
     margin-top: 1.5vw;
 }
+
+/* Enquiry process */
+
+  .dld_main_2 {
+    backdrop-filter: blur(0.078vw);
+    background-color: rgba(228, 227, 234, 0.5);
+    width: 95.03%;
+    margin-left: auto;
+	margin-right: auto;
+    margin-top: 2.5vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    border-radius: 2vw;
+    display: flex;
+    /* padding-bottom: 4vw; */
+  }
+
+  .dld_main_2 p {
+    margin: 0 10vw 0 10vw;
+  }
+
+  .ttl_center_2 {
+    /* position: relative; */
+    /* top:5%; */
+    width: 86vw;
+    /* height: vw; */
+    background-color: #e4e3ea;
+	/* box-shadow: 8px 10px 15px 0 rgba(0,0,0,0.2); */
+	border-radius: 2vw;
+    margin:auto;
+    margin-top: 4vw;
+    margin-bottom: 8vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+  }
+
+  .ttl_center_2 p {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    text-align: center;
+  }

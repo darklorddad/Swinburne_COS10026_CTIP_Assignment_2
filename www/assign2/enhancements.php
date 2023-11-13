@@ -10,8 +10,8 @@
     <?php include_once("dld_background_dots.php"); ?>
     <?php include_once("dld_top_navigation_bar.php"); ?>
 
-    <div class="ash_section_1">
-		<div class="ash_page_header">
+    <div class = "ash_section_1">
+		<div class = "ash_page_header">
 			<p class = "ash_title_header">Enhancements</p>
 			<p>A page that lists out all the enhancements for FLORASCAN</p>
 		</div>
