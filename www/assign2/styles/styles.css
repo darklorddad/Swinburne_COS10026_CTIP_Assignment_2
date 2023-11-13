@@ -3566,6 +3566,224 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     border-radius: 2vw;
 }
 
+/* Tzy Lynn's create_user.php */
+
+.ttl_user_center{
+    width: 75vw;
+    background-color: #e4e3ea;
+	border-radius: 2vw;
+    margin: auto;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+.ttl_user_form{
+    width: 70%;
+    padding: 3vw;
+    margin: auto;
+}
+.ttl_user_details{
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1.5vw;
+    margin: auto;
+}
+
+.ttl_fieldset{
+    margin: auto;
+}
+
+.ttl_div{
+    font-size: 1vw;
+}
+
+.ttl_label{
+    font-size: 1vw;
+    font-family: "dld_samsungsharpsans_medium";
+    display: inline-block;
+    justify-content: center;
+}
+
+.ttl_fieldset{
+    border-radius: 2vw;
+    font-size: 1vw;
+    padding: 1vw;
+    margin-bottom: 1vw;
+}
+
+.ttl_field{
+    width: 90%;
+    padding: 0.5vw 1vw;
+    background-color: white;
+    font-size: 1vw;
+    margin: 0;
+    margin-top: 0.25vw;
+    margin-bottom: 1vw;
+    transition: 0.25s;
+    border-radius: 1vw;
+    border: 0.1vw solid #23322a;
+    display: inline-block;
+}
+
+.ttl_field::placeholder {
+    font-size: 0.75vw;
+    font-family: "dld_samsungsharpsans";
+}
+
+.ttl_field:hover {
+    background-color: rgb(35, 50, 42, 0.25);
+}
+
+.ttl_field:focus {
+    background-color: #fff;
+}
+
+/* Tzy Lynn's create_user_action.php, edit_user_action.php*/
+
+.ttl_submit, .ttl_view_result, .ttl_update{
+    border-radius: 1vw;
+    padding: 0.5vw 3vw;
+    font-size: 1.25vw;
+    font-family: "dld_samsungsharpsans_bold";
+    border: none;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    cursor: pointer;
+    color: #23322a;
+    background-color: #2ecc71;
+}
+
+.ttl_go_back{
+    border-radius: 1vw;
+    padding: 0.5vw 3vw;
+    margin-top: 2vw;
+    font-size: 1.25vw;
+    font-family: "dld_samsungsharpsans_bold";
+    border: none;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    cursor: pointer;
+    color: #23322a;
+    background-color: #e74c3c;
+}
+
+
+.ttl_submit:hover , .ttl_go_back:hover, .ttl_view_result, .ttl_update:hover{
+    background-color: #23322a;
+    color: #90a79a;
+}
+
+.ttl_submit-button, .ttl_go_back_button, .ttl_view_result_button,.ttl_update-button{
+    text-align: center;
+    padding: 2vw;
+}
+
+.ttl_error_title, .ttl_user_account_created, .ttl_user_account_updated{
+    text-align: center;
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 2vw;
+    padding: 2vw;
+    margin: 0;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+.ttl_error_container{
+    width: 75vw;
+    background-color: #e4e3ea;
+	border-radius: 2vw;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.ttl_error_details{
+    text-align: center;
+    font-family: "dld_samsungsharpsans_medium";
+    font-size: 1.5vw;
+}
+
+/*Tzy Lynn's view_user.php*/
+
+.ttl_view_user_table_container{
+    background-color: #e4e3ea;
+    margin: 3vw;
+    border-radius: 2vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+
+}
+
+.ttl_view_user_table{
+    width: 95%;
+    margin: auto;
+    padding: 2vw;
+    border-spacing: 0.8vw;
+    
+}
+.ttl_view_user_table_heading{
+    color: #23322a;
+    background-color: #90a79a;
+    font-family: "dld_samsungsharpsans_bold";
+    border-radius: 1vw;
+    padding: 1vw;
+    font-size: 1.8vw;
+}
+
+.ttl_view_user_table_row{
+    border-radius: 1vw;
+    font-family: "dld_samsungsharpsans_medium";
+    font-size: 1.5vw;
+    background-color: #424F4A;
+    color: white;
+    text-align: center;
+}
+
+.ttl_create_user_account_container{
+    padding-left: 5vw;
+    padding-bottom: 3vw;
+}
+
+.ttl_create_user_account_btn{
+    padding: 1vw;
+    border: none;
+    outline: none;
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1.25vw;
+
+    color: #23322a;
+    background: linear-gradient(200deg, #66B5F6 0%, #BFE299 100%);
+    box-shadow: .4vw .4vw 2.4vw .2vw hsla(236, 50%, 50%, .3);
+    border-radius: 1vw;
+}
+
+a.ttl_create_user_account_btn{
+    text-decoration: none;
+}
+
+a.ttl_create_user_account_btn:hover{
+    box-shadow: 0 0 4.4vw .2vw hsla(236, 50%, 50%, .4);
+    filter: saturate(200%);
+}
+
+a.ttl_edit, a.ttl_delete{
+    text-decoration: none;
+    color: white;
+    padding: 0.5vw;
+}
+
+a.ttl_edit:hover, a.ttl_delete:hover{
+    color: #90a79a;
+}
+
+.ttl_user_details_heading{
+    text-align: center;
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 2vw;
+    margin-top: 3vw;
+    margin-bottom: 0;
+}
+
+
+
 
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
