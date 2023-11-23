@@ -14,9 +14,5 @@
 			<p class = "ash_title_header">User Profile</p>
 		</div>
 	</div>
-
-    
 </body>
-
-
 </html>

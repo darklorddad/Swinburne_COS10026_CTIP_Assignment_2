@@ -21,6 +21,7 @@
 
 *::-webkit-scrollbar-track {
     background: #e4e3ea;
+    border-radius: 1vw;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -1688,7 +1689,7 @@ label.dld_gallery-label {
     border-spacing: 0.5vw;
 }
 
-.czy_profile_body th, td{
+.czy_profile_body th, .czy_profile_body td{
     box-shadow: -0.1vw 0.1vw 0.52vw rgba(0,0,0,0.3);
     padding: 0.5vw 1.5vw;
     color: #23322a; 
@@ -3481,7 +3482,6 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     row-gap: 3vw;
     margin-top: 4vw;
     margin-bottom: 4vw;
-
 }
 
 .ttl_plant_care_card{
@@ -3599,22 +3599,16 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     margin: auto;
 }
 
-.ttl_fieldset{
-    margin: auto;
-}
-
 .ttl_div{
-    font-size: 1vw;
-}
-
-.ttl_label{
-    font-size: 1vw;
     font-family: "dld_samsungsharpsans_medium";
-    display: inline-block;
-    justify-content: center;
+    font-size: 1.3vw;
+    margin-top: 1vw;
+    text-align: center;
 }
 
 .ttl_fieldset{
+    border: solid #23322a 0.3vw;
+    margin: auto;
     border-radius: 2vw;
     font-size: 1vw;
     padding: 1vw;
@@ -3663,15 +3657,15 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .ttl_go_back{
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1.25vw;
+    color: #23322a;
     border-radius: 1vw;
     padding: 0.5vw 3vw;
     margin-top: 2vw;
-    font-size: 1.25vw;
-    font-family: "dld_samsungsharpsans_bold";
     border: none;
     transition: background-color 0.25s ease, color 0.25s ease;
     cursor: pointer;
-    color: #23322a;
     background-color: #e74c3c;
 }
 
@@ -3687,9 +3681,9 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .ttl_error_title, .ttl_user_account_created, .ttl_user_account_updated{
-    text-align: center;
     font-family: "dld_samsungsharpsans_bold";
     font-size: 2vw;
+    text-align: center;
     padding: 2vw;
     margin: 0;
     text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
@@ -3706,59 +3700,92 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .ttl_error_details{
-    text-align: center;
     font-family: "dld_samsungsharpsans_medium";
     font-size: 1.5vw;
+    text-align: center;
 }
 
 /*Tzy Lynn's view_user.php*/
 
-.ttl_view_user_table_container{
+.ttl_view_user_table_container_details{
     background-color: #e4e3ea;
-    margin: 3vw;
-    border-radius: 2vw;
+    margin-top: 0;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 1vw;
+    border-radius: 1vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
 
+.ttl_view_user_table_container{
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    margin-left: 0.2vw;
+    margin-right: 0.6vw;
+    height: 30vw;
+    overflow: auto;
 }
 
 .ttl_view_user_table{
-    width: 95%;
+    width: 100%;
     margin: auto;
-    padding: 2vw;
-    border-spacing: 0.8vw;
-    
+    border-spacing: 0.6vw;
+    table-layout: fixed;
+    word-wrap:break-word;
 }
+
 .ttl_view_user_table_heading{
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1.5vw;
     color: #23322a;
     background-color: #90a79a;
-    font-family: "dld_samsungsharpsans_bold";
-    border-radius: 1vw;
-    padding: 1vw;
-    font-size: 1.8vw;
+    border-radius: 0.6vw;
+    padding: 0.9vw;
+    position: sticky;
+    top: 0vw;
+}
+
+.czy_username_heading, .czy_password_heading{
+    width: 14.3vw;
+}
+
+.czy_action_heading{
+    width: 10vw;
+}
+
+.czy_username, .czy_password{
+    width: 15vw;
+}
+
+.czy_action{
+    width: 10.5vw;
+}
+
+.bx{
+    transform: translateY(0.1vw) translateX(-0.5vw);
 }
 
 .ttl_view_user_table_row{
-    border-radius: 1vw;
     font-family: "dld_samsungsharpsans_medium";
-    font-size: 1.5vw;
-    background-color: #424F4A;
+    font-size: 1.4vw;
     color: white;
+    border-radius: 0.9vw;
+    padding: 0.6vw;
+    background-color: #424F4A;
     text-align: center;
 }
 
 .ttl_create_user_account_container{
-    padding-left: 5vw;
+    font-family: "dld_samsungsharpsans_bold";
+    text-align: center;
+    padding-top: 2vw;
     padding-bottom: 3vw;
 }
 
 .ttl_create_user_account_btn{
-    padding: 1vw;
-    border: none;
-    outline: none;
-    font-family: "dld_samsungsharpsans_bold";
     font-size: 1.25vw;
-
     color: #23322a;
+    padding: 1vw 2vw 1vw 2vw;
     background: linear-gradient(200deg, #66B5F6 0%, #BFE299 100%);
     box-shadow: .4vw .4vw 2.4vw .2vw hsla(236, 50%, 50%, .3);
     border-radius: 1vw;
@@ -3769,7 +3796,7 @@ a.ttl_create_user_account_btn{
 }
 
 a.ttl_create_user_account_btn:hover{
-    box-shadow: 0 0 4.4vw .2vw hsla(236, 50%, 50%, .4);
+    box-shadow: 0 0 2vw .2vw hsla(236, 50%, 50%, .4);
     filter: saturate(200%);
 }
 
@@ -3783,12 +3810,17 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     color: #90a79a;
 }
 
+.czy_sorting{
+    text-decoration: none;
+    color: #23322a;
+}
+
 .ttl_user_details_heading{
-    text-align: center;
     font-family: "dld_samsungsharpsans_bold";
     font-size: 2vw;
-    margin-top: 3vw;
-    margin-bottom: 0;
+    text-align: center;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
 }
 
 
