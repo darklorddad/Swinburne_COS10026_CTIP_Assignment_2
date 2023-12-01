@@ -2441,7 +2441,33 @@ a:focus {
 
 /* Ashley's user_profile.php */
 
+.ash_container_1{
+    width: 100%;
+    height: 100vh;
+    background-color: ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.ash_profile_box{
+    background: #21F5F0;
+    text-align: center;
+    padding: 40px 90px;
+    color: #fff;
+    position: relative;
+    border-radius: 20px;
+}
+
+.ash_profile_pic{
+    width: 150px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 6px;
+    margin-top: 40px;
+}
 
 
 
