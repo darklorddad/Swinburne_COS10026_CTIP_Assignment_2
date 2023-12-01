@@ -8,7 +8,7 @@
 </head>
 <body class = "ttl_body">
     <?php 
-
+        include_once("dld_top_navigation_bar.php");
         include_once("dld_background_dots.php");
         include_once("user_table.php");
 
@@ -82,6 +82,17 @@
             $conn->close(); 
         ?>
     </div>
+
+    <footer>
+        <div class = "dld_footer_section_1">
+            <?php include_once("dld_footer_section_1.php");?>
+            <div class = "dld_section_1_footer_right">
+                <h1 class = "dld_footer_heading">Acknowledgement</h1>
+                <div class = "dld_footer_section_1_center_row">The Crew</div>
+            </div>
+        </div>
+        <?php include_once("dld_footer_section_2.php");?>
+    </footer>    
 
 </body>
 </html>
