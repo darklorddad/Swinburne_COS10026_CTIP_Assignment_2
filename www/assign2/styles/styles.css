@@ -3712,7 +3712,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     margin-top: 0;
     margin-left: 3vw;
     margin-right: 3vw;
-    margin-bottom: 1vw;
+    margin-bottom: 3vw;
     border-radius: 1vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
@@ -3742,27 +3742,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     border-radius: 0.6vw;
     padding: 0.9vw;
     position: sticky;
-    top: 0vw;
-}
-
-.czy_username_heading, .czy_password_heading{
-    width: 14.3vw;
-}
-
-.czy_action_heading{
-    width: 10vw;
-}
-
-.czy_username, .czy_password{
-    width: 15vw;
-}
-
-.czy_action{
-    width: 10.5vw;
-}
-
-.bx{
-    transform: translateY(0.1vw) translateX(-0.5vw);
+    top: 0.6vw;
 }
 
 .ttl_view_user_table_row{
@@ -3775,10 +3755,68 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     text-align: center;
 }
 
+.czy_enquiry_table_heading{
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1.1vw;
+    color: #23322a;
+    background-color: #90a79a;
+    border-radius: 0.6vw;
+    padding: 0.5vw;
+    position: sticky;
+    top: 0.6vw;
+}
+
+.czy_enquiry_table_row{
+    font-family: "dld_samsungsharpsans_medium";
+    font-size: 0.9vw;
+    color: white;
+    border-radius: 0.9vw;
+    padding: 0.6vw;
+    background-color: #424F4A;
+    text-align: center;
+}
+
+/* Enquiry Table Headings */
+.czy_firstname_heading, .czy_lastname_heading{
+    width: 9.5vw;
+}
+.czy_email_heading{
+    width: 15vw;
+}
+.czy_plant_heading{
+    width: 10vw;
+}
+.czy_delete_heading{
+    width: 4.5vw;
+}
+
+/* Enquiry rows */
+.czy_enquiry{
+    text-align: justify;
+    padding: 0.9vw;
+}
+
+/* User Table Headings */
+.czy_username_heading, .czy_password_heading{
+    width: 14.3vw;
+}
+.czy_action_heading{
+    width: 10vw;
+}
+.czy_username, .czy_password{
+    width: 15vw;
+}
+.czy_action{
+    width: 10.5vw;
+}
+
+.bx{
+    transform: translateY(0.1vw) translateX(-0.5vw);
+}
+
 .ttl_create_user_account_container{
     font-family: "dld_samsungsharpsans_bold";
     text-align: center;
-    padding-top: 2vw;
     padding-bottom: 3vw;
 }
 
