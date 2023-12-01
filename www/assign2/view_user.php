@@ -11,6 +11,7 @@
         <?php
             include_once("dld_top_navigation_bar.php");
             include_once("dld_background_dots.php");
+            include_once("user_table.php");
 
             $hostname = "127.0.0.1";
             $user = "root";
@@ -48,9 +49,9 @@
                             <th class = "ttl_view_user_table_heading czy_action_heading">Action</th>
                         </tr>
                         <?php
-                            $admin_username = "Admin";
+                            $admin_username = "admin";
 
-                            $result = mysqli_query($conn, "SELECT username, email, user_password, id FROM UserDetails WHERE username = '$admin_username'");
+                            $result = mysqli_query($conn, "SELECT username, email, user_password, id FROM userdetails WHERE username = '$admin_username'");
                             while ($res = mysqli_fetch_assoc($result)) {
                                 echo"
                         <tr>
@@ -61,7 +62,7 @@
                         </tr>
                                 ";
                             }
-                            $sql = "SELECT * FROM UserDetails";
+                            $sql = "SELECT * FROM userdetails";
 
                             if (isset($_GET['sort'])){
                                 if($_GET['sort'] == 'username'){
