@@ -3733,9 +3733,55 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 /*Tzy Lynn's view_user.php*/
 
+/* Search bar on view_user.php */
+.ttl_search_form{
+    margin: 0 auto;
+    width: 55%;
+    padding: 1vw;
+    background-color: #23322a;
+    border-radius: 1vw;
+    text-align: center;
+}
+
+.ttl_search_bar{
+    width: 80%;
+    font-size: 1.5vw;
+    margin-right: 0.8vw;
+    padding: 0.5vw;
+    padding-left: 1.5vw;
+    border: none;
+    border-radius: 1vw;
+    background-color: #e4e3ea;
+    border: 0.15vw solid #23322a;
+    font-family: "dld_samsungsharpsans";
+    transition: box-shadow 0.25s ease;
+}
+
+.ttl_search_bar:hover{
+    box-shadow: #90a79a 0 0 1vw 0.1vw;
+}
+
+.ttl_search_btn{
+    width: 10%;
+    font-size: 1.5vw;
+    margin-right: 0.8vw;
+    padding: 0.5vw;
+    padding-left: 1.5vw;
+    border: none;
+    border-radius: 1vw;
+    background: linear-gradient(200deg, #66B5F6 0%, #BFE299 100%);
+    color: #23322a;
+}
+
+.ttl_search_btn:hover{
+    box-shadow: #90a79a 0 0 1vw 0.1vw;
+    filter: saturate(200%);
+}
+
+/* User table */
 .ttl_view_user_table_container_details{
     background-color: #e4e3ea;
-    margin-top: 0;
+    margin-top: 2vw;
     margin-left: 3vw;
     margin-right: 3vw;
     margin-bottom: 3vw;

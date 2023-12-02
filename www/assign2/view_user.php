@@ -39,6 +39,12 @@
 
         <div class = "ttl_main_body">
             <h1 class = "ttl_user_details_heading">User Details</h1>
+
+            <form action="view_user.php" method="GET" class="ttl_search_form">
+                <input type="text" id="search" name="search" placeholder="Search..." class="ttl_search_bar">
+                <button type="submit" class="ttl_search_btn"><i class="bx bx-search"></i></button>
+            </form>
+
             <div class = "ttl_view_user_table_container_details">
                 <div class = "ttl_view_user_table_container">
                     <table class = "ttl_view_user_table">
@@ -50,21 +56,27 @@
                             <th class = "ttl_view_user_table_heading czy_action_heading">Action</th>
                         </tr>
                         <?php
+
                             $admin_username = "admin";
 
-                            $result = mysqli_query($conn, "SELECT user_id, username, email, user_password, id FROM userdetails WHERE username = '$admin_username'");
-                            while ($res = mysqli_fetch_assoc($result)) {
-                                echo"
-                        <tr>
-                            <td class = 'ttl_view_user_table_row czy_user_id'>".$res['user_id']."</td>
-                            <td class = 'ttl_view_user_table_row czy_username'>".$res['username']."</td>
-                            <td class = 'ttl_view_user_table_row'>".$res['email']."</td>
-                            <td class = 'ttl_view_user_table_row czy_password'>".$res['user_password']."</td>
-                            <td class = 'ttl_view_user_table_row czy_action'><a href = \"edit_user.php?id=$res[id]\" class = 'ttl_edit'>Edit</a></td>
-                        </tr>
-                                ";
-                            }
                             $sql = "SELECT * FROM userdetails";
+
+                            // Handle search functionality
+                            if (isset($_GET['search'])) {
+                                $searchTerm = mysqli_real_escape_string($conn, $_GET['search']);
+                                $conditions = [];
+
+                                // Add conditions for each field you want to search
+                                $fields = ['user_id', 'username', 'email', 'user_password']; 
+
+                                foreach ($fields as $field) {
+                                    $conditions[] = "$field LIKE '%$searchTerm%'";
+                                }
+
+                                if (!empty($conditions)) {
+                                    $sql .= " WHERE " . implode(" OR ", $conditions);
+                                }
+                            }
 
                             if (isset($_GET['sort'])){
                                 if($_GET['sort'] == 'username'){
@@ -80,20 +92,30 @@
                             else{
                                 $sql .= " ORDER BY user_id ASC";
                             }
+
                             $result = mysqli_query($conn, $sql);
+
                             while ($res = mysqli_fetch_assoc($result)) {
-                                if (isset($res['username']) && $res['username'] != $admin_username) {
-                                    echo "
-                        <tr>
-                            <td class = 'ttl_view_user_table_row czy_user_id'>".$res['user_id']."</td>
-                            <td class = 'ttl_view_user_table_row czy_username'>".$res['username']."</td>
-                            <td class = 'ttl_view_user_table_row'>".$res['email']."</td>
-                            <td class = 'ttl_view_user_table_row czy_password'>".$res['user_password']."</td>
-                            <td class = 'ttl_view_user_table_row czy_action'>
-                                <a href = \"edit_user.php?id=$res[id]\" class = 'ttl_edit '>Edit</a> | <a href = \"delete_user.php?id=$res[id]\" class = 'ttl_delete'>Delete</a>
-                            </td>
-                        </tr>\n";
+                                echo "
+                                <tr>
+                                    <td class='ttl_view_user_table_row czy_user_id'>".$res['user_id']."</td>
+                                    <td class='ttl_view_user_table_row czy_username'>".$res['username']."</td>
+                                    <td class='ttl_view_user_table_row'>".$res['email']."</td>
+                                    <td class='ttl_view_user_table_row czy_password'>".$res['user_password']."</td>
+                                    <td class='ttl_view_user_table_row czy_action'>";
+                            
+                                // Add a condition to check if the user is the admin
+                                if ($res['username'] == $admin_username) {
+                                    // Display only "Edit" action for the admin user
+                                    echo "<a href=\"edit_user.php?id=$res[id]\" class='ttl_edit'>Edit</a>";
+                                } else {
+                                    // Display both "Edit" and "Delete" actions for other users
+                                    echo "<a href=\"edit_user.php?id=$res[id]\" class='ttl_edit'>Edit</a> | <a href=\"delete_user.php?id=$res[id]\" class='ttl_delete'>Delete</a>";
                                 }
+                            
+                                echo "
+                                    </td>
+                                </tr>\n";
                             }
                             
                         ?>
