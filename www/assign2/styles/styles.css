@@ -3826,13 +3826,13 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 .czy_username_heading, .czy_password_heading{
     width: 14.3vw;
 }
-.czy_action_heading{
+.czy_action_heading, .czy_user_id_heading{
     width: 10vw;
 }
 .czy_username, .czy_password{
     width: 15vw;
 }
-.czy_action{
+.czy_action, .czy_user_id{
     width: 10.5vw;
 }
 

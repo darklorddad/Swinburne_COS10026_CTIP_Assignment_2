@@ -67,7 +67,8 @@
                     // If all the fields are filled (not empty) 
 
                     // Insert data into database
-                    $result = mysqli_query($conn, "INSERT INTO UserDetails (`username`, `email`, `user_password`) VALUES ('$username', '$email', '$user_password')");
+                    $user_id = generateUniqueUserId($conn); // Generate a unique user ID
+                    $result = mysqli_query($conn, "INSERT INTO userdetails (`user_id`,`username`, `email`, `user_password`) VALUES ('$user_id', '$username', '$email', '$user_password')");
                     
                     if ($result) {
                         echo "<p class='ttl_user_account_created'>User account created successfully!</p>";

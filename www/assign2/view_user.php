@@ -43,6 +43,7 @@
                 <div class = "ttl_view_user_table_container">
                     <table class = "ttl_view_user_table">
                         <tr>
+                            <th class = "ttl_view_user_table_heading czy_user_id_heading"><a href = "view_user.php?sort=user_id" class = "czy_sorting"><i class='bx bx-id-card'></i>User ID</a></th>
                             <th class = "ttl_view_user_table_heading czy_username_heading"><a href = "view_user.php?sort=username" class = "czy_sorting"><i class = 'bx bxs-user'></i>Username</a></th>
                             <th class = "ttl_view_user_table_heading"><a href = "view_user.php?sort=email" class = "czy_sorting"><i class = 'bx bxs-envelope'></i>Email</a></th>
                             <th class = "ttl_view_user_table_heading czy_password_heading"><a href = "view_user.php?sort=user_password" class = "czy_sorting"><i class = 'bx bxs-lock-alt' ></i>Password</a></th>
@@ -51,10 +52,11 @@
                         <?php
                             $admin_username = "admin";
 
-                            $result = mysqli_query($conn, "SELECT username, email, user_password, id FROM userdetails WHERE username = '$admin_username'");
+                            $result = mysqli_query($conn, "SELECT user_id, username, email, user_password, id FROM userdetails WHERE username = '$admin_username'");
                             while ($res = mysqli_fetch_assoc($result)) {
                                 echo"
                         <tr>
+                            <td class = 'ttl_view_user_table_row czy_user_id'>".$res['user_id']."</td>
                             <td class = 'ttl_view_user_table_row czy_username'>".$res['username']."</td>
                             <td class = 'ttl_view_user_table_row'>".$res['email']."</td>
                             <td class = 'ttl_view_user_table_row czy_password'>".$res['user_password']."</td>
@@ -76,13 +78,14 @@
                                 }
                             }
                             else{
-                                $sql .= " ORDER BY id ASC";
+                                $sql .= " ORDER BY user_id ASC";
                             }
                             $result = mysqli_query($conn, $sql);
                             while ($res = mysqli_fetch_assoc($result)) {
                                 if (isset($res['username']) && $res['username'] != $admin_username) {
                                     echo "
                         <tr>
+                            <td class = 'ttl_view_user_table_row czy_user_id'>".$res['user_id']."</td>
                             <td class = 'ttl_view_user_table_row czy_username'>".$res['username']."</td>
                             <td class = 'ttl_view_user_table_row'>".$res['email']."</td>
                             <td class = 'ttl_view_user_table_row czy_password'>".$res['user_password']."</td>
