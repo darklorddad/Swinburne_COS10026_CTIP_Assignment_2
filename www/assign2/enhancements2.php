@@ -16,14 +16,14 @@
 			<p>A page that lists out all the enhancements for FLORASCAN</p>
 		</div>
 	</div>
-
+    
     <nav class = "czy_navigation_fool_profile">
         <div class="ash_page_header">
             <p class = "ash_title_header">Enhancement</p>
         </div>
         <ul>
-            <li><a href = "enhancements.php" class = "czy_active">Enhancement 1</a></li>
-            <li><a href = "enhancements2.php">Enhancement 2</a></li>
+            <li><a href = "enhancements.php">Enhancement 1</a></li>
+            <li><a href = "enhancements2.php" class = "czy_active">Enhancement 2</a></li>
         </ul>
     </nav>
 

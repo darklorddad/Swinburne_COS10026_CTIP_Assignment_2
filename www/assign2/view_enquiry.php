@@ -37,7 +37,7 @@
         
 
         <div class = "ttl_main_body">
-            <h1 class = "ttl_user_details_heading">User Details</h1>
+            <h1 class = "ttl_user_details_heading">User Enquiry</h1>
             <div class = "ttl_view_user_table_container_details">
                 <div class = "ttl_view_user_table_container">
                     <table class = "ttl_view_user_table">

@@ -35,14 +35,27 @@
             </ul>
         </nav>
 
-        
-
         <div class = "ttl_main_body">
             <h1 class = "ttl_user_details_heading">User Details</h1>
 
-            <form action="view_user.php" method="GET" class="ttl_search_form">
-                <input type="text" id="search" name="search" placeholder="Search..." class="ttl_search_bar">
-                <button type="submit" class="ttl_search_btn"><i class="bx bx-search"></i></button>
+            <form action = "view_user.php" method = "GET" class = "ttl_search_form">
+                <input type = "text" id = "search" name = "search" placeholder = "Search..." class = "ttl_search_bar" list = "autocomplete" autocomplete = "off">
+                <button type = "submit" class = "ttl_search_btn"><i class = "bx bx-search"></i></button>
+                <datalist id = "autocomplete">
+                <?php
+                    $sql = "SELECT * FROM userdetails";
+                    $result = mysqli_query($conn, $sql);
+
+                    while ($res = mysqli_fetch_assoc($result)) {
+                        echo "
+                    <option value = " . $res['user_id'] . ">
+                    <option value = " . $res['username'] . ">
+                    <option value = " . $res['email'] . ">  
+                    <option value = " . $res['user_password'] . ">
+                        \n";
+                    }
+                ?>
+                </datalist>
             </form>
 
             <div class = "ttl_view_user_table_container_details">

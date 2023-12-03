@@ -3737,10 +3737,12 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 .ttl_search_form{
     margin: 0 auto;
     width: 55%;
-    padding: 1vw;
+    padding: 0.7vw 0 0.7vw 0;
+    padding-right: 0vw;
     background-color: #23322a;
-    border-radius: 1vw;
+    border-radius: 1.8vw;
     text-align: center;
+    font-family: "dld_samsungsharpsans";
 }
 
 .ttl_search_bar{
@@ -3749,11 +3751,9 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     margin-right: 0.8vw;
     padding: 0.5vw;
     padding-left: 1.5vw;
-    border: none;
     border-radius: 1vw;
     background-color: #e4e3ea;
-    border: 0.15vw solid #23322a;
-    font-family: "dld_samsungsharpsans";
+    border: none;
     transition: box-shadow 0.25s ease;
 }
 
@@ -3764,7 +3764,6 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 .ttl_search_btn{
     width: 10%;
     font-size: 1.5vw;
-    margin-right: 0.8vw;
     padding: 0.5vw;
     padding-left: 1.5vw;
     border: none;
