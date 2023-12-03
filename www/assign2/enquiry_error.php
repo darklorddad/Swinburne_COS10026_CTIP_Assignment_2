@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 
 <html lang = "en">
@@ -22,10 +26,14 @@
         <div class = "dld_main_2">
             <div class = "ttl_center_2">
                 <?php
-                    session_start();
                     if(isset($_SESSION['error'])) {
                         echo "<p>" . $_SESSION['error'] . "</p>";
                         unset($_SESSION['error']);
+                    }
+
+                    if(isset($_SESSION['submitted'])) {
+                        echo "<p>" . $_SESSION['submitted'] . "</p>";
+                        unset($_SESSION['submitted']);
                     }
                 ?>
             </div>
