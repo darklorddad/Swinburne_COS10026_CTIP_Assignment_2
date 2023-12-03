@@ -95,27 +95,33 @@
 
                             $result = mysqli_query($conn, $sql);
 
-                            while ($res = mysqli_fetch_assoc($result)) {
-                                echo "
-                                <tr>
-                                    <td class='ttl_view_user_table_row czy_user_id'>".$res['user_id']."</td>
-                                    <td class='ttl_view_user_table_row czy_username'>".$res['username']."</td>
-                                    <td class='ttl_view_user_table_row'>".$res['email']."</td>
-                                    <td class='ttl_view_user_table_row czy_password'>".$res['user_password']."</td>
-                                    <td class='ttl_view_user_table_row czy_action'>";
-                            
-                                // Add a condition to check if the user is the admin
-                                if ($res['username'] == $admin_username) {
-                                    // Display only "Edit" action for the admin user
-                                    echo "<a href=\"edit_user.php?id=$res[id]\" class='ttl_edit'>Edit</a>";
-                                } else {
-                                    // Display both "Edit" and "Delete" actions for other users
-                                    echo "<a href=\"edit_user.php?id=$res[id]\" class='ttl_edit'>Edit</a> | <a href=\"delete_user.php?id=$res[id]\" class='ttl_delete'>Delete</a>";
+                            // Check if there are any records
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($res = mysqli_fetch_assoc($result)) {
+                                    echo "
+                                    <tr>
+                                        <td class='ttl_view_user_table_row czy_user_id'>" . $res['user_id'] . "</td>
+                                        <td class='ttl_view_user_table_row czy_username'>" . $res['username'] . "</td>
+                                        <td class='ttl_view_user_table_row'>" . $res['email'] . "</td>
+                                        <td class='ttl_view_user_table_row czy_password'>" . $res['user_password'] . "</td>
+                                        <td class='ttl_view_user_table_row czy_action'>";
+
+                                    // Add a condition to check if the user is the admin
+                                    if ($res['username'] == $admin_username) {
+                                        // Display only "Edit" action for the admin user
+                                        echo "<a href=\"edit_user.php?id=$res[id]\" class='ttl_edit'>Edit</a>";
+                                    } else {
+                                        // Display both "Edit" and "Delete" actions for other users
+                                        echo "<a href=\"edit_user.php?id=$res[id]\" class='ttl_edit'>Edit</a> | <a href=\"delete_user.php?id=$res[id]\" class='ttl_delete'>Delete</a>";
+                                    }
+
+                                    echo "
+                                        </td>
+                                    </tr>\n";
                                 }
-                            
-                                echo "
-                                    </td>
-                                </tr>\n";
+                            } else {
+                                // No records found
+                                echo "<div class='ttl_no_records_container'><p class='ttl_no_records'>No records found</p></div>";
                             }
                             
                         ?>

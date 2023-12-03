@@ -3778,6 +3778,17 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     filter: saturate(200%);
 }
 
+.ttl_no_records_container p{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5vw;
+    font-family: "dld_samsungsharpsans_bold";
+    
+} 
+
 /* User table */
 .ttl_view_user_table_container_details{
     background-color: #e4e3ea;
