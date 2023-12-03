@@ -100,14 +100,92 @@
                     }
 
                     $last_name = $_POST["last-name"];
+                    if (empty($last_name)) {
+                        $_SESSION['error'] = "Last name is required";
+                        header('Location: enquiry_error.php');
+                        exit();
+                    } elseif (strlen($last_name) > 25) {
+                        $_SESSION['error'] = "Last name should not exceed 25 characters";
+                        header('Location: enquiry_error.php');
+                        exit();
+                    } elseif (!preg_match("/^[A-Za-z]+$/", $last_name)) {
+                        $_SESSION['error'] = "Last name should only contain letters";
+                        header('Location: enquiry_error.php');
+                        exit();
+                    }
                     $email = $_POST["email"];
+                    if (empty($email)) {
+                        $_SESSION['error'] = "Email is required";
+                        header('Location: enquiry_error.php');
+                        exit();
+                    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                        $_SESSION['error'] = "Invalid email format";
+                        header('Location: enquiry_error.php');
+                        exit();
+                    }
                     $street = $_POST["street"];
+                    if (empty($street)) {
+                        $_SESSION['error'] = "Street address is required";
+                        header('Location: enquiry_error.php');
+                        exit();
+                    } elseif (strlen($street) > 255) {
+                        $_SESSION['error'] = "Street address should not exceed 255 characters";
+                        header('Location: enquiry_error.php');
+                        exit();
+                    }
                     $city_town = $_POST["city-town"];
+                    if (empty($city_town)) {
+                        $_SESSION['error'] = "City or Town is required";
+                        header('Location: enquiry_error.php');
+                        exit();
+                    } elseif (strlen($city_town) > 50) {
+                        $_SESSION['error'] = "City or Town should not exceed 50 characters";
+                        header('Location: enquiry_error.php');
+                        exit();
+                    }
+
                     $state = $_POST["state"];
-                    $postcode = $_POST["postcode"];
-                    $plant = $_POST["plant"];
-                    $enquiry = $_POST["comment"];
+                    $valid_states = array(
+                        "Selangor", "Perlis", "Kelantan", "Sabah", "Perak", 
+                        "Penang", "Negeri Sembilan", "Malacca", "Johore", 
+                        "Terengganu", "Pahang", "Kedah"
+                    );
                     
+                    if (empty($state)) {
+                        $_SESSION['error'] = "Please select your state";
+                        header('Location: enquiry_error.php');
+                        exit();
+                    } elseif (!in_array($state, $valid_states)) {
+                        $_SESSION['error'] = "Invalid state selected";
+                        header('Location: enquiry_error.php');
+                        exit();
+                    }
+
+                    $postcode = $_POST["postcode"];
+                    if (empty($postcode)) {
+                        $_SESSION['error'] = "Postcode is required";
+                        header('Location: enquiry_error.php');
+                        exit();
+                    } elseif (!preg_match("/^\d{5}$/", $postcode)) {
+                        $_SESSION['error'] = "Invalid postcode format. Please enter a 5-digit postcode";
+                        header('Location: enquiry_error.php');
+                        exit();
+                    }
+                    $plant = $_POST["plant"];
+                    $selectedPlant = $_POST['plant'];
+
+                    if ($selectedPlant === "" || $selectedPlant === "Select a plant") {
+                        $_SESSION['error'] = "Please select a valid plant";
+                        header('Location: enquiry_error.php');
+                        exit();
+                    }
+                    $enquiry = $_POST["comment"];
+                    if (empty($enquiry)) {
+                        $_SESSION['error'] = "Please enter your enquiry";
+                        header('Location: enquiry_error.php');
+                        exit();
+                    }
+                             
                     $insert_enquiry = "INSERT INTO enquiry (first_name, last_name, email, street, city, state, postcode, plant, enquiry) 
                                     VALUES ('$first_name', '$last_name', '$email', '$street', '$city_town', '$state', '$postcode', '$plant', '$enquiry')";
 
