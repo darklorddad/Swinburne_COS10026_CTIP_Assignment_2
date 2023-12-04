@@ -4226,3 +4226,10 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     margin-bottom: 3vw;
     text-align: center;
   }
+
+  .login_error {
+    color: #ca0201;
+    font-size: 1vw;
+    text-align: center;
+    font-family: "dld_samsungsharpsans_medium";
+  }

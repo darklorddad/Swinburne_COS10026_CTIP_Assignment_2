@@ -1,44 +1,39 @@
 <?php
-    // Database connection parameters
-    $servername = "127.0.0.1";
-    $username = "root";
+    $hostname = "127.0.0.1";
+    $user = "root";
     $password = "";
-    $dbname = "florascan_database";
+    $database = "florascan_database";
 
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = mysqli_connect($hostname, $user, $password, $database);
 
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
     }
 
-    // Create table
-    $sql = "CREATE TABLE accounts (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    firstname VARCHAR(30) NOT NULL,
-    lastname VARCHAR(30) NOT NULL,
-    email VARCHAR(50),
-    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-    )";
+    $login_username = mysqli_real_escape_string($conn, $_POST["login_username"]);
+    $login_password = mysqli_real_escape_string($conn, $_POST["login_password"]);
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Table accounts created successfully";
+    $query = "SELECT * FROM userdetails WHERE username = '" . $login_username . 
+          "' AND user_password = '" . $login_password . "'";
+
+    $result = mysqli_query($conn, $query);
+
+    if ($login_username == "Admin" && $login_password == "Florascan") {
+        // Admin credentials found, start a session and redirect to a success page
+        session_start();
+        $_SESSION["username"] = $login_username;
+        header("Location: view_user.php");
+    } elseif (mysqli_num_rows($result) > 0) {
+        // User found, start a session and redirect to a success page
+        session_start();
+        $_SESSION["username"] = $login_username;
+        header("Location: success_page.php");
     } else {
-        echo "Error creating table: " . $conn->error;
+        // User not found, start a session, store an error message, and redirect back to the login page
+        session_start();
+        $_SESSION["error"] = "Invalid username or password.";
+        header("Location: login.php");
     }
 
-    // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO enquiry (first_name, last_name, email) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $first_name, $last_name, $email);
-
-    // Set parameters and execute
-    $first_name = "John";
-    $last_name = "Doe";
-    $email = "john@example.com";
-
-    echo "New records created successfully";
-
-    $stmt->close();
-    $conn->close();
+    mysqli_close($conn);
 ?>
