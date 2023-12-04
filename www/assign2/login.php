@@ -27,7 +27,7 @@
                 <form action="login_process.php">
                     <div class="ash_input_box">
                         <input type="text" required>
-                        <label>Username</label>
+                        <label>Email</label>
                         <i class='bx bxs-user'></i>
                     </div>
                     <div class="ash_input_box">

@@ -25,6 +25,7 @@
             <h4>@admin</h4>
             <p>Admin account of FLORASCAN</p>
             <button class="ash_moreinfo_button"><a href="edit_profile.php" class="ash_editprofile_link">Edit Profile</a></button>
+            <button class="ash_moreinfo_button"><a href="index.php" class="ash_editprofile_link">Log Out</a></button>
         </div>
     </div>
 
