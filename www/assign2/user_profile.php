@@ -20,7 +20,7 @@
 
     <div class="ash_container_1">
         <div class="ash_profile_box">
-            <img src="styles/images/ash/ash_plant_icon_1.jpg" alt="ash plant icon" class="ash_profile_pic">
+            <!-- <img src="styles/images/ash/ash_plant_icon_1.jpg" alt="ash plant icon" class="ash_profile_pic"> -->
             <h3>Admin</h3>
             <h4>@admin</h4>
             <p>Admin account of FLORASCAN</p>
