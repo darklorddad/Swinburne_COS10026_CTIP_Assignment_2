@@ -19,7 +19,23 @@
 	</div>
 
     <div class="ash_edituser_profile">
-        
+    <div class="flex">
+         <div class="inputBox">
+            <span>username :</span>
+            <input type="text" name="update_name" value="<?php echo $fetch['name']; ?>" class="box">
+            <span>your email :</span>
+            <input type="email" name="update_email" value="<?php echo $fetch['email']; ?>" class="box">
+         </div>
+         <div class="inputBox">
+            <input type="hidden" name="old_pass" value="<?php echo $fetch['password']; ?>">
+            <span>old password :</span>
+            <input type="password" name="update_pass" placeholder="enter previous password" class="box">
+            <span>new password :</span>
+            <input type="password" name="new_pass" placeholder="enter new password" class="box">
+            <span>confirm password :</span>
+            <input type="password" name="confirm_pass" placeholder="confirm new password" class="box">
+         </div>
+      </div>
     </div>
 
     <footer>
