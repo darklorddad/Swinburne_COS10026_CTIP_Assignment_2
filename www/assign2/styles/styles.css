@@ -1938,6 +1938,15 @@ label.dld_gallery-label {
     background: transparent;
     transition: .25s;
     cursor: pointer;
+    font-family: "dld_samsungsharpsans_bold";
+}
+
+.ash_moreinfo_button a {
+    color: #23322a;
+}
+
+.ash_moreinfo_button:hover a {
+    color: #90a79a;
 }
 
 .ash_box a {
@@ -2442,23 +2451,34 @@ a:focus {
 /* Ashley's user_profile.php */
 
 .ash_container_1{
-    width: 100%;
-    height: 100vh;
-    background-color: ;
-    background-size: cover;
-    background-position: center;
+    backdrop-filter: blur(0.078vw);
+    background-color: rgba(228, 227, 234, 0.5);
+    width: 95.03%;
+    margin-left: auto;
+	margin-right: auto;
+    margin-top: 2.5vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    border-radius: 2vw;
+    display: flex;
+    padding-top: 2vw;
+    padding-bottom: 4vw;
+    /* height: 25vw; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .ash_profile_box{
-    background: #21F5F0;
+    background: #e4e3ea;
     text-align: center;
     padding: 40px 90px;
-    color: #fff;
+    color: #23322a;
     position: relative;
     border-radius: 20px;
+}
+
+.ash_profile_box_button{
+    
 }
 
 /* .ash_profile_pic{
@@ -2469,9 +2489,25 @@ a:focus {
     margin-top: 40px;
 } */
 
+.ash_inputbox_container{
+    padding-top: 2vw;
+    padding-bottom: 4vw;
+}
 
+.ash_inputbox input{
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    padding-right: 4vw;
+    padding-left: 0.5vw;
+    border-radius: 2vw;
+}
 
-/* testing 2 */
+.ash_box2{
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    border-radius: 2vw;
+}
+
 
 
 

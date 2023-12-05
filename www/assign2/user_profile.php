@@ -21,10 +21,14 @@
     <div class="ash_container_1">
         <div class="ash_profile_box">
             <!-- <img src="styles/images/ash/ash_plant_icon_1.jpg" alt="ash plant icon" class="ash_profile_pic"> -->
-            <h3>@Admin</h3>
-            <p>admin_florascan@gmail.com</p>
-            <button class="ash_moreinfo_button"><a href="edit_profile.php" class="ash_editprofile_link">Edit Profile</a></button>
-            <button class="ash_moreinfo_button"><a href="index.php" class="ash_editprofile_link">Log Out</a></button>
+            <h3>Username: Admin</h3>
+            <p>Email: admin_florascan@gmail.com</p>
+            
+            <div class="ash_profile_box_button">
+                <button class="ash_moreinfo_button"><a href="edit_profile.php" class="ash_editprofile_link">Edit Profile</a></button>
+                <button class="ash_moreinfo_button"><a href="index.php" class="ash_editprofile_link">Log Out</a></button>
+            </div>
+
         </div>
     </div>
 
