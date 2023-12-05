@@ -20,7 +20,6 @@
 
     <div class="ash_container_1">
         <div class="ash_profile_box">
-            <!-- <img src="styles/images/ash/ash_plant_icon_1.jpg" alt="ash plant icon" class="ash_profile_pic"> -->
             <h3>Username: Admin</h3>
             <p>Email: admin_florascan@gmail.com</p>
             

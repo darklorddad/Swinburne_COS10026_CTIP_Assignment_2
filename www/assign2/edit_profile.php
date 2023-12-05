@@ -22,31 +22,88 @@
         <div class="ash_profile_box">
             <div class="ash_inputbox_container">
                 <div class="ash_inputbox">
-                    <p>
-                        <span>Username :</span>
-                        <input type="text" name="update_name" value="" class="ash_box2">
-                    </p>
+                    <form action="edit_profile.php" method="post">
+                        <p>
+                            <span>Username :</span>
+                            <input type="text" name="update_name" placeholder="Enter your username here" value="" class="ash_box2">
+                        </p>
 
-                    <p>
-                        <span>Your email :</span>
-                        <input type="email" name="update_email" value="" class="ash_box2">
-                    </p>
-        
-                    <p>
-                        <input type="hidden" name="old_pass" value="">
-                        <span>Old password :</span>
-                        <input type="password" name="update_pass" placeholder="Enter previous password" class="ash_box2">
-                    </p>
+                        <p>
+                            <span>Email :</span>
+                            <input type="email" name="update_email" placeholder="Enter your email here" value="" class="ash_box2">
+                        </p>
 
-                    <p>
-                        <span>New password :</span>
-                        <input type="password" name="new_pass" placeholder="Enter new password" class="ash_box2">
-                    </p>
+                        <p>
+                            <input type="hidden" name="old_pass" value="">
+                            <span>Old password :</span>
+                            <input type="password" name="update_pass" placeholder="Enter previous password" class="ash_box2">
+                        </p>
 
-                    <p>
-                        <span>Confirm password :</span>
-                        <input type="password" name="confirm_pass" placeholder="Confirm new password" class="ash_box2">
-                    </p>
+                        <p>
+                            <span>New password :</span>
+                            <input type="password" name="new_pass" placeholder="Enter new password" class="ash_box2">
+                        </p>
+
+                        <p>
+                            <span>Confirm password :</span>
+                            <input type="password" name="confirm_pass" placeholder="Confirm new password" class="ash_box2">
+                        </p>
+
+                        <p>
+                            <input type="submit" value="Update Profile">
+                        </p>
+                    </form>
+
+                    <?php
+                        $servername = "127.0.0.1";
+                        $username = "root";
+                        $password = "";
+                        $dbname = "florascan_database";
+
+                        // Create connection
+                        $conn = new mysqli($servername, $username, $password, $dbname);
+
+                        // Check connection
+                        if ($conn->connect_error) {
+                            die("Connection failed: " . $conn->connect_error);
+                        }
+
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            $email = $_POST['update_email'];
+                            $old_pass = $_POST['old_pass'];
+                            $new_pass = $_POST['new_pass'];
+                            $confirm_pass = $_POST['confirm_pass'];
+                            $username = $_POST['update_name'];
+                        
+                            // Check if email exists
+                            $sql = "SELECT * FROM users WHERE email = '$email'";
+                            $result = $conn->query($sql);
+                        
+                            if ($result->num_rows > 0) {
+                                // Email exists, check if old password matches
+                                $row = $result->fetch_assoc();
+                                if (password_verify($old_pass, $row['password'])) {
+                                    // Old password matches, check if new password and confirm password match
+                                    if ($new_pass == $confirm_pass) {
+                                        // Update password and username
+                                        $new_pass_hash = password_hash($new_pass, PASSWORD_DEFAULT);
+                                        $sql = "UPDATE users SET password = '$new_pass_hash', username = '$username' WHERE email = '$email'";
+                                        if ($conn->query($sql) === TRUE) {
+                                            echo "Record updated successfully";
+                                        } else {
+                                            echo "Error updating record: " . $conn->error;
+                                        }
+                                    } else {
+                                        echo "New password and confirm password do not match";
+                                    }
+                                } else {
+                                    echo "Old password does not match";
+                                }
+                            } else {
+                                echo "Email does not exist";
+                            }
+                        }
+                    ?>
                 </div>
             </div>
         </div>
