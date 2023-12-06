@@ -1,5 +1,6 @@
 <?php
     session_start();
+
     $hostname = "127.0.0.1";
     $user = "root";
     $password = "";
@@ -55,64 +56,68 @@
 
     $first_name = $_POST["first-name"];
     if(empty($first_name)) {
-        $_SESSION['error'] = "First name is required";
-        header('Location: enquiry_error.php');
-        exit();
+        $_SESSION['first_name_error'] = "First name is required";
     }
     elseif(strlen($first_name) > 25) {
-        $_SESSION['error'] = "First name should not exceed 25 characters";
-        header('Location: enquiry_error.php');
-        exit();
+        $_SESSION['first_name_error'] = "First name should not exceed 25 characters";
     }
     elseif(!preg_match("/^[A-Za-z]+$/", $first_name)) {
-        $_SESSION['error'] = "First name should only contain letters";
-        header('Location: enquiry_error.php');
-        exit();
+        $_SESSION['first_name_error'] = "First name should only contain letters";
+    }
+    else{
+        unset($_SESSION['first_name_error']);
+        $_SESSION['first_name'] = $first_name;
     }
 
     $last_name = $_POST["last-name"];
     if (empty($last_name)) {
-        $_SESSION['error'] = "Last name is required";
-        header('Location: enquiry_error.php');
-        exit();
-    } elseif (strlen($last_name) > 25) {
-        $_SESSION['error'] = "Last name should not exceed 25 characters";
-        header('Location: enquiry_error.php');
-        exit();
-    } elseif (!preg_match("/^[A-Za-z]+$/", $last_name)) {
-        $_SESSION['error'] = "Last name should only contain letters";
-        header('Location: enquiry_error.php');
-        exit();
+        $_SESSION['last_name_error'] = "Last name is required";
+    } 
+    elseif (strlen($last_name) > 25) {
+        $_SESSION['last_name_error'] = "Last name should not exceed 25 characters";
+    } 
+    elseif (!preg_match("/^[A-Za-z]+$/", $last_name)) {
+        $_SESSION['last_name_error'] = "Last name should only contain letters";
     }
+    else{
+        unset($_SESSION['last_name_error']);
+        $_SESSION['last_name'] = $last_name;
+    }
+
     $email = $_POST["email"];
     if (empty($email)) {
-        $_SESSION['error'] = "Email is required";
-        header('Location: enquiry_error.php');
-        exit();
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $_SESSION['error'] = "Invalid email format";
-        header('Location: enquiry_error.php');
-        exit();
+        $_SESSION['email_error'] = "Email is required";
+    } 
+    elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $_SESSION['email_error'] = "Invalid email format";
     }
+    else{
+        unset($_SESSION['email_error']);
+        $_SESSION['email'] = $email;
+    }
+
     $street = $_POST["street"];
     if (empty($street)) {
-        $_SESSION['error'] = "Street address is required";
-        header('Location: enquiry_error.php');
-        exit();
-    } elseif (strlen($street) > 255) {
-        $_SESSION['error'] = "Street address should not exceed 255 characters";
-        header('Location: enquiry_error.php');
-        exit();
+        $_SESSION['street_error'] = "Street address is required";
+    } 
+    elseif (strlen($street) > 255) {
+        $_SESSION['street_error'] = "Street address should not exceed 255 characters";
     }
+    else{
+        unset($_SESSION['street_error']);
+        $_SESSION['street'] = $street;
+    }
+
     $city_town = $_POST["city-town"];
     if (empty($city_town)) {
-        $_SESSION['error'] = "City or Town is required";
-        header('Location: enquiry_error.php');
-        exit();
-    } elseif (strlen($city_town) > 50) {
-        $_SESSION['error'] = "City or Town should not exceed 50 characters";
-        header('Location: enquiry_error.php');
-        exit();
+        $_SESSION['city_town_error'] = "City or Town is required";
+    } 
+    elseif (strlen($city_town) > 50) {
+        $_SESSION['city_town_error'] = "City or Town should not exceed 50 characters";
+    }
+    else{
+        unset($_SESSION['city_town_error']);
+        $_SESSION['city_town'] = $city_town;
     }
 
     $state = $_POST["state"];
@@ -123,53 +128,89 @@
     );
     
     if (empty($state)) {
-        $_SESSION['error'] = "Please select your state";
-        header('Location: enquiry_error.php');
-        exit();
-    } elseif (!in_array($state, $valid_states)) {
-        $_SESSION['error'] = "Invalid state selected";
-        header('Location: enquiry_error.php');
-        exit();
+        $_SESSION['state_error'] = "Please select your state";
+    } 
+    elseif (!in_array($state, $valid_states)) {
+        $_SESSION['state_error'] = "Invalid state selected";
+    }
+    else{
+        unset($_SESSION['state_error']);
+        $_SESSION['state'] = $state;
     }
 
     $postcode = $_POST["postcode"];
     if (empty($postcode)) {
-        $_SESSION['error'] = "Postcode is required";
-        header('Location: enquiry_error.php');
-        exit();
-    } elseif (!preg_match("/^\d{5}$/", $postcode)) {
-        $_SESSION['error'] = "Invalid postcode format. Please enter a 5-digit postcode";
-        header('Location: enquiry_error.php');
-        exit();
+        $_SESSION['postcode_error'] = "Postcode is required";
+    } 
+    elseif (!preg_match("/^\d{5}$/", $postcode)) {
+        $_SESSION['postcode_error'] = "Invalid postcode format. Please enter a 5-digit postcode";
     }
+    else{
+        unset($_SESSION['postcode_error']);
+        $_SESSION['postcode'] = $postcode;
+    }
+
     $plant = $_POST["plant"];
     $selectedPlant = $_POST['plant'];
 
     if ($selectedPlant === "" || $selectedPlant === "Select a plant") {
-        $_SESSION['error'] = "Please select a valid plant";
-        header('Location: enquiry_error.php');
-        exit();
+        $_SESSION['plant_error'] = "Please select a valid plant";
     }
+    else{
+        unset($_SESSION['plant_error']);
+        $_SESSION['plant'] = $plant;
+    }
+
     $enquiry = $_POST["comment"];
     if (empty($enquiry)) {
-        $_SESSION['error'] = "Please enter your enquiry";
+        $_SESSION['comment_error'] = "Please enter your enquiry";
+    }
+    else{
+        unset($_SESSION['comment_error']);
+        $_SESSION['comment'] = $enquiry;
+    }
+    
+    $_SESSION['enquiry'] = [
+        'first-name' => $first_name,
+        'last-name'  => $last_name,
+        'email'      => $email,
+        'street'     => $street,
+        'city-town'  => $city_town,
+        'state'      => $state,
+        'postcode'   => $postcode,
+        'plant'      => $plant,
+        'comment'    => $enquiry
+    ];
+
+    if (isset($_SESSION['first_name_error']) || 
+        isset($_SESSION['last_name_error']) || 
+        isset($_SESSION['email_error']) || 
+        isset($_SESSION['street_error']) || 
+        isset($_SESSION['city_town_error']) || 
+        isset($_SESSION['state_error']) || 
+        isset($_SESSION['postcode_error']) || 
+        isset($_SESSION['plant_error']) ||
+        isset($_SESSION['comment_error']))
+    {
+        unset($_SESSION['result']);
         header('Location: enquiry_error.php');
         exit();
-    }
-            
-    $insert_enquiry = "INSERT INTO enquiry (first_name, last_name, email, street, city, state, postcode, plant, enquiry) 
+    } 
+    else{
+        $insert_enquiry = "INSERT INTO enquiry (first_name, last_name, email, street, city, state, postcode, plant, enquiry) 
                     VALUES ('$first_name', '$last_name', '$email', '$street', '$city_town', '$state', '$postcode', '$plant', '$enquiry')";
 
-    if ($mysqli_session -> query($insert_enquiry) === TRUE) {
-        $_SESSION['submitted'] = "<p>Record inserted successfully</p> \n<p>Thank you <span style=\"font-family: 'dld_samsungsharpsans_bold';\">" . $first_name . "</span> for your enquiry, we will get back to you soon</p>";
-        header('Location: enquiry_error.php');
-        exit();
+        if ($mysqli_session -> query($insert_enquiry) === TRUE) {
+            $_SESSION['result'] = "<p>Record inserted successfully</p> \n<p>Thank you <strong>" . $first_name . "</strong> for your enquiry, we will get back to you soon</p>";
+            header('Location: enquiry_error.php');
+            exit();
+        }
+        else {
+            $_SESSION['result'] = "Error inserting record: " . $mysqli_session -> error;
+            header('Location: enquiry_error.php');
+            exit();
+        }
     }
-    else {
-        $_SESSION['error'] = "Error inserting record: " . $mysqli_session -> error;
-        header('Location: enquiry_error.php');
-        exit();
-    }
-
+    
     $mysqli_session -> close();
 ?>

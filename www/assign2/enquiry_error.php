@@ -25,17 +25,109 @@
 
         <div class = "dld_main_2">
             <div class = "ttl_center_2">
-                <?php
-                    if(isset($_SESSION['error'])) {
-                        echo "<p>" . $_SESSION['error'] . "</p>";
-                        unset($_SESSION['error']);
-                    }
+                <fieldset class = "czy_enquiry_details">
+                    <legend>Enquiry Details</legend>
+                    <?php
+                        if (isset($_SESSION['result'])){
+                            echo "<p>" . $_SESSION['result'] . "</p>";
+                        }
+                        else{
+                            echo "<div class = \"user-info\">";
+                            echo "<div class = \"czy_header\">First Name</div>";
+                            echo "<div class = \"czy_between\">:</div>";
 
-                    if(isset($_SESSION['submitted'])) {
-                        echo "<p>" . $_SESSION['submitted'] . "</p>";
-                        unset($_SESSION['submitted']);
-                    }
-                ?>
+                            if (isset($_SESSION['first_name_error'])){
+                                echo "<div class = \"czy_description czy_error\">" . $_SESSION['first_name_error'] . "</div>\n</div>\n";
+                            }else{
+                                echo "<div class = \"czy_description\">" . $_SESSION['first_name'] . "</div>\n</div>\n";
+                            }
+
+                            echo "<div class = \"user-info\">";
+                            echo "<div class = \"czy_header\">Last Name</div>";
+                            echo "<div class = \"czy_between\">:</div>";
+
+                            if (isset($_SESSION['last_name_error'])){
+                                echo "<div class = \"czy_description czy_error\">" . $_SESSION['last_name_error'] . "</div>\n</div>";
+                            }else{
+                                echo "<div class = \"czy_description\">" . $_SESSION['last_name'] . "</div>\n</div>";
+                            }
+
+                            echo "<div class = \"user-info\">";
+                            echo "<div class = \"czy_header\">Email</div>";
+                            echo "<div class = \"czy_between\">:</div>";
+
+                            if (isset($_SESSION['email_error'])){
+                                echo "<div class = \"czy_description czy_error\">" . $_SESSION['email_error'] . "</div>\n</div>";
+                            }else{
+                                echo "<div class = \"czy_description\">" . $_SESSION['email'] . "</div>\n</div>";
+                            }
+
+                            echo "<div class = \"user-info\">";
+                            echo "<div class = \"czy_header\">Street</div>";
+                            echo "<div class = \"czy_between\">:</div>";
+
+                            if (isset($_SESSION['street_error'])){
+                                echo "<div class = \"czy_description czy_error\">" . $_SESSION['street_error'] . "</div>\n</div>";
+                            }else{
+                                echo "<div class = \"czy_description\">" . $_SESSION['street'] . "</div>\n</div>";
+                            }
+
+                            echo "<div class = \"user-info\">";
+                            echo "<div class = \"czy_header\">City Town</div>";
+                            echo "<div class = \"czy_between\">:</div>";
+
+                            if (isset($_SESSION['city_town_error'])){
+                                echo "<div class = \"czy_description czy_error\">" . $_SESSION['city_town_error'] . "</div>\n</div>";
+                            }else{
+                                echo "<div class = \"czy_description\">" . $_SESSION['city_town'] . "</div>\n</div>";
+                            }
+
+                            echo "<div class = \"user-info\">";
+                            echo "<div class = \"czy_header\">State</div>";
+                            echo "<div class = \"czy_between\">:</div>";
+
+                            if (isset($_SESSION['state_error'])){
+                                echo "<div class = \"czy_description czy_error\">" . $_SESSION['state_error'] . "</div>\n</div>";
+                            }else{
+                                echo "<div class = \"czy_description\">" . $_SESSION['state'] . "</div>\n</div>";
+                            }
+
+                            echo "<div class = \"user-info\">";
+                            echo "<div class = \"czy_header\">Postcode</div>";
+                            echo "<div class = \"czy_between\">:</div>";
+
+                            if (isset($_SESSION['postcode_error'])){
+                                echo "<div class = \"czy_description czy_error\">" . $_SESSION['postcode_error'] . "</div>\n</div>";
+                            }else{
+                                echo "<div class = \"czy_description\">" . $_SESSION['postcode'] . "</div>\n</div>";
+                            }
+
+                            echo "<div class = \"user-info\">";
+                            echo "<div class = \"czy_header\">Plant</div>";
+                            echo "<div class = \"czy_between\">:</div>";
+
+                            if (isset($_SESSION['plant_error'])){
+                                echo "<div class = \"czy_description czy_error\">" . $_SESSION['plant_error'] . "</div>\n</div>";
+                            }else{
+                                echo "<div class = \"czy_description\">" . $_SESSION['plant'] . "</div>\n</div>";
+                            }
+
+                            
+                            echo "<div class = \"user-info\">";
+                            echo "<div class = \"czy_header\">Comment</div>";
+                            echo "<div class = \"czy_between\">:</div>"; 
+
+                            if (isset($_SESSION['comment_error'])){
+                                echo "<div class = \"czy_description czy_error comment\">" . $_SESSION['comment_error'] . "</div>\n</div>";
+                            }else{
+                                echo "<div class = \"czy_description comment\">" . $_SESSION['comment'] . "</div>\n</div>";
+                            }
+                        }
+                        ?>
+                    </fieldset>
+                <div class = "czy_enquiry_error">
+                    <a href = "enquiry.php" class = "czy_enquiry_error_button">Go back</a>
+                </div>
             </div>
         </div>
 

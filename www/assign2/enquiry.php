@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 
 <html lang = "en">
@@ -39,69 +43,91 @@
                             <legend class = "nic_label nic_legend">Contact details</legend>
                             <div class = "nic_div">
                                 <label class = "nic_label" for = "first-name">First name</label>
-                                <input id = "first-name" name = "first-name" class = "nic_field" type = "text" placeholder = "Enter your first name">
+                                <input id = "first-name" name = "first-name" class = "nic_field" type = "text" placeholder = "Enter your first name" 
+                                    value = "<?= isset($_SESSION['enquiry']['first-name']) ? htmlspecialchars($_SESSION['enquiry']['first-name']) : '' ?>">
+                                <?php unset($_SESSION['enquiry']['first-name']); ?>
                             </div>
+
                             <div class = "nic_div">
                                 <label class = "nic_label" for = "last-name">Last name</label>
-                                <input id = "last-name" name = "last-name" class = "nic_field" type = "text" placeholder = "Enter your last name">
+                                <input id = "last-name" name = "last-name" class = "nic_field" type = "text" placeholder = "Enter your last name" 
+                                    value = "<?= isset($_SESSION['enquiry']['last-name']) ? htmlspecialchars($_SESSION['enquiry']['last-name']) : '' ?>">
+                                <?php unset($_SESSION['enquiry']['last-name']); ?>
                             </div>
+
                             <div class = "nic_div">
                                 <label class = "nic_label" for = "email">Email</label>
-                                <input id = "email" name = "email" class = "nic_field" type = "email" placeholder = "Enter your email">
+                                <input id = "email" name = "email" class = "nic_field" type = "email" placeholder = "Enter your email" 
+                                    value = "<?= isset($_SESSION['enquiry']['email']) ? htmlspecialchars($_SESSION['enquiry']['email']) : '' ?>">
+                                <?php unset($_SESSION['enquiry']['email']); ?>
                             </div>
                         </fieldset>
+
                         <fieldset>
-                            <legend class="nic_label nic_legend">Address</legend>
-                            <label class="nic_label" for="street">Street</label>
-                            <input id="street" name="street" class="nic_field" type="text" placeholder = "Enter your street address">
-                            <label class="nic_label" for="city-town">City / Town</label>
-                            <input id="city-town" name="city-town" class="nic_field" type="text" placeholder = "Enter your city or town">
+                            <legend class = "nic_label nic_legend">Address</legend>
+                            <label class = "nic_label" for = "street">Street</label>
+                            <input id = "street" name = "street" class = "nic_field" type = "text" placeholder = "Enter your street address" 
+                                value = "<?= isset($_SESSION['enquiry']['street']) ? htmlspecialchars($_SESSION['enquiry']['street']) : '' ?>">
+                            <?php unset($_SESSION['enquiry']['street']); ?>
+
+                            <label class = "nic_label" for = "city-town">City / Town</label>
+                            <input id = "city-town" name = "city-town" class = "nic_field" type = "text" placeholder = "Enter your city or town" 
+                                value = "<?= isset($_SESSION['enquiry']['city-town']) ? htmlspecialchars($_SESSION['enquiry']['city-town']) : '' ?>">
+                            <?php unset($_SESSION['enquiry']['city-town']); ?>
+
                             <label class="nic_label" for="state">State</label>
                             <select id="state" name="state" class="nic_select">
                                 <option value="">Select your state</option>
-                                <option value="Selangor">Selangor</option>
-                                <option value="Perlis">Perlis</option>
-                                <option value="Kelantan">Kelantan</option>
-                                <option value="Sabah">Sabah</option>
-                                <option value="Perak">Perak</option>
-                                <option value="Penang">Penang</option>
-                                <option value="Negeri Sembilan">Negeri Sembilan</option>
-                                <option value="Malacca">Malacca</option>
-                                <option value="Johore">Johore</option>
-                                <option value="Terengganu">Terengganu</option>
-                                <option value="Pahang">Pahang</option>
-                                <option value="Kedah">Kedah</option>
+                                <?php
+                                    $states = ["Selangor", "Perlis", "Kelantan", "Sabah", "Perak", "Penang", "Negeri Sembilan", "Malacca", "Johore", "Terengganu", "Pahang", "Kedah"];
+
+                                    foreach ($states as $state) {
+                                        echo '<option value="' . $state . '" ' . (isset($_SESSION['enquiry']['state']) && $_SESSION['enquiry']['state'] == $state ? 'selected' : '') . '>' . $state . '</option>';
+                                    }
+
+                                    unset($_SESSION['enquiry']['state']);
+                                ?>
                             </select>
-                            <label class="nic_label" for="postcode">Postcode</label>
-                            <input id="postcode" name="postcode" class="nic_field" type="text" placeholder = "Enter your postcode">
+
+                            <label class = "nic_label" for = "postcode">Postcode</label>
+                            <input id = "postcode" name = "postcode" class = "nic_field" type = "text" placeholder = "Enter your postcode" 
+                                value = "<?= isset($_SESSION['enquiry']['postcode']) ? htmlspecialchars($_SESSION['enquiry']['postcode']) : '' ?>">
+                            <?php unset($_SESSION['enquiry']['postcode']); ?>
                         </fieldset>
 
                         <fieldset>
                             <legend class = "nic_label nic_legend">Enquiry</legend>
                             <div class = "nic_div">
-                                <label class="nic_label" for="plant">Plant</label>
-                                <select id="plant" name="plant" class="nic_select">
-                                    <option value="">Select a plant</option>
-                                    <option value="Dipterocarpaceae">Dipterocarpaceae</option>
-                                    <option value="Lauraceae">Lauraceae</option>
-                                    <option value="Burseraceae">Burseraceae</option>
-                                    <option value="Myristicaceae">Myristicaceae</option>
-                                    <option value="Chrysobalanaceae">Chrysobalanaceae</option>
-                                    <option value="Meliaceae">Meliaceae</option>
-                                    <option value="Ebenaceae">Ebenaceae</option>
-                                </select>
+                            <label class="nic_label" for="plant">Plant</label>
+                            <select id="plant" name="plant" class="nic_select">
+                                <option value="">Select a plant</option>
+                                <?php
+                                    $plantOptions = ['Dipterocarpaceae', 'Lauraceae', 'Burseraceae', 'Myristicaceae', 'Chrysobalanaceae', 'Meliaceae', 'Ebenaceae'];
+
+                                    foreach ($plantOptions as $option) {
+                                        $isSelected = isset($_SESSION['enquiry']['plant']) && $_SESSION['enquiry']['plant'] == $option;
+                                        echo '<option value="' . $option . '" ' . ($isSelected ? 'selected' : '') . '>' . $option . '</option>';
+                                    }
+
+                                    unset($_SESSION['enquiry']['plant']);
+                                ?>
+                            </select>
                                 
-                                <label class="nic_label" for="comment">Enquiry</label>
-                                <textarea id="comment" name="comment" class="nic_field nic_textarea" placeholder="Leave your enquiries here"></textarea>
+                                <label class = "nic_label" for = "comment">Enquiry</label>
+                                <textarea id = "comment" name = "comment" class = "nic_field nic_textarea" placeholder = "Leave your enquiries here">
+                                    <?= isset($_SESSION['enquiry']['comment']) ? $_SESSION['enquiry']['comment'] : '' ?>
+                                </textarea>
+                                <?php unset($_SESSION['enquiry']['comment']); ?>
                             </div>
                         </fieldset>
 
-                        <div class="nic_button-container">
-                            <div class="nic_reset-button">
-                                <button type="reset" class="nic_button nic_reset" value="Reset">Reset</button>
+                        <div class = "nic_button-container">
+                            <div class = "nic_reset-button">
+                                <button type = "reset" class = "nic_button nic_reset" value = "Reset">Reset</button>
                             </div>
-                            <div class="nic_submit-button">
-                                <button type="submit" class="nic_button nic_submit" value="Submit">Submit</button>
+
+                            <div class = "nic_submit-button">
+                                <button type = "submit" class = "nic_button nic_submit" value = "Submit">Submit</button>
                             </div>
                         </div>
                     </form>

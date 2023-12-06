@@ -4286,46 +4286,130 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 
 /* Enquiry process */
 
-  .dld_main_2 {
+.dld_main_2 {
     backdrop-filter: blur(0.078vw);
     background-color: rgba(228, 227, 234, 0.5);
     width: 95.03%;
     margin-left: auto;
-	margin-right: auto;
+    margin-right: auto;
     margin-top: 2.5vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
     border-radius: 2vw;
     display: flex;
     /* padding-bottom: 4vw; */
-  }
+}
 
-  .dld_main_2 p {
+.dld_main_2 p {
     margin: 0 10vw 0 10vw;
-  }
+}
 
-  .ttl_center_2 {
+.czy_enquiry_details{
+    margin: 5vw;
+    margin-bottom: 0;
+    border-radius: 1.5vw;
+    border: #23322a solid 0.3vw;
+}
+
+.czy_enquiry_details > legend{
+    text-align: center;
+    padding: 0 0.8vw;
+    font-size: 2vw;
+}
+
+.czy_enquiry_error{
+    font-size: 1.5vw;
+    text-align: center;
+    margin: 2.5vw 0;
+}
+
+.czy_enquiry_error_button{
+    font-weight: bold;
+    color: #23322a;
+    background-color: #90a79a;
+    border-radius: 2vw;
+    padding: 0.8vw 2.5vw;
+    transition: all 0.3s;
+}
+
+.czy_enquiry_error_button:hover{
+    color: #90a79a;
+    background-color: #23322a;
+}
+
+.user-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: justify;
+    min-height: 4vw;
+    border-radius: 2vw;
+    margin: 1vw 2vw;
+}
+
+.czy_header{
+    color: #23322a;
+    background-color: #90a79a;
+    font-size: 1.2vw;
+    font-weight: bold;
+    width: 15%;
+    height: 1vw;
+    border-radius: 2vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    padding-top: 0.75vw;
+    padding-bottom: 1.25vw;
+    padding-left: 2vw;
+    padding-right: 1vw;
+}   
+
+.czy_between{
+    font-size: 1.5vw;
+    margin-top: 1vw;
+    margin-bottom: 1.5vw;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+}
+
+.czy_error{
+    color: red;
+}
+
+.czy_description{
+    margin-top: 0.5vw;
+    margin-bottom: 0.9vw;
+    width: 75%;
+    padding-top: 0.75vw;
+    padding-bottom: 0.5vw;
+    padding-left: 1.2vw;
+    padding-right: 1vw;
+    border: 0.2vw solid #23322a;
+    border-radius: 2vw;
+}
+
+.ttl_center_2 {
+    font-family: "dld_samsungsharpsans_medium";
     /* position: relative; */
     /* top:5%; */
-    width: 86vw;
     /* height: vw; */
+    /* box-shadow: 8px 10px 15px 0 rgba(0,0,0,0.2); */
+    width: 86vw;
     background-color: #e4e3ea;
-	/* box-shadow: 8px 10px 15px 0 rgba(0,0,0,0.2); */
-	border-radius: 2vw;
+    border-radius: 2vw;
     margin:auto;
     margin-top: 4vw;
-    margin-bottom: 8vw;
+    margin-bottom: 4vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
-  }
+}
 
-  .ttl_center_2 p {
+.ttl_center_2 p {
     margin-top: 3vw;
     margin-bottom: 3vw;
     text-align: center;
-  }
+}
 
-  .login_error {
+.login_error {
     color: #ca0201;
     font-size: 1vw;
     text-align: center;
     font-family: "dld_samsungsharpsans_medium";
-  }
+}
