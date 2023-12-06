@@ -1371,7 +1371,7 @@ label.dld_gallery-label {
     border-radius: 2vw;
     backdrop-filter: blur(0.078vw);
     background-color: rgba(228, 227, 234, 0.5);
-    padding: 2vw 3vw 3vw 3vw;
+    padding: 4vw 3vw 8vw 3vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
@@ -4303,9 +4303,23 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     margin: 0 10vw 0 10vw;
 }
 
+.dld_enquiry_result_center {
+    font-family: "dld_samsungsharpsans_medium";
+    /* position: relative; */
+    /* top:5%; */
+    /* height: vw; */
+    /* box-shadow: 8px 10px 15px 0 rgba(0,0,0,0.2); */
+    width: 86vw;
+    background-color: #e4e3ea;
+    border-radius: 2vw;
+    margin:auto;
+    margin-top: 4vw;
+    margin-bottom: 8vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
 .czy_enquiry_details{
-    margin: 5vw;
-    margin-bottom: 0;
+    margin: 4vw 5vw 0vw 5vw;
     border-radius: 1.5vw;
     border: #23322a solid 0.3vw;
 }
@@ -4313,22 +4327,33 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 .czy_enquiry_details > legend{
     text-align: center;
     padding: 0 0.8vw;
-    font-size: 2vw;
+    font-size: 1.25vw;
+    font-family: "dld_samsungsharpsans_bold";
+}
+
+.czy_enquiry_details > p{
+    text-align: center;
+    padding: 1vw 0.8vw;
+    font-size: 1vw;
+    font-family: "dld_samsungsharpsans_medium";
 }
 
 .czy_enquiry_error{
-    font-size: 1.5vw;
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1.25vw;
     text-align: center;
     margin: 2.5vw 0;
+    margin-bottom: 5vw;
 }
 
 .czy_enquiry_error_button{
-    font-weight: bold;
+    font-family: "dld_samsungsharpsans_bold";
     color: #23322a;
     background-color: #90a79a;
     border-radius: 2vw;
     padding: 0.8vw 2.5vw;
-    transition: all 0.3s;
+    transition: all 0.25s;
+    font-size: 1vw;
 }
 
 .czy_enquiry_error_button:hover{
@@ -4349,7 +4374,7 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 .czy_header{
     color: #23322a;
     background-color: #90a79a;
-    font-size: 1.2vw;
+    font-size: 1vw;
     font-weight: bold;
     width: 15%;
     height: 1vw;
@@ -4357,13 +4382,13 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     margin-top: 0.5vw;
     margin-bottom: 0.5vw;
     padding-top: 0.75vw;
-    padding-bottom: 1.25vw;
+    padding-bottom: 1vw;
     padding-left: 2vw;
     padding-right: 1vw;
 }   
 
 .czy_between{
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     margin-top: 1vw;
     margin-bottom: 1.5vw;
     margin-right: 0.5vw;
@@ -4372,14 +4397,16 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 
 .czy_error{
     color: red;
+    font-size: 1vw;
 }
 
 .czy_description{
+    font-size: 1vw;
     margin-top: 0.5vw;
     margin-bottom: 0.9vw;
     width: 75%;
     padding-top: 0.75vw;
-    padding-bottom: 0.5vw;
+    padding-bottom: 0.6vw;
     padding-left: 1.2vw;
     padding-right: 1vw;
     border: 0.2vw solid #23322a;

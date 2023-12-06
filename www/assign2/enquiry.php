@@ -38,7 +38,7 @@
 
                 <div class = "nic_right">
                     <h2 class = "nic_h2">Specifics</h2>
-                    <form action = "enquiry_confirmation.php" method = "POST" class = "nic_form">
+                    <form action = "enquiry_process.php" method = "POST" class = "nic_form">
                         <fieldset>
                             <legend class = "nic_label nic_legend">Contact details</legend>
                             <div class = "nic_div">

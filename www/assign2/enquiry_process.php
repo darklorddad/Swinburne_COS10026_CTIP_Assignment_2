@@ -10,7 +10,7 @@
 
     if ($mysqli_session -> connect_error) {
         $_SESSION['error'] = "Error connecting to database: " . $mysqli_session -> connect_error;
-        header('Location: enquiry_error.php');
+        header('Location: enquiry_result.php');
         exit();
     }
 
@@ -22,7 +22,7 @@
 
         if ($mysqli_session->query($create_database) !== TRUE) {
             $_SESSION['error'] = "Error creating database: " . $mysqli_session -> error;
-            header('Location: enquiry_error.php');
+            header('Location: enquiry_result.php');
             exit();
         }
     }
@@ -49,7 +49,7 @@
     
         if ($mysqli_session -> query($create_table) !== TRUE) {
             $_SESSION['error'] = "Error creating table: " . $mysqli_session -> error;
-            header('Location: enquiry_error.php');
+            header('Location: enquiry_result.php');
             exit();
         }
     }
@@ -143,7 +143,7 @@
         $_SESSION['postcode_error'] = "Postcode is required";
     } 
     elseif (!preg_match("/^\d{5}$/", $postcode)) {
-        $_SESSION['postcode_error'] = "Invalid postcode format. Please enter a 5-digit postcode";
+        $_SESSION['postcode_error'] = "Invalid postcode format, please enter a valid 5-digit postcode";
     }
     else{
         unset($_SESSION['postcode_error']);
@@ -154,7 +154,7 @@
     $selectedPlant = $_POST['plant'];
 
     if ($selectedPlant === "" || $selectedPlant === "Select a plant") {
-        $_SESSION['plant_error'] = "Please select a valid plant";
+        $_SESSION['plant_error'] = "Please select a plant";
     }
     else{
         unset($_SESSION['plant_error']);
@@ -193,7 +193,7 @@
         isset($_SESSION['comment_error']))
     {
         unset($_SESSION['result']);
-        header('Location: enquiry_error.php');
+        header('Location: enquiry_result.php');
         exit();
     } 
     else{
@@ -201,16 +201,16 @@
                     VALUES ('$first_name', '$last_name', '$email', '$street', '$city_town', '$state', '$postcode', '$plant', '$enquiry')";
 
         if ($mysqli_session -> query($insert_enquiry) === TRUE) {
-            $_SESSION['result'] = "<p>Record inserted successfully</p> \n<p>Thank you <strong>" . $first_name . "</strong> for your enquiry, we will get back to you soon</p>";
-            header('Location: enquiry_error.php');
+            $_SESSION['result'] = "<p>Record inserted into database successfully</p> \n<p>Thank you <strong>" . $first_name . "</strong> for your enquiry, we will get back to you soon.</p>";
+            header('Location: enquiry_result.php');
             exit();
         }
         else {
             $_SESSION['result'] = "Error inserting record: " . $mysqli_session -> error;
-            header('Location: enquiry_error.php');
+            header('Location: enquiry_result.php');
             exit();
         }
     }
     
-    $mysqli_session -> close();
+    // $mysqli_session -> close();
 ?>

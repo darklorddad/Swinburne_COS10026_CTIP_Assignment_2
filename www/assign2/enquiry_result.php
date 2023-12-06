@@ -24,9 +24,9 @@
         </div>
 
         <div class = "dld_main_2">
-            <div class = "ttl_center_2">
+            <div class = "dld_enquiry_result_center">
                 <fieldset class = "czy_enquiry_details">
-                    <legend>Enquiry Details</legend>
+                    <legend>Enquiry Status</legend>
                     <?php
                         if (isset($_SESSION['result'])){
                             echo "<p>" . $_SESSION['result'] . "</p>";
@@ -126,7 +126,7 @@
                         ?>
                     </fieldset>
                 <div class = "czy_enquiry_error">
-                    <a href = "enquiry.php" class = "czy_enquiry_error_button">Go back</a>
+                    <a href = "enquiry.php" class = "czy_enquiry_error_button">Return to enquiry page</a>
                 </div>
             </div>
         </div>
