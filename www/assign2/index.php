@@ -19,7 +19,7 @@
                     <li><a href = "contributions.php">Contributions</a></li>
                     <li><a href = "enquiry.php">Enquiry</a></li>
                     <li><a href = "profile_ash.php">Profiles</a></li>
-                    <li><a href = "login.php">Account</a></li>
+                    <li><a href = "login_verification.php">Account</a></li>
                 </ul>
             </nav>
 
@@ -67,7 +67,7 @@
                         <span class = "dld_side_navigation_bar_text">Profiles</span>
                     </a></li>
 
-                    <li><a href = "login.php">
+                    <li><a href = "login_verification.php">
                         <span class = "material-symbols-outlined dld_side_navigation_bar_icon">account_circle</span>
                         <span class = "dld_side_navigation_bar_text">Account</span>
                     </a></li>

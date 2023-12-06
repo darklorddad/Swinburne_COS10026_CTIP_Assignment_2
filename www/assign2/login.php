@@ -1,6 +1,22 @@
 <?php
-    session_start();
+    session_start(); 
+    include("user_table.php");
+    createUserTable();
+
+    $_SESSION['last_activity'] = time();
+
+    // Check if the user has been inactive for a specific period (e.g., 30 minutes)
+    $inactive_timeout = 30;
+    if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > $inactive_timeout)) {
+        session_unset();
+        session_destroy();
+    }
+
+    if (isset($_SESSION["user_id"])) {
+        header("edit_profile.php");
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang = "en">
 <head>
@@ -28,23 +44,28 @@
                 <h2>Log In</h2>
                 <form action = "login_process.php" method = "post">
                     <div class = "ash_input_box">
-                        <input type = "text" name = "login_email">
+                        <input type = "text" name = "login_email" autocomplete = "off" value = 
+                            "<?= isset($_SESSION['login']['email']) ? htmlspecialchars($_SESSION['login']['email']) : '' ?>">
+                        <?php unset($_SESSION['login']['email']);?>
                         <label>Email</label>
                         <i class = 'bx bxs-user'></i>
                     </div>
+
                     <div class = "ash_input_box">
-                        <input type = "password" name = "login_password">
+                        <input type = "password" name = "login_password" autocomplete = "off">
                         <label>Password</label>
                         <i class = 'bx bxs-lock-alt'></i>
                     </div>
+
                     <button type = "submit" class = "ash_btn">Log In</button>
-                    <?php
-                        if(isset($_SESSION["error"])) {
-                            echo "<p class = 'login_error'>" . $_SESSION["error"] . "</p>";
-                            unset($_SESSION["error"]);
-                        }
-                    ?>
+
                     <div class = "ash_logreg_link">
+                        <?php
+                            if(isset($_SESSION["error"])) {
+                                echo "<p class = 'login_error'>" . $_SESSION["error"] . "</p>";
+                                unset($_SESSION["error"]);
+                            }
+                        ?>
                         <p>Don't have an account? <a href = "register.php#register_point" class = "ash_register_link">Sign Up</a></p>
                     </div>
                 </form>

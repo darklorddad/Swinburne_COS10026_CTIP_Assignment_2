@@ -55,7 +55,7 @@
                             <a target="_blank" href = "contributions.php">Contributions</a>
                             <a target="_blank" href = "enquiry.php">Enquiry</a>  
                             <a target="_blank" href = "profile_dld.php">Profiles</a>  
-                            <a target="_blank" href = "login.php">Account</a>  
+                            <a target="_blank" href = "login_verification.php">Account</a>  
                         </div>
                     </div>
 
@@ -201,7 +201,7 @@
                             <a target="_blank" href = "contributions.php">Contributions</a>  
                             <a target="_blank" href = "enquiry.php">Enquiry</a>
                             <a target="_blank" href = "profile_dld.php">Profile</a>
-                            <a target="_blank" href = "login.php">Account</a>
+                            <a target="_blank" href = "login_verification.php">Account</a>
                         </div>
                     </div>
 
@@ -300,7 +300,7 @@
                         <div class = "dld_flex_container">
                             <a target="_blank" href = "index.php">Mainpage</a>
                             <a target="_blank" href = "explore.php">Explore</a>
-                            <a target="_blank" href = "login.php">Account</a>
+                            <a target="_blank" href = "login_verification.php">Account</a>
                         </div>
                     </div>
 

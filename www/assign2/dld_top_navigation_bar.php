@@ -70,7 +70,7 @@
                 </li>
 
                 <li>
-                    <a href = "login.php">
+                    <a href = "login_verification.php">
                         <span class = "dld_top_navigation_bar_icon">
                             <span class = "material-symbols-outlined">account_circle</span>
                         </span>

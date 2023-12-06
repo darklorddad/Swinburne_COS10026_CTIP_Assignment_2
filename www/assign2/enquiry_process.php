@@ -6,11 +6,13 @@
     $password = "";
     $database = "florascan_database";
 
+    unset($_SESSION['result']); 
+
     $mysqli_session = new mysqli($hostname, $user, $password);
 
     if ($mysqli_session -> connect_error) {
         $_SESSION['error'] = "Error connecting to database: " . $mysqli_session -> connect_error;
-        header('Location: enquiry_result.php');
+        header('Location: enquiry_error.php');
         exit();
     }
 
@@ -22,7 +24,7 @@
 
         if ($mysqli_session->query($create_database) !== TRUE) {
             $_SESSION['error'] = "Error creating database: " . $mysqli_session -> error;
-            header('Location: enquiry_result.php');
+            header('Location: enquiry_error.php');
             exit();
         }
     }

@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $hostname = "127.0.0.1";
     $user = "root";
     $password = "";
@@ -13,24 +14,27 @@
     $login_email = mysqli_real_escape_string($conn, $_POST["login_email"]);
     $login_password = mysqli_real_escape_string($conn, $_POST["login_password"]);
 
-    $query = "SELECT * FROM userdetails WHERE email = '" . $login_email . 
-          "' AND user_password = '" . $login_password . "'";
+    $_SESSION["login"]["email"] = $login_email;
+
+    $_SESSION['last_activity'] = 0;
+
+    $query = "SELECT user_id FROM userdetails WHERE email = '" . $login_email . "' AND user_password = '" . $login_password . "'";
 
     $result = mysqli_query($conn, $query);
 
-    if ($login_email == "admin_florascan@gmail.com" && $login_password == "Florascan") {
-        session_start();
-        $_SESSION["email"] = $login_email;
+    $resultData = mysqli_fetch_assoc($result);
+    $user_id = $resultData['user_id'];
+    
+    if ($login_email == "admin_florascan@gmail.com" && $login_password == "admin") {
+        $_SESSION["user_id"] = $user_id;
         header("Location: view_user.php");
     }
     elseif (mysqli_num_rows($result) > 0) {
-        session_start();
-        $_SESSION["email"] = $login_email;
-        header("Location: login_success.php");
+        $_SESSION["user_id"] = $user_id;
+        header("Location: index.php");
     }
     else {
-        session_start();
-        $_SESSION["error"] = "Invalid username or password.";
+        $_SESSION["error"] = "Invalid email or password.";
         header("Location: login.php");
     }
 

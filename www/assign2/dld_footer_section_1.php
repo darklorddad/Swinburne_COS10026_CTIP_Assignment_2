@@ -54,7 +54,7 @@
                         <a href = "profile_dld.php">Profile DLD</a>
                         <a href = "profile_nic.php">Profile NIC</a>
                         <a href = "profile_ttl.php">Profile TTL</a>
-                        <a href = "login.php">Log In</a>
+                        <a href = "login_verification.php">Log In</a>
                         <a href = "register.php">Register</a>
                     </div>
 
@@ -65,7 +65,7 @@
                         <a href = "contributions.php">Contributions</a>
                         <a href = "enquiry.php">Enquiry</a>
                         <a href = "profile_czy.php">Profiles</a>
-                        <a href = "login.php">Account</a>
+                        <a href = "login_verification.php">Account</a>
                         <a href = "enhancements.php">Enhancements</a>
                     </div>
                 </div>

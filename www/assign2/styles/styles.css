@@ -2396,20 +2396,19 @@ a:focus {
 }
 
 .ash_form_box .ash_logreg_link, .ash_logreg_link_register{
-    font-size: 0.75vw;
+    font-size: 0.8vw;
     color: #e4e3ea;
     text-align: center;
     margin: 0;
-    margin-top: 3vw;
+    margin-top: 1.5vw;
 }
 
-.ash_logreg_link_register p{
+.ash_logreg_link_register{
     font-family: "dld_samsungsharpsans_medium";
     color: #23322a;
 }
 
 .ash_logreg_link p a,.ash_logreg_link_register p a{
-    /* color: #90a79a; */
     text-decoration: none;
     font-weight: bold;
 }
