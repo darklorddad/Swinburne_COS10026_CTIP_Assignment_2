@@ -50,7 +50,7 @@
                         </p>
 
                         <p>
-                            <input type="submit" value="Update Profile">
+                            <input type="submit" value="Update Profile" class="ash_moreinfo_button">
                         </p>
                     </form>
 
@@ -65,16 +65,16 @@
 
                         // Check connection
                         if ($conn->connect_error) {
-                            die("Connection failed: " . $conn->connect_error);
-                        }
+                        die("Connection failed: " . $conn->connect_error);
+                        }       
 
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            $username = $_POST['update_name'];
                             $email = $_POST['update_email'];
                             $old_pass = $_POST['old_pass'];
                             $new_pass = $_POST['new_pass'];
                             $confirm_pass = $_POST['confirm_pass'];
-                            $username = $_POST['update_name'];
-                        
+                            
                             // Check if email exists
                             $sql = "SELECT * FROM users WHERE email = '$email'";
                             $result = $conn->query($sql);
