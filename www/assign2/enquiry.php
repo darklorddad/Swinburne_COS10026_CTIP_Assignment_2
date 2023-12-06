@@ -114,9 +114,7 @@
                             </select>
                                 
                                 <label class = "nic_label" for = "comment">Enquiry</label>
-                                <textarea id = "comment" name = "comment" class = "nic_field nic_textarea" placeholder = "Leave your enquiries here">
-                                    <?= isset($_SESSION['enquiry']['comment']) ? $_SESSION['enquiry']['comment'] : '' ?>
-                                </textarea>
+                                <textarea id = "comment" name = "comment" class = "nic_field nic_textarea" placeholder = "Leave your enquiries here"><?= isset($_SESSION['enquiry']['comment']) ? $_SESSION['enquiry']['comment'] : '' ?></textarea>
                                 <?php unset($_SESSION['enquiry']['comment']); ?>
                             </div>
                         </fieldset>
