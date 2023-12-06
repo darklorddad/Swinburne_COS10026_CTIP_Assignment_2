@@ -24,20 +24,21 @@
             }
         ?>
 
-        <nav class = "czy_navigation_fool_profile">
+        <nav class = "dld_header_bar">
             <div class="ash_page_header">
                 <p class = "ash_title_header">User Management</p>
+                <p>User Management creates, manages and removes user accounts</p>
             </div>
             <ul>
-                <li><a href = "view_user.php">User Data</a></li>
-                <li><a href = "view_enquiry.php" class = "czy_active">Enquiries</a></li>
+                <li><a href = "view_user.php">User details</a></li>
+                <li><a href = "view_enquiry.php" class = "czy_active">User enquiries</a></li>
             </ul>
         </nav>
 
         
 
         <div class = "ttl_main_body">
-            <h1 class = "ttl_user_details_heading">User Enquiry</h1>
+            <h1 class = "ttl_user_details_heading">User enquiries</h1>
             <div class = "ttl_view_user_table_container_details">
                 <div class = "ttl_view_user_table_container">
                     <table class = "ttl_view_user_table">
