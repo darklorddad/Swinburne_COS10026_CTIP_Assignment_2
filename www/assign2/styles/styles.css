@@ -4240,14 +4240,9 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 
 .nic_button {
     border-radius: 1vw;
-    /* border-color: black; */
-    /* text-align: center; */
-    /* display: flex; */
-    /* margin-right: auto; */
     padding: 0.5vw 3vw;
     font-size: 1vw;
     font-family: "dld_samsungsharpsans_bold";
-    /* background-color: #2ecc71; */
     border: none;
     transition: background-color 0.25s ease, color 0.25s ease;
     cursor: pointer;
@@ -4255,7 +4250,6 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 }
 
 .nic_button:hover {
-    /* filter: brightness(50%); */
     background-color: #23322a;
     color: #90a79a;
 }
@@ -4263,23 +4257,20 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 /* Submit and Reset button styles */
 .nic_submit {
     background-color: #2ecc71;
-    /* color: #2ecc71; */
-    /* color: #fff; */
     width: 10vw;
 }
 
 .nic_reset {
     background-color: #e74c3c;
-    /* color: #fff; */
-    /* color: #e74c3c; */
+    margin-top: 1.5vw;
     margin-right: 1vw;
     width: 10vw;
+    float: right;
 }
 
 /* Button container */
 .nic_button-container {
-    display: flex;
-    justify-content: right;
+    float: right;
     margin-top: 1.5vw;
 }
 

@@ -1,5 +1,17 @@
 <?php
     session_start();
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reset'])) {
+        unset($_SESSION['first-name']);
+        unset($_SESSION['last-name']);
+        unset($_SESSION['email']);
+        unset($_SESSION['street']);
+        unset($_SESSION['city-town']);
+        unset($_SESSION['state']);
+        unset($_SESSION['postcode']);
+        unset($_SESSION['plant']);
+        unset($_SESSION['comment']);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +35,7 @@
             </div>
         </div>
 
-        <div class = "nic_container">
+        <div class = "nic_container" id = "jump">
             <div class = "nic_contact-box">
                 <div class = "nic_left">
                     <div id = "nic_slideshow">
@@ -120,14 +132,15 @@
                         </fieldset>
 
                         <div class = "nic_button-container">
-                            <div class = "nic_reset-button">
-                                <button type = "reset" class = "nic_button nic_reset" value = "Reset">Reset</button>
-                            </div>
-
                             <div class = "nic_submit-button">
                                 <button type = "submit" class = "nic_button nic_submit" value = "Submit">Submit</button>
                             </div>
                         </div>
+                    </form>
+
+                    
+                    <form action = "enquiry.php#jump" method = "post" class = "nic_reset-button">
+                        <button type = "submit" class = "nic_button nic_reset" name = "reset" value = "Reset">Reset</button>
                     </form>
                 </div>
             </div>
