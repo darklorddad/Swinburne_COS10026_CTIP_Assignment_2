@@ -4314,6 +4314,8 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     margin:auto;
     margin-top: 4vw;
     margin-bottom: 8vw;
+    margin-left: 8vw;
+    margin-right: 8vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
@@ -4404,10 +4406,10 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     margin-top: 0.5vw;
     margin-bottom: 0.9vw;
     width: 75%;
-    padding-top: 0.75vw;
-    padding-bottom: 0.6vw;
+    padding-top: 0.65vw;
+    padding-bottom: 0.5vw;
     padding-left: 1.2vw;
-    padding-right: 1vw;
+    /* padding-right: 1vw; */
     border: 0.2vw solid #23322a;
     border-radius: 2vw;
 }
