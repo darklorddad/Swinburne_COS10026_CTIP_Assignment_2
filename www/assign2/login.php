@@ -26,11 +26,11 @@
     
             <div class = "ash_form_box login">
                 <h2>Log In</h2>
-                <form action="login_process.php">
-                    <div class="ash_input_box">
-                        <input type="text" required>
-                        <label>Username/Email</label>
-                        <i class='bx bxs-user'></i>
+                <form action = "login_process.php" method = "post">
+                    <div class = "ash_input_box">
+                        <input type = "text" name = "login_email">
+                        <label>Email</label>
+                        <i class = 'bx bxs-user'></i>
                     </div>
                     <div class = "ash_input_box">
                         <input type = "password" name = "login_password">
@@ -44,7 +44,7 @@
                             unset($_SESSION["error"]);
                         }
                     ?>
-                    <div class="ash_logreg_link">
+                    <div class = "ash_logreg_link">
                         <p>Don't have an account? <a href = "register.php#register_point" class = "ash_register_link">Sign Up</a></p>
                     </div>
                 </form>

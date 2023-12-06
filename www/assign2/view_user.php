@@ -25,18 +25,19 @@
             }
         ?>
 
-        <nav class = "czy_navigation_fool_profile">
+        <nav class = "dld_header_bar">
             <div class="ash_page_header">
                 <p class = "ash_title_header">User Management</p>
+                <p>User Management creates, manages and removes user accounts</p>
             </div>
             <ul>
-                <li><a href = "view_user.php" class = "czy_active">User Data</a></li>
-                <li><a href = "view_enquiry.php">Enquiries</a></li>
+                <li><a href = "view_user.php" class = "czy_active">User details</a></li>
+                <li><a href = "view_enquiry.php">User enquiries</a></li>
             </ul>
         </nav>
 
-        <div class = "ttl_main_body">
-            <h1 class = "ttl_user_details_heading">User Details</h1>
+        <div class = "ttl_main_body_2">
+            <h1 class = "ttl_user_details_heading">User details</h1>
 
             <form action = "view_user.php" method = "GET" class = "ttl_search_form">
                 <input type = "text" id = "search" name = "search" placeholder = "Search..." class = "ttl_search_bar" list = "autocomplete" autocomplete = "off">
@@ -140,12 +141,11 @@
                         ?>
                     </table>
                 </div>
-            </div>
-
-            <div class="ttl_create_user_account_container">
-                <a href = "create_user.php" class = 'ttl_create_user_account_btn'>
-                    Create New User Account
-                </a>
+                <div class="ttl_create_user_account_container">
+                    <a href = "create_user.php" class = 'ttl_create_user_account_btn'>
+                        Create New User Account
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -157,7 +157,7 @@
                 <?php include_once("dld_footer_section_1.php");?>
                 <div class = "dld_section_1_footer_right">
                     <h1 class = "dld_footer_heading">Acknowledgement</h1>
-                    <div class = "dld_footer_section_1_center_row">The Crew</div>
+                    <div class = "dld_footer_section_1_center_row">The crew</div>
                 </div>
             </div>
             <?php include_once("dld_footer_section_2.php");?>
