@@ -10,16 +10,10 @@
     <?php include_once("dld_background_dots.php"); ?>
     <?php include_once("dld_top_navigation_bar.php"); ?>
 
-    <div class = "ash_section_1">
-		<div class = "ash_page_header">
-			<p class = "ash_title_header">Enhancements</p>
-			<p>A page that lists out all the enhancements for FLORASCAN</p>
-		</div>
-	</div>
-
-    <nav class = "czy_navigation_fool_profile">
+    <nav class = "dld_header_bar">
         <div class="ash_page_header">
             <p class = "ash_title_header">Enhancement</p>
+            <p>A page that lists out all the enhancements for FLORASCAN</p>
         </div>
         <ul>
             <li><a href = "enhancements.php" class = "czy_active">Enhancement 1</a></li>

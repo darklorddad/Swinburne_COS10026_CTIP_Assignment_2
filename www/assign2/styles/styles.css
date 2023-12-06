@@ -1292,7 +1292,7 @@ label.dld_gallery-label {
     text-decoration: none;
     text-align: center;
     transition: color 0.25s, background-color 0.25s;
-    padding: 0.5vw 15vw;
+    padding: 0.5vw 10vw;
 }
 
 .dld_header_bar a:hover {
@@ -1664,7 +1664,7 @@ label.dld_gallery-label {
     margin-left: 2.5vw;
     border-radius: 2vw;
     padding-top: 2vw;
-    padding-bottom: 5vw;
+    padding-bottom: 8vw;
 }
 
 .czy_profile_pic{
@@ -1688,7 +1688,7 @@ label.dld_gallery-label {
 .czy_student_id {
     font-size: 1.25vw;
     margin-bottom: 3vw;
-    font-family: Arial, sans-serif;
+    font-family: "dld_samsungsharpsans_medium";
 }
 
 .czy_profile_about_me, .czy_profile_personal{
