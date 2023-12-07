@@ -30,61 +30,51 @@
             <div class = "czy_tis_a_line"></div>
 
             <div class = "czy_ooo_pictures">
-                
-                <div class = "czy_card">
-                    <img src = "styles/images/czy/apocynaceae/alstonia_angustifolia/1.jpeg" alt = "apocynaceae_alstonia_angustifolia" class = "czy_yoo_pictures">
-                    <div class = "czy_image_container"></div>
-                    <div class = "czy_cards_le_content">
-                        <p class = "czy_card_title">Apocynaceae</p>
-                        
-                        <div class = "czy_seperator"></div>
+                <?php
+                    $families = [
+                        [
+                            'name' => 'Apocynaceae',
+                            'description' => 'Apocynaceae is a family of flowering plants...',
+                            'image' => 'styles/images/czy/apocynaceae/alstonia_angustifolia/1.jpeg',
+                            'alt' => 'apocynaceae_alstonia_angustifolia',
+                            'genera_link' => 'genera.php#apocynaceae',
+                            'species_link' => 'species.php#apocynaceae'
+                        ],
+                        [
+                            'name' => 'Dipterocarpaceae',
+                            'description' => 'Dipterocarpaceae is a family of 16 genera and about 695 known species of mainly tropical lowland rainforest trees...',
+                            'image' => 'styles/images/czy/dipterocarpaceae/hopea_griffithii/2.jpeg',
+                            'alt' => 'dipterocarpaceae_hopea_griffithii',
+                            'genera_link' => 'genera.php#dipterocarpaceae',
+                            'species_link' => 'species.php#dipterocarpaceae'
+                        ],
+                        [
+                            'name' => 'Pandanaceae',
+                            'description' => 'Pandanaceae is a family of flowering plants native to the tropics and subtropics of the Old World...',
+                            'image' => 'styles/images/czy/pandanaceae/benstonea_nana/1.jpg',
+                            'alt' => 'pandanaceae_benstonea_nana',
+                            'genera_link' => 'genera.php#pandanaceae',
+                            'species_link' => 'species.php#pandanaceae'
+                        ],
+                    ];
 
-                        <p class = "czy_small_description">
-                            Apocynaceae is a family of flowering plants. Many species are tall trees found in tropical forests, but some grow in tropical dry environments. Many of these plants have milky latex, and many species are poisonous if ingested.
-                        </p>
+                    function createFamilyCard($family) {
+                        echo "<div class='czy_card'>";
+                        echo "<img src='{$family['image']}' alt='{$family['alt']}' class='czy_yoo_pictures'>";
+                        echo "<div class='czy_cards_le_content'>";
+                        echo "<p class='czy_card_title'>{$family['name']}</p>";
+                        echo "<div class='czy_seperator'></div>";
+                        echo "<p class='czy_small_description'>{$family['description']}</p>";
+                        echo "<div class='czy_button'>";
+                        echo "<a href='{$family['genera_link']}' class='czy_card_butt_on'>Genera</a>";
+                        echo "<a href='{$family['species_link']}' class='czy_card_butt_on'>Species</a>";
+                        echo "</div></div></div>";
+                    }
 
-                        <div class = "czy_button">
-                            <a href = "genera.php#apocynaceae" class = "czy_card_butt_on">Genera</a>
-                            <a href = "species.php#apocynaceae" class = "czy_card_butt_on">Species</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class = "czy_card">
-                    <img src = "styles/images/czy/dipterocarpaceae/hopea_griffithii/2.jpeg" alt = "dipterocarpaceae_hopea_griffithii" class = "czy_yoo_pictures">
-                    <div class = "czy_cards_le_content">
-                        <p class = "czy_card_title">Dipterocarpaceae</p>
-                        
-                        <div class = "czy_seperator"></div>
-
-                        <p class = "czy_small_description">
-                            Dipterocarpaceae is a family of 16 genera and about 695 known species of mainly tropical lowland rainforest trees. The greatest diversity of Dipterocarpaceae occurs in Borneo. Many are large forest-emergent species, typically reaching heights of 40 - 70 m, some even over 80m.
-                        </p>
-
-                        <div class = "czy_button">
-                            <a href = "genera.php#dipterocarpaceae" class = "czy_card_butt_on">Genera</a>
-                            <a href = "species.php#dipterocarpaceae" class = "czy_card_butt_on">Species</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class = "czy_card">
-                    <img src = "styles/images/czy/pandanaceae/benstonea_nana/1.jpg" alt = "pandanaceae_benstonea_nana" class = "czy_yoo_pictures">
-                    <div class = "czy_cards_le_content">
-                        <p class = "czy_card_title">Pandanaceae</p>
-                        
-                        <div class = "czy_seperator"></div>
-
-                        <p class = "czy_small_description">
-                            Pandanaceae is a family of flowering plants native to the tropics and subtropics of the Old World, from West Africa through the Pacific. It contains 982 known species in five genera. The family likely originated during the Late Cretaceous.
-                        </p>
-
-                        <div class = "czy_button">
-                            <a href = "genera.php#pandanaceae" class = "czy_card_butt_on">Genera</a>
-                            <a href = "species.php#pandanaceae" class = "czy_card_butt_on">Species</a>
-                        </div>
-                    </div>
-                </div>
+                    foreach ($families as $family) {
+                        createFamilyCard($family);
+                    }
+                ?>
             </div>
         </div>
 
