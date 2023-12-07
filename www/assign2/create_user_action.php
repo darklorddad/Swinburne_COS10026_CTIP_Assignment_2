@@ -51,6 +51,9 @@
                         if (empty($username)) {
                             echo "<p class = 'ttl_error_details'>Username field is empty.<br></p>";
                         }
+                        elseif (strlen($edit_username) > 25) {
+                            echo "<p class = 'ttl_error_details'>Username exceeded 25 characters.<br></p>";
+                        }
                         
                         if (empty($email)) {
                             echo "<p class = 'ttl_error_details'>Email field is empty.<br></p>";

@@ -113,16 +113,7 @@
             exit();
         }
         else{
-            $query = "SELECT * FROM userdetails WHERE user_password = '$new_password'";
-            $result = mysqli_query($conn, $query);
-            if (mysqli_num_rows($result) > 0) {
-                $_SESSION['edit_profile']['error'] =  "Password exist already";
-                header("Location: edit_profile.php#error");
-                exit();
-            }
-            else{
-                $result = mysqli_query($conn, "UPDATE UserDetails SET user_password = '$new_password' WHERE user_id = " . $_SESSION['user_id']);
-            }
+            $result = mysqli_query($conn, "UPDATE UserDetails SET user_password = '$new_password' WHERE user_id = " . $_SESSION['user_id']);
         }
     }
     

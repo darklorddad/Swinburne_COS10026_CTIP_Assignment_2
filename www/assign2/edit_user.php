@@ -47,31 +47,46 @@
 
         <div class = "ttl_main_body">
             <div class = "ttl_user_center">
-                <form action = "edit_user_action.php" method = "post" name="edit_user_account" class="ttl_user_form">
+                <?php
+                    if (isset($_SESSION['edit_user']['result'])){
+                        echo'<div class = "ttl_user_center_1">';
+                        echo'<p class = "ttl_user_account_updated">Account details updated successfully</p>';
+                        echo'<div class = "ttl_view_result_button">';
+                        echo'<a href = "view_user.php">';
+                        echo'<button class = "ttl_update" type = "button">Return to admin dashboard</button>\\n</a>\\n</div>\\n</div>';
+                    }
+                    else{
+                        echo'
+                <form action = "edit_user_process.php" method = "post" name = "edit_user_account" class = "ttl_user_form">
                     <fieldset class = "ttl_fieldset">
                         <legend class = "ttl_user_details">User details</legend>
                         <div class = "ttl_div">
-                            <label class = "ttl_label" for="username">Username</label>
-                            <input id = "username" name= " username" class= " ttl_field" type = "text" maxlength = "25" pattern = "[a-zA-Z0-9@#$%^&*()_+{}|:<>?~-]*" value = "<?php echo $username; ?>">
-                        </div>
-                        <div class = "ttl_div">
-                            <label class = "ttl_label" for = "email">Email</label>
-                            <input id = "email" name = "email" class = "ttl_field" type = "email" value = "<?php echo $email; ?>">
-                        </div>
-                        <div class = "ttl_div">
-                            <label class = "ttl_label" for = "user_password">Password</label>
-                            <input id = "user_password" name = "user_password" class = "ttl_field" type = "password" value = "<?php echo $user_password; ?>">
+                            <label class = "ttl_label" for = "username">Username</label>
+                            <input id = "username" name= " username" class= " ttl_field" type = "text" value = "' . $username . '">
                         </div>
 
-                        <input type = "hidden" name = "id" value = "<?php echo $id; ?>">
+                        <div class = "ttl_div">
+                            <label class = "ttl_label" for = "email">Email</label>
+                            <input id = "email" name = "email" class = "ttl_field" value = "' . $email . '">
+                        </div>
+
+                        <div class = "ttl_div">
+                            <label class = "ttl_label" for = "user_password">Password</label>
+                            <input id = "user_password" name = "user_password" class = "ttl_field" type = "password" value = "' . $user_password . '">
+                        </div>
+
+                        <input type = "hidden" name = "id" value = "' . $id . '">
 
                     </fieldset>
                     
-                    <div class="ttl_update-button">
+                    <div class = "ttl_update-button">
                         <input type = "submit" class = "ttl_update" name = "update_account" value = "Update user details">
                         <a class = "ttl_update" href = "view_user.php">Return to admin dashboard</a>
                     </div>
                 </form>
+                        ';
+                    }
+                ?>
             </div>
         </div>
 
