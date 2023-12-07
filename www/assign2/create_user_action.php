@@ -25,6 +25,13 @@
         }
     ?>
 
+    <div class="ash_section_1">
+		<div class="ash_page_header">
+			<p class = "ash_title_header">Create User Account</p>
+            <p>Create user account is an administrative feature that allows an admin to set up new user accounts in the system.</p>
+		</div>
+	</div>
+
     <div class = "ttl_main_body">
         <?php
             if (isset($_POST['create_account'])) {

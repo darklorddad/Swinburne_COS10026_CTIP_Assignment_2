@@ -3732,6 +3732,21 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     align-items: center;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
+
+.ttl_user_center_1 {
+    width: 75vw;
+    background-color: #e4e3ea;
+	border-radius: 2vw;
+    margin: auto;
+    margin-top: 4vw;
+    margin-bottom: 8vw;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    padding-bottom: 4vw;
+    padding-top: 4vw;
+}
+
 .ttl_user_form{
     width: 70%;
     padding: 3vw;
@@ -3790,7 +3805,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .ttl_submit, .ttl_view_result, .ttl_update {
     border-radius: 1vw;
-    padding: 0.75vw 3vw;
+    padding: 0.5vw 3vw;
     font-size: 1.125vw;
     font-family: "dld_samsungsharpsans_bold";
     border: none;
@@ -3824,15 +3839,14 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .ttl_go_back{
     font-family: "dld_samsungsharpsans_bold";
-    font-size: 1.25vw;
+    font-size: 1.125vw;
     color: #23322a;
     border-radius: 1vw;
     padding: 0.5vw 3vw;
-    margin-top: 2vw;
     border: none;
     transition: background-color 0.25s ease, color 0.25s ease;
     cursor: pointer;
-    background-color: #e74c3c;
+    background-color: #90a79a;
 }
 
 
@@ -3848,10 +3862,10 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .ttl_error_title, .ttl_user_account_created, .ttl_user_account_updated{
-    font-family: "dld_samsungsharpsans_bold";
-    font-size: 2vw;
+    font-family: "dld_samsungsharpsans";
+    font-size: 1vw;
     text-align: center;
-    padding: 2vw;
+    /* padding: 2vw; */
     margin: 0;
     text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
@@ -3864,12 +3878,17 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     justify-content: center;
     align-items: center;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    margin-top: 4vw;
+    margin-bottom: 8vw;
+    padding-top: 2vw;
+    padding-bottom: 4vw;
 }
 
 .ttl_error_details{
-    font-family: "dld_samsungsharpsans_medium";
-    font-size: 1.5vw;
+    font-family: "dld_samsungsharpsans";
+    font-size: 1vw;
     text-align: center;
+    margin: 2vw;
 }
 
 /*Tzy Lynn's view_user.php*/
@@ -3999,7 +4018,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     font-family: "dld_samsungsharpsans";
     font-size: 1vw;
     color: #e4e3ea;
-    border-radius: 0.9vw;
+    border-radius: 0.5vw;
     padding: 0.6vw;
     background-color: #424F4A;
     text-align: center;
@@ -4020,7 +4039,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     font-family: "dld_samsungsharpsans";
     font-size: 0.9vw;
     color: white;
-    border-radius: 0.9vw;
+    border-radius: 0.5vw;
     padding: 0.6vw;
     background-color: #424F4A;
     text-align: center;

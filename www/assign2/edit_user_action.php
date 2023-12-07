@@ -24,63 +24,71 @@
         }
     ?>
 
+    <div class = "ash_section_1">
+        <div class = "ash_page_header">
+            <p class = "ash_title_header">Edit User Account</p>
+            <p>Edit user account allows administrators to modify the details of a user account</p>
+        </div>
+    </div>
+
     <div class = "ttl_main_body">
         <?php
-            if (isset($_POST['update_account'])) {
-                // Escape special characters in a string for use in an SQL statement
-                $id = mysqli_real_escape_string($conn, $_POST['id']);
-                $username = mysqli_real_escape_string($conn, $_POST['username']);
-                $email = mysqli_real_escape_string($conn, $_POST['email']);
-                $user_password = mysqli_real_escape_string($conn, $_POST['user_password']);	
-                
-                // Check for empty fields
-                if (empty($username) || empty($email) || empty($user_password)) {
-                    
-                    echo "<h1 class = 'ttl_error_title'>Error</h1>";
+            function handleFormSubmission($conn) {
+                $errors = array();
+                $success = false;
 
-                    echo "<div class = 'ttl_error_container'>";
+                if (isset($_POST["update_account"])) {
+                    $id = mysqli_real_escape_string($conn, $_POST["id"]);
+                    $username = mysqli_real_escape_string($conn, $_POST["username"]);
+                    $email = mysqli_real_escape_string($conn, $_POST["email"]);
+                    $user_password = mysqli_real_escape_string($conn, $_POST["user_password"]);	
 
-                        if (empty($username)) {
-                            echo "<p class = 'ttl_error_details'>Username field is empty.<br></p>";
-                        }
-                        
-                        if (empty($email)) {
-                            echo "<p class = 'ttl_error_details'>Email field is empty.<br></p>";
-                        }
-                        
-                        if (empty($user_password)) {
-                            echo "<p class = 'ttl_error_details'>Password field is empty.<br></p>";
-                        }
+                    if (empty($username)) {
+                        $errors[] = "Invalid username, please enter a valid username.";
+                    }
                     
-                    echo "</div>";
+                    if (empty($email)) {
+                        $errors[] = "Invalid email, please enter a valid email.";
+                    }
                     
-                    // Show link to the previous page
-                    echo "
-                        <div class='ttl_go_back_button'>
-                            <a href='view_user.php'>
-                                <button class = 'ttl_go_back' type='button'>Go Back</button>
-                            </a>
-                        </div>
-                        ";
+                    if (empty($user_password)) {
+                        $errors[] = "Invalid password, please enter a valid password.";
+                    }
 
-                } else {
-                    // Update the database table
-                    $result = mysqli_query($conn, "UPDATE UserDetails SET `username` = '$username', `email` = '$email', `user_password` = '$user_password' WHERE `id` = $id");
-                    
-                    // Display success message
-                    echo "<p class='ttl_user_account_updated'>Data updated successfully!</p>";
-                    echo "
-                        <div class='ttl_view_result_button'>
-                            <a href='view_user.php'>
-                                <button class='ttl_view_result' type='button'>View Result</button>
-                            </a>
-                        </div>
-                        "; 
+                    if (empty($errors)) {
+                        $query = "UPDATE UserDetails SET `username` = '$username', `email` = '$email', `user_password` = '$user_password' WHERE `id` = $id";
+                        $result = mysqli_query($conn, $query);
+                        $success = $result !== false;
+                    }
                 }
+
+                return array($errors, $success);
             }
 
-            $conn->close(); 
+            list($errors, $success) = handleFormSubmission($conn);
         ?>
+
+        <?php if (!empty($errors)): ?>
+            <div class = "ttl_error_container">
+                <?php foreach ($errors as $error): ?>
+                    <p class = "ttl_error_details"><?php echo $error; ?><br></p>
+                <?php endforeach; ?>
+                <div class = "ttl_go_back_button">
+                    <a href = "view_user.php">
+                        <button class = "ttl_go_back" type = "button">Return to admin dashboard</button>
+                    </a>
+                </div>
+            </div>
+        <?php elseif ($success): ?>
+            <div class = "ttl_user_center_1">
+                <p class = "ttl_user_account_updated">Account details updated successfully</p>
+                <div class = "ttl_view_result_button">
+                    <a href = "view_user.php">
+                        <button class = "ttl_update" type="button">Return to admin dashboard</button>
+                    </a>
+                </div>
+            </div>
+        <?php endif; ?>
     </div>
 
     <footer>
@@ -92,7 +100,6 @@
             </div>
         </div>
         <?php include_once("dld_footer_section_2.php");?>
-    </footer>    
-
+    </footer>
 </body>
 </html>

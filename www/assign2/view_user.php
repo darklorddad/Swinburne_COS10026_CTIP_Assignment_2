@@ -28,7 +28,7 @@
         <nav class = "dld_header_bar">
             <div class="ash_page_header">
                 <p class = "ash_title_header">Admin Dashboard</p>
-                <p>Admin Dashboard creates, manages and removes user accounts</p>
+                <p>Admin dashboard creates, manages and removes user accounts</p>
             </div>
             <ul>
                 <li><a href = "view_user.php" class = "czy_active">User details</a></li>
