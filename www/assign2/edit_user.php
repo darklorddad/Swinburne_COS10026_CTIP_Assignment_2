@@ -41,6 +41,7 @@
         <div class = "ash_section_1">
             <div class = "ash_page_header">
                 <p class = "ash_title_header">Edit User Account</p>
+                <p>Edit user account allows administrators to modify the details of a user account</p>
             </div>
         </div>
 
@@ -67,9 +68,9 @@
                     </fieldset>
                     
                     <div class="ttl_update-button">
-                        <input type = "submit" class = "ttl_update" name = "update_account" value = "Update Account">
+                        <input type = "submit" class = "ttl_update" name = "update_account" value = "Update user details">
+                        <a class = "ttl_update" href = "view_user.php">Return to view user page</a>
                     </div>
-
                 </form>
             </div>
         </div>
@@ -82,7 +83,7 @@
                 <?php include_once("dld_footer_section_1.php");?>
                 <div class = "dld_section_1_footer_right">
                     <h1 class = "dld_footer_heading">Acknowledgement</h1>
-                    <div class = "dld_footer_section_1_center_row">The User</div>
+                    <div class = "dld_footer_section_1_center_row">None</div>
                 </div>
             </div>
             <?php include_once("dld_footer_section_2.php");?>

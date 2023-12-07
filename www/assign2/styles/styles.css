@@ -1223,14 +1223,14 @@ label.dld_gallery-label {
     color: #23322a;
     text-decoration: none;
     border-radius: 2vw;
-    background-color: #91a99b;
+    background-color: #90a79a;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.15), 0 0.52vw 0.52vw rgba(0,0,0,0.12);
     transition: all 0.25s;
 }
 
 .dld_flex_container a:hover{
     background-color: #23322a;
-    color: #91a99b;
+    color: #90a79a;
 }
 
 .dld_column_img{
@@ -3701,7 +3701,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 	border-radius: 2vw;
     margin: auto;
     margin-top: 4vw;
-    margin-bottom: 4vw;
+    margin-bottom: 8vw;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
@@ -3713,24 +3713,24 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 .ttl_user_details{
     font-family: "dld_samsungsharpsans_bold";
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     margin: auto;
 }
 
 .ttl_div{
     font-family: "dld_samsungsharpsans_medium";
-    font-size: 1.3vw;
+    font-size: 1vw;
     margin-top: 1vw;
     text-align: center;
 }
 
 .ttl_fieldset{
-    border: solid #23322a 0.3vw;
+    border: solid #23322a 0.1vw;
     margin: auto;
     border-radius: 2vw;
     font-size: 1vw;
     padding: 1vw;
-    margin-bottom: 1vw;
+    /* margin-bottom: 1vw; */
 }
 
 .ttl_field{
@@ -3762,16 +3762,27 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 /* Tzy Lynn's create_user_action.php, edit_user_action.php*/
 
-.ttl_submit, .ttl_view_result, .ttl_update{
+.ttl_submit, .ttl_view_result, .ttl_update {
     border-radius: 1vw;
-    padding: 0.5vw 3vw;
-    font-size: 1.25vw;
+    padding: 0.75vw 3vw;
+    font-size: 1.125vw;
     font-family: "dld_samsungsharpsans_bold";
     border: none;
     transition: background-color 0.25s ease, color 0.25s ease;
     cursor: pointer;
     color: #23322a;
-    background-color: #2ecc71;
+    background-color: #90a79a;
+}
+
+.ttl_update-button a {
+    font-family: "dld_samsungsharpsans_bold";
+    /* width: 25vw; */
+}
+
+.ttl_update-button input {
+    font-family: "dld_samsungsharpsans_bold";
+    width: 21.5vw;
+    margin-right: 1vw;
 }
 
 .ttl_go_back{
@@ -3796,6 +3807,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 .ttl_submit-button, .ttl_go_back_button, .ttl_view_result_button,.ttl_update-button{
     text-align: center;
     padding: 2vw;
+    padding-bottom: 0.5vw;
 }
 
 .ttl_error_title, .ttl_user_account_created, .ttl_user_account_updated{

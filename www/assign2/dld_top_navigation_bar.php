@@ -22,17 +22,19 @@
         $account_text = "Admin Dashboard";
     }
     else {
-        $user_id = $_SESSION["user_id"];
-        $stmt = $mysqli_session -> prepare("SELECT * FROM userdetails WHERE user_id = ?");
-        $stmt -> bind_param("s", $user_id);
-        $stmt -> execute();
-    
-        $result = $stmt -> get_result();
-        if ($result -> num_rows > 0) {
-            $account_text = "User Dashboard";
-        }
-        else {
-            $account_text = "Account";
+        if (isset($_SESSION["user_id"])) {
+            $user_id = $_SESSION["user_id"];
+            $stmt = $mysqli_session -> prepare("SELECT * FROM userdetails WHERE user_id = ?");
+            $stmt -> bind_param("s", $user_id);
+            $stmt -> execute();
+            
+            $result = $stmt -> get_result();
+            if ($result -> num_rows > 0) {
+                $account_text = "User Dashboard";
+            }
+            else {
+                $account_text = "Account";
+            }
         }
     }
 

@@ -1,3 +1,44 @@
+<?php
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    $hostname = "127.0.0.1";
+    $user = "root";
+    $password = "";
+    $database = "florascan_database";
+
+    $mysqli_session = new mysqli($hostname, $user, $password, $database);
+
+    if ($mysqli_session -> connect_error) {
+        $_SESSION['error'] = "Error connecting to database: " . $mysqli_session -> connect_error;
+        header('Location: enquiry_error.php');
+        exit();
+    }
+    
+    $account_text = "Account";
+
+    if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] == "000001") {
+        $account_text = "Admin Dashboard";
+    }
+    else {
+        if (isset($_SESSION["user_id"])) {
+            $user_id = $_SESSION["user_id"];
+            $stmt = $mysqli_session -> prepare("SELECT * FROM userdetails WHERE user_id = ?");
+            $stmt -> bind_param("s", $user_id);
+            $stmt -> execute();
+            
+            $result = $stmt -> get_result();
+            if ($result -> num_rows > 0) {
+                $account_text = "User Dashboard";
+            }
+            else {
+                $account_text = "Account";
+            }
+        }
+    }
+?>
+
 <!DOCTYPE html>
 
 <html lang = "en">
@@ -19,7 +60,7 @@
                     <li><a href = "contributions.php">Contributions</a></li>
                     <li><a href = "enquiry.php">Enquiry</a></li>
                     <li><a href = "profile_ash.php">Profiles</a></li>
-                    <li><a href = "login_verification.php">Account</a></li>
+                    <li><a href = "login_verification.php"><?php echo $account_text; ?></a></li>
                 </ul>
             </nav>
 
@@ -69,7 +110,7 @@
 
                     <li><a href = "login_verification.php">
                         <span class = "material-symbols-outlined dld_side_navigation_bar_icon">account_circle</span>
-                        <span class = "dld_side_navigation_bar_text">Account</span>
+                        <span class = "dld_side_navigation_bar_text"><?php echo $account_text; ?></span>
                     </a></li>
 
                     <li><a href = "enhancements.php">
