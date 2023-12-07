@@ -8,14 +8,12 @@
     $password = "";
     $database = "florascan_database";
 
-    // Create a new mysqli object without selecting a database
     $mysqli_session = new mysqli($hostname, $user, $password);
 
     try {
-        // Check if the database exists
-        $db_exists = $mysqli_session->select_db($database);
-    } catch (mysqli_sql_exception $e) {
-        // Handle exception
+        $db_exists = $mysqli_session -> select_db($database);
+    }
+    catch (mysqli_sql_exception $e) {
         $db_exists = false;
     }
 

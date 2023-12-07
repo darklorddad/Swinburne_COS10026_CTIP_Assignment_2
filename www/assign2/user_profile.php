@@ -66,8 +66,8 @@
                 </div>
             </fieldset>
             <div class = "czy_special">
-                <a href = "edit_profile.php" class = "ash_editprofile_link"><button class = "dld_special_button">Edit Profile</button></a>
-                <a href = "log_out_button.php" class = "ash_editprofile_link"><button class = "dld_special_button">Log Out</button></a>
+                <a href = "edit_profile.php" class = "ash_editprofile_link"><button class = "dld_special_button">Edit account details</button></a>
+                <a href = "log_out_button.php" class = "ash_editprofile_link"><button class = "dld_special_button">Log out</button></a>
             </div>
         </div>
     </div>

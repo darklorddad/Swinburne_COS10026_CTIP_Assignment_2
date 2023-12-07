@@ -88,8 +88,8 @@
             </fieldset>
 
             <div class = "czy_special">
-                <button type = "submit" class = "dld_special_button" value = "Submit">Update profile</button>
-                <a href = "user_profile.php" class = "ash_editprofile_link"><button class = "dld_special_button">Return to user dashboard</button></a>
+                <button type = "submit" class = "dld_special_button" value = "Submit">Update account details</button>
+                <a href = "user_profile.php" class = "dld_special_button_1">Return to user dashboard</a>
             </div>
         </form>
     </div>

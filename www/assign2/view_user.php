@@ -28,19 +28,19 @@
         <nav class = "dld_header_bar">
             <div class="ash_page_header">
                 <p class = "ash_title_header">Admin Dashboard</p>
-                <p>Admin dashboard creates, manages and removes user accounts</p>
+                <p>Admin dashboard creates, manages and removes user accounts.</p>
             </div>
             <ul>
-                <li><a href = "view_user.php" class = "czy_active">User details</a></li>
+                <li><a href = "view_user.php" class = "czy_active">User accounts</a></li>
                 <li><a href = "view_enquiry.php">User enquiries</a></li>
             </ul>
         </nav>
 
         <div class = "ttl_main_body_2">
-            <h1 class = "ttl_user_details_heading">User details</h1>
+            <!-- <h1 class = "ttl_user_details_heading">User details</h1> -->
 
             <form action = "view_user.php" method = "GET" class = "ttl_search_form">
-                <input type = "text" id = "search" name = "search" placeholder = "Search..." class = "ttl_search_bar" list = "autocomplete" autocomplete = "off">
+                <input type = "text" id = "search" name = "search" placeholder = "Search" class = "ttl_search_bar" list = "autocomplete" autocomplete = "off">
                 <button type = "submit" class = "ttl_search_btn"><i class = "bx bx-search"></i></button>
                 <datalist id = "autocomplete">
                 <?php

@@ -2546,8 +2546,8 @@ a:focus {
     font-family: "dld_samsungsharpsans_bold";
     color: #23322a;
     background-color: #90a79a;
-    border-radius: 2vw;
-    padding: 0.8vw 2.5vw;
+    border-radius: 1vw;
+    padding: 0.75vw 2.5vw;
     transition: all 0.25s;
     font-size: 1vw;
     width: 20vw;
@@ -2555,7 +2555,21 @@ a:focus {
     margin-left: 0.5vw;
 }
 
-.dld_special_button:hover{
+.dld_special_button_1 {
+    border: none;
+    font-family: "dld_samsungsharpsans_bold";
+    color: #23322a;
+    background-color: #90a79a;
+    border-radius: 1vw;
+    padding: 0.75vw 2.5vw;
+    transition: all 0.25s;
+    font-size: 1vw;
+    width: 15.5vw;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+}
+
+.dld_special_button:hover, .dld_special_button_1:hover {
     cursor: pointer;
     color: #90a79a;
     background-color: #23322a;
@@ -3756,10 +3770,11 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     font-family: "dld_samsungsharpsans_bold";
     font-size: 1.25vw;
     margin: auto;
+    padding: 0vw 0.5vw;
 }
 
 .ttl_div{
-    font-family: "dld_samsungsharpsans_medium";
+    font-family: "dld_samsungsharpsans";
     font-size: 1vw;
     margin-top: 1vw;
     text-align: center;
@@ -3805,7 +3820,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .ttl_submit, .ttl_view_result, .ttl_update {
     border-radius: 1vw;
-    padding: 0.5vw 3vw;
+    padding: 0.75vw 3vw;
     font-size: 1.125vw;
     font-family: "dld_samsungsharpsans_bold";
     border: none;
@@ -3865,7 +3880,6 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     font-family: "dld_samsungsharpsans";
     font-size: 1vw;
     text-align: center;
-    /* padding: 2vw; */
     margin: 0;
     text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
@@ -3900,12 +3914,13 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     padding: 1vw 0 1vw 0;
     padding-right: 0vw;
     background-color: #23322a;
-    border-radius: 1vw;
+    border-radius: 1.5vw;
     border-bottom-left-radius: 0vw;
     border-bottom-right-radius: 0vw;
     text-align: center;
     font-family: "dld_samsungsharpsans";
     /* margin-bottom: 3vw; */
+    margin-top: 4vw;
 }
 
 .ttl_search_bar{
@@ -3966,11 +3981,11 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .ttl_view_user_table_container_details{
     background-color: #e4e3ea;
-    /* margin-top: 2vw; */
+    margin-top: 4vw;
     margin-left: 3vw;
     margin-right: 3vw;
     margin-bottom: 8vw;
-    border-radius: 1vw;
+    border-radius: 2vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
@@ -3980,7 +3995,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     margin-left: 3vw;
     margin-right: 3vw;
     margin-bottom: 8vw;
-    border-radius: 1vw;
+    border-radius: 1.5vw;
     border-top-right-radius: 0vw;
     border-top-left-radius: 0vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
@@ -4092,7 +4107,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 .ttl_create_user_account_btn{
     font-size: 1.125vw;
     color: #23322a;
-    padding: 1vw 2vw 1vw 2vw;
+    padding: 0.75vw 2vw;
     background: linear-gradient(200deg, #66B5F6 0%, #BFE299 100%);
     box-shadow: .4vw .4vw 2.4vw .2vw hsla(236, 50%, 50%, .3);
     border-radius: 1vw;
@@ -4111,7 +4126,7 @@ a.ttl_create_user_account_btn:hover{
 .ttl_log_out_button {
     font-size: 1.125vw;
     color: #23322a;
-    padding: 1vw 4.5vw 1vw 4.5vw;
+    padding: 0.75vw 4vw;
     background: linear-gradient(200deg, #66B5F6 0%, #BFE299 100%);
     box-shadow: .4vw .4vw 2.4vw .2vw hsla(236, 50%, 50%, .3);
     border-radius: 1vw;
@@ -4247,7 +4262,7 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 /* Right side form container */
 .nic_right {
     margin: 0;
-    padding: 2vw;
+    padding: 1.875vw;
     border-top-right-radius: 2vw;
     border-bottom-right-radius: 2vw;
 }
@@ -4318,6 +4333,7 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 .nic_legend {
     font-family: "dld_samsungsharpsans_bold";
     font-size: 1.25vw;
+    padding: 0vw 0.5vw;
 }
 
 .nic_right fieldset{
@@ -4349,7 +4365,7 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 
 .nic_button {
     border-radius: 1vw;
-    padding: 0.5vw 3vw;
+    padding: 0.75vw 3vw;
     font-size: 1vw;
     font-family: "dld_samsungsharpsans_bold";
     border: none;
@@ -4459,8 +4475,8 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     font-family: "dld_samsungsharpsans_bold";
     color: #23322a;
     background-color: #90a79a;
-    border-radius: 2vw;
-    padding: 0.8vw 2.5vw;
+    border-radius: 1vw;
+    padding: 0.75vw 2.5vw;
     transition: all 0.25s;
     font-size: 1vw;
 }
@@ -4483,11 +4499,11 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 
 .czy_header {
     color: #23322a;
-    background-color: #90a79a;
+    background-color: white;
     font-size: 1vw;
     width: 16.5%;
     height: 1vw;
-    border-radius: 2vw;
+    border-radius: 1vw;
     margin-top: 0.5vw;
     margin-bottom: 0.5vw;
     padding-top: 0.75vw;
@@ -4519,7 +4535,8 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     padding-bottom: 0.5vw;
     padding-left: 1.2vw;
     border: 0.1vw solid #23322a;
-    border-radius: 2vw;
+    border-radius: 1vw;
+    background-color: white;
 }
 
 .czy_description p {

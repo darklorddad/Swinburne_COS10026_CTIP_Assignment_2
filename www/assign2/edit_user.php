@@ -41,25 +41,25 @@
         <div class = "ash_section_1">
             <div class = "ash_page_header">
                 <p class = "ash_title_header">Edit User Account</p>
-                <p>Edit user account allows administrators to modify the details of a user account</p>
+                <p>Edit user account allows administrators to modify the details of a user account.</p>
             </div>
         </div>
 
         <div class = "ttl_main_body">
-            <div class = "ttl_user_center">
+            <div class = "ttl_user_center_1">
                 <?php
                     if (isset($_SESSION['edit_user']['result'])){
-                        echo'<div class = "ttl_user_center_1">';
                         echo'<p class = "ttl_user_account_updated">Account details updated successfully</p>';
                         echo'<div class = "ttl_view_result_button">';
                         echo'<a href = "view_user.php">';
-                        echo'<button class = "ttl_update" type = "button">Return to admin dashboard</button>\\n</a>\\n</div>\\n</div>';
+                        echo'<button class = "ttl_update" type = "button">Return to admin dashboard</button></a></div>';
+                        unset($_SESSION['edit_user']['result']);
                     }
                     else{
                         echo'
                 <form action = "edit_user_process.php" method = "post" name = "edit_user_account" class = "ttl_user_form">
                     <fieldset class = "ttl_fieldset">
-                        <legend class = "ttl_user_details">User details</legend>
+                        <legend class = "ttl_user_details">Account details</legend>
                         <div class = "ttl_div">
                             <label class = "ttl_label" for = "username">Username</label>
                             <input id = "username" name= " username" class= " ttl_field" type = "text" value = "' . $username . '">
@@ -75,8 +75,14 @@
                             <input id = "user_password" name = "user_password" class = "ttl_field" type = "password" value = "' . $user_password . '">
                         </div>
 
-                        <input type = "hidden" name = "id" value = "' . $id . '">
+                        <input type = "hidden" name = "id" value = "' . $id . '">';
+                    
+                        if (isset($_SESSION['error'])) {
+                            echo "<p class = 'login_error'>" . $_SESSION['error'] . "</p>";
+                            unset($_SESSION['error']);
+                        }
 
+                        echo'
                     </fieldset>
                     
                     <div class = "ttl_update-button">
