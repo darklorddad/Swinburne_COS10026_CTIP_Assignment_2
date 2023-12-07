@@ -2,19 +2,6 @@
     session_start(); 
     include("user_table.php");
     createUserTable();
-
-    $_SESSION['last_activity'] = time();
-
-    // Check if the user has been inactive for a specific period (e.g., 30 minutes)
-    $inactive_timeout = 30;
-    if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > $inactive_timeout)) {
-        session_unset();
-        session_destroy();
-    }
-
-    if (isset($_SESSION["user_id"])) {
-        header("edit_profile.php");
-    }
 ?>
 
 <!DOCTYPE html>

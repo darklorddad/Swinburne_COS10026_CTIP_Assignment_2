@@ -2526,21 +2526,14 @@ a:focus {
 }
 
 .ash_profile_box{
+    font-family: "dld_samsungsharpsans_medium";
     background: #e4e3ea;
     text-align: center;
-    padding: 40px 90px;
+    width: 80%;
     color: #23322a;
     position: relative;
-    border-radius: 20px;
+    border-radius: 2vw;
 }
-
-/* .ash_profile_pic{
-    width: 150px;
-    border-radius: 50%;
-    background: #fff;
-    padding: 6px;
-    margin-top: 40px;
-} */
 
 .ash_inputbox_container{
     padding-top: 2vw;
@@ -2556,9 +2549,14 @@ a:focus {
 }
 
 .ash_box2{
-    padding-top: 1vw;
-    padding-bottom: 1vw;
+    font-family: "dld_samsungsharpsans_medium";
+    width: 74%;
+    height: 2.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-top: 0.5vw;
     border-radius: 2vw;
+    border: 0.15vw solid #23322a;
 }
 
 
@@ -4379,7 +4377,7 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 .czy_enquiry_details{
     margin: 4vw 5vw 0vw 5vw;
     border-radius: 1.5vw;
-    border: #23322a solid 0.1vw;
+    border: #23322a solid 0.15vw;
 }
 
 .czy_enquiry_details > legend{
@@ -4396,7 +4394,7 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     font-family: "dld_samsungsharpsans";
 }
 
-.czy_enquiry_error{
+.czy_special{
     font-family: "dld_samsungsharpsans_bold";
     font-size: 1.25vw;
     text-align: center;
@@ -4404,7 +4402,8 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     margin-bottom: 5vw;
 }
 
-.czy_enquiry_error_button{
+.czy_special_button{
+    border: none;
     font-family: "dld_samsungsharpsans_bold";
     color: #23322a;
     background-color: #90a79a;
@@ -4414,7 +4413,8 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     font-size: 1vw;
 }
 
-.czy_enquiry_error_button:hover{
+.czy_special_button:hover{
+    cursor: pointer;
     color: #90a79a;
     background-color: #23322a;
 }
@@ -4434,14 +4434,14 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     background-color: #90a79a;
     font-size: 1vw;
     font-weight: bold;
-    width: 15%;
+    width: 16.5%;
     height: 1vw;
     border-radius: 2vw;
     margin-top: 0.5vw;
     margin-bottom: 0.5vw;
     padding-top: 0.75vw;
     padding-bottom: 1vw;
-    padding-left: 2vw;
+    padding-left: 1vw;
     padding-right: 1vw;
 }   
 
@@ -4466,8 +4466,7 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     padding-top: 0.7vw;
     padding-bottom: 0.5vw;
     padding-left: 1.2vw;
-    /* padding-right: 1vw; */
-    border: 0.1vw solid #23322a;
+    border: 0.15vw solid #23322a;
     border-radius: 2vw;
 }
 

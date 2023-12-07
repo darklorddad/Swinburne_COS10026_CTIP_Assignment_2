@@ -125,8 +125,8 @@
                         }
                         ?>
                     </fieldset>
-                <div class = "czy_enquiry_error">
-                    <a href = "enquiry.php" class = "czy_enquiry_error_button">Return to enquiry</a>
+                <div class = "czy_special">
+                    <a href = "enquiry.php" class = "czy_special_button">Return to enquiry</a>
                 </div>
             </div>
         </div>

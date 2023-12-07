@@ -31,6 +31,11 @@
         header("Location: register.php");
         exit();
     }
+    elseif (strlen($register_username) > 25) {
+        $_SESSION['error'] = "Username exceed 25 characters";
+        header("Location: register.php");
+        exit();
+    }
     elseif (mysqli_num_rows($result) > 0) {
         $_SESSION['error'] = "Username exist already";
         header("Location: register.php");

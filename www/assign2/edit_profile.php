@@ -12,14 +12,13 @@
     }
 
     // Select data associated with this particular id
-    $result = mysqli_query($conn, "SELECT * FROM UserDetails WHERE user_id = " . $_SESSION['user_id']);
+    $result = mysqli_query($conn, "SELECT username, email FROM UserDetails WHERE user_id = " . $_SESSION['user_id']);
 
     // Fetch the next row of a result set as an associative array
     $resultData = mysqli_fetch_assoc($result);
 
     $username = $resultData['username'];
     $email = $resultData['email'];
-    $user_password = $resultData['user_password'];
 ?>
 
 <!DOCTYPE html>
@@ -43,94 +42,45 @@
 	</div>
 
     <div class = "ash_container_1">
-        <div class = "ash_profile_box">
-            <div class = "ash_inputbox_container">
-                <div class = "ash_inputbox">
-                    <form action = "edit_profile.php" method = "post">
-                        <p>
-                            <span>Username :</span>
-                            <input type = "text" name = "update_name" placeholder = "Enter your username here" value = "<?php echo $username; ?>" class = "ash_box2">
-                        </p>
+        <form class = "ash_profile_box" action = "edit_profile_process.php" method = "post">
+            <fieldset class = "czy_enquiry_details">
+                <legend>Profile Status</legend>
 
-                        <p>
-                            <span>Email :</span>
-                            <input type = "email" name = "update_email" placeholder = "Enter your email here" value = "<?php echo $email; ?>" class = "ash_box2">
-                        </p>
-
-                        <p>
-                            <input type = "hidden" name = "old_pass" value = "">
-                            <span>Old password :</span>
-                            <input type = "password" name = "update_pass" placeholder = "Enter previous password" class = "ash_box2">
-                        </p>
-
-                        <p>
-                            <span>New password :</span>
-                            <input type = "password" name = "new_pass" placeholder = "Enter new password" class = "ash_box2">
-                        </p>
-
-                        <p>
-                            <span>Confirm password :</span>
-                            <input type = "password" name = "confirm_pass" placeholder = "Confirm new password" class = "ash_box2">
-                        </p>
-
-                        <p>
-                            <input type = "submit" value = "Update Profile" class = "ash_moreinfo_button">
-                        </p>
-                    </form>
-
-                    <?php
-                        $servername = "127.0.0.1";
-                        $username = "root";
-                        $password = "";
-                        $dbname = "florascan_database";
-
-                        // Create connection
-                        $conn = new mysqli($servername, $username, $password, $dbname);
-
-                        // Check connection
-                        if ($conn->connect_error) {
-                        die("Connection failed: " . $conn->connect_error);
-                        }       
-
-                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            $username = $_POST['update_name'];
-                            $email = $_POST['update_email'];
-                            $old_pass = $_POST['old_pass'];
-                            $new_pass = $_POST['new_pass'];
-                            $confirm_pass = $_POST['confirm_pass'];
-                            
-                            // Check if email exists
-                            $sql = "SELECT * FROM users WHERE email = '$email'";
-                            $result = $conn->query($sql);
-                        
-                            if ($result->num_rows > 0) {
-                                // Email exists, check if old password matches
-                                $row = $result->fetch_assoc();
-                                if (password_verify($old_pass, $row['password'])) {
-                                    // Old password matches, check if new password and confirm password match
-                                    if ($new_pass == $confirm_pass) {
-                                        // Update password and username
-                                        $new_pass_hash = password_hash($new_pass, PASSWORD_DEFAULT);
-                                        $sql = "UPDATE users SET password = '$new_pass_hash', username = '$username' WHERE email = '$email'";
-                                        if ($conn->query($sql) === TRUE) {
-                                            echo "Record updated successfully";
-                                        } else {
-                                            echo "Error updating record: " . $conn->error;
-                                        }
-                                    } else {
-                                        echo "New password and confirm password do not match";
-                                    }
-                                } else {
-                                    echo "Old password does not match";
-                                }
-                            } else {
-                                echo "Email does not exist";
-                            }
-                        }
-                    ?>
+                <div class = "user-info">
+                    <div class = "czy_header">Username</div>
+                    <div class = "czy_between">:</div>
+                    <input type = "text" id = "edit_username" name = "edit_username" class = "ash_box2" value = "<?php echo $username; ?>">
                 </div>
+
+                <div class = "user-info">
+                    <div class = "czy_header">Email</div>
+                    <div class = "czy_between">:</div>
+                    <input type = "text" name = "edit_email" class = "ash_box2" value = "<?php echo $email; ?>">
+                </div>
+
+                <div class = "user-info">
+                    <div class = "czy_header">Old Password</div>
+                    <div class = "czy_between">:</div>
+                    <input type = "password" name = "old_password" class = "ash_box2" placeholder = "Enter your old password">
+                </div>
+
+                <div class = "user-info">
+                    <div class = "czy_header">New Password</div>
+                    <div class = "czy_between">:</div>
+                    <input type = "text" name = "new_password" class = "ash_box2" placeholder = "Enter your new password">
+                </div>
+
+                <div class = "user-info">
+                    <div class = "czy_header">Confirm Password</div>
+                    <div class = "czy_between">:</div>
+                    <input type = "text" name = "confirm_password" class = "ash_box2" placeholder = "Re-enter your new password">
+                </div>
+            </fieldset>
+
+            <div class = "czy_special">
+                <button type = "submit" class = "czy_special_button" value = "Submit">Update Profile</button>
             </div>
-        </div>
+        </form>
     </div>
 
     <footer>
