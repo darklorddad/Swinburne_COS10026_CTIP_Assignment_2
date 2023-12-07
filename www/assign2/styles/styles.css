@@ -1098,7 +1098,7 @@ label.dld_gallery-label {
     width: 33%;
 } */
 
-.dld_section_1_footer_right_acknowledgement {
+.dld_section_1_footer_right {
     font-size: 1vw;
 }
 
@@ -1164,7 +1164,7 @@ label.dld_gallery-label {
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
     font-family: "dld_samsungsharpsans_medium";
     padding-top: 4vw;
-    padding-bottom: 8vw;
+    padding-bottom: 3vw;
 }
 
 .dld_row{
@@ -1194,6 +1194,7 @@ label.dld_gallery-label {
     background-color: #e4e3ea;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
     min-height: 18.6vw;
+    line-height: 1.5;
 }
 
 .dld_buttons_column{
@@ -1244,6 +1245,11 @@ label.dld_gallery-label {
     width: 35vw;
     border-radius: 2vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.dld_header_bar .czy_active {
+    color: #90a79a;
+    background-color: #23322a; 
 }
 
 
@@ -1663,12 +1669,11 @@ label.dld_gallery-label {
     margin-top: 2.5vw;
     margin-left: 2.5vw;
     border-radius: 2vw;
-    padding-top: 2vw;
     padding-bottom: 8vw;
 }
 
 .czy_profile_pic{
-    margin-top: 3vw;
+    margin-top: 4vw;
     width: 15vw;
     height: 15vw;
     border-radius: 15vw;
@@ -1678,6 +1683,7 @@ label.dld_gallery-label {
 .czy_member_name{
     font-size: 200%;
     font-family: "dld_samsungsharpsans_bold";
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 .czy_member_course {
@@ -1702,7 +1708,7 @@ label.dld_gallery-label {
 }
 
 .czy_about_me{
-    box-shadow: -0.2vw 0.2vw 0.52vw rgba(0,0,0,0.3);
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
     text-align: justify;
     width: 83%;
     padding: 2.5vw 5vw;
@@ -1740,7 +1746,7 @@ label.dld_gallery-label {
 }
 
 .czy_profile_body th, .czy_profile_body td{
-    box-shadow: -0.1vw 0.1vw 0.52vw rgba(0,0,0,0.3);
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
     padding: 0.5vw 1.5vw;
     color: #23322a; 
     height: 3vw;
@@ -3822,7 +3828,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 /* Search bar on view_user.php */
 .ttl_search_form{
     margin: 0 auto;
-    width: 93.5%;
+    width: 93.6%;
     padding: 1vw 0 1vw 0;
     padding-right: 0vw;
     background-color: #23322a;
@@ -3843,7 +3849,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     border-radius: 1vw;
     background-color: #e4e3ea;
     border: none;
-    transition: box-shadow 0.5s ease;
+    transition: box-shadow 0.25s ease;
 }
 
 .ttl_search_bar:hover{
@@ -3859,7 +3865,8 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     border-radius: 1vw;
     background: linear-gradient(200deg, #66B5F6 0%, #BFE299 100%);
     color: #23322a;
-    transition: 0.5s ease;
+    transition: 0.25s ease;
+    margin-left: 1.9vw;
 }
 
 .ttl_search_btn:hover{
@@ -3886,7 +3893,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     border-radius: 2vw;
     display: flex;
     flex-direction: column;
-    padding-bottom: 2vw;
+    /* padding-bottom: 2vw; */
 }
 
 .ttl_view_user_table_container_details{
@@ -3930,7 +3937,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .ttl_view_user_table_heading{
     font-family: "dld_samsungsharpsans_bold";
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     color: #23322a;
     background-color: #90a79a;
     border-radius: 0.6vw;
@@ -3941,8 +3948,8 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .ttl_view_user_table_row{
     font-family: "dld_samsungsharpsans_medium";
-    font-size: 1.4vw;
-    color: white;
+    font-size: 1.25vw;
+    color: #e4e3ea;
     border-radius: 0.9vw;
     padding: 0.6vw;
     background-color: #424F4A;
@@ -4021,6 +4028,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     background: linear-gradient(200deg, #66B5F6 0%, #BFE299 100%);
     box-shadow: .4vw .4vw 2.4vw .2vw hsla(236, 50%, 50%, .3);
     border-radius: 1vw;
+    transition: all 0.25s ease;
 }
 
 a.ttl_create_user_account_btn{
@@ -4032,10 +4040,31 @@ a.ttl_create_user_account_btn:hover{
     filter: saturate(200%);
 }
 
+.ttl_log_out_button {
+    font-size: 1.25vw;
+    color: #23322a;
+    padding: 1vw 4.5vw 1vw 4.5vw;
+    background: linear-gradient(200deg, #66B5F6 0%, #BFE299 100%);
+    box-shadow: .4vw .4vw 2.4vw .2vw hsla(236, 50%, 50%, .3);
+    border-radius: 1vw;
+    transition: all 0.25s ease;
+    margin-left: 2vw;
+}
+
+a.ttl_log_out_button {
+    text-decoration: none;
+}
+
+a.ttl_log_out_button:hover {
+    box-shadow: 0 0 2vw .2vw hsla(236, 50%, 50%, .4);
+    filter: saturate(200%);
+}
+
 a.ttl_edit, a.ttl_delete{
     text-decoration: none;
     color: white;
     padding: 0.5vw;
+    transition: all 0.25s ease;
 }
 
 a.ttl_edit:hover, a.ttl_delete:hover{
@@ -4049,10 +4078,11 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 
 .ttl_user_details_heading{
     font-family: "dld_samsungsharpsans_bold";
-    font-size: 2vw;
+    font-size: 1.5vw;
     text-align: center;
     margin-top: 4vw;
     margin-bottom: 2vw;
+    text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
 }
 
 

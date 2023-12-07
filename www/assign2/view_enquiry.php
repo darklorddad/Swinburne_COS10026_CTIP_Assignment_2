@@ -27,7 +27,7 @@
         <nav class = "dld_header_bar">
             <div class="ash_page_header">
                 <p class = "ash_title_header">User Management</p>
-                <p>User Management creates, manages and removes user accounts</p>
+                <p>User management creates, manages and removes user accounts</p>
             </div>
             <ul>
                 <li><a href = "view_user.php">User details</a></li>
@@ -43,8 +43,8 @@
                 <div class = "ttl_view_user_table_container">
                     <table class = "ttl_view_user_table">
                         <tr>
-                            <th class = "czy_enquiry_table_heading czy_firstname_heading"><a href = "view_enquiry.php?sort=firstname" class = "czy_sorting"><i class = 'bx bxs-user'></i>Firstname</a></th>
-                            <th class = "czy_enquiry_table_heading czy_lastname_heading"><a href = "view_enquiry.php?sort=lastname" class = "czy_sorting"><i class = 'bx bxs-user' ></i>Lastname</a></th>
+                            <th class = "czy_enquiry_table_heading czy_firstname_heading"><a href = "view_enquiry.php?sort=firstname" class = "czy_sorting"><i class = 'bx bxs-user'></i>First name</a></th>
+                            <th class = "czy_enquiry_table_heading czy_lastname_heading"><a href = "view_enquiry.php?sort=lastname" class = "czy_sorting"><i class = 'bx bxs-user' ></i>Last name</a></th>
                             <th class = "czy_enquiry_table_heading czy_email_heading"><a href = "view_enquiry.php?sort=email" class = "czy_sorting"><i class = 'bx bxs-envelope'></i>Email</a></th>
                             <th class = "czy_enquiry_table_heading czy_plant_heading"><a href = "view_enquiry.php?sort=plant" class = "czy_sorting"><i class = 'bx bxs-leaf'></i>Plant</a></th>
                             <th class = "czy_enquiry_table_heading czy_enquiry_heading"><a href = "view_enquiry.php?sort=enquiry" class = "czy_sorting"></i>Enquiry</a></th>

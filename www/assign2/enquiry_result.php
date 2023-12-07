@@ -26,7 +26,7 @@
         <div class = "dld_main_2">
             <div class = "dld_enquiry_result_center">
                 <fieldset class = "czy_enquiry_details">
-                    <legend>Enquiry Status</legend>
+                    <legend>Enquiry status</legend>
                     <?php
                         if (isset($_SESSION['result'])){
                             echo "<p>" . $_SESSION['result'] . "</p>";

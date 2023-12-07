@@ -30,7 +30,7 @@
 
             <div class="dld_column">
                 <div class="dld_enhancements_description">
-                    <h2>Top Navigation Bar / Side Navigation Bar</h2>
+                    <h2>Top navigation bar / Side navigation bar</h2>
                     <p>
                         The navigation bar is usually constructed as a list of links. php unordered lists (&lt;ul&gt;) are used to structure the navigation items. Each list item (&lt;li&gt;) contains a link (&lt;a&gt;) to a specific page or section of the website. CSS styles are employed to enhance the appearance, positioning, and layout of the navigation bar. Hover can be applied to create interactive effects like color changes or underlines when users hover over on navigation items.
                     </p>
@@ -43,7 +43,7 @@
                         <h3>Pages :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target="_blank" href = "index.php">Mainpage</a>
+                            <a target="_blank" href = "index.php">Home</a>
                             <a target="_blank" href = "identify.php">Identify</a>  
                             <a target="_blank" href = "explore.php">Explore</a>  
                             <a target="_blank" href = "contributions.php">Contributions</a>
@@ -71,14 +71,14 @@
 
             <div class="dld_column">
                 <div class="dld_enhancements_description">
-                    <h2>Maps / Youtube</h2>
-                    <p>An embeded Google Map is used to display the location of the plant as well as an embeded videa linked to an external video link allowing the user to play it while remaining on the current page. To implement this into the site the element (&lt;iframe&gt;) is used.</p>
+                    <h2>Google Maps / Youtube</h2>
+                    <p>An embeded Google Maps is used to display the location of the plant as well as an embeded videa linked to an external video link allowing the user to play it while remaining on the current page. To implement this into the site the element (&lt;iframe&gt;) is used.</p>
 
                     <div class = "dld_buttons_column">
                         <h3>Pages :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target="_blank" href = "index.php">Mainpage</a>
+                            <a target="_blank" href = "index.php">Home</a>
                             <a target="_blank" href = "identify.php">Identify</a>  
                         </div>
                     </div>
@@ -107,14 +107,14 @@
                     </p>
 
                     <p>
-                        php properties like input and label, and CSS properties like (overflow: hidden) help control the visibility and positioning of slides, creating a sliding effect. And with the absence of JavaScript means that the transition between slides automatically relies on CSS properties such as keyframes.
+                        PHP properties like input and label, and CSS properties like (overflow: hidden) help control the visibility and positioning of slides, creating a sliding effect. With the absence of JavaScript means that the transition between slides automatically relies on CSS properties such as keyframes.
                     </p>
 
                     <div class = "dld_buttons_column">
                         <h3>Pages :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target="_blank" href = "index.php">Mainpage</a>
+                            <a target="_blank" href = "index.php">Home</a>
                             <a target="_blank" href = "identify.php">Identify</a>  
                             <a target="_blank" href = "enquiry.php">Enquiry</a>  
                         </div>
@@ -139,9 +139,9 @@
 
             <div class="dld_column">
                 <div class="dld_enhancements_description">
-                    <h2>Modal boxes / Popup</h2>
+                    <h2>Modal box / Popup</h2>
                     <p>
-                        A modal box is essentially a hidden or initially hidden container within a web page. It can be triggered to display by using CSS-based methods, such as pseudo-class selectors like (:target). When a trigger element (e.g., a button or link) is clicked or interacted with, the modal box becomes visible through CSS. The modal box typically contains content, which can range from text and images to forms or additional user interface elements. Users can close the modal box by clicking on a designated "close" button or an overlay element.
+                        A modal box is essentially a hidden or initially hidden container within a web page. It can be triggered to display by using CSS-based methods, such as pseudo-class selectors like (:target). When a trigger element (e.g. a button or link) is clicked or interacted with, the modal box becomes visible through CSS. The modal box typically contains content, which can range from text and images to forms or additional user interface elements. Users can close the modal box by clicking on a designated "close" button or an overlay element.
                     </p>
 
                     <div class = "dld_buttons_column">
@@ -172,9 +172,9 @@
 
             <div class="dld_column">
                 <div class="dld_enhancements_description">
-                    <h2>On Hover Animations</h2>
+                    <h2>On hover animation</h2>
                     <p>
-                        Hover animations are often applied to various elements such as buttons, links, images, and text. To implement hover animations, CSS property (:hover and transition) is primarily used. When the user hovers over an element, the CSS rules within the (:hover) block take effect, causing changes in appearance or behavior. Transitions are essential to creating smooth and gradual changes during hover. CSS properties like transition allows the control of duration and easing of these changes. 
+                        Hover animations are often applied to various elements such as buttons, links, images and text. To implement hover animations, CSS property (:hover and transition) is primarily used. When the user hovers over an element, the CSS rules within the (:hover) block take effect, causing changes in appearance or behavior. Transitions are essential to creating smooth and gradual changes during hover. CSS properties like transition allows the control of duration and easing of these changes. 
                     </p>
 
                     <p>
@@ -189,12 +189,12 @@
                         <h3>Pages :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target="_blank" href = "index.php">Mainpage</a>
+                            <a target="_blank" href = "index.php">Home</a>
                             <a target="_blank" href = "identify.php">Identify</a>
                             <a target="_blank" href = "species.php">Explore</a>
                             <a target="_blank" href = "contributions.php">Contributions</a>  
                             <a target="_blank" href = "enquiry.php">Enquiry</a>
-                            <a target="_blank" href = "profile_dld.php">Profile</a>
+                            <a target="_blank" href = "profile_dld.php">Profiles</a>
                             <a target="_blank" href = "login_verification.php">Account</a>
                         </div>
                     </div>
@@ -217,9 +217,9 @@
 
             <div class="dld_column">
                 <div class="dld_enhancements_description">
-                    <h2>Search Bar</h2>
+                    <h2>Search bar</h2>
                     <p>
-                        The search bar is usually designed using php input elements, such as &lt;input type="text"&gt;, and often includes a submit button (&lt;input type="submit"&gt;) or a search icon. CSS styles are applied to define the appearance, positioning, and layout of the search bar within the webpage.
+                        The search bar is usually designed using PHP input elements, such as &lt;input type="text"&gt;, and often includes a submit button (&lt;input type="submit"&gt;) or a search icon. CSS styles are applied to define the appearance, positioning and layout of the search bar within the webpage.
                     </p>
 
                     <div class = "dld_buttons_column">
@@ -248,9 +248,9 @@
 
             <div class="dld_column">
                 <div class="dld_enhancements_description">
-                    <h2>Upload File</h2>
+                    <h2>Upload file</h2>
                     <p>
-                        The file upload element is created using php input elements with type="file". The input field presents a user interface that allows users to select and submit files from their local device. CSS can be used to style the file input field or the form, making it visually appealing and consistent with the website's design.
+                        The file upload element is created using PHP input elements with type="file". The input field presents a user interface that allows users to select and submit files from their local device. CSS can be used to style the file input field or the form, making it visually appealing and consistent with the website's design.
                     </p>
 
                     <div class = "dld_buttons_column">
@@ -279,9 +279,9 @@
 
             <div class="dld_column">
                 <div class="dld_enhancements_description">
-                    <h2>Anchor Linking</h2>
+                    <h2>Anchor linking</h2>
                     <p>
-                        Anchor linking is achieved using php elements with the id attribute and anchor tags. An anchor point within a page is created when an id is assigned to a php element using the format &lt;div id="section1"&gt;. To create a link that navigates to the anchor point,the element &lt;a&gt; is used. 
+                        Anchor linking is achieved using PHP elements with the ID attribute and anchor tags. An anchor point within a page is created when an ID is assigned to a PHP element using the format &lt;div id="section1"&gt;. To create a link that navigates to the anchor point,the element &lt;a&gt; is used. 
                     </p>
 
                     <p>
@@ -292,7 +292,7 @@
                         <h3>Pages :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target="_blank" href = "index.php">Mainpage</a>
+                            <a target="_blank" href = "index.php">Home</a>
                             <a target="_blank" href = "explore.php">Explore</a>
                             <a target="_blank" href = "login_verification.php">Account</a>
                         </div>
@@ -317,17 +317,25 @@
             <div class = "dld_section_1_footer_right">
                 <h1 class = "dld_footer_heading">Acknowledgement</h1>
 
-                <div class = "dld_footer_section_1_center_row">
+                <!-- <div class = "dld_footer_section_1_center_row">
                     <div class = "dld_footer_section_1_center_column">
                         <a href = "index.php" class = "dld_footer_section_1_center_navigation_link_1">Home</a>
+                        <a href = "contributions.php">Contributions</a>
+                        <a href = "login.php">Accounts</a>
+                    </div>
+
+                    <div class = "dld_footer_section_1_center_column">
                         <a href = "identify.php">Identify</a>
+                        <a href = "enquiry.php">Enquiry</a>
+                        <a href = "enhancements.php">Enhancements</a>
                     </div>
 
                     <div class = "dld_footer_section_1_center_column">
                         <a href = "explore.php">Explore</a>
-                        <a href = "contributions.php">Contributions</a>
+                        <a href = "profile_ash.php">Profiles</a>
                     </div>
-                </div>
+                </div> -->
+                <p>None</p>
             </div>
         </div>
 

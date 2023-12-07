@@ -203,7 +203,7 @@
                     VALUES ('$first_name', '$last_name', '$email', '$street', '$city_town', '$state', '$postcode', '$plant', '$enquiry')";
 
         if ($mysqli_session -> query($insert_enquiry) === TRUE) {
-            $_SESSION['result'] = "<p>Record inserted into database successfully</p> \n<p>Thank you <strong>" . $first_name . "</strong> for your enquiry, we will get back to you soon.</p>";
+            $_SESSION['result'] = "<p>Record inserted into database successfully.</p> \n<p>Thank you <strong>" . $first_name . "</strong> for your enquiry, we will get back to you soon.</p>";
             header('Location: enquiry_result.php');
             exit();
         }
