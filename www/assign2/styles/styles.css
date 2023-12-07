@@ -3822,14 +3822,16 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 /* Search bar on view_user.php */
 .ttl_search_form{
     margin: 0 auto;
-    width: 55%;
-    padding: 0.4vw 0 0.4vw 0;
+    width: 93.5%;
+    padding: 1vw 0 1vw 0;
     padding-right: 0vw;
     background-color: #23322a;
     border-radius: 1vw;
+    border-bottom-left-radius: 0vw;
+    border-bottom-right-radius: 0vw;
     text-align: center;
     font-family: "dld_samsungsharpsans";
-    margin-bottom: 3vw;
+    /* margin-bottom: 3vw; */
 }
 
 .ttl_search_bar{
@@ -3873,7 +3875,6 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     transform: translate(-50%, -50%);
     font-size: 1.5vw;
     font-family: "dld_samsungsharpsans_bold";
-    
 } 
 
 /* User table */
@@ -3893,8 +3894,20 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     /* margin-top: 2vw; */
     margin-left: 3vw;
     margin-right: 3vw;
-    margin-bottom: 5vw;
+    margin-bottom: 8vw;
     border-radius: 1vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.ttl_view_user_table_container_details_2 {
+    background-color: #e4e3ea;
+    /* margin-top: 2vw; */
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 8vw;
+    border-radius: 1vw;
+    border-top-right-radius: 0vw;
+    border-top-left-radius: 0vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
 
@@ -4041,8 +4054,6 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     margin-top: 4vw;
     margin-bottom: 2vw;
 }
-
-
 
 
 
@@ -4313,7 +4324,7 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 .czy_enquiry_details{
     margin: 4vw 5vw 0vw 5vw;
     border-radius: 1.5vw;
-    border: #23322a solid 0.3vw;
+    border: #23322a solid 0.1vw;
 }
 
 .czy_enquiry_details > legend{
@@ -4397,11 +4408,11 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     margin-top: 0.5vw;
     margin-bottom: 0.9vw;
     width: 75%;
-    padding-top: 0.65vw;
+    padding-top: 0.7vw;
     padding-bottom: 0.5vw;
     padding-left: 1.2vw;
     /* padding-right: 1vw; */
-    border: 0.2vw solid #23322a;
+    border: 0.1vw solid #23322a;
     border-radius: 2vw;
 }
 

@@ -59,7 +59,7 @@
                 </datalist>
             </form>
 
-            <div class = "ttl_view_user_table_container_details">
+            <div class = "ttl_view_user_table_container_details_2">
                 <div class = "ttl_view_user_table_container">
                     <table class = "ttl_view_user_table">
                         <tr>
