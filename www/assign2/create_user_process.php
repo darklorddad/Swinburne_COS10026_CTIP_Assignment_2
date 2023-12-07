@@ -1,5 +1,6 @@
 <?php
     session_start();
+
     include("user_table.php");
 
     $hostname = "127.0.0.1";
@@ -70,6 +71,7 @@
 
     $user_id = generateUniqueUserId($conn);
     $insertQuery = "INSERT INTO UserDetails (user_id, username, email, user_password) VALUES ('$user_id', '$username', '$email', '$user_password')";
+    
     if (mysqli_query($conn, $insertQuery)) {
         $_SESSION["create_user"]["result"] = "New account created successfully";
         header("Location: view_user.php");

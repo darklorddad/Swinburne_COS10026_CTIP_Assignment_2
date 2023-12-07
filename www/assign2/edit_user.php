@@ -62,17 +62,17 @@
                         <legend class = "ttl_user_details">Account details</legend>
                         <div class = "ttl_div">
                             <label class = "ttl_label" for = "username">Username</label>
-                            <input id = "username" name= " username" class= " ttl_field" type = "text" value = "' . $username . '">
+                            <input id = "username" name= " username" class= " ttl_field" type = "text" placeholder = "Enter your username" value = "' . $username . '">
                         </div>
 
                         <div class = "ttl_div">
                             <label class = "ttl_label" for = "email">Email</label>
-                            <input id = "email" name = "email" class = "ttl_field" value = "' . $email . '">
+                            <input id = "email" name = "email" class = "ttl_field" placeholder = "Enter your email" value = "' . $email . '">
                         </div>
 
                         <div class = "ttl_div">
                             <label class = "ttl_label" for = "user_password">Password</label>
-                            <input id = "user_password" name = "user_password" class = "ttl_field" type = "password" value = "' . $user_password . '">
+                            <input id = "user_password" name = "user_password" class = "ttl_field" type = "password" placeholder = "Enter your password" value = "' . $user_password . '">
                         </div>
 
                         <input type = "hidden" name = "id" value = "' . $id . '">';
