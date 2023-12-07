@@ -2,6 +2,8 @@
     session_start(); 
     include("user_table.php");
     createUserTable();
+
+    $_SESSION["user_id"] = null;
     
     if (isset($_SESSION["user_id"]) ) {
         if ($_SESSION["user_id"] == "000001") {
