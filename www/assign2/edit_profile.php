@@ -1,3 +1,27 @@
+<?php
+    session_start();
+    $hostname = "127.0.0.1";
+    $user = "root";
+    $password = "";
+    $database = "florascan_database";
+
+    $conn = mysqli_connect($hostname, $user, $password, $database);
+
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    // Select data associated with this particular id
+    $result = mysqli_query($conn, "SELECT * FROM UserDetails WHERE user_id = " . $_SESSION['user_id']);
+
+    // Fetch the next row of a result set as an associative array
+    $resultData = mysqli_fetch_assoc($result);
+
+    $username = $resultData['username'];
+    $email = $resultData['email'];
+    $user_password = $resultData['user_password'];
+?>
+
 <!DOCTYPE html>
 <html lang = "en">
 <head>
@@ -6,51 +30,51 @@
     <title>FLORASCAN - View User Profile</title>
     <?php include_once("head.php"); ?>
 </head>
-<body class="ash_body">
+<body class = "ash_body">
     <?php 
         include_once("dld_top_navigation_bar.php");
         include_once("dld_background_dots.php"); 
     ?>
 
-    <div class="ash_section_1">
-		<div class="ash_page_header">
+    <div class = "ash_section_1">
+		<div class = "ash_page_header">
 			<p class = "ash_title_header">Edit User Profile</p>
 		</div>
 	</div>
 
-    <div class="ash_container_1">
-        <div class="ash_profile_box">
-            <div class="ash_inputbox_container">
-                <div class="ash_inputbox">
-                    <form action="edit_profile.php" method="post">
+    <div class = "ash_container_1">
+        <div class = "ash_profile_box">
+            <div class = "ash_inputbox_container">
+                <div class = "ash_inputbox">
+                    <form action = "edit_profile.php" method = "post">
                         <p>
                             <span>Username :</span>
-                            <input type="text" name="update_name" placeholder="Enter your username here" value="" class="ash_box2">
+                            <input type = "text" name = "update_name" placeholder = "Enter your username here" value = "<?php echo $username; ?>" class = "ash_box2">
                         </p>
 
                         <p>
                             <span>Email :</span>
-                            <input type="email" name="update_email" placeholder="Enter your email here" value="" class="ash_box2">
+                            <input type = "email" name = "update_email" placeholder = "Enter your email here" value = "<?php echo $email; ?>" class = "ash_box2">
                         </p>
 
                         <p>
-                            <input type="hidden" name="old_pass" value="">
+                            <input type = "hidden" name = "old_pass" value = "">
                             <span>Old password :</span>
-                            <input type="password" name="update_pass" placeholder="Enter previous password" class="ash_box2">
+                            <input type = "password" name = "update_pass" placeholder = "Enter previous password" class = "ash_box2">
                         </p>
 
                         <p>
                             <span>New password :</span>
-                            <input type="password" name="new_pass" placeholder="Enter new password" class="ash_box2">
+                            <input type = "password" name = "new_pass" placeholder = "Enter new password" class = "ash_box2">
                         </p>
 
                         <p>
                             <span>Confirm password :</span>
-                            <input type="password" name="confirm_pass" placeholder="Confirm new password" class="ash_box2">
+                            <input type = "password" name = "confirm_pass" placeholder = "Confirm new password" class = "ash_box2">
                         </p>
 
                         <p>
-                            <input type="submit" value="Update Profile" class="ash_moreinfo_button">
+                            <input type = "submit" value = "Update Profile" class = "ash_moreinfo_button">
                         </p>
                     </form>
 

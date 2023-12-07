@@ -1,3 +1,26 @@
+<?php
+    session_start();
+    $hostname = "127.0.0.1";
+    $user = "root";
+    $password = "";
+    $database = "florascan_database";
+
+    $conn = mysqli_connect($hostname, $user, $password, $database);
+
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    // Select data associated with this particular id
+    $result = mysqli_query($conn, "SELECT username, email FROM UserDetails WHERE user_id = " . $_SESSION["user_id"] . "");
+
+    // Fetch the next row of a result set as an associative array
+    $resultData = mysqli_fetch_assoc($result);
+
+    $username = $resultData['username'];
+    $email = $resultData['email'];
+?>
+
 <!DOCTYPE html>
 <html lang = "en">
 <head>
@@ -6,26 +29,26 @@
     <title>FLORASCAN - View User Profile</title>
     <?php include_once("head.php"); ?>
 </head>
-<body class="ash_body">
+<body class = "ash_body">
     <?php 
         include_once("dld_top_navigation_bar.php");
         include_once("dld_background_dots.php"); 
     ?>
 
-    <div class="ash_section_1">
-		<div class="ash_page_header">
+    <div class = "ash_section_1">
+		<div class = "ash_page_header">
 			<p class = "ash_title_header">User Profile</p>
 		</div>
 	</div>
 
-    <div class="ash_container_1">
-        <div class="ash_profile_box">
-            <h3>Username: Admin</h3>
-            <p>Email: admin_florascan@gmail.com</p>
+    <div class = "ash_container_1">
+        <div class = "ash_profile_box">
+            <h3>Username: <?php echo $username ?></h3>
+            <p>Email: <?php echo $email ?></p>
             
-            <div class="ash_profile_box_button">
-                <button class="ash_moreinfo_button"><a href="edit_profile.php" class="ash_editprofile_link">Edit Profile</a></button>
-                <button class="ash_moreinfo_button"><a href="index.php" class="ash_editprofile_link">Log Out</a></button>
+            <div class = "ash_profile_box_button">
+                <a href = "edit_profile.php" class = "ash_editprofile_link"><button class = "ash_moreinfo_button">Edit Profile</button></a>
+                <a href = "log_out_button.php" class = "ash_editprofile_link"><button class = "ash_moreinfo_button">Log Out</button></a>
             </div>
         </div>
     </div>
