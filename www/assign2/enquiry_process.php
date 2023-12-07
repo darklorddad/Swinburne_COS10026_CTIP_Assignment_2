@@ -1,4 +1,6 @@
 <?php
+    include("user_table.php");
+
     session_start();
 
     $hostname = "127.0.0.1";
@@ -15,6 +17,8 @@
         header('Location: enquiry_error.php');
         exit();
     }
+
+    createUserTable()
 
     function createDatabase($mysqli_session, $database) {
         $check_database_query = "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '$database'";
