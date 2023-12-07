@@ -25,7 +25,7 @@
     $resultData = mysqli_fetch_assoc($result);
     $user_id = $resultData['user_id'];
     
-    if ($login_email == "admin_florascan@gmail.com" && $login_password == "admin") {
+    if ($login_email == "admin@florascan.com" && $login_password == "admin") {
         $_SESSION["user_id"] = $user_id;
         header("Location: view_user.php");
     }

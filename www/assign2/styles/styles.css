@@ -94,12 +94,12 @@
     position: absolute;
     /* left: 9.8%; */
     /* right: 9.8%; */
-    top: -5.4%;
+    top: -50.4%;
     /* border-radius: 1000vw; */
     filter: blur(2500vw);
     z-index: -2;
-    /* transform: rotate(90deg); */
-    /* animation: dld_background_gradient_rotate 7s linear infinite; */
+    transform: rotate(90deg);
+    animation: dld_background_gradient_rotate 7s linear infinite;
 }
 
 @keyframes dld_background_gradient_rotate {

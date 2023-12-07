@@ -16,45 +16,52 @@
         exit();
     }
 
-    $check_database_query = "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '$database'";
-    $check_database = $mysqli_session->query($check_database_query);
+    function createDatabase($mysqli_session, $database) {
+        $check_database_query = "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '$database'";
+        $check_database = $mysqli_session->query($check_database_query);
 
-    if ($check_database->num_rows == 0) {
-        $create_database = "CREATE DATABASE $database";
+        if ($check_database->num_rows == 0) {
+            $create_database = "CREATE DATABASE $database";
 
-        if ($mysqli_session->query($create_database) !== TRUE) {
-            $_SESSION['error'] = "Error creating database: " . $mysqli_session -> error;
-            header('Location: enquiry_error.php');
-            exit();
+            if ($mysqli_session->query($create_database) !== TRUE) {
+                $_SESSION['error'] = "Error creating database: " . $mysqli_session -> error;
+                header('Location: enquiry_error.php');
+                exit();
+            }
+        }
+
+        $mysqli_session -> select_db($database);
+    }
+
+    function createTable($mysqli_session) {
+        $table = "enquiry";
+        $check_table_query = "SHOW TABLES LIKE '$table'";
+        $check_table = $mysqli_session -> query($check_table_query);
+        
+        if ($check_table -> num_rows == 0) {
+            $create_table = "CREATE TABLE $table (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                first_name VARCHAR(50) NOT NULL,
+                last_name VARCHAR(50) NOT NULL,
+                email VARCHAR(50) NOT NULL,
+                street VARCHAR(255) NOT NULL,
+                city VARCHAR(50) NOT NULL,
+                state VARCHAR(50) NOT NULL,
+                postcode VARCHAR(10) NOT NULL,
+                plant VARCHAR(50) NOT NULL,
+                enquiry TEXT NOT NULL
+            )";
+        
+            if ($mysqli_session -> query($create_table) !== TRUE) {
+                $_SESSION['error'] = "Error creating table: " . $mysqli_session -> error;
+                header('Location: enquiry_result.php');
+                exit();
+            }
         }
     }
 
-    $mysqli_session -> select_db($database);
-
-    $table = "enquiry";
-    $check_table_query = "SHOW TABLES LIKE '$table'";
-    $check_table = $mysqli_session -> query($check_table_query);
-    
-    if ($check_table -> num_rows == 0) {
-        $create_table = "CREATE TABLE $table (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            first_name VARCHAR(50) NOT NULL,
-            last_name VARCHAR(50) NOT NULL,
-            email VARCHAR(50) NOT NULL,
-            street VARCHAR(255) NOT NULL,
-            city VARCHAR(50) NOT NULL,
-            state VARCHAR(50) NOT NULL,
-            postcode VARCHAR(10) NOT NULL,
-            plant VARCHAR(50) NOT NULL,
-            enquiry TEXT NOT NULL
-        )";
-    
-        if ($mysqli_session -> query($create_table) !== TRUE) {
-            $_SESSION['error'] = "Error creating table: " . $mysqli_session -> error;
-            header('Location: enquiry_result.php');
-            exit();
-        }
-    }
+    createDatabase($mysqli_session, $database);
+    createTable($mysqli_session);
 
     $first_name = $_POST["first-name"];
     if(empty($first_name)) {

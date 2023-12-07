@@ -145,7 +145,7 @@
                     <a href = "create_user.php" class = 'ttl_create_user_account_btn'>
                         Create user account
                     </a>
-                    <a href = "create_user.php" class = 'ttl_log_out_button'>
+                    <a href = "admin_log_out_button.php" class = 'ttl_log_out_button'>
                         Admin log out
                     </a>
                 </div>

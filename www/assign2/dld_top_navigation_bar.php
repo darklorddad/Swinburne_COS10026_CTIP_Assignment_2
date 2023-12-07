@@ -1,4 +1,12 @@
-<?php echo '
+<?php     
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+    $account_text = "Account";
+    if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] == "000001") {
+        $account_text = "Admin Dashboard";
+    }
+    echo '
         <nav class = "dld_top_navigation_bar">
             <ul>
                 <li class="dld_top_navigation_bar_item_first">
@@ -75,7 +83,7 @@
                             <span class = "material-symbols-outlined">account_circle</span>
                         </span>
                         <span class = "dld_top_navigation_bar_text">
-                            Account
+                            ' . $account_text . '
                         </span>
                     </a>
                 </li>
