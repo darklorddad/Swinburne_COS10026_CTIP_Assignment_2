@@ -1,11 +1,39 @@
 <?php     
-    if (session_status() == PHP_SESSION_NONE) {
-        session_start();
+    session_start();
+
+    $hostname = "127.0.0.1";
+    $user = "root";
+    $password = "";
+    $database = "florascan_database";
+
+    $mysqli_session = new mysqli($hostname, $user, $password, $database);
+
+    if ($mysqli_session -> connect_error) {
+        $_SESSION['error'] = "Error connecting to database: " . $mysqli_session -> connect_error;
+        header('Location: enquiry_error.php');
+        exit();
     }
+    
     $account_text = "Account";
+
     if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] == "000001") {
         $account_text = "Admin Dashboard";
     }
+    else {
+        $user_id = $_SESSION["user_id"];
+        $stmt = $mysqli_session -> prepare("SELECT * FROM userdetails WHERE user_id = ?");
+        $stmt -> bind_param("s", $user_id);
+        $stmt -> execute();
+    
+        $result = $stmt -> get_result();
+        if ($result -> num_rows > 0) {
+            $account_text = "User Dashboard";
+        }
+        else {
+            $account_text = "Account";
+        }
+    }
+
     echo '
         <nav class = "dld_top_navigation_bar">
             <ul>

@@ -22,6 +22,31 @@
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
             }
+
+            $table = "enquiry";
+            $check_table_query = "SHOW TABLES LIKE '$table'";
+            $check_table = $conn -> query($check_table_query);
+            
+            if ($check_table -> num_rows == 0) {
+                $create_table = "CREATE TABLE $table (
+                    id INT AUTO_INCREMENT PRIMARY KEY,
+                    first_name VARCHAR(50) NOT NULL,
+                    last_name VARCHAR(50) NOT NULL,
+                    email VARCHAR(50) NOT NULL,
+                    street VARCHAR(255) NOT NULL,
+                    city VARCHAR(50) NOT NULL,
+                    state VARCHAR(50) NOT NULL,
+                    postcode VARCHAR(10) NOT NULL,
+                    plant VARCHAR(50) NOT NULL,
+                    enquiry TEXT NOT NULL
+                )";
+            
+                if ($conn -> query($create_table) !== TRUE) {
+                    $_SESSION['error'] = "Error creating table: " . $conn -> error;
+                    header('Location: enquiry_result.php');
+                    exit();
+                }
+            }
         ?>
 
         <nav class = "dld_header_bar">
@@ -89,6 +114,11 @@
                             
                         ?>
                     </table>
+                </div>
+                <div class="ttl_create_user_account_container">
+                    <a href = "log_out_button.php" class = 'ttl_log_out_button'>
+                        Admin log out
+                    </a>
                 </div>
             </div>
         </div>
