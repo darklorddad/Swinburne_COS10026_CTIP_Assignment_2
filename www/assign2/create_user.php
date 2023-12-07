@@ -14,7 +14,8 @@
 
     <div class="ash_section_1">
 		<div class="ash_page_header">
-			<p class = "ash_title_header">Create New User Account</p>
+			<p class = "ash_title_header">Create User Account</p>
+            <p>Create user account is an administrative feature that allows an admin to set up new user accounts in the system.</p>
 		</div>
 	</div>
 
@@ -38,7 +39,8 @@
                 </fieldset>
                 
                 <div class="ttl_submit-button">
-                    <input type="submit" class="ttl_submit" name="create_account" value="Create Account">
+                    <input type="submit" class="ttl_submit" name="create_account" value="Create account">
+                    <a class = "ttl_submit" href = "view_user.php">Return to admin dashboard</a>
                 </div>
 
             </form>
@@ -50,7 +52,7 @@
             <?php include_once("dld_footer_section_1.php");?>
             <div class = "dld_section_1_footer_right">
                 <h1 class = "dld_footer_heading">Acknowledgement</h1>
-                <div class = "dld_footer_section_1_center_row">The Crew</div>
+                <div class = "dld_footer_section_1_center_row">None</div>
             </div>
         </div>
         <?php include_once("dld_footer_section_2.php");?>

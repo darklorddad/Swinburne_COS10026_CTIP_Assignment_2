@@ -69,7 +69,7 @@
                     
                     <div class="ttl_update-button">
                         <input type = "submit" class = "ttl_update" name = "update_account" value = "Update user details">
-                        <a class = "ttl_update" href = "view_user.php">Return to view user page</a>
+                        <a class = "ttl_update" href = "view_user.php">Return to admin dashboard</a>
                     </div>
                 </form>
             </div>

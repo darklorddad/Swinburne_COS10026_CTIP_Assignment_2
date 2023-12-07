@@ -1835,6 +1835,8 @@ label.dld_gallery-label {
     border-radius: 2vw;
     margin-top: 2.5vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    padding-bottom: 4vw;
+    padding-top: 2vw;
 }
 
 .ash_container{
@@ -3781,7 +3783,18 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .ttl_update-button input {
     font-family: "dld_samsungsharpsans_bold";
-    width: 21.5vw;
+    width: 20.8vw;
+    margin-right: 1vw;
+}
+
+.ttl_submit-button a {
+    font-family: "dld_samsungsharpsans_bold";
+    /* width: 25vw; */
+}
+
+.ttl_submit-button input {
+    font-family: "dld_samsungsharpsans_bold";
+    width: 20.5vw;
     margin-right: 1vw;
 }
 
@@ -3949,7 +3962,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .ttl_view_user_table_heading{
     font-family: "dld_samsungsharpsans_bold";
-    font-size: 1.25vw;
+    font-size: 1.125vw;
     color: #23322a;
     background-color: #90a79a;
     border-radius: 0.6vw;
@@ -3959,8 +3972,8 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .ttl_view_user_table_row{
-    font-family: "dld_samsungsharpsans_medium";
-    font-size: 1.25vw;
+    font-family: "dld_samsungsharpsans";
+    font-size: 1vw;
     color: #e4e3ea;
     border-radius: 0.9vw;
     padding: 0.6vw;
@@ -3970,17 +3983,17 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .czy_enquiry_table_heading{
     font-family: "dld_samsungsharpsans_bold";
-    font-size: 1.1vw;
+    font-size: 1.125vw;
     color: #23322a;
     background-color: #90a79a;
     border-radius: 0.6vw;
-    padding: 0.5vw;
+    padding: 0.88vw 0.5vw;
     position: sticky;
     top: 0.6vw;
 }
 
 .czy_enquiry_table_row{
-    font-family: "dld_samsungsharpsans_medium";
+    font-family: "dld_samsungsharpsans";
     font-size: 0.9vw;
     color: white;
     border-radius: 0.9vw;
@@ -4006,7 +4019,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 /* Enquiry rows */
 .czy_enquiry{
     text-align: justify;
-    padding: 0.9vw;
+    padding: 0.65vw 0.9vw;
 }
 
 /* User Table Headings */
@@ -4034,7 +4047,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 }
 
 .ttl_create_user_account_btn{
-    font-size: 1.25vw;
+    font-size: 1.125vw;
     color: #23322a;
     padding: 1vw 2vw 1vw 2vw;
     background: linear-gradient(200deg, #66B5F6 0%, #BFE299 100%);
@@ -4053,7 +4066,7 @@ a.ttl_create_user_account_btn:hover{
 }
 
 .ttl_log_out_button {
-    font-size: 1.25vw;
+    font-size: 1.125vw;
     color: #23322a;
     padding: 1vw 4.5vw 1vw 4.5vw;
     background: linear-gradient(200deg, #66B5F6 0%, #BFE299 100%);
@@ -4090,7 +4103,7 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 
 .ttl_user_details_heading{
     font-family: "dld_samsungsharpsans_bold";
-    font-size: 1.5vw;
+    font-size: 1.75vw;
     text-align: center;
     margin-top: 4vw;
     margin-bottom: 2vw;

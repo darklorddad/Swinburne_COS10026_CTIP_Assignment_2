@@ -26,7 +26,7 @@
 <head>
     <meta name = "author" content = "Ashley">
     <meta name = "description" content = "Create User Account">
-    <title>FLORASCAN - View User Profile</title>
+    <title>FLORASCAN - User Dashboard</title>
     <?php include_once("head.php"); ?>
 </head>
 <body class = "ash_body">
@@ -37,7 +37,8 @@
 
     <div class = "ash_section_1">
 		<div class = "ash_page_header">
-			<p class = "ash_title_header">User Profile</p>
+			<p class = "ash_title_header">User Dashboard</p>
+            <p>User dashboard is a custom interface offering users centralised access to role-specific information and tools.</p>
 		</div>
 	</div>
 

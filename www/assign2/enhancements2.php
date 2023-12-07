@@ -12,7 +12,7 @@
 
     <nav class = "dld_header_bar">
         <div class="ash_page_header">
-            <p class = "ash_title_header">Enhancement</p>
+            <p class = "ash_title_header">Enhancements</p>
             <p>A page that lists out all the enhancements for FLORASCAN</p>
         </div>
         <ul>
