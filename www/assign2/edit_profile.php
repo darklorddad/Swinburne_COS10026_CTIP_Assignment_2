@@ -41,8 +41,9 @@
 		</div>
 	</div>
 
-    <div class = "ash_container_1">
+    <div class = "ash_container_1" id = "error">
         <form class = "ash_profile_box" action = "edit_profile_process.php" method = "post">
+
             <fieldset class = "czy_enquiry_details">
                 <legend>Profile Status</legend>
 
@@ -67,14 +68,22 @@
                 <div class = "user-info">
                     <div class = "czy_header">New Password</div>
                     <div class = "czy_between">:</div>
-                    <input type = "text" name = "new_password" class = "ash_box2" placeholder = "Enter your new password">
+                    <input type = "password" name = "new_password" class = "ash_box2" placeholder = "Enter your new password">
                 </div>
 
                 <div class = "user-info">
                     <div class = "czy_header">Confirm Password</div>
                     <div class = "czy_between">:</div>
-                    <input type = "text" name = "confirm_password" class = "ash_box2" placeholder = "Re-enter your new password">
+                    <input type = "password" name = "confirm_password" class = "ash_box2" placeholder = "Re-enter your new password">
                 </div>
+
+                <?php 
+                    if(isset($_SESSION['edit_profile']["error"])) {
+                        echo "<div class = 'user-info login_error'>" . $_SESSION['edit_profile']["error"] . "</div>";
+                        unset($_SESSION['edit_profile']["error"]);
+                    }
+                ?>
+
             </fieldset>
 
             <div class = "czy_special">

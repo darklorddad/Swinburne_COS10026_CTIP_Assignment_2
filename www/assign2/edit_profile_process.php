@@ -18,90 +18,114 @@
     $resultData = mysqli_fetch_assoc($result);
 
     $edit_username = mysqli_real_escape_string($conn, $_POST['edit_username']);
-    // $edit_email = mysqli_real_escape_string($conn, $_POST['edit_email']);
-    // $old_password = mysqli_real_escape_string($conn, $_POST['old_password']);
-    // $new_password = mysqli_real_escape_string($conn, $_POST['new_password']);	
-    // $new_password = mysqli_real_escape_string($conn, $_POST['confirm_password']);	
+    $edit_email = mysqli_real_escape_string($conn, $_POST['edit_email']);
+    $old_password = mysqli_real_escape_string($conn, $_POST['old_password']);
+    $new_password = mysqli_real_escape_string($conn, $_POST['new_password']);	
+    $confirm_password = mysqli_real_escape_string($conn, $_POST['confirm_password']);	
 
     $username = $resultData['username'];
-    // $email = $resultData['email']; 
-    // $password = $resultData['user_password']
-
-    $query = "SELECT * FROM userdetails WHERE username = '" . $username . "'";
-    $result = mysqli_query($conn, $query);
-
+    $email = $resultData['email']; 
+    $password = $resultData['user_password'];
     
-    $first_name = $_POST["first-name"];
-    if(empty($first_name)) {
-        $_SESSION['first_name_error'] = "First name is required";
-    }
-    elseif() {
-        $_SESSION['first_name_error'] = "First name should not exceed 25 characters";
-    }
-    elseif(!preg_match("/^[A-Za-z]+$/", $first_name)) {
-        $_SESSION['first_name_error'] = "First name should only contain letters";
-    }
-    else{
-        unset($_SESSION['first_name_error']);
-        $_SESSION['first_name'] = $first_name;
-    }
-
-    
+    // Username validation
     if (empty($edit_username)) {
-        
+        $_SESSION['edit_profile']['error'] =  "Username was empty";
+        header("Location: edit_profile.php#error");
+        exit();
     }
     elseif (strlen($edit_username) > 25) {
-        $_SESSION['edit_profile']['error'] =  
+        $_SESSION['edit_profile']['error'] =  "Username exceeded 25 characters";
+        header("Location: edit_profile.php#error");
+        exit();
     }
     elseif ($edit_username != $username) {
-        $result = mysqli_query($conn, "UPDATE UserDetails SET username = " . $username . " WHERE user_id = " . $_SESSION['user_id']);
+        $query = "SELECT * FROM userdetails WHERE username = '$edit_username'";
+        $result = mysqli_query($conn, $query);
+        if (mysqli_num_rows($result) > 0) {
+            $_SESSION['edit_profile']['error'] =  "Username exist already";
+            header("Location: edit_profile.php#error");
+            exit();
+        }
+        else{
+            $result = mysqli_query($conn, "UPDATE UserDetails SET username = '$edit_username' WHERE user_id = " . $_SESSION['user_id']);
+        }
     }
 
-    // if (empty($register_username)) {
-    //     $_SESSION['error'] = "Username is required";
-    //     header("Location: register.php");
-    //     exit();
-    // }
-    // elseif (mysqli_num_rows($result) > 0) {
-    //     $_SESSION['error'] = "Username exist already";
-    //     header("Location: register.php");
-    //     exit();
-    // }
+    // Email validation
+    if (empty($edit_email)) {
+        $_SESSION['edit_profile']['error'] =  "Email was empty";
+        header("Location: edit_profile.php#error");
+        exit();
+    }
+    elseif (!filter_var($edit_email, FILTER_VALIDATE_EMAIL)) {
+        $_SESSION['edit_profile']['error'] =  "Invalid email format";
+        header("Location: edit_profile.php#error");
+        exit();
+    }
+    elseif ($edit_email != $email) {
+        $query = "SELECT * FROM userdetails WHERE email = '$edit_email'";
+        $result = mysqli_query($conn, $query);
+        if (mysqli_num_rows($result) > 0) {
+            $_SESSION['edit_profile']['error'] =  "Email exist already";
+            header("Location: edit_profile.php#error");
+            exit();
+        }
+        else{
+            $result = mysqli_query($conn, "UPDATE UserDetails SET email = '$edit_email' WHERE user_id = " . $_SESSION['user_id']);
+        }
+    }
 
-
-    // if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    //     $username = $_POST['update_name'];
-    //     $email = $_POST['update_email'];
-    //     $old_pass = $_POST['old_pass'];
-    //     $new_pass = $_POST['new_pass'];
-    //     $confirm_pass = $_POST['confirm_pass'];
-        
-    //     // Check if email exists
-    //     $sql = "SELECT * FROM users WHERE email = '$email'";
-    //     $result = $conn->query($sql);
+    // Password validation
+    if (empty($old_password)) {
+        $_SESSION['edit_profile']['error'] = "Enter in your old password";
+        header("Location: edit_profile.php#error");
+        exit();
+    }
+    elseif ($old_password != $password) {
+        $_SESSION['edit_profile']['error'] = "Incorrect password";
+        header("Location: edit_profile.php#error");
+        exit();
+    }
+    else{
+        if (empty($new_password)) {
+            $_SESSION['edit_profile']['error'] = "Enter in your new password";
+            header("Location: edit_profile.php#error");
+            exit();
+        }
+        elseif (empty($confirm_password)) {
+            $_SESSION['edit_profile']['error'] = "Re-enter your new password again";
+            header("Location: edit_profile.php#error");
+            exit();
+        }
+        elseif (strlen($new_password) < 8) {
+            $_SESSION['edit_profile']['error'] = "Password should have at least 8 characters";
+            header("Location: edit_profile.php#error");
+            exit();
+        }
+        elseif ($new_password == $old_password) {
+            $_SESSION['edit_profile']['error'] = "New password cannot be the same as the old password";
+            header("Location: edit_profile.php#error");
+            exit();
+        }
+        elseif ($new_password != $confirm_password) {
+            $_SESSION['edit_profile']['error'] = "New password does not match confirm password";
+            header("Location: edit_profile.php#error");
+            exit();
+        }
+        else{
+            $query = "SELECT * FROM userdetails WHERE user_password = '$new_password'";
+            $result = mysqli_query($conn, $query);
+            if (mysqli_num_rows($result) > 0) {
+                $_SESSION['edit_profile']['error'] =  "Password exist already";
+                header("Location: edit_profile.php#error");
+                exit();
+            }
+            else{
+                $result = mysqli_query($conn, "UPDATE UserDetails SET user_password = '$new_password' WHERE user_id = " . $_SESSION['user_id']);
+            }
+        }
+    }
     
-    //     if ($result->num_rows > 0) {
-    //         // Email exists, check if old password matches
-    //         $row = $result->fetch_assoc();
-    //         if (password_verify($old_pass, $row['password'])) {
-    //             // Old password matches, check if new password and confirm password match
-    //             if ($new_pass == $confirm_pass) {
-    //                 // Update password and username
-    //                 $new_pass_hash = password_hash($new_pass, PASSWORD_DEFAULT);
-    //                 $sql = "UPDATE users SET password = '$new_pass_hash', username = '$username' WHERE email = '$email'";
-    //                 if ($conn->query($sql) === TRUE) {
-    //                     echo "Record updated successfully";
-    //                 } else {
-    //                     echo "Error updating record: " . $conn->error;
-    //                 }
-    //             } else {
-    //                 echo "New password and confirm password do not match";
-    //             }
-    //         } else {
-    //             echo "Old password does not match";
-    //         }
-    //     } else {
-    //         echo "Email does not exist";
-    //     }
-    // }
+    header("Location: edit_profile.php#error");
+    exit();
 ?>
