@@ -4503,6 +4503,11 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     border-radius: 2vw;
 }
 
+.czy_description p {
+    margin-top: 0vw;
+    margin-bottom: 0vw;
+}
+
 .ttl_center_2 {
     font-family: "dld_samsungsharpsans_medium";
     /* position: relative; */
