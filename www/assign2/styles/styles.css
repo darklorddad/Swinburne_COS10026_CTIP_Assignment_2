@@ -2517,8 +2517,8 @@ a:focus {
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
     border-radius: 2vw;
     display: flex;
-    padding-top: 2vw;
-    padding-bottom: 4vw;
+    padding-top: 4vw;
+    padding-bottom: 8vw;
     /* height: 25vw; */
     display: flex;
     align-items: center;
@@ -2526,13 +2526,39 @@ a:focus {
 }
 
 .ash_profile_box{
-    font-family: "dld_samsungsharpsans_medium";
     background: #e4e3ea;
     text-align: center;
     width: 80%;
     color: #23322a;
     position: relative;
     border-radius: 2vw;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    /* padding: 5vw; */
+}
+
+.ash_profile_box p {
+    font-family: "dld_samsungsharpsans_medium";
+    font-size: 1vw;
+}
+
+.dld_special_button {
+    border: none;
+    font-family: "dld_samsungsharpsans_bold";
+    color: #23322a;
+    background-color: #90a79a;
+    border-radius: 2vw;
+    padding: 0.8vw 2.5vw;
+    transition: all 0.25s;
+    font-size: 1vw;
+    width: 20vw;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+}
+
+.dld_special_button:hover{
+    cursor: pointer;
+    color: #90a79a;
+    background-color: #23322a;
 }
 
 .ash_inputbox_container{
@@ -2549,14 +2575,14 @@ a:focus {
 }
 
 .ash_box2{
-    font-family: "dld_samsungsharpsans_medium";
+    font-family: "dld_samsungsharpsans";
     width: 74%;
     height: 2.5vw;
     padding-left: 1vw;
     padding-right: 1vw;
     margin-top: 0.5vw;
     border-radius: 2vw;
-    border: 0.15vw solid #23322a;
+    border: 0.1vw solid #23322a;
 }
 
 
@@ -4267,7 +4293,7 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 .nic_label {
     font-size: 1vw;
     /* font-weight: bold; */
-    font-family: "dld_samsungsharpsans_medium";
+    font-family: "dld_samsungsharpsans";
 }
 
 .nic_legend {
@@ -4354,11 +4380,11 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 }
 
 .dld_main_2 p {
-    margin: 0 10vw 0 10vw;
+    margin: 0 10vw 0 0vw;
 }
 
 .dld_enquiry_result_center {
-    font-family: "dld_samsungsharpsans_medium";
+    /* font-family: "dld_samsungsharpsans_medium"; */
     /* position: relative; */
     /* top:5%; */
     /* height: vw; */
@@ -4377,7 +4403,7 @@ a.ttl_edit:hover, a.ttl_delete:hover{
 .czy_enquiry_details{
     margin: 4vw 5vw 0vw 5vw;
     border-radius: 1.5vw;
-    border: #23322a solid 0.15vw;
+    border: #23322a solid 0.1vw;
 }
 
 .czy_enquiry_details > legend{
@@ -4394,12 +4420,19 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     font-family: "dld_samsungsharpsans";
 }
 
+.czy_enquiry_details > p > span {
+    font-family: "dld_samsungsharpsans_bold";
+}
+
 .czy_special{
     font-family: "dld_samsungsharpsans_bold";
     font-size: 1.25vw;
     text-align: center;
     margin: 2.5vw 0;
     margin-bottom: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .czy_special_button{
@@ -4429,11 +4462,10 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     margin: 1vw 2vw;
 }
 
-.czy_header{
+.czy_header {
     color: #23322a;
     background-color: #90a79a;
     font-size: 1vw;
-    font-weight: bold;
     width: 16.5%;
     height: 1vw;
     border-radius: 2vw;
@@ -4443,6 +4475,7 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     padding-bottom: 1vw;
     padding-left: 1vw;
     padding-right: 1vw;
+    font-family: "dld_samsungsharpsans_medium";
 }   
 
 .czy_between{
@@ -4466,7 +4499,7 @@ a.ttl_edit:hover, a.ttl_delete:hover{
     padding-top: 0.7vw;
     padding-bottom: 0.5vw;
     padding-left: 1.2vw;
-    border: 0.15vw solid #23322a;
+    border: 0.1vw solid #23322a;
     border-radius: 2vw;
 }
 

@@ -33,7 +33,7 @@
                         }
                         else{
                             echo "<div class = \"user-info\">";
-                            echo "<div class = \"czy_header\">First Name</div>";
+                            echo "<div class = \"czy_header\">First name</div>";
                             echo "<div class = \"czy_between\">:</div>";
 
                             if (isset($_SESSION['first_name_error'])){
@@ -43,7 +43,7 @@
                             }
 
                             echo "<div class = \"user-info\">";
-                            echo "<div class = \"czy_header\">Last Name</div>";
+                            echo "<div class = \"czy_header\">Last name</div>";
                             echo "<div class = \"czy_between\">:</div>";
 
                             if (isset($_SESSION['last_name_error'])){

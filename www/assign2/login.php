@@ -1,9 +1,3 @@
-<?php
-    session_start(); 
-    include("user_table.php");
-    createUserTable();
-?>
-
 <!DOCTYPE html>
 <html lang = "en">
 <head>

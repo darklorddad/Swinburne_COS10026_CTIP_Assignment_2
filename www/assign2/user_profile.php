@@ -11,14 +11,17 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    // Select data associated with this particular id
-    $result = mysqli_query($conn, "SELECT username, email FROM UserDetails WHERE user_id = " . $_SESSION["user_id"] . "");
+    if (isset($_SESSION["user_id"])) {
+        $result = mysqli_query($conn, "SELECT username, email FROM UserDetails WHERE user_id = " . $_SESSION["user_id"]);
+        $resultData = mysqli_fetch_assoc($result);
 
-    // Fetch the next row of a result set as an associative array
-    $resultData = mysqli_fetch_assoc($result);
-
-    $username = $resultData['username'];
-    $email = $resultData['email'];
+        $username = $resultData['username'];
+        $email = $resultData['email'];
+    }
+    else {
+        $username = "Logged out";
+        $email = "Logged out";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -38,18 +41,33 @@
     <div class = "ash_section_1">
 		<div class = "ash_page_header">
 			<p class = "ash_title_header">User Dashboard</p>
-            <p>User dashboard is a custom interface offering users centralised access to role-specific information and tools.</p>
+            <p>User dashboard is a custom interface offering centralised access to role-specific information and tools.</p>
 		</div>
 	</div>
 
-    <div class = "ash_container_1">
-        <div class = "ash_profile_box">
-            <h3>Username: <?php echo $username ?></h3>
-            <p>Email: <?php echo $email ?></p>
-            
-            <div class = "ash_profile_box_button">
-                <a href = "edit_profile.php" class = "ash_editprofile_link"><button class = "ash_moreinfo_button">Edit Profile</button></a>
-                <a href = "log_out_button.php" class = "ash_editprofile_link"><button class = "ash_moreinfo_button">Log Out</button></a>
+    <div class = "dld_main_2">
+        <div class = "dld_enquiry_result_center">
+            <fieldset class = "czy_enquiry_details">
+                <legend>Account details</legend>
+                <div class = "user-info">
+                    <div class = "czy_header">Username</div>
+                    <div class = "czy_between">:</div>
+                    <div class = "czy_description">
+                        <p><?php echo $username; ?></p>
+                    </div>
+                </div>
+
+                <div class = "user-info">
+                    <div class = "czy_header">Email</div>
+                    <div class = "czy_between">:</div>
+                    <div class = "czy_description">
+                        <p><?php echo $email; ?></p>
+                    </div>
+                </div>
+            </fieldset>
+            <div class = "czy_special">
+                <a href = "edit_profile.php" class = "ash_editprofile_link"><button class = "dld_special_button">Edit Profile</button></a>
+                <a href = "log_out_button.php" class = "ash_editprofile_link"><button class = "dld_special_button">Log Out</button></a>
             </div>
         </div>
     </div>
@@ -59,7 +77,7 @@
             <?php include_once("dld_footer_section_1.php");?>
             <div class = "dld_section_1_footer_right">
                 <h1 class = "dld_footer_heading">Acknowledgement</h1>
-                <div class = "dld_footer_section_1_center_row">The Crew</div>
+                <div class = "dld_footer_section_1_center_row">None</div>
             </div>
         </div>
         <?php include_once("dld_footer_section_2.php");?>

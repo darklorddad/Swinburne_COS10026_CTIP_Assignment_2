@@ -26,7 +26,7 @@
 <head>
     <meta name = "author" content = "Ashley">
     <meta name = "description" content = "Edit User Profile">
-    <title>FLORASCAN - View User Profile</title>
+    <title>FLORASCAN - Edit Account Details</title>
     <?php include_once("head.php"); ?>
 </head>
 <body class = "ash_body">
@@ -37,7 +37,8 @@
 
     <div class = "ash_section_1">
 		<div class = "ash_page_header">
-			<p class = "ash_title_header">Edit User Profile</p>
+			<p class = "ash_title_header">Edit Account Details</p>
+            <p>Edit account details is a feature that allows users to modify personal information and password for their account.</p>
 		</div>
 	</div>
 
@@ -45,34 +46,34 @@
         <form class = "ash_profile_box" action = "edit_profile_process.php" method = "post">
 
             <fieldset class = "czy_enquiry_details">
-                <legend>Profile Status</legend>
+                <legend>Account details</legend>
 
                 <div class = "user-info">
                     <div class = "czy_header">Username</div>
                     <div class = "czy_between">:</div>
-                    <input type = "text" id = "edit_username" name = "edit_username" class = "ash_box2" value = "<?php echo $username; ?>">
+                    <input type = "text" id = "edit_username" name = "edit_username" class = "ash_box2" placeholder = "Enter your username" value = "<?php echo $username; ?>">
                 </div>
 
                 <div class = "user-info">
                     <div class = "czy_header">Email</div>
                     <div class = "czy_between">:</div>
-                    <input type = "text" name = "edit_email" class = "ash_box2" value = "<?php echo $email; ?>">
+                    <input type = "text" name = "edit_email" class = "ash_box2" placeholder = "Enter your email" value = "<?php echo $email; ?>">
                 </div>
 
                 <div class = "user-info">
-                    <div class = "czy_header">Old Password</div>
+                    <div class = "czy_header">Old password</div>
                     <div class = "czy_between">:</div>
                     <input type = "password" name = "old_password" class = "ash_box2" placeholder = "Enter your old password">
                 </div>
 
                 <div class = "user-info">
-                    <div class = "czy_header">New Password</div>
+                    <div class = "czy_header">New password</div>
                     <div class = "czy_between">:</div>
                     <input type = "password" name = "new_password" class = "ash_box2" placeholder = "Enter your new password">
                 </div>
 
                 <div class = "user-info">
-                    <div class = "czy_header">Confirm Password</div>
+                    <div class = "czy_header">Confirm password</div>
                     <div class = "czy_between">:</div>
                     <input type = "password" name = "confirm_password" class = "ash_box2" placeholder = "Re-enter your new password">
                 </div>
@@ -87,7 +88,8 @@
             </fieldset>
 
             <div class = "czy_special">
-                <button type = "submit" class = "czy_special_button" value = "Submit">Update Profile</button>
+                <button type = "submit" class = "dld_special_button" value = "Submit">Update profile</button>
+                <a href = "user_profile.php" class = "ash_editprofile_link"><button class = "dld_special_button">Return to user dashboard</button></a>
             </div>
         </form>
     </div>
@@ -97,7 +99,7 @@
             <?php include_once("dld_footer_section_1.php");?>
             <div class = "dld_section_1_footer_right">
                 <h1 class = "dld_footer_heading">Acknowledgement</h1>
-                <div class = "dld_footer_section_1_center_row">The Crew</div>
+                <div class = "dld_footer_section_1_center_row">None</div>
             </div>
         </div>
         <?php include_once("dld_footer_section_2.php");?>
