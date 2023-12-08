@@ -3063,17 +3063,21 @@ a:focus {
 	text-align: center;
 	overflow: hidden;
     margin-top: 15vw;
-    margin-bottom: -6vw;
+    margin-bottom: -5vw;
 }
 
 .ttl_filecontent{
+	height: 50%;
     display: table-cell;
     vertical-align: middle;
     background-color: white;
 }
 
 .ttl_filecontent{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     color: #676767;
 }
 
@@ -3110,23 +3114,19 @@ a:focus {
     background-color: #23322a;
 }
 
-.ttl_filecontent input[type=file] {
+.test_input[type=file] {
     align-items: center;
-    /* justify-content: center; */
     position: relative;
-    left: 6.5%;
-    padding: 1vw;
-    padding-bottom: 3vw;
+    padding: 15vw 12.3vw 5vw;
 }
 
 .ttl_filecontent img {
     margin: 0;
-    position: relative;
-    top: 60%;
-    left: 0;
+    position: absolute;
+    top: 15%;
+    right: 13vw;
     width: 40%;
     height: 50%;
-    padding: 3vw;
 }
 
 .ttl_identify_button_container{
