@@ -9,8 +9,8 @@
 
     <body class = "ttl_body">
         <?php
-            include_once("dld_top_navigation_bar.php");
             include_once("dld_background_dots.php");
+            include_once("dld_top_navigation_bar.php");
 
             $hostname = "127.0.0.1";
             $user = "root";

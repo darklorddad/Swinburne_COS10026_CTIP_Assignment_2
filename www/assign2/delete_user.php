@@ -10,13 +10,11 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    // Get id parameter value from URL
     $id = $_GET['id'];
 
-    // Delete row from the database table
     $result = mysqli_query($conn, "DELETE FROM UserDetails WHERE id = $id");
 
     header("Location:view_user.php");
 
-    $conn->close(); 
+    $conn -> close(); 
 ?>
