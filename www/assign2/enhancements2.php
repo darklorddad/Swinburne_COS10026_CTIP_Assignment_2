@@ -49,7 +49,9 @@
                         <h3>Source :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target = "_blank" href = "https://www.w3schools.com/css/css_navbar.asp">Source</a>
+                            <a target = "_blank" href = "https://www.w3schools.com/php/php_mysql_select.asp">Source 1</a>
+                            <a target = "_blank" href = "https://www.w3schools.com/php/php_mysql_select_orderby.asp">Source 2</a>
+                            <a target = "_blank" href = "https://www.w3schools.com/php/php_mysql_create_table.asp">Source 3</a>
                         </div>
                     </div>
                 </div>
@@ -83,7 +85,8 @@
                         <h3>Source :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target = "_blank" href = "https://www.w3schools.com/css/css_navbar.asp">Source</a>
+                            <a target = "_blank" href = "https://www.w3schools.com/php/php_mysql_select.asp">Source 1</a>
+                            <a target = "_blank" href = "https://www.w3schools.com/php/php_mysql_select_orderby.asp">Source 2</a>
                         </div>
                     </div>
                 </div>
@@ -117,7 +120,8 @@
                         <h3>Source :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target = "_blank" href = "https://www.geeksforgeeks.org/how-to-add-google-map-inside-html-page-without-using-api-key/">Source</a>
+                            <a target = "_blank" href = "https://www.w3schools.com/php/php_mysql_select_where.asp">Source 1</a>
+                            <a target = "_blank" href = "https://www.w3schools.com/php/php_mysql_delete.asp">Source 2</a>
                         </div>
                     </div>
                 </div>
@@ -151,7 +155,8 @@
                         <h3>Source :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target = "_blank" href = "https://codepen.io/SitePoint/pen/MyPVdK?editors=1100">Source</a>
+                            <a target = "_blank" href = "https://www.w3schools.com/php/php_mysql_update.asp">Source</a>
+                            <a target = "_blank" href = "https://www.w3schools.com/php/php_mysql_delete.asp">Source 2</a>
                         </div>
                     </div>
                 </div>
@@ -186,7 +191,7 @@
                         <h3>Source :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target = "_blank" href = "https://codepen.io/peiche/pen/kQwYVJ?editors=1100">Source</a>
+                            <a target = "_blank" href = "https://www.w3schools.com/php/func_mysqli_fetch_assoc.asp">Source</a>
                         </div>
                     </div>
                 </div>
@@ -228,7 +233,8 @@
                         <h3>Source :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target="_blank" href = "https://codepen.io/peiche/pen/kQwYVJ?editors=1100">Source</a>
+                            <a target="_blank" href = "https://www.w3schools.com/php/func_filter_var.asp">Source 1</a>
+                            <a target="_blank" href = "https://www.w3schools.com/php/php_mysql_insert.asp">Source 2</a>
                         </div>
                     </div>
                 </div>
@@ -262,7 +268,9 @@
                         <h3>Source :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target="_blank" href = "https://www.geeksforgeeks.org/create-a-search-bar-using-html-and-css/">Source</a>
+                            <a target="_blank" href = "https://www.w3schools.com/php/func_filter_var.asp">Source 1</a>
+                            <a target="_blank" href = "https://www.w3schools.com/php/php_mysql_insert.asp">Source 2</a>
+                            <a target="_blank" href = "https://www.w3schools.com/php/php_mysql_create_table.asp">Source 3</a>
                         </div>
                     </div>
                 </div>
