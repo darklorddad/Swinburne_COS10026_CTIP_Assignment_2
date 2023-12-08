@@ -26,6 +26,8 @@
     $username = $resultData['username'];
     $email = $resultData['email']; 
     $password = $resultData['user_password'];
+
+    unset($_SESSION["edit_profile"]["result"]);
     
     // Username validation
     if (empty($edit_username)) {
@@ -48,6 +50,7 @@
         }
         else{
             $result = mysqli_query($conn, "UPDATE UserDetails SET username = '$edit_username' WHERE user_id = " . $_SESSION['user_id']);
+            $_SESSION['edit_profile']['result'] = "Account details updated succesfully";
         }
     }
 
@@ -72,6 +75,7 @@
         }
         else{
             $result = mysqli_query($conn, "UPDATE UserDetails SET email = '$edit_email' WHERE user_id = " . $_SESSION['user_id']);
+            $_SESSION['edit_profile']['result'] = "Account details updated succesfully";
         }
     }
 
@@ -114,6 +118,7 @@
         }
         else{
             $result = mysqli_query($conn, "UPDATE UserDetails SET user_password = '$new_password' WHERE user_id = " . $_SESSION['user_id']);
+            $_SESSION['edit_profile']['result'] = "Account details updated succesfully";
         }
     }
     

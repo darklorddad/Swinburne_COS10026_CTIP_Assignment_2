@@ -2980,6 +2980,7 @@ a:focus {
 }
 
 .ttl_main_body {
+    /* font-family: "dld_samsungsharpsans_bold"; */
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
     background-color: rgba(228, 227, 234, 0.5);
     backdrop-filter: blur(0.078vw);

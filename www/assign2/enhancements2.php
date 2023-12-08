@@ -25,18 +25,14 @@
 
         <div class="dld_row">
             <div class="dld_column_img">
-                <img src = "styles/images/czy/gifs/side-nav-sticky.gif" alt="gif">
+                <img src = "styles/images/czy/enhancement_2/view_user_page.png" alt="pic">
             </div>
 
             <div class="dld_column">
                 <div class="dld_enhancements_description">
-                    <h2>Top navigation bar / Side navigation bar</h2>
+                    <h2>View User Page</h2>
                     <p>
-                        The navigation bar is usually constructed as a list of links. php unordered lists (&lt;ul&gt;) are used to structure the navigation items. Each list item (&lt;li&gt;) contains a link (&lt;a&gt;) to a specific page or section of the website. CSS styles are employed to enhance the appearance, positioning, and layout of the navigation bar. Hover can be applied to create interactive effects like color changes or underlines when users hover over on navigation items.
-                    </p>
-
-                    <p>
-                        The navigation bar also has the CSS property (position: sticky;).
+                        The view user page is made using php.
                     </p>
 
                     <div class = "dld_buttons_column">
@@ -44,12 +40,6 @@
 
                         <div class = "dld_flex_container">
                             <a target="_blank" href = "index.php">Home</a>
-                            <a target="_blank" href = "identify.php">Identify</a>  
-                            <a target="_blank" href = "explore.php">Explore</a>  
-                            <a target="_blank" href = "contributions.php">Contributions</a>
-                            <a target="_blank" href = "enquiry.php">Enquiry</a>  
-                            <a target="_blank" href = "profile_dld.php">Profiles</a>  
-                            <a target="_blank" href = "login_verification.php">Account</a>  
                         </div>
                     </div>
 
@@ -66,13 +56,15 @@
 
         <div class="dld_row">
             <div class="dld_column_img">
-                <img src = "styles/images/czy/gifs/maps.gif" alt="gif">
+                <img src = "styles/images/czy/enhancement_2/view_enquiry_page.png" alt="pic">
             </div>
 
             <div class="dld_column">
                 <div class="dld_enhancements_description">
-                    <h2>Google Maps / Youtube</h2>
-                    <p>An embeded Google Maps is used to display the location of the plant as well as an embeded videa linked to an external video link allowing the user to play it while remaining on the current page. To implement this into the site the element (&lt;iframe&gt;) is used.</p>
+                    <h2>View Enquiry Page</h2>
+                    <p>
+                        The view enquiry page is made using php.
+                    </p>
 
                     <div class = "dld_buttons_column">
                         <h3>Pages :</h3>

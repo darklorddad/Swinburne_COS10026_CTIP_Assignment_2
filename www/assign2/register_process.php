@@ -61,16 +61,8 @@
         exit();
     }
 
-    $query = "SELECT * FROM userdetails WHERE user_password = '" . $register_password . "'";
-    $result = mysqli_query($conn, $query);
-
     if (empty($register_password)) {
         $_SESSION['error'] = "Password is required";
-        header("Location: register.php");
-        exit();
-    }
-    elseif (mysqli_num_rows($result) > 0) {
-        $_SESSION['error'] = "Password exist already";
         header("Location: register.php");
         exit();
     }

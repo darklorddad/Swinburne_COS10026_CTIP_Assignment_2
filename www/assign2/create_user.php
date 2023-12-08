@@ -2,7 +2,7 @@
 <html lang = "en">
 <head>
     <meta name = "author" content = "Tan Tzy Lynn">
-    <meta name="description" content = "Create User Account">
+    <meta name = "description" content = "Create User Account">
     <title>FLORASCAN - Create User Account</title>
     <?php include_once("head.php"); ?>
 </head>
@@ -21,23 +21,23 @@
 
     <div class = "ttl_main_body">
         <div class = "ttl_user_center">
-            <form action = "create_user_process.php" method="post" name="create_user_account" class="ttl_user_form">
+            <form action = "create_user_process.php" method = "post" name = "create_user_account" class = "ttl_user_form">
                 <fieldset class = "ttl_fieldset">
                     <legend class = "ttl_user_details">Account details</legend>
 
                     <div class = "ttl_div">
                         <label class = "ttl_label" for = "username">Username</label>
-                        <input id = "username" name = "username" class = "ttl_field" type = "text" placeholder = "Enter your username">
+                        <input id = "username" name = "username" class = "ttl_field" type = "text" placeholder = "Enter your username" autocomplete = "off">
                     </div>
 
                     <div class = "ttl_div">
                         <label class = "ttl_label" for = "email">Email</label>
-                        <input id = "email" name = "email" class = "ttl_field" type = "email" placeholder = "Enter your email address">
+                        <input id = "email" name = "email" class = "ttl_field" type = "email" placeholder = "Enter your email address" autocomplete = "off">
                     </div>
 
                     <div class = "ttl_div">
                         <label class = "ttl_label" for = "user_password">Password</label>
-                        <input id = "user_password" name = "user_password" class = "ttl_field" type = "password" placeholder = "Enter your password">
+                        <input id = "user_password" name = "user_password" class = "ttl_field" type = "password" placeholder = "Enter your password" autocomplete = "off">
                     </div>
 
                     <?php

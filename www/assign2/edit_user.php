@@ -51,8 +51,7 @@
                     if (isset($_SESSION['edit_user']['result'])){
                         echo'<p class = "ttl_user_account_updated">Account details updated successfully</p>';
                         echo'<div class = "ttl_view_result_button">';
-                        echo'<a href = "view_user.php">';
-                        echo'<button class = "ttl_update" type = "button">Return to admin dashboard</button></a></div>';
+                        echo'<a href = "view_user.php"><button class = "ttl_update" type = "button">Return to admin dashboard</button></a></div>';
                         unset($_SESSION['edit_user']['result']);
                     }
                     else{

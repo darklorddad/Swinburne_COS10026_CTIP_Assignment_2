@@ -42,8 +42,20 @@
 		</div>
 	</div>
 
-    <div class = "ash_container_1" id = "error">
-        <form class = "ash_profile_box" action = "edit_profile_process.php" method = "post">
+    <div class = "ttl_main_body" id = "error">
+
+        <?php
+            if (isset($_SESSION['edit_profile']['result'])){
+                echo'<div class = "ttl_user_center_1">';
+                echo'<p class = "ttl_user_account_updated">Account details updated successfully</p>';
+                echo'<div class = "ttl_view_result_button">';
+                echo'<a href = "user_profile.php"><button class = "ttl_update" type = "button">Return to user dashboard</button></a></div></div>';
+                unset($_SESSION['edit_profile']['result']);
+                unset($_SESSION['edit_profile']["error"]);
+            }
+            else{
+                echo'
+        <form class = "ttl_user_center" action = "edit_profile_process.php" method = "post">
 
             <fieldset class = "czy_enquiry_details">
                 <legend>Account details</legend>
@@ -51,13 +63,13 @@
                 <div class = "user-info">
                     <div class = "czy_header">Username</div>
                     <div class = "czy_between">:</div>
-                    <input type = "text" id = "edit_username" name = "edit_username" class = "ash_box2" placeholder = "Enter your username" value = "<?php echo $username; ?>">
+                    <input type = "text" id = "edit_username" name = "edit_username" class = "ash_box2" placeholder = "Enter your username" value = "' . $username . '">
                 </div>
 
                 <div class = "user-info">
                     <div class = "czy_header">Email</div>
                     <div class = "czy_between">:</div>
-                    <input type = "text" name = "edit_email" class = "ash_box2" placeholder = "Enter your email" value = "<?php echo $email; ?>">
+                    <input type = "text" name = "edit_email" class = "ash_box2" placeholder = "Enter your email" value = "' . $email . '">
                 </div>
 
                 <div class = "user-info">
@@ -76,22 +88,21 @@
                     <div class = "czy_header">Confirm password</div>
                     <div class = "czy_between">:</div>
                     <input type = "password" name = "confirm_password" class = "ash_box2" placeholder = "Re-enter your new password">
-                </div>
-
-                <?php 
+                </div>';
                     if(isset($_SESSION['edit_profile']["error"])) {
                         echo "<div class = 'user-info login_error'>" . $_SESSION['edit_profile']["error"] . "</div>";
                         unset($_SESSION['edit_profile']["error"]);
                     }
-                ?>
-
+                echo'
             </fieldset>
 
             <div class = "czy_special">
                 <button type = "submit" class = "dld_special_button" value = "Submit">Update account details</button>
                 <a href = "user_profile.php" class = "dld_special_button_1">Return to user dashboard</a>
             </div>
-        </form>
+        </form>';
+            }
+        ?>
     </div>
 
     <footer>
