@@ -3,7 +3,7 @@
 <head>
     <meta name = "author" content = "Edison Ho">
     <meta name = "description" content = "Enhancements">
-    <title>FLORASCAN - Enhancements</title>
+    <title>FLORASCAN - Enhancement 2</title>
     <?php include_once("head.php"); ?>
 </head>
 <body class = "dld_body">
@@ -11,9 +11,9 @@
     <?php include_once("dld_top_navigation_bar.php"); ?>
 
     <nav class = "dld_header_bar">
-        <div class="ash_page_header">
+        <div class = "ash_page_header">
             <p class = "ash_title_header">Enhancements</p>
-            <p>A page that lists out all the enhancements for FLORASCAN.</p>
+            <p>A page that lists out all the enhancements.</p>
         </div>
         <ul>
             <li><a href = "enhancements.php">Enhancement 1</a></li>
@@ -22,24 +22,26 @@
     </nav>
 
     <div class = "dld_enhancements_big_box">
-
-        <div class="dld_row">
-            <div class="dld_column_img">
-                <img src = "styles/images/czy/enhancement_2/view_user_page.png" alt="pic">
+        <div class = "dld_row">
+            <div class = "dld_column_img">
+                <img src = "styles/images/czy/enhancement_2/view_user_page.png" alt = "pic">
             </div>
 
-            <div class="dld_column">
-                <div class="dld_enhancements_description">
-                    <h2>View User Page</h2>
+            <div class = "dld_column">
+                <div class = "dld_enhancements_description">
+                    <h2>View user page</h2>
                     <p>
-                        The view user page is made using php.
+                        The view_user.php file is a PHP script that serves as an admin dashboard. 
+                        It is responsible for displaying user accounts, allowing the admin to search 
+                        for specific users, sort the user list and perform actions such as editing 
+                        or deleting user accounts.
                     </p>
 
                     <div class = "dld_buttons_column">
                         <h3>Pages :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target="_blank" href = "index.php">Home</a>
+                            <a target = "_blank" href = "index.php">Home</a>
                         </div>
                     </div>
 
@@ -47,31 +49,34 @@
                         <h3>Source :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target="_blank" href = "https://www.w3schools.com/css/css_navbar.asp">Source</a>
+                            <a target = "_blank" href = "https://www.w3schools.com/css/css_navbar.asp">Source</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="dld_row">
-            <div class="dld_column_img">
-                <img src = "styles/images/czy/enhancement_2/view_enquiry_page.png" alt="pic">
+        <div class = "dld_row">
+            <div class = "dld_column_img">
+                <img src = "styles/images/czy/gifs/admin_create_delete_user.gif" alt = "gif">
             </div>
 
-            <div class="dld_column">
-                <div class="dld_enhancements_description">
-                    <h2>View Enquiry Page</h2>
+            <div class = "dld_column">
+                <div class = "dld_enhancements_description">
+                    <h2>Create user page</h2>
                     <p>
-                        The view enquiry page is made using php.
+                        The create_user.php file is a PHP script that provides an interface for creating new 
+                        user accounts. It includes a form where an admin can enter a username, email and 
+                        password for the new account. The form data is sent to create_user_process.php 
+                        for processing.
                     </p>
 
                     <div class = "dld_buttons_column">
                         <h3>Pages :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target="_blank" href = "index.php">Home</a>
-                            <a target="_blank" href = "identify.php">Identify</a>  
+                            <a target = "_blank" href = "index.php">Home</a>
+                            <a target = "_blank" href = "identify.php">Identify</a>  
                         </div>
                     </div>
 
@@ -79,27 +84,27 @@
                         <h3>Source :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target="_blank" href = "https://www.geeksforgeeks.org/how-to-add-google-map-inside-html-page-without-using-api-key/">Source</a>
+                            <a target = "_blank" href = "https://www.geeksforgeeks.org/how-to-add-google-map-inside-html-page-without-using-api-key/">Source</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="dld_row">
-            <div class="dld_column_img">
-                <img src = "styles/images/czy/gifs/carousel.gif" alt="gif">
+        <div class = "dld_row">
+            <div class = "dld_column_img">
+                <img src = "styles/images/czy/gifs/admin_edit_user.gif" alt = "gif">
             </div>
 
-            <div class="dld_column">
-                <div class="dld_enhancements_description">
-                    <h2>Carousel / Slideshow</h2>
+            <div class = "dld_column">
+                <div class = "dld_enhancements_description">
+                    <h2>Edit user page</h2>
                     <p>
-                        The carousel consists of a container element that holds multiple content panels or slides. Each slide is designed to be fully visible one at a time, while the others are hidden. Users can navigate through the content by manually clicking or using CSS-based navigation controls. 
-                    </p>
-
-                    <p>
-                        PHP properties like input and label, and CSS properties like (overflow: hidden) help control the visibility and positioning of slides, creating a sliding effect. With the absence of JavaScript means that the transition between slides automatically relies on CSS properties such as keyframes.
+                        The edit_user.php file is a PHP script designed to facilitate the editing of user account details. 
+                        It connects to a MySQL database to retrieve the details of a specific user based on an ID passed 
+                        through the URL. The script populates an HTML form with the user's current information, 
+                        allowing an admin to update the username, email, and password. Upon submission, the form 
+                        data is sent to edit_user_process.php for updating the database.
                     </p>
 
                     <div class = "dld_buttons_column">
@@ -124,16 +129,24 @@
             </div>
         </div>
     
-        <div class="dld_row">
-            <div class="dld_column_img">
-                <img src = "styles/images/czy/gifs/modal-box.gif" alt="gif">
+        <div class = "dld_row">
+            <div class = "dld_column_img">
+                <img src = "styles/images/czy/gifs/admin_searchbar.gif" alt = "gif">
             </div>
 
-            <div class="dld_column">
-                <div class="dld_enhancements_description">
-                    <h2>Modal box / Popup</h2>
+            <div class = "dld_column">
+                <div class = "dld_enhancements_description">
+                    <h2>User account page search bar</h2>
                     <p>
-                        A modal box is essentially a hidden or initially hidden container within a web page. It can be triggered to display by using CSS-based methods, such as pseudo-class selectors like (:target). When a trigger element (e.g. a button or link) is clicked or interacted with, the modal box becomes visible through CSS. The modal box typically contains content, which can range from text and images to forms or additional user interface elements. Users can close the modal box by clicking on a designated "close" button or an overlay element.
+                        The search bar in view_user.php is part of a form that allows the admin to search 
+                        for user accounts. It uses a GET method to submit the search term to the same page. 
+                        The search input field has an autocomplete attribute set to "off" to prevent 
+                        automatic suggestions by the browser, and it references a datalist with the 
+                        ID autocomplete. This datalist is populated with options generated by a PHP 
+                        script that queries the userdetails table in the database, providing suggestions 
+                        for user IDs, usernames, emails, and passwords. When the form is submitted, the 
+                        search term is processed by the PHP script, which modifies the SQL query to filter 
+                        the user accounts displayed in the table based on the search criteria.
                     </p>
 
                     <div class = "dld_buttons_column">
@@ -159,7 +172,7 @@
 
         <div class="dld_row">
             <div class="dld_column_img">
-                <img src = "styles/images/czy/gifs/flip-card.gif" alt="gif">
+                <img src = "styles/images/czy/gifs/admin_searchbar.gif" alt="gif">
             </div>
 
             <div class="dld_column">
@@ -204,7 +217,7 @@
 
         <div class="dld_row">
             <div class="dld_column_img">
-                <img src = "styles/images/czy/search-bar.png" alt = "pic">
+                <img src = "styles/images/czy/gifs/registration_login.gif" alt = "pic">
             </div>
 
             <div class="dld_column">
@@ -227,74 +240,6 @@
 
                         <div class = "dld_flex_container">
                             <a target="_blank" href = "https://www.geeksforgeeks.org/create-a-search-bar-using-html-and-css/">Source</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="dld_row">
-            <div class="dld_column_img">
-                <img src = "styles/images/czy/upload-file.png" alt="gif">
-            </div>
-
-            <div class="dld_column">
-                <div class="dld_enhancements_description">
-                    <h2>Upload file</h2>
-                    <p>
-                        The file upload element is created using PHP input elements with type="file". The input field presents a user interface that allows users to select and submit files from their local device. CSS can be used to style the file input field or the form, making it visually appealing and consistent with the website's design.
-                    </p>
-
-                    <div class = "dld_buttons_column">
-                        <h3>Pages :</h3>
-
-                        <div class = "dld_flex_container">
-                            <a target="_blank" href = "identify.php">Identify</a>
-                        </div>
-                    </div>
-
-                    <div class = "dld_buttons_column">
-                        <h3>Source :</h3>
-
-                        <div class = "dld_flex_container">
-                            <a target="_blank" href = "https://www.w3schools.com/howto/howto_html_file_upload_button.asp">Source</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="dld_row">
-            <div class="dld_column_img">
-                <img src = "styles/images/czy/gifs/anchor-link.gif" alt="gif">
-            </div>
-
-            <div class="dld_column">
-                <div class="dld_enhancements_description">
-                    <h2>Anchor linking</h2>
-                    <p>
-                        Anchor linking is achieved using PHP elements with the ID attribute and anchor tags. An anchor point within a page is created when an ID is assigned to a PHP element using the format &lt;div id="section1"&gt;. To create a link that navigates to the anchor point,the element &lt;a&gt; is used. 
-                    </p>
-
-                    <p>
-                        For example, &lt;a href="#section1"&gt;Go to Section 1&lt;/a&gt; or &lt;a href="example.php#section1"&gt;Go to Section 1 in example.php&lt;/a&gt;. When the anchor link is clicked, the page automatically scrolls to the corresponding anchor point of the current page or another page.
-                    </p>
-
-                    <div class = "dld_buttons_column">
-                        <h3>Pages :</h3>
-
-                        <div class = "dld_flex_container">
-                            <a target="_blank" href = "index.php">Home</a>
-                            <a target="_blank" href = "explore.php">Explore</a>
-                            <a target="_blank" href = "login_verification.php">Account</a>
-                        </div>
-                    </div>
-
-                    <div class = "dld_buttons_column">
-                        <h3>Source :</h3>
-
-                        <div class = "dld_flex_container">
-                            <a target="_blank" href = "https://www.w3docs.com/snippets/html/how-to-create-an-anchor-link-to-jump-to-a-specific-part-of-a-page.html">Source</a>
                         </div>
                     </div>
                 </div>

@@ -67,17 +67,17 @@
                 <p class="ttl_upload_description">At least a photo of leaf, flower, fruit or bark is required for identification to work.</p>
             </div>
             
-            <div class="ttl_dropzone">
-                <div class="ttl_filecontent">
-                    <img src="styles/images/ttl/ttl_upload_icon.svg" class="ttl_upload_icon" alt="upload icon">
-                    <span class="ttl_filename"></span>
-                    <input type="file" class="input">
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <div class="ttl_dropzone">
+                    <div class="ttl_filecontent">
+                        <img src="styles/images/ttl/ttl_upload_icon.svg" class="ttl_upload_icon" alt="upload icon">
+                        <span class="ttl_filename"></span>
+                        <input type="file" class="input">
+                    </div>
                 </div>
-            </div>
 
-            <!-- <div class="ttl_upload-btn_container"> -->
-            <div class="ttl_upload-btn">Upload file</div>
-            <!-- </div> -->
+                <input type = "submit" class = "ttl_upload-btn" value = "Upload Image" name = "submit">
+            </form>
 
             <div class="ttl_identify_button_container">
                 <button class="ttl_identify_button">Identify
