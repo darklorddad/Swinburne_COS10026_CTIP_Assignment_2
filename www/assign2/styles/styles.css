@@ -3082,9 +3082,9 @@ a:focus {
 }
 
 .ttl_upload-btn{
+    border: none;
     position: relative;
-	width: 20vw;
-	height: 1.4vw;
+	width: 22vw;
     /* margin-top: 10vw; */
     left: 50%;
     transform: translate(-50%, -50%);
@@ -3115,8 +3115,6 @@ a:focus {
 }
 
 .test_input[type=file] {
-    align-items: center;
-    position: relative;
     padding: 15vw 12.3vw 5vw;
 }
 
@@ -3903,10 +3901,6 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     text-align: center;
     margin: 0;
     text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
-}
-
-.ttl_user_account_updated {
-    margin-top: 4vw;
 }
 
 .ttl_error_container{
