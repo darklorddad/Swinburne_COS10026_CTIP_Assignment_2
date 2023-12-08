@@ -41,7 +41,7 @@
                         <h3>Pages :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target = "_blank" href = "index.php">Home</a>
+                            <a target = "_blank" href = "view_user.php">User accounts</a>
                         </div>
                     </div>
 
@@ -75,7 +75,7 @@
                         <h3>Pages :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target = "_blank" href = "index.php">Home</a>
+                            <a target = "_blank" href = "view_enquiry.php">User enquiries</a>
                         </div>
                     </div>
 
@@ -109,8 +109,7 @@
                         <h3>Pages :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target = "_blank" href = "index.php">Home</a>
-                            <a target = "_blank" href = "identify.php">Identify</a>  
+                            <a target = "_blank" href = "create_user.php">Create user account</a>
                         </div>
                     </div>
 
@@ -144,9 +143,7 @@
                         <h3>Pages :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target = "_blank" href = "index.php">Home</a>
-                            <a target = "_blank" href = "identify.php">Identify</a>  
-                            <a target = "_blank" href = "enquiry.php">Enquiry</a>  
+                            <a target = "_blank" href = "edit_user.php">Edit user account</a>
                         </div>
                     </div>
 
@@ -154,8 +151,7 @@
                         <h3>Source :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target = "_blank" href = "https://codepen.io/SitePoint/pen/MyPVdK?editors=1100">Carousel</a>
-                            <a target = "_blank" href = "https://codepen.io/avkuznetsov54/pen/wQqjmW">Slideshow</a>
+                            <a target = "_blank" href = "https://codepen.io/SitePoint/pen/MyPVdK?editors=1100">Source</a>
                         </div>
                     </div>
                 </div>
@@ -182,9 +178,7 @@
                         <h3>Pages :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target = "_blank" href = "species.php">Explore</a>
-                            <a target = "_blank" href = "identify.php">Identify</a>  
-                            <a target = "_blank" href = "contributions.php">Contributions</a>  
+                            <a target = "_blank" href = "view_user.php">User accounts</a>
                         </div>
                     </div>
 
@@ -225,13 +219,8 @@
                         <h3>Pages :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target="_blank" href = "index.php">Home</a>
-                            <a target="_blank" href = "identify.php">Identify</a>
-                            <a target="_blank" href = "species.php">Explore</a>
-                            <a target="_blank" href = "contributions.php">Contributions</a>  
-                            <a target="_blank" href = "enquiry.php">Enquiry</a>
-                            <a target="_blank" href = "profile_dld.php">Profiles</a>
-                            <a target="_blank" href = "login_verification.php">Account</a>
+                            <a target="_blank" href = "login.php">Login</a>
+                            <a target="_blank" href = "register.php">Register</a>
                         </div>
                     </div>
 
@@ -265,7 +254,7 @@
                         <h3>Pages :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target="_blank" href = "explore.php">Explore</a>
+                            <a target="_blank" href = "enquiry.php">Enquiry</a>
                         </div>
                     </div>
 
