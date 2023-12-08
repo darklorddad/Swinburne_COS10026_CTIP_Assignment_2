@@ -46,7 +46,7 @@
         </div>
 
         <div class = "ttl_main_body">
-            <div class = "ttl_user_center_1">
+            <div class = "ttl_user_center_2">
                 <?php
                     if (isset($_SESSION['edit_user']['result'])){
                         echo'<p class = "ttl_user_account_updated">Account details updated successfully</p>';

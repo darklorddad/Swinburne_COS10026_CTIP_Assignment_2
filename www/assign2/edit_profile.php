@@ -46,7 +46,7 @@
 
         <?php
             if (isset($_SESSION['edit_profile']['result'])){
-                echo'<div class = "ttl_user_center_1">';
+                echo'<div class = "ttl_user_center_2">';
                 echo'<p class = "ttl_user_account_updated">Account details updated successfully</p>';
                 echo'<div class = "ttl_view_result_button">';
                 echo'<a href = "user_profile.php"><button class = "ttl_update" type = "button">Return to user dashboard</button></a></div></div>';

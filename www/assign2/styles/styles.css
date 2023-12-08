@@ -3764,6 +3764,20 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     justify-content: center;
     align-items: center;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    /* padding-bottom: 4vw; */
+    /* padding-top: 4vw; */
+}
+
+.ttl_user_center_2 {
+    width: 75vw;
+    background-color: #e4e3ea;
+	border-radius: 2vw;
+    margin: auto;
+    margin-top: 4vw;
+    margin-bottom: 8vw;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
     padding-bottom: 4vw;
     padding-top: 4vw;
 }
@@ -3889,6 +3903,10 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
     text-align: center;
     margin: 0;
     text-shadow: 0 0.729vw 2vw rgba(0,0,0,0.25);
+}
+
+.ttl_user_account_updated {
+    margin-top: 4vw;
 }
 
 .ttl_error_container{
