@@ -35,7 +35,12 @@
 
                 <a href = "https://www.youtube.com/watch?v=zDBzVGz05xk">
                     <div class = "dld_footer_section_1_left_information dld_footer_section_1_left_information_last">
-                        <p class = "dld_footer_section_1_left_information_email">Link</p>
+                        <p class = "dld_footer_section_1_left_information_email">Assignment 1 video</p>
+                    </div>
+                </a>
+                <a href = "https://youtu.be/MmmD6BhKb0E">
+                    <div class = "dld_footer_section_1_left_information dld_footer_section_1_left_information_last">
+                        <p class = "dld_footer_section_1_left_information_email">Assignment 2 video</p>
                     </div>
                 </a>
             </div>

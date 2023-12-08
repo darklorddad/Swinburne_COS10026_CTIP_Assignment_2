@@ -42,7 +42,7 @@
                     </div>
 
                     <div class = "ash_register_input_box">
-                        <input type = "text" name = "register_email" value = 
+                        <input type = "text" name = "register_email" autocomplete = "off" value = 
                             "<?= isset($_SESSION['register']['email']) ? htmlspecialchars($_SESSION['register']['email']) : '' ?>">
                         <?php unset($_SESSION['register']['email']);?>
                         <label>Email</label>

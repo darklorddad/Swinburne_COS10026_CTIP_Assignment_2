@@ -949,6 +949,7 @@ label.dld_gallery-label {
     border-radius: 1vw;
     transition: background-color 0.25s ease, color 0.25s ease;
     cursor: pointer;
+    margin-bottom: 1vw;
 }
 
 .dld_footer_section_1_left_information .dld_footer_section_1_left_information_icon {
@@ -1002,7 +1003,7 @@ label.dld_gallery-label {
 }
 
 .dld_footer_section_1_left_information_last {
-    margin-bottom: 0;
+    margin-bottom: 1vw;
 }
 
 .dld_footer_section_1_left_socials a {
