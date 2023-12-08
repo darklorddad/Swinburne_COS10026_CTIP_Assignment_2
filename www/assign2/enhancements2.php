@@ -58,7 +58,41 @@
 
         <div class = "dld_row">
             <div class = "dld_column_img">
-                <img src = "styles/images/czy/gifs/admin_create_delete_user.gif" alt = "gif">
+                <img src = "styles/images/czy/enhancement_2/view_enquiry_page.png" alt = "pic">
+            </div>
+
+            <div class = "dld_column">
+                <div class = "dld_enhancements_description">
+                    <h2>View enquiry page</h2>
+                    <p>
+                        The view_enquiry.php file is a PHP script that is responsible for managing user enquiries. 
+                        The script generates a table in HTML to display the enquiries, with sortable columns for 
+                        first name, last name, email, plant and enquiry text. Each row in the table represents an 
+                        individual enquiry and includes a 'Delete' action link to remove the enquiry from the database.
+                    </p>
+
+                    <div class = "dld_buttons_column">
+                        <h3>Pages :</h3>
+
+                        <div class = "dld_flex_container">
+                            <a target = "_blank" href = "index.php">Home</a>
+                        </div>
+                    </div>
+
+                    <div class = "dld_buttons_column">
+                        <h3>Source :</h3>
+
+                        <div class = "dld_flex_container">
+                            <a target = "_blank" href = "https://www.w3schools.com/css/css_navbar.asp">Source</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "dld_row">
+            <div class = "dld_column_img">
+                <img src = "styles/images/czy/enhancement_2/admin_create_delete_user.gif" alt = "gif">
             </div>
 
             <div class = "dld_column">
@@ -93,7 +127,7 @@
 
         <div class = "dld_row">
             <div class = "dld_column_img">
-                <img src = "styles/images/czy/gifs/admin_edit_user.gif" alt = "gif">
+                <img src = "styles/images/czy/enhancement_2/admin_edit_user.gif" alt = "gif">
             </div>
 
             <div class = "dld_column">
@@ -101,19 +135,18 @@
                     <h2>Edit user page</h2>
                     <p>
                         The edit_user.php file is a PHP script designed to facilitate the editing of user account details. 
-                        It connects to a MySQL database to retrieve the details of a specific user based on an ID passed 
-                        through the URL. The script populates an HTML form with the user's current information, 
-                        allowing an admin to update the username, email, and password. Upon submission, the form 
-                        data is sent to edit_user_process.php for updating the database.
+                        The script populates an HTML form with the user's current information, allowing an admin to update 
+                        the username, email and password. Upon submission, the form data is sent to edit_user_process.php 
+                        for updating the database.
                     </p>
 
                     <div class = "dld_buttons_column">
                         <h3>Pages :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target="_blank" href = "index.php">Home</a>
-                            <a target="_blank" href = "identify.php">Identify</a>  
-                            <a target="_blank" href = "enquiry.php">Enquiry</a>  
+                            <a target = "_blank" href = "index.php">Home</a>
+                            <a target = "_blank" href = "identify.php">Identify</a>  
+                            <a target = "_blank" href = "enquiry.php">Enquiry</a>  
                         </div>
                     </div>
 
@@ -121,8 +154,8 @@
                         <h3>Source :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target="_blank" href = "https://codepen.io/SitePoint/pen/MyPVdK?editors=1100">Carousel</a>
-                            <a target="_blank" href = "https://codepen.io/avkuznetsov54/pen/wQqjmW">Slideshow</a>
+                            <a target = "_blank" href = "https://codepen.io/SitePoint/pen/MyPVdK?editors=1100">Carousel</a>
+                            <a target = "_blank" href = "https://codepen.io/avkuznetsov54/pen/wQqjmW">Slideshow</a>
                         </div>
                     </div>
                 </div>
@@ -131,31 +164,27 @@
     
         <div class = "dld_row">
             <div class = "dld_column_img">
-                <img src = "styles/images/czy/gifs/admin_searchbar.gif" alt = "gif">
+                <img src = "styles/images/czy/enhancement_2/admin_searchbar.gif" alt = "gif">
             </div>
 
             <div class = "dld_column">
                 <div class = "dld_enhancements_description">
-                    <h2>User account page search bar</h2>
+                    <h2>View user page search bar</h2>
                     <p>
                         The search bar in view_user.php is part of a form that allows the admin to search 
                         for user accounts. It uses a GET method to submit the search term to the same page. 
-                        The search input field has an autocomplete attribute set to "off" to prevent 
-                        automatic suggestions by the browser, and it references a datalist with the 
-                        ID autocomplete. This datalist is populated with options generated by a PHP 
-                        script that queries the userdetails table in the database, providing suggestions 
-                        for user IDs, usernames, emails, and passwords. When the form is submitted, the 
-                        search term is processed by the PHP script, which modifies the SQL query to filter 
-                        the user accounts displayed in the table based on the search criteria.
+                        When the form is submitted, the search term is processed by the PHP script, which 
+                        modifies the SQL query to filter the user accounts displayed in the table based 
+                        on the search criteria.
                     </p>
 
                     <div class = "dld_buttons_column">
                         <h3>Pages :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target="_blank" href = "species.php">Explore</a>
-                            <a target="_blank" href = "identify.php">Identify</a>  
-                            <a target="_blank" href = "contributions.php">Contributions</a>  
+                            <a target = "_blank" href = "species.php">Explore</a>
+                            <a target = "_blank" href = "identify.php">Identify</a>  
+                            <a target = "_blank" href = "contributions.php">Contributions</a>  
                         </div>
                     </div>
 
@@ -163,31 +192,33 @@
                         <h3>Source :</h3>
 
                         <div class = "dld_flex_container">
-                            <a target="_blank" href = "https://codepen.io/peiche/pen/kQwYVJ?editors=1100">Source</a>
+                            <a target = "_blank" href = "https://codepen.io/peiche/pen/kQwYVJ?editors=1100">Source</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="dld_row">
+        <div class = "dld_row">
             <div class="dld_column_img">
-                <img src = "styles/images/czy/gifs/admin_searchbar.gif" alt="gif">
+                <img src = "styles/images/czy/enhancement_2/registration_login.gif" alt="gif">
             </div>
 
             <div class="dld_column">
                 <div class="dld_enhancements_description">
-                    <h2>On hover animation</h2>
+                    <h2>Login and register page</h2>
                     <p>
-                        Hover animations are often applied to various elements such as buttons, links, images and text. To implement hover animations, CSS property (:hover and transition) is primarily used. When the user hovers over an element, the CSS rules within the (:hover) block take effect, causing changes in appearance or behavior. Transitions are essential to creating smooth and gradual changes during hover. CSS properties like transition allows the control of duration and easing of these changes. 
+                        The login.php file is a PHP script that provides a login interface. 
+                        It includes a form where users can enter their email and password to log in. 
+                        The form data is sent to login_process.php for authentication. The script also 
+                        provides a link to the registration page for users who do not have an account. 
                     </p>
 
                     <p>
-                        Hover animations include color changes, background modifications and transition effects.
-                    </p>
-
-                    <p>
-                        Hover animations can provide visual feedback and enhance the interactivity of a website, making it more engaging for users. These animations are static and rely on user interaction; once the user moves the cursor away, the element reverts to its original state.
+                        The register.php file is a PHP script for the registration interface. 
+                        The form allows new users to enter a username, email and password to create an account. 
+                        The form data is submitted to register_process.php for account creation. 
+                        The script also provides a link to the login page for users who already have an account. 
                     </p>
 
                     <div class = "dld_buttons_column">
@@ -217,14 +248,17 @@
 
         <div class="dld_row">
             <div class="dld_column_img">
-                <img src = "styles/images/czy/gifs/registration_login.gif" alt = "pic">
+                <img src = "styles/images/czy/enhancement_2/enquiry_page.gif" alt = "gif">
             </div>
 
             <div class="dld_column">
                 <div class="dld_enhancements_description">
-                    <h2>Search bar</h2>
+                    <h2>Enquiry page</h2>
                     <p>
-                        The search bar is usually designed using PHP input elements, such as &lt;input type="text"&gt;, and often includes a submit button (&lt;input type="submit"&gt;) or a search icon. CSS styles are applied to define the appearance, positioning and layout of the search bar within the webpage.
+                        The enquiry.php file is a PHP script that provides an enquiry form for users. 
+                        It allows users to submit their contact details, address and specific enquiry related to plants. 
+                        The script includes a reset functionality that clears the session data when the reset button is pressed.
+                        The form data is sent to enquiry_process.php for handling the submission.
                     </p>
 
                     <div class = "dld_buttons_column">

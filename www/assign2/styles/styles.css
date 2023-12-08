@@ -1162,7 +1162,7 @@ label.dld_gallery-label {
     background-color: rgba(228, 227, 234, 0.5);
     border-radius: 2vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
-    font-family: "dld_samsungsharpsans_medium";
+    font-family: "dld_samsungsharpsans";
     padding-top: 4vw;
     padding-bottom: 3vw;
 }
@@ -1185,7 +1185,7 @@ label.dld_gallery-label {
     align-items: center;
 }
   
-.dld_enhancements_description{
+.dld_enhancements_description {
     font-size: 1vw;
     width: 47.5vw;
     text-align: justify;
@@ -1197,6 +1197,10 @@ label.dld_gallery-label {
     line-height: 1.5;
 }
 
+.dld_enhancements_description h2 {
+    font-family: "dld_samsungsharpsans_medium";
+}
+
 .dld_buttons_column{
     display: flex;
     flex-direction: row;
@@ -1205,6 +1209,7 @@ label.dld_gallery-label {
 .dld_buttons_column h3{
     font-size: 1.2vw;
     width: 5.2vw;
+    font-family: "dld_samsungsharpsans_medium";
 }
 
 .dld_flex_container{
@@ -1219,13 +1224,13 @@ label.dld_gallery-label {
     padding: 0.4vw 0vw;
     margin: 0.9vw 0.35vw;
     font-size: 1vw;
-    font-weight: bold;
     color: #23322a;
     text-decoration: none;
-    border-radius: 2vw;
+    border-radius: 0.75vw;
     background-color: #90a79a;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.15), 0 0.52vw 0.52vw rgba(0,0,0,0.12);
     transition: all 0.25s;
+    font-weight: bold;
 }
 
 .dld_flex_container a:hover{
