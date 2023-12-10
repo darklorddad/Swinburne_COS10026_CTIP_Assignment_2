@@ -10,10 +10,11 @@
     <?php include_once("dld_background_dots.php"); ?>
     <?php include_once("dld_top_navigation_bar.php"); ?>
 
+
     <div class = "ttl_header_section">
         <div class = "ttl_header_container">
             <div class = "ttl_text_container">
-                <!-- <h2 class = "ttl_title">FLORASCAN</h2> -->
+                
                 <div class = "ttl_page_header">
                     <p class = "ttl_title_header">Identify</p>
                     <p>Explore the diverse world of plants effortlessly with our user-friendly identification tool and deepen your connection with the natural wonders around you.</p>
@@ -21,11 +22,6 @@
 
                 <div class = "ttl_block_reveal_container">
                     <div class = "ttl_block_reveal">
-                
-                        <!-- <div class = "ttl_identify">
-                            <div class = "ttl_block1"></div>
-                            <p class = "ttl_block1_text">Identify</p>
-                        </div> -->
                 
                         <div class = "ttl_any_plant">
                             <div class = "ttl_block2"></div>
@@ -60,23 +56,59 @@
 
 
     <div class = "ttl_main_body">
-        <!-- <div class = "ttl_frame"> -->
         <div class = "ttl_center">
             <div class = "ttl_bar">
                 <p class = "ttl_upload_title">Flora Recognition</p>
                 <p class = "ttl_upload_description">At least a photo of leaf, flower, fruit or bark is required for identification to work.</p>
             </div>
+
+            <?php
+                $targetDir = "store_user_uploads/"; 
+
+                if (!file_exists($targetDir)) {
+                    mkdir($targetDir, 0777, true); 
+                }
+                
+                $defaultImage = 'styles/images/ttl/ttl_upload_icon.svg';
+                $uploadedImage = '';
+
+               
+                if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['upload_file'])) {
+                    
+                    $allowedFileTypes = array("image/png", "image/jpg", "image/jpeg");
+
+                    if (!in_array($_FILES["fileToUpload"]["type"], $allowedFileTypes)) {
+                        echo "<p class='ttl_upload_img_error_message'>Invalid file type. Please upload a PNG, JPG, or JPEG file.</p>";
+                    } else {
+                    
+                        $targetFile = $targetDir . basename($_FILES["fileToUpload"]["name"]);
+
+                        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $targetFile)) {
+                            $uploadedImage = $targetFile;
+
+                            $uploadedFilename = basename($targetFile);
+                        } else {
+                            echo "<p class='ttl_upload_img_error_message'>Sorry, there was an error uploading your file.</p>";
+                        }
+                    }
+                }
+            ?>
+
+
             
-            <form action = "upload.php" method = "post" enctype = "multipart/form-data">
+            <form id="uploadForm" action="identify.php" method="post" enctype="multipart/form-data">
                 <div class = "ttl_dropzone">
                     <div class = "ttl_filecontent">
-                        <img src = "styles/images/ttl/ttl_upload_icon.svg" class = "ttl_upload_icon" alt = "upload icon">
-                        <input type = "file" class = "test_input">
-                        <span class = "ttl_filename"></span>
+                        <?php
+                            echo '<img src="' . ($uploadedImage ? $uploadedImage : $defaultImage) . '" alt="Uploaded Image" class="ttl_uploaded_image">';
+                        ?>
+
+                        <input type = "file" class = "fileToUpload" name = "fileToUpload">
+                        
                     </div>
                 </div>
 
-                <input type = "submit" class = "ttl_upload-btn" value = "Upload Image" name = "submit">
+                <input type = "submit" class = "ttl_upload-btn" value = "Upload Image" name = "upload_file">
             </form>
 
             <div class = "ttl_identify_button_container">
@@ -102,12 +134,6 @@
                 </button>
             </div>
         </div>
-
-
-
-        <!-- </div> -->
-
-        
     </div>
 
     <section class = "ttl_result">
