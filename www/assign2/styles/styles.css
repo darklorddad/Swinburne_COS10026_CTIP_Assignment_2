@@ -2174,7 +2174,7 @@ a:focus {
 }
 
 .ash_commentss{
-    border-radius: 1vw 0.75vw 0.75vw 1vw;
+    border-radius: 0.5vw 0.75vw 0.75vw 0.5vw;
     margin-left: 4vw;
     margin-right: 4.75vw;
     background-color: #e4e3ea;
@@ -2182,11 +2182,12 @@ a:focus {
     padding-bottom: 0;
     height: 10vw;
     overflow: auto;
+    margin-top: 1vw;
 }
 
 .ash_comment_small_box{
     background-color: #90a79a;
-    margin-bottom: 1vw;
+    margin-bottom: 0.5vw;
     border-radius: 0.5vw;
     width: fit-content;
     padding: 0.5vw 0.75vw;
@@ -2204,6 +2205,7 @@ a:focus {
     border: none;
     padding: 0.5vw;
     transition: background-color 0.25s ease;
+    background-color: #e4e3ea;
 }
 
 .ash_comment_box form textarea:hover {
@@ -3035,18 +3037,18 @@ a:focus {
 }
 
 .ttl_center {
-    /* position: relative; */
-    /* top:5%; */
     width: 59vw;
-    /* height: vw; */
     background-color: #e4e3ea;
-	/* box-shadow: 8px 10px 15px 0 rgba(0,0,0,0.2); */
 	border-radius: 2vw;
     margin:auto;
     margin-top: 4vw;
     margin-bottom: 8vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
 }
+
+/* .ttl_center form {
+    height: 0vw;
+} */
 
 .ttl_center_3 {
     width: 59vw;
@@ -3191,9 +3193,8 @@ a:focus {
 .ttl_upload_img_error_message{
     font-family: "dld_samsungsharpsans_medium";
     text-align: center;
-    padding-top: 4vw;
     margin: 0vw;
-    font-size: 1.5vw;
+    font-size: 1vw;
     color: red;
 }
 
@@ -3406,6 +3407,27 @@ a:focus {
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
     transition: background-color 0.25s ease, color 0.25s ease;
     align-items: center;
+}
+
+.ttl_plant_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ttl_plant_info p {
+    margin-top: 1.75vw;
+    margin-bottom: 0vw;
+    font-size: 1.125vw;
+}
+
+.ttl_plant_info_common_name {
+    font-family: "dld_samsungsharpsans_bold";
+}
+
+.ttl_plant_info_scientific_name {
+    font-family: "dld_samsungsharpsans_medium";
 }
 
 .ttl_plant_card:hover{

@@ -23,8 +23,19 @@
 			die("Connection failed: " . mysqli_connect_error());
 		}
 		
-		if (!mysqli_select_db($conn, $database)) {
+		// Check if database exists
+		$db_exists = mysqli_query($conn, "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '$database'");
+		
+		if ($db_exists->num_rows <= 0) {
+			// Database doesn't exist, so create it
 			$sql = "CREATE DATABASE $database";
+			if (mysqli_query($conn, $sql)) {
+				mysqli_select_db($conn, $database);
+			} else {
+				echo "Error creating database: " . mysqli_error($conn);
+			}
+		} else {
+			mysqli_select_db($conn, $database);
 		}
 
 		// Check if table exists
@@ -234,7 +245,7 @@
 					<form method = "post" action = "submit_comment.php">
 						<textarea class = "ash_comment_boxx" rows = "3" placeholder = "Leave a comment here" name = "comment"></textarea>
 						<input type = "hidden" name = "plant" value = "avocado">
-						<input type = "submit" class = "ash_submit_btn" value = "comment">
+						<input type = "submit" class = "ash_submit_btn" value = "Comment">
 					</form>
 				</div>
 				<a href = "#ash_contribution" class = "ash_link_2"></a>
@@ -282,7 +293,7 @@
 					<form method = "post" action = "submit_comment.php">
 						<textarea class = "ash_comment_boxx" rows = "3" placeholder = "Leave a comment here" name = "comment"></textarea>
 						<input type = "hidden" name = "plant" value = "chinaberry">
-						<input type = "submit" class = "ash_submit_btn" value = "comment">
+						<input type = "submit" class = "ash_submit_btn" value = "Comment">
 					</form>
 				</div>
 				<a href = "#ash_contribution" class = "ash_link_2"></a>
@@ -330,7 +341,7 @@
 					<form method = "post" action = "submit_comment.php">
 						<textarea class = "ash_comment_boxx" rows = "3" placeholder = "Leave a comment here" name = "comment"></textarea>
 						<input type = "hidden" name = "plant" value = "cocoplum">
-						<input type = "submit" class = "ash_submit_btn" value = "comment">
+						<input type = "submit" class = "ash_submit_btn" value = "Comment">
 					</form>
 				</div>
 				<a href = "#ash_contribution" class = "ash_link_2"></a>
@@ -378,7 +389,7 @@
 					<form method = "post" action = "submit_comment.php">
 						<textarea class = "ash_comment_boxx" rows = "3" placeholder = "Leave a comment here" name = "comment"></textarea>
 						<input type = "hidden" name = "plant" value = "nutmeg">
-						<input type = "submit" class = "ash_submit_btn" value = "comment">
+						<input type = "submit" class = "ash_submit_btn" value = "Comment">
 					</form>
 				</div>
 				<a href = "#ash_contribution" class = "ash_link_2"></a>
@@ -426,7 +437,7 @@
 					<form method = "post" action = "submit_comment.php">
 						<textarea class = "ash_comment_boxx" rows = "3" placeholder = "Leave a comment here" name = "comment"></textarea>
 						<input type = "hidden" name = "plant" value = "japanesepersimmon">
-						<input type = "submit" class = "ash_submit_btn" value = "comment">
+						<input type = "submit" class = "ash_submit_btn" value = "Comment">
 					</form>
 				</div>
 				<a href = "#ash_contribution" class = "ash_link_2"></a>
@@ -478,7 +489,7 @@
 					<form method = "post" action = "submit_comment.php">
 						<textarea class = "ash_comment_boxx" rows = "3" placeholder = "Leave a comment here" name = "comment"></textarea>
 						<input type = "hidden" name = "plant" value = "velvetapple">
-						<input type = "submit" class = "ash_submit_btn" value = "comment">
+						<input type = "submit" class = "ash_submit_btn" value = "Comment">
 					</form>
 				</div>
 				<a href = "#ash_contribution" class = "ash_link_2"></a>
