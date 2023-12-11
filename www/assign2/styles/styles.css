@@ -2085,6 +2085,7 @@ a:focus {
 }
 
 .ash_modal {
+    font-family: "dld_samsungsharpsans_medium";
     width: 60vw;
     padding: 4vw 2vw;
     border-radius: 2vw;
@@ -2172,15 +2173,35 @@ a:focus {
     transform: translateY(-.2vw);
 }
 
+.ash_commentss{
+    border-radius: 1vw;
+    margin-left: 4vw;
+    margin-right: 4.75vw;
+    background-color: #e4e3ea;
+    padding: 1vw;
+    padding-bottom: 0;
+    height: 10vw;
+}
+
+.ash_comment_small_box{
+    background-color: #90a79a;
+    margin-bottom: 1vw;
+    border-radius: 0.5vw;
+    width: fit-content;
+    padding: 0.5vw;
+}
+
 .ash_comment_box form {
     margin-left: 4vw;
     margin-top: 1vw;
 }
 
 .ash_comment_box form textarea {
+    resize: none;
     border-radius: 0.5vw;
     width: 90%;
     border: none;
+    padding: 0.5vw;
     transition: background-color 0.25s ease;
 }
 
@@ -2208,7 +2229,7 @@ a:focus {
     border: none;
     border-radius: 0.5vw;
     cursor: pointer;
-    margin-left: 4vw;
+    margin-left: 0vw;
     margin-top: 1vw;
     font-family: "dld_samsungsharpsans_bold";
     font-size: 1vw;

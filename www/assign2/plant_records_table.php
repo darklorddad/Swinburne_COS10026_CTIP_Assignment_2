@@ -37,11 +37,10 @@
     }
 
     $plantDetailsToInsert = [
-        ['filename' => 'ttl_chinaberry.jpg', 'image_file_path' => 'styles/images/ttl/ttl_chinaberry.jpg', 'plant_common_name' => 'Chinaberry', 'plant_scientific_name' => 'Melia azedarach', 'modal_href_link' => '#ttl_chinaberry_info'],
-        ['filename' => 'ttl_persimmon.png', 'image_file_path' => 'styles/images/ttl/ttl_persimmon.png', 'plant_common_name' => 'Malaysian Persimmon', 'plant_scientific_name' => 'Diospyros maritima', 'modal_href_link' => '#ttl_persimmon_info'],
-        ['filename' => 'ttl_cocoplum.png', 'image_file_path' => 'styles/images/ttl/ttl_cocoplum.png', 'plant_common_name' => 'Cocoplum', 'plant_scientific_name' => 'Chrysobalanus icaco', 'modal_href_link' => '#ttl_cocoplum_info'],
-        ['filename' => 'ttl_gumbo_limbo.png', 'image_file_path' => 'styles/images/ttl/ttl_gumbo_limbo.png', 'plant_common_name' => 'Gumbo-limbo', 'plant_scientific_name' => 'Bursera simaruba', 'modal_href_link' => '#ttl_gumbo_limbo_info'],
-        
+        ['filename' => 'ttl_chinaberry', 'image_file_path' => 'styles/images/ttl/ttl_chinaberry.jpg', 'plant_common_name' => 'Chinaberry', 'plant_scientific_name' => 'Melia azedarach', 'modal_href_link' => '#ttl_chinaberry_info'],
+        ['filename' => 'ttl_persimmon', 'image_file_path' => 'styles/images/ttl/ttl_persimmon.png', 'plant_common_name' => 'Malaysian Persimmon', 'plant_scientific_name' => 'Diospyros maritima', 'modal_href_link' => '#ttl_persimmon_info'],
+        ['filename' => 'ttl_cocoplum', 'image_file_path' => 'styles/images/ttl/ttl_cocoplum.png', 'plant_common_name' => 'Cocoplum', 'plant_scientific_name' => 'Chrysobalanus icaco', 'modal_href_link' => '#ttl_cocoplum_info'],
+        ['filename' => 'ttl_gumbo_limbo', 'image_file_path' => 'styles/images/ttl/ttl_gumbo_limbo.png', 'plant_common_name' => 'Gumbo-limbo', 'plant_scientific_name' => 'Bursera simaruba', 'modal_href_link' => '#ttl_gumbo_limbo_info'],
     ];
     
     foreach ($plantDetailsToInsert as $plantData) {

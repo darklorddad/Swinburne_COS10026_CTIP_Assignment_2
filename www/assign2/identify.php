@@ -69,21 +69,21 @@
                 <p class="ttl_upload_description">At least a photo of leaf, flower, fruit or bark is required for identification to work.</p>
             </div>
 
-            <form id="uploadForm" action="identify.php" method="post" enctype="multipart/form-data">
+            <form id="uploadForm" action="identify.php#jump" method="post" enctype="multipart/form-data">
                 <div class="ttl_dropzone">
                     <div class="ttl_filecontent">
                         <?php
                             $imageToShow = (!empty($uploadedImage)) ? $uploadedImage : $defaultImage;
                             echo '<img src="' . $imageToShow . '" alt="Uploaded Image" class="ttl_uploaded_image">';
                         ?>
-                        <input type="file" id="fileToUpload" name="fileToUpload" accept=".png, .jpg, .jpeg">
+                        <input type = "file" id = "fileToUpload" name = "fileToUpload" accept = ".png, .jpg, .jpeg">
                     </div>
                 </div>
 
-                <input type="hidden" name="uploaded_filename" value="<?php echo isset($uploadedFilename) ? $uploadedFilename : ''; ?>">
+                <input type = "hidden" name = "uploaded_filename" value = "<?php echo isset($uploadedFilename) ? $uploadedFilename : ''; ?>">
 
                 <div class="ttl_upload-btn">
-                    <button type="submit" class="ttl_identify_button" name="upload_identify">
+                    <button type="submit" class="ttl_identify_button" name = "upload_identify"  id = "jump">
                         Upload and Identify
                         <span class="ttl-star-1">
                             <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g ><metadata></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
@@ -130,7 +130,10 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $filename = isset($_POST['uploaded_filename']) ? $_POST['uploaded_filename'] : '';
+            $target_file = $targetDir . basename($_FILES["fileToUpload"]["name"]);
+            $imageFileType = strtolower(pathinfo($target_file, PATHINFO_FILENAME));
+
+            $filename = isset($_FILES["fileToUpload"]["name"]) ? $imageFileType : '';
             $sql = "SELECT * FROM plant_records WHERE filename = '$filename'";
             $result = $conn->query($sql);
 

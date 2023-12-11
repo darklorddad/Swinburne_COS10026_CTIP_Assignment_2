@@ -1,29 +1,29 @@
 <?php
-// Check if comment is set
-if (!isset($_POST['comment'])) {
-    die('Comment not provided');
-}
+    // Check if comment is set
+    if (!isset($_POST['comment'])) {
+        die('Comment not provided');
+    }
 
-$comment = $_POST['comment'];
+    $comment = $_POST['comment'];
 
-// Database credentials
-$db_host = 'localhost';
-$db_name = 'testdb';
-$db_charset = 'utf8';
-$db_user = 'correct_username'; // replace with your correct username
-$db_pass = 'correct_password'; // replace with your correct password
+    $hostname = "127.0.0.1";
+    $user = "root";
+    $password = "";
+    $database = "florascan_database";
 
-try {
-    // Connect to your database
-    $db = new PDO("mysql:host=$db_host;dbname=$db_name;charset=$db_charset", $db_user, $db_pass);
+    $conn = mysqli_connect($hostname, $user, $password, $database);
+
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
 
     // Insert the comment into the database
     $query = $db->prepare("INSERT INTO comments (comment) VALUES (?)");
-    $query->execute([$comment]);
+    $insertQuery = "INSERT INTO UserDetails (user_id, username, email, user_password) VALUES ('$user_id', '$username', '$email', '$user_password')";
+    mysqli_query($conn, $insertQuery);
 
     // Redirect back to the original page
     header('Location: contributions.php');
-} catch (PDOException $e) {
-    die('Database connection failed: ' . $e->getMessage());
-}
+
 ?>
