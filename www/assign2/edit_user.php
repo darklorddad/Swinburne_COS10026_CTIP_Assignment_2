@@ -27,7 +27,7 @@
             $id = $_GET['id'];
 
             // Select data associated with this particular id
-            $result = mysqli_query($conn, "SELECT * FROM UserDetails WHERE id = $id");
+            $result = mysqli_query($conn, "SELECT * FROM userdetails WHERE id = $id");
 
             // Fetch the next row of a result set as an associative array
             $resultData = mysqli_fetch_assoc($result);
