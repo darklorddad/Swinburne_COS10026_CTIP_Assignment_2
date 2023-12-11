@@ -1,3 +1,10 @@
+<?php
+    session_start();
+
+    $defaultImage = 'styles/images/ttl/ttl_upload_icon.svg';
+    $uploadedImage = ''; 
+?>
+
 <!DOCTYPE html>
 <html lang = "en">
 <head>
@@ -55,116 +62,75 @@
         </div>
     </div>
 
-
     <div class = "ttl_main_body">
         <div class="ttl_center">
             <div class="ttl_bar">
                 <p class="ttl_upload_title">Flora Recognition</p>
                 <p class="ttl_upload_description">At least a photo of leaf, flower, fruit or bark is required for identification to work.</p>
             </div>
-            
-            <?php
-                $targetDir = "store_user_uploads/"; 
-
-                
-                if (!file_exists($targetDir)) {
-                    mkdir($targetDir, 0777, true); 
-                }
-
-                
-                $defaultImage = 'styles/images/ttl/ttl_upload_icon.svg';
-                $uploadedImage = '';
-
-                
-                if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['upload_file'])) {
-                    
-                    $allowedFileTypes = array("image/png", "image/jpg", "image/jpeg");
-
-                    if (!in_array($_FILES["fileToUpload"]["type"], $allowedFileTypes)) {
-                        echo "<p class='ttl_upload_img_error_message'>Invalid file type. Please upload a PNG, JPG, or JPEG file.</p>";
-                    } else {
-                        
-                        $targetFile = $targetDir . basename($_FILES["fileToUpload"]["name"]);
-
-                        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $targetFile)) {
-                            $uploadedImage = $targetFile;
-
-                            
-                            $uploadedFilename = basename($targetFile);
-                        } else {
-                            echo "<p class='ttl_upload_img_error_message'>Sorry, there was an error uploading your file.</p>";
-                        }
-                    }
-                }
-            ?>
 
             <form id="uploadForm" action="identify.php" method="post" enctype="multipart/form-data">
                 <div class="ttl_dropzone">
                     <div class="ttl_filecontent">
                         <?php
-                            
-                            echo '<img src="' . ($uploadedImage ? $uploadedImage : $defaultImage) . '" alt="Uploaded Image" class="ttl_uploaded_image">';
-
+                            $imageToShow = (!empty($uploadedImage)) ? $uploadedImage : $defaultImage;
+                            echo '<img src="' . $imageToShow . '" alt="Uploaded Image" class="ttl_uploaded_image">';
                         ?>
-
-                        <input type="file" name="fileToUpload" class="input" accept=".png, .jpg, .jpeg">
+                        <input type="file" id="fileToUpload" name="fileToUpload" accept=".png, .jpg, .jpeg">
                     </div>
                 </div>
-                
+
                 <input type="hidden" name="uploaded_filename" value="<?php echo isset($uploadedFilename) ? $uploadedFilename : ''; ?>">
 
                 <div class="ttl_upload-btn">
-                    <input type="submit" class="ttl_upload" name="upload_file" value="Upload File">
-                </div>
-
-                <div class="ttl_identify_button_container">
-                    <button type="submit" class="ttl_identify_button" name="identify">Identify
+                    <button type="submit" class="ttl_identify_button" name="upload_identify">
+                        Upload and Identify
                         <span class="ttl-star-1">
-                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g ><metadata></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g ><metadata></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
                         </span>
                         <span class="ttl-star-2">
-                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g ><metadata></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g ><metadata></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
                         </span>
                         <span class="ttl-star-3">
-                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g ><metadata></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g ><metadata></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
                         </span>
                         <span class="ttl-star-4">
-                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g ><metadata></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g ><metadata></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
                         </span>
                         <span class="ttl-star-5">
-                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g ><metadata></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g ><metadata></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
                         </span>
                         <span class="ttl-star-6">
-                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g ><metadata></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g ><metadata></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
                         </span>
                     </button>
                 </div>
-
             </form>
-
         </div>
-        
     </div>
 
     <?php
-        
-        $hostname = "127.0.0.1";
-        $user = "root";
-        $password = "";
-        $database = "florascan_database";
+        $targetDir = "store_user_uploads/"; 
 
-        $conn = new mysqli($hostname, $user, $password, $database);
-
-        
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
+        if (!file_exists($targetDir)) {
+            mkdir($targetDir, 0777, true); 
         }
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['identify'])) {
-           
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['upload_identify'])) {
+            $allowedFileTypes = array("image/png", "image/jpg", "image/jpeg");
+
+            $hostname = "127.0.0.1";
+            $user = "root";
+            $password = "";
+            $database = "florascan_database";
+
+            $conn = new mysqli($hostname, $user, $password, $database);
+
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
             $filename = isset($_POST['uploaded_filename']) ? $_POST['uploaded_filename'] : '';
-            
-            
             $sql = "SELECT * FROM plant_records WHERE filename = '$filename'";
             $result = $conn->query($sql);
 
@@ -172,41 +138,53 @@
             echo '<h1 class="ttl_result_title">Identification Summary</h1>';
             echo '<div class="ttl_result_container">';
 
-
-            if ($result->num_rows > 0) {
-                
-                while ($row = $result->fetch_assoc()) {
-                    $imageFilePath = $row['image_file_path'];
-                    $imgCaption = $row['plant_common_name'];
-                    $plantCommonName = $row['plant_common_name'];
-                    $plantScientificName = $row['plant_scientific_name'];
-                    $modalHrefLink = $row['modal_href_link'];
-
-                    echo '<div class="ttl_plant_card">';
-                    echo '<img src="' . $imageFilePath . '" alt="' . $imgCaption . '">';
-
-                    echo '<div class="ttl_plant_name">';
-                    echo '<p class="ttl_plant_common_name">' . $plantCommonName . '</p>';
-                    echo '<p class="ttl_plant_scientific_name">' . $plantScientificName . '</p>';
-                    echo '</div>';
-
-                    echo '<div class="ttl_plant_modal_box">';
-                    echo '<a href="' . $modalHrefLink . '" class="ttl_link-1" ">Delve Deeper</a>';
-                    echo '</div>';
-
-                    echo '</div>';
-                }
+            if (!in_array($_FILES["fileToUpload"]["type"], $allowedFileTypes)) {
+                echo "<p class='ttl_upload_img_error_message'>Invalid file type. Please upload a PNG or JPG file.</p>";
             } else {
-                
-                echo "<p>No records found for the uploaded image. </p>";
+                $targetFile = $targetDir . basename($_FILES["fileToUpload"]["name"]);
+
+                if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $targetFile)) {
+                    $uploadedImage = $targetFile;
+                    $uploadedFilename = basename($targetFile);
+
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $uploadedImage = $targetFile;
+                            $uploadedFilename = basename($targetFile);
+                            $_SESSION['uploadedFileText'] = 'File uploaded: ' . $uploadedFilename;
+                            $imageFilePath = $row['image_file_path'];
+                            $imgCaption = $row['plant_common_name'];
+                            $plantCommonName = $row['plant_common_name'];
+                            $plantScientificName = $row['plant_scientific_name'];
+                            $modalHrefLink = $row['modal_href_link'];
+        
+                            echo '<div class="ttl_plant_card">';
+                            echo '<img src="' . $imageFilePath . '" alt="' . $imgCaption . '">';
+                            echo '<div class="ttl_plant_info">';
+                            echo '<h2>' . $plantCommonName . '</h2>';
+                            echo '<h3>' . $plantScientificName . '</h3>';
+                            echo '<div class="ttl_plant_modal_box">';
+                            echo '<a href="' . $modalHrefLink . '" class="ttl_link-1" ">Delve Deeper</a>';
+                            echo '</div>';
+                            echo '</div>';
+                        }
+                    } else {
+                        echo '
+                        <div class = "ttl_center_3">
+                            <p>No records found for the uploaded image. </p>
+                        <div>
+                        ';
+                    }
+                } else {
+                    echo "<p class='ttl_upload_img_error_message'>Sorry, there was an error uploading your file.</p>";
+                }
             }
 
             echo '</div>';
             echo '</section>';
-        }
 
-        
-        $conn->close();
+            $conn->close();
+        }
     ?>
 
     <div class = "ttl_modal_container" id = "ttl_chinaberry_info">

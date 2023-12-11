@@ -3011,7 +3011,7 @@ a:focus {
     /* background: linear-gradient(to top right, #2c3e50 0%, #34495e 100%);  */
 }
 
-.ttl_center{
+.ttl_center {
     /* position: relative; */
     /* top:5%; */
     width: 59vw;
@@ -3023,6 +3023,18 @@ a:focus {
     margin-top: 4vw;
     margin-bottom: 8vw;
     box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+}
+
+.ttl_center_3 {
+    width: 59vw;
+    background-color: #e4e3ea;
+	border-radius: 2vw;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.729vw 1.458vw rgba(0,0,0,0.25), 0 0.52vw 0.52vw rgba(0,0,0,0.22);
+    padding: 5vw 0vw;
 }
 
 .ttl_upload_title{
@@ -3049,7 +3061,7 @@ a:focus {
     padding: 1vw;
 }
 
-.ttl_dropzone{
+.ttl_dropzone {
     position: relative;
 	box-sizing: border-box;
 	display: table;
@@ -3063,8 +3075,7 @@ a:focus {
 	border-radius: 2vw;
 	text-align: center;
 	overflow: hidden;
-    margin-top: 15vw;
-    margin-bottom: 1vw;
+    margin-top: 10vw;
 }
 
 .ttl_filecontent{
@@ -3082,35 +3093,61 @@ a:focus {
     color: #676767;
 }
 
-.ttl_upload-btn{
-    border: none;
-    position: relative;
+.ttl_filecontent input {
+    margin-bottom: 3vw;
+}
+
+.ttl_file_upload_container {
 	width: 22vw;
-    /* margin-top: 10vw; */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 1vw;
-	/* background: #d0d9cd; */
     background: linear-gradient(200deg, #66B5F6 0%, #BFE299 100%);
 	border-radius: 1.5vw;
-	text-align: center;
 	font-size: 1vw;
-	/* box-shadow: 0 2px 0 0 #78866B; */
 	cursor: pointer;
 	transition: all .25s ease;
-    /* margin-bottom: 3.4vw; */
     font-family: "dld_samsungsharpsans_bold";
     box-shadow: .4vw .4vw 2.4vw .2vw hsla(236, 50%, 50%, .3);
     color: #23322a;
+    padding: 0.4vw;
+    margin-bottom: 3vw;
 }
 
-.ttl_upload-btn:hover {
+.ttl_file_upload_container:hover {
     filter: saturate(200%);
     box-shadow: 0 0 4.4vw .2vw hsla(236, 50%, 50%, .4);
 }
 
-.ttl_upload-btn:hover .ttl_center {
+.ttl_file_upload_container:hover .ttl_center {
     background-color: #23322a;
+}
+
+.ttl_upload {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 1.1vw;
+    width: 100%;
+    height: 100%;
+    font-family: "dld_samsungsharpsans_bold";
+    font-size: 1vw;
+    border-radius: 1.5vw;
+}
+
+.ttl_input_file {
+    display: none;
+}
+
+.ttl_file_upload_label {
+    display: block;
+    /* padding: 10px; */
+    /* background-color: #4CAF50; */
+    /* color: white; */
+    cursor: pointer;
+}
+
+.ttl_file_upload_button {
+    display: block;
+    margin-top: 0.25vw;
 }
 
 .test_input[type=file] {
@@ -3125,13 +3162,16 @@ a:focus {
     width: 60%;
     height: 50%;
     padding: 3vw;
+    border-radius: 4vw;
 }
 
 .ttl_upload_img_error_message{
     font-family: "dld_samsungsharpsans_medium";
     text-align: center;
-    padding: 2vw;
+    padding-top: 4vw;
+    margin: 0vw;
     font-size: 1.5vw;
+    color: red;
 }
 
 .ttl_identify_button_container{
@@ -3156,6 +3196,7 @@ a:focus {
     border-radius: 1.5vw;
     transition: all .25s ease-in-out;
     cursor: pointer;
+    margin-bottom: 3vw;
 }
 
 .ttl-star-1 {
@@ -3418,14 +3459,11 @@ a.ttl_link-1:focus, a.ttl_link-2:focus {
     top: 0;
     left: 0;
     z-index: 10;
-
     display: none;
     justify-content: center;
     align-items: center;
-
     width: 100%;
     height: 100%;
-
     background: hsl(220, 25%, 10%);
 }
 
@@ -3722,7 +3760,7 @@ a.ttl_link-2:hover, a.ttl_link-2:focus {
 
 .ttl_plant_environment_table td, .ttl_plant_environment_table th{
     text-align: center;
-    /* padding: 1vw; */
+    padding: 1vw;
     background-color: #AFE4DE;
 }
 
