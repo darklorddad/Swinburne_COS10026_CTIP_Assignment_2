@@ -182,12 +182,31 @@
 			<div class="ash_modal">
 				<h1 class="ash_modal_title">Comments</h1>
 				<div class="ash_comment_box">
-					<form>
+					<form method="post" action="submit_comment.php">
 					  <textarea name="ash_comment_boxx" cols="30" rows="10" placeholder = "Leave a comment here"></textarea>
+					  <input type="submit" value="Post Comment">
 					</form>
 					<button class="ash_submit_btn">Submit</button>
 				</div>
 				<a href="#ash_contribution" class="ash_link_2"></a>
+
+				<?php
+				// Connect to your database
+				$db = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', 'username', 'password');
+
+				// Get the comments from the database
+				$query = $db->query("SELECT * FROM comments ORDER BY id DESC");
+				$comments = $query->fetchAll(PDO::FETCH_ASSOC);
+				?>
+
+				<!-- Display the comments -->
+				<div class="ash_commentss">
+					<?php foreach ($comments as $comment): ?>
+						<div class="ash_commentsss">
+							<?= htmlspecialchars($comment['comment'], ENT_QUOTES, 'UTF-8') ?>
+						</div>
+					<?php endforeach; ?>
+				</div>
 			</div>
 		</div>
 	</div>
