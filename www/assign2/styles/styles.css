@@ -2174,13 +2174,14 @@ a:focus {
 }
 
 .ash_commentss{
-    border-radius: 1vw;
+    border-radius: 1vw 0.75vw 0.75vw 1vw;
     margin-left: 4vw;
     margin-right: 4.75vw;
     background-color: #e4e3ea;
     padding: 1vw;
     padding-bottom: 0;
     height: 10vw;
+    overflow: auto;
 }
 
 .ash_comment_small_box{
@@ -2188,7 +2189,7 @@ a:focus {
     margin-bottom: 1vw;
     border-radius: 0.5vw;
     width: fit-content;
-    padding: 0.5vw;
+    padding: 0.5vw 0.75vw;
 }
 
 .ash_comment_box form {
@@ -2242,6 +2243,7 @@ a:focus {
 }
 
 .ash_comment_boxx {
+    font-family: "dld_samsungsharpsans_medium";
     display: flex;
     flex-direction: column;
 }

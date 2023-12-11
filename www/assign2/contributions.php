@@ -35,7 +35,8 @@
 			// Table doesn't exist, so create it
 			$sql = "CREATE TABLE user_comments (
 				id INT AUTO_INCREMENT PRIMARY KEY, 
-				comment VARCHAR(255) NOT NULL
+				comment VARCHAR(255) NOT NULL,
+				plant VARCHAR(50) NOT NULL
 			)";
 	
 			mysqli_query($conn, $sql);
@@ -215,7 +216,7 @@
 				<div class = "ash_commentss">
 					<?php
 						mysqli_select_db($conn, $database);
-						$sql = "SELECT * FROM user_comments ORDER BY id DESC";
+						$sql = "SELECT * FROM user_comments WHERE plant = 'avocado' ORDER BY id DESC";
 						$result = mysqli_query($conn, $sql);
 
 						if (mysqli_num_rows($result) > 0) {
@@ -231,13 +232,12 @@
 
 				<div class = "ash_comment_box">
 					<form method = "post" action = "submit_comment.php">
-					  <textarea name = "ash_comment_boxx" cols = "10" rows = "3" placeholder = "Leave a comment here"></textarea>
-					  <input type = "submit" class = "ash_submit_btn" value = "Post Comment">
+						<textarea class = "ash_comment_boxx" rows = "3" placeholder = "Leave a comment here" name = "comment"></textarea>
+						<input type = "hidden" name = "plant" value = "avocado">
+						<input type = "submit" class = "ash_submit_btn" value = "comment">
 					</form>
 				</div>
 				<a href = "#ash_contribution" class = "ash_link_2"></a>
-
-				
 			</div>
 		</div>
 	</div>
@@ -260,10 +260,29 @@
 		<div class = "ash_modal_container" id = "chinaberrycomment">
 			<div class = "ash_modal">
 				<h1 class = "ash_modal_title">Comments</h1>
+				<!-- Display the comments -->
+				<div class = "ash_commentss">
+					<?php
+						mysqli_select_db($conn, $database);
+						$sql = "SELECT * FROM user_comments WHERE plant = 'chinaberry' ORDER BY id DESC";
+						$result = mysqli_query($conn, $sql);
+
+						if (mysqli_num_rows($result) > 0) {
+							while ($res = mysqli_fetch_assoc($result)) {
+								echo '<div class = "ash_comment_small_box">' . htmlspecialchars($res['comment'], ENT_QUOTES, 'UTF-8') . "</div>\n";
+							}
+						} else {
+							// No records found
+							echo "<div class = 'ash_no_comment'>No comments</div>";
+						}
+					?>
+				</div>
+
 				<div class = "ash_comment_box">
-					<form>
-					  <textarea name = "ash_comment_boxx" cols = "30" rows = "3">Add a comment</textarea>
-					  <input type = "submit" value = "Post">
+					<form method = "post" action = "submit_comment.php">
+						<textarea class = "ash_comment_boxx" rows = "3" placeholder = "Leave a comment here" name = "comment"></textarea>
+						<input type = "hidden" name = "plant" value = "chinaberry">
+						<input type = "submit" class = "ash_submit_btn" value = "comment">
 					</form>
 				</div>
 				<a href = "#ash_contribution" class = "ash_link_2"></a>
@@ -289,10 +308,29 @@
 		<div class = "ash_modal_container" id = "cocoplumcomment">
 			<div class = "ash_modal">
 				<h1 class = "ash_modal_title">Comments</h1>
+				<!-- Display the comments -->
+				<div class = "ash_commentss">
+					<?php
+						mysqli_select_db($conn, $database);
+						$sql = "SELECT * FROM user_comments WHERE plant = 'cocoplum' ORDER BY id DESC";
+						$result = mysqli_query($conn, $sql);
+
+						if (mysqli_num_rows($result) > 0) {
+							while ($res = mysqli_fetch_assoc($result)) {
+								echo '<div class = "ash_comment_small_box">' . htmlspecialchars($res['comment'], ENT_QUOTES, 'UTF-8') . "</div>\n";
+							}
+						} else {
+							// No records found
+							echo "<div class = 'ash_no_comment'>No comments</div>";
+						}
+					?>
+				</div>
+
 				<div class = "ash_comment_box">
-					<form>
-					  <textarea name = "ash_comment_boxx" cols = "30" rows = "3">Add a comment</textarea>
-					  <input type = "submit" value = "Post">
+					<form method = "post" action = "submit_comment.php">
+						<textarea class = "ash_comment_boxx" rows = "3" placeholder = "Leave a comment here" name = "comment"></textarea>
+						<input type = "hidden" name = "plant" value = "cocoplum">
+						<input type = "submit" class = "ash_submit_btn" value = "comment">
 					</form>
 				</div>
 				<a href = "#ash_contribution" class = "ash_link_2"></a>
@@ -318,10 +356,29 @@
 		<div class = "ash_modal_container" id = "nutmegcomment">
 			<div class = "ash_modal">
 				<h1 class = "ash_modal_title">Comments</h1>
+				<!-- Display the comments -->
+				<div class = "ash_commentss">
+					<?php
+						mysqli_select_db($conn, $database);
+						$sql = "SELECT * FROM user_comments WHERE plant = 'nutmeg' ORDER BY id DESC";
+						$result = mysqli_query($conn, $sql);
+
+						if (mysqli_num_rows($result) > 0) {
+							while ($res = mysqli_fetch_assoc($result)) {
+								echo '<div class = "ash_comment_small_box">' . htmlspecialchars($res['comment'], ENT_QUOTES, 'UTF-8') . "</div>\n";
+							}
+						} else {
+							// No records found
+							echo "<div class = 'ash_no_comment'>No comments</div>";
+						}
+					?>
+				</div>
+
 				<div class = "ash_comment_box">
-					<form>
-					  <textarea name = "ash_comment_boxx" cols = "30" rows = "3">Add a comment</textarea>
-					  <input type = "submit" value = "Post">
+					<form method = "post" action = "submit_comment.php">
+						<textarea class = "ash_comment_boxx" rows = "3" placeholder = "Leave a comment here" name = "comment"></textarea>
+						<input type = "hidden" name = "plant" value = "nutmeg">
+						<input type = "submit" class = "ash_submit_btn" value = "comment">
 					</form>
 				</div>
 				<a href = "#ash_contribution" class = "ash_link_2"></a>
@@ -347,10 +404,29 @@
 		<div class = "ash_modal_container" id = "japanesepersimmoncomment">
 			<div class = "ash_modal">
 				<h1 class = "ash_modal_title">Comments</h1>
+				<!-- Display the comments -->
+				<div class = "ash_commentss">
+					<?php
+						mysqli_select_db($conn, $database);
+						$sql = "SELECT * FROM user_comments WHERE plant = 'japanesepersimmon' ORDER BY id DESC";
+						$result = mysqli_query($conn, $sql);
+
+						if (mysqli_num_rows($result) > 0) {
+							while ($res = mysqli_fetch_assoc($result)) {
+								echo '<div class = "ash_comment_small_box">' . htmlspecialchars($res['comment'], ENT_QUOTES, 'UTF-8') . "</div>\n";
+							}
+						} else {
+							// No records found
+							echo "<div class = 'ash_no_comment'>No comments</div>";
+						}
+					?>
+				</div>
+
 				<div class = "ash_comment_box">
-					<form>
-					  <textarea name = "ash_comment_boxx" cols = "30" rows = "3">Add a comment</textarea>
-					  <input type = "submit" value = "Post">
+					<form method = "post" action = "submit_comment.php">
+						<textarea class = "ash_comment_boxx" rows = "3" placeholder = "Leave a comment here" name = "comment"></textarea>
+						<input type = "hidden" name = "plant" value = "japanesepersimmon">
+						<input type = "submit" class = "ash_submit_btn" value = "comment">
 					</form>
 				</div>
 				<a href = "#ash_contribution" class = "ash_link_2"></a>
@@ -380,10 +456,29 @@
 		<div class = "ash_modal_container" id = "velvetapplecomment">
 			<div class = "ash_modal">
 				<h1 class = "ash_modal_title">Comments</h1>
+				<!-- Display the comments -->
+				<div class = "ash_commentss">
+					<?php
+						mysqli_select_db($conn, $database);
+						$sql = "SELECT * FROM user_comments WHERE plant = 'velvetapple' ORDER BY id DESC";
+						$result = mysqli_query($conn, $sql);
+
+						if (mysqli_num_rows($result) > 0) {
+							while ($res = mysqli_fetch_assoc($result)) {
+								echo '<div class = "ash_comment_small_box">' . htmlspecialchars($res['comment'], ENT_QUOTES, 'UTF-8') . "</div>\n";
+							}
+						} else {
+							// No records found
+							echo "<div class = 'ash_no_comment'>No comments</div>";
+						}
+					?>
+				</div>
+
 				<div class = "ash_comment_box">
-					<form>
-					  <textarea name = "ash_comment_boxx" cols = "30" rows = "3">Add a comment</textarea>
-					  <input type = "submit" value = "Post">
+					<form method = "post" action = "submit_comment.php">
+						<textarea class = "ash_comment_boxx" rows = "3" placeholder = "Leave a comment here" name = "comment"></textarea>
+						<input type = "hidden" name = "plant" value = "velvetapple">
+						<input type = "submit" class = "ash_submit_btn" value = "comment">
 					</form>
 				</div>
 				<a href = "#ash_contribution" class = "ash_link_2"></a>

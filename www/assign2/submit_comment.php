@@ -1,11 +1,4 @@
 <?php
-    // Check if comment is set
-    if (!isset($_POST['comment'])) {
-        die('Comment not provided');
-    }
-
-    $comment = $_POST['comment'];
-
     $hostname = "127.0.0.1";
     $user = "root";
     $password = "";
@@ -17,13 +10,21 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
+    $plant = $_POST['plant'];
 
-    // Insert the comment into the database
-    $query = $db->prepare("INSERT INTO comments (comment) VALUES (?)");
-    $insertQuery = "INSERT INTO UserDetails (user_id, username, email, user_password) VALUES ('$user_id', '$username', '$email', '$user_password')";
-    mysqli_query($conn, $insertQuery);
+    // Check if comment is set
+    if (!empty($_POST['comment'])) {
+        $comment = $_POST['comment'];
 
-    // Redirect back to the original page
-    header('Location: contributions.php');
+        // Insert the comment into the database
+        $insertQuery = "INSERT INTO user_comments (comment, plant) VALUES ('$comment', '$plant')";
+        mysqli_query($conn, $insertQuery);
 
+        // Redirect back to the original page
+        header('Location: contributions.php#' . $plant . 'comment');
+    }
+    else{
+        unset($_POST['comment']);
+        header('Location: contributions.php#' . $plant . 'comment');
+    }
 ?>
